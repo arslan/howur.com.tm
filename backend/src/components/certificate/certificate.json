@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_certificate_certificates",
+  "info": {
+    "displayName": "certificate",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "under_heading": {
+      "type": "text"
+    },
+    "certificate_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::certificate-list.certificate-list"
+    }
+  }
+}

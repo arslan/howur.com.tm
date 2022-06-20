@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_contacts_addresses",
+  "info": {
+    "displayName": "address",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "address": {
+      "type": "string"
+    }
+  }
+}

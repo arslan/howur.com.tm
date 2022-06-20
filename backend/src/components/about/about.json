@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_about_abouts",
+  "info": {
+    "displayName": "about",
+    "icon": "american-sign-language-interpreting"
+  },
+  "options": {},
+  "attributes": {
+    "headImg": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "heading": {
+      "type": "string"
+    },
+    "under_heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "descImg": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

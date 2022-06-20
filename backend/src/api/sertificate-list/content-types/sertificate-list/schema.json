@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sertificate_lists",
+  "info": {
+    "singularName": "sertificate-list",
+    "pluralName": "sertificate-lists",
+    "displayName": "сertificate_list"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "img": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "collectionName": "components_form_form_mains",
+  "info": {
+    "displayName": "form_main",
+    "icon": "address-card",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "mail": {
+      "type": "string"
+    },
+    "form_address": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contacts.address"
+    },
+    "form_mail": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contacts.mail"
+    },
+    "form_number": {
+      "type": "component",
+      "repeatable": false,
+      "component": "contacts.phone-number"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}

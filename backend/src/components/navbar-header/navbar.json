@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_navbar_header_navbars",
+  "info": {
+    "displayName": "navbar",
+    "icon": "angle-double-up",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "locals": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::local.local"
+    },
+    "navigations": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::navigation.navigation"
+    },
+    "under_navs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::under-nav.under-nav"
+    }
+  }
+}
