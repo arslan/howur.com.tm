@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "under_navs",
+  "info": {
+    "singularName": "under-nav",
+    "pluralName": "under-navs",
+    "displayName": "under_nav"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    }
+  }
+}

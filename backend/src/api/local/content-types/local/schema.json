@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locals",
+  "info": {
+    "singularName": "local",
+    "pluralName": "locals",
+    "displayName": "local",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    }
+  }
+}

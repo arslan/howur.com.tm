@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_contacts_mail",
+  "info": {
+    "displayName": "mail",
+    "icon": "ad"
+  },
+  "options": {},
+  "attributes": {
+    "mail": {
+      "type": "email"
+    }
+  }
+}

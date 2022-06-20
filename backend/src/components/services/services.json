@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_services_services",
+  "info": {
+    "displayName": "services",
+    "icon": "ad",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "under_heading": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "service_lists": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::service-list.service-list"
+    },
+    "button": {
+      "type": "string"
+    }
+  }
+}
