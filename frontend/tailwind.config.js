@@ -6,12 +6,10 @@ module.exports = {
     theme: {
         extend: {},
         colors: {
-            'darkBlue': '#344151',
-            'green':'#0bc469',
-            'white':'white',
-            'grey':'#7a7a7a',
-            'black':'black',
-            'red':'#891289'
+            'white':'#fff',
+            'grey':'#7A7A7A',
+            'black':'#10181F',
+            'red':'#CD3202'
         },
         screens: {
             xsm: "0px",
