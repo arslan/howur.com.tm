@@ -5,13 +5,18 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import NavbarMain from "./header/NavbarMain";
 import Lang from "./header/Lang";
 import NavbarServices from "./header/NavbarServices";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <div className="w-full bg-green h-64 ">
       <div className="max-w-7xl mx-auto w-full pt-2">
         <div className="flex justify-between items-center self-center pb-4">
-          <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+          <span className="cursor-pointer">
+            <Link href="/" >
+              <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+            </Link>
+          </span>
           <div className="">
             <div className="flex items-center justify-end text-red">
               <FiPhone />

@@ -4,10 +4,14 @@ import Socialicons from "./common/SocialIcons";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-grey text-white">
+    <div className="w-full bg-grey">
       <div className="max-w-7xl mx-auto flex py-2 w-full">
         <div className="w-1/12 mr-12">
-          <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+          <span className="cursor-pointer">
+            <Link href="/">
+              <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+            </Link>
+          </span>
         </div>
         <div className="flex w-11/12 self-center ">
           <div className="mr-16 w-3/5">
@@ -30,11 +34,17 @@ const Footer = () => {
       </div>
       <div className="w-full h-14 bg-black">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <p>©2022 Pursatly Yorish. All Rights Reserved.</p>
-          <Link href='https://hillitilsimat.com.tm/' className='cursor-pointer self-center'>
-          <Image src="/logo.svg" width={134} height={33} alt="Hilli tilsimat"/>
-          </Link>
-
+          <p className="text-white">©2022 Pursatly Yorish. All Rights Reserved.</p>
+          <span className="cursor-pointer self-center">
+            <Link href="https://hillitilsimat.com.tm/">
+              <Image
+                src="/logo.svg"
+                width={200}
+                height={54}
+                alt="Hilli tilsimat"
+              />
+            </Link>
+          </span>
         </div>
       </div>
     </div>

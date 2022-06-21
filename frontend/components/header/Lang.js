@@ -36,7 +36,7 @@ function Lang() {
   const lang = { ru: "Русский", en: "English", tk: "Tükmen" };
 
   return (
-    <Menu as="div" className="relative inline-block text-grey">
+    <Menu as="div" className="relative inline-block text-[#7A7A7A]">
       <Menu.Button className="w-full relative flex hover:text-red text-xl">
         {lang[currentLang]}
         <div className="w-4 self-center">
