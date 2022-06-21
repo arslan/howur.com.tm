@@ -36,7 +36,7 @@ function Lang() {
   const lang = { ru: "Русский", en: "English", tk: "Tükmen" };
 
   return (
-    <Menu as="div" className="relative inline-block text-[#7A7A7A]">
+    <Menu as="div" className="relative inline-block text-[#7A7A7A] ml-2">
       <Menu.Button className="w-full relative flex hover:text-red text-xl">
         {lang[currentLang]}
         <div className="w-4 self-center">
@@ -52,15 +52,15 @@ function Lang() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute right-0 mt-6 w-36 origin-top-right rounded-md bg-white dark:bg-black shadow-lg dark:shadow-xl focus:outline-none px-2">
+        <Menu.Items className="absolute right-0 mt-6 w-36 origin-top-right rounded-md bg-white shadow-lg focus:outline-none px-2">
           {flags.map(({ language, longName }) => {
             return (
               <Menu.Item key={uuid_v4()}>
                 {({ active }) => (
                   <button
-                    className={`cursor-pointer pt-2 hover:bg-gray-200 w-full dark:hover:text-black group flex items-center rounded-md py-2 px-5 text-sm my-1 ${
+                    className={`cursor-pointer pt-2 hover:bg-gray-200 hover:text-red w-full group flex items-center rounded-md py-2 px-5 text-sm my-1 ${
                     language === currentLang
-                        ?  "dark:hover:text-white bg-[#2058D4] dark:bg-blue rounded-md hover:text-black text-white pl-2"
+                        ?  " bg-red rounded-md text-white pl-2"
                         : ""
                     }`}
                   >

@@ -21,14 +21,14 @@ function NavbarServices(props) {
 
   return (
     <div {...props} className="">
-      <ul className="flex justify-between">
+      <ul className="flex justify-between ">
         {navigation.map(({ name, href }) => {
           return (
             <>
-              <li className="text-black text-xl" key={uuid_v4()}>
+              <li className="text-black text-xl w-32 h-20 flex flex-wrap" key={uuid_v4()}>
                 <Link href={href} passHref>
                   <span
-                    className={`cursor-pointer p-2 hover:border-red hover:border-2 ${
+                    className={`self-center cursor-pointer mx-1 p-2 hover:outline hover:outline-offset-0 hover:outline-red ${
                       currentPage === href ? " text-black" : ""
                     }`}
                   >
