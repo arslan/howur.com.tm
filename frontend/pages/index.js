@@ -4,6 +4,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import dynamic from "next/dynamic";
+import FormMapSection from "../components/FormMapSection";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -16,7 +17,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <h1 className="">salam</h1>
+      <FormMapSection />
     </div>
   );
 }

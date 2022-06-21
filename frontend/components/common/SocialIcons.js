@@ -6,7 +6,7 @@ export default function Socialicons() {
   return (
     <div className="flex flex-row">
       <Link href="https://www.facebook.com/tylla.nal.9">
-        <a className='px-2'>
+        <a className='pr-2'>
           <FaFacebookSquare />
         </a>
       </Link>
