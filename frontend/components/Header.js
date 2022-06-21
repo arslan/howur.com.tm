@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <div className="w-full bg-green h-64 ">
-      <div className="max-w-7xl mx-auto w-full pt-2">
+    <div className="w-full bg-white sticky top-0 z-50">
+      <div className="max-w-7xl mx-auto w-full py-2">
         <div className="flex justify-between items-center self-center pb-4">
           <span className="cursor-pointer">
             <Link href="/" >
@@ -34,7 +34,7 @@ const Header = () => {
                 Туркменистан / Ашгабад, Парахат 1, Здание 68
               </p>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center border-t-2 border-grey mt-2">
               <NavbarMain />
               <Lang />
             </div>

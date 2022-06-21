@@ -5,11 +5,11 @@ import { MdOutlineEmail } from "react-icons/md";
 import Socialicons from "./common/SocialIcons";
 import Form from "./Form";
 
-const FormMapSection = () => {
+const ServicesSection = () => {
   return (
-    <div className="max-w-7xl mx-auto mb-12">
+    <div className="max-w-7xl mx-auto my-12" id="services">
       <h2 className="font-bold text-3xl">
-        They floated in the coffin for Armitage’s call.
+        Services
       </h2>
       <div className="w-full flex my-16">
         <div className="w-1/2"><Form /></div>
@@ -46,4 +46,4 @@ const FormMapSection = () => {
   );
 };
 
-export default FormMapSection;
+export default ServicesSection;
