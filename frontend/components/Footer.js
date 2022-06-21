@@ -34,13 +34,13 @@ const Footer = () => {
       </div>
       <div className="w-full h-14 bg-black">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <p className="text-white">©2022 Pursatly Yorish. All Rights Reserved.</p>
-          <span className="cursor-pointer self-center">
+          <p className="text-white ">©2022 Pursatly Yorish. All Rights Reserved.</p>
+          <span className="cursor-pointer pt-[3px] self-center">
             <Link href="https://hillitilsimat.com.tm/">
               <Image
                 src="/logo.svg"
-                width={200}
-                height={54}
+                width={180}
+                height={46}
                 alt="Hilli tilsimat"
               />
             </Link>

@@ -21,7 +21,7 @@ function NavbarServices(props) {
 
   return (
     <div {...props} className="">
-      <ul className="flex justify-between ">
+      <ul className="flex justify-between">
         {navigation.map(({ name, href }) => {
           return (
             <>
