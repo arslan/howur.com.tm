@@ -37,9 +37,9 @@ function Lang() {
 
   return (
     <Menu as="div" className="relative inline-block text-grey">
-      <Menu.Button className="w-full px-4 relative flex hover:text-blue">
+      <Menu.Button className="w-full relative flex hover:text-red text-xl">
         {lang[currentLang]}
-        <div className="w-4 self-center ml-2">
+        <div className="w-4 self-center">
           <GoChevronDown />
         </div>
       </Menu.Button>
@@ -52,7 +52,7 @@ function Lang() {
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="absolute -left-[10%] mt-6 w-36 origin-top-right rounded-md bg-white dark:bg-black shadow-lg dark:shadow-xl focus:outline-none px-2">
+        <Menu.Items className="absolute right-0 mt-6 w-36 origin-top-right rounded-md bg-white dark:bg-black shadow-lg dark:shadow-xl focus:outline-none px-2">
           {flags.map(({ language, longName }) => {
             return (
               <Menu.Item key={uuid_v4()}>
