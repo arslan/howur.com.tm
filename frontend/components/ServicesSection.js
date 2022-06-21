@@ -4,32 +4,32 @@ import { v4 as uuid_v4 } from "uuid";
 const ServicesSection = () => {
   const serviceCardItems = [
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },
     {
-      img: "/hero.png",
+      img: "/example.jpeg",
       title: "blablabla",
       desc: "They were dropping, losing altitude in a canyon of rainbow foliage, a lurid communal mural that completely covered the hull of the Villa",
     },

@@ -9,9 +9,9 @@ import Lang from "./Lang";
 function NavbarMain(props) {
   //   const { t } = useTranslation('common')
   const router = useRouter();
-  const currentPage = router.pathname;
+  const currentSection = router.asPath;
   const navigation = [
-    { name: "home", href: "/" },
+    { name: "home", href: "#home" },
     { name: "services", href: "#services" },
     { name: "aboutUs", href: "#aboutUs" },
     { name: "sertificates", href: "#sertificates" },
@@ -19,24 +19,24 @@ function NavbarMain(props) {
 
   ];
 
+// useState for hover effect
+
   return (
     <div {...props} className="">
       <ul className="flex justify-between mt-[5px] pr-2 mb-[6px]">
         {navigation.map(({ name, href }, i) => {
           return (
-            <>
               <li className="text-black text-xl w-32" key={uuid_v4()}>
                 <Link href={href} passHref>
                   <span
                     className={`cursor-pointer px-4 py-2 hover:text-red ${
-                      currentPage === href ? " text-red border-t-2 w-32" : " "
+                      currentSection === "/"+href ? " text-red border-t-2 border-red" : " "
                     }`}
                   >
                     {name}
                   </span>
                 </Link>
               </li>
-            </>
           );
         })}
       </ul>
