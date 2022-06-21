@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "fire_safety_services",
+  "info": {
+    "singularName": "fire-safety-service",
+    "pluralName": "fire-safety-services",
+    "displayName": "fire_safety_service"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "fire_safety": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "services-page-com.component-services"
+    }
+  }
+}

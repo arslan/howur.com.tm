@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "design_services",
+  "info": {
+    "singularName": "design-service",
+    "pluralName": "design-services",
+    "displayName": "design_service"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "design": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "services-page-com.component-services"
+    }
+  }
+}

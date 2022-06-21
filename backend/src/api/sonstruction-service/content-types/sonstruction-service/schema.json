@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "sonstruction_services",
+  "info": {
+    "singularName": "sonstruction-service",
+    "pluralName": "sonstruction-services",
+    "displayName": "сonstruction_service"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "construction": {
+      "type": "component",
+      "repeatable": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "services-page-com.component-services"
+    }
+  }
+}
