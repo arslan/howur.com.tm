@@ -2,12 +2,9 @@ import Head from "next/head";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 import { useTranslation } from "next-i18next";
-import ServicesSection from "../components/ServicesSection";
-import AboutUsSection from "../components/AboutUsSection";
-import SertificatesSection from "../components/SertificatesSection";
-import ContactSection from "../components/ContactSection";
-import Hero from "../components/Hero";
 
+import dynamic from "next/dynamic";
+import FormMapSection from "../components/FormMapSection";
 
 export default function Home() {
   const { t } = useTranslation("common");
@@ -19,12 +16,7 @@ export default function Home() {
         <meta name="Hovur's Website" content="Construction" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero />
-      <ServicesSection />
-      <AboutUsSection />
-      <SertificatesSection />
-      <ContactSection />
-
+      <p className="text-7xl">Fire safety</p>
     </div>
   );
 }
