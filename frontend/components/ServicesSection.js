@@ -1,5 +1,6 @@
 import ServiceCard from "./common/ServiceCard";
 import { v4 as uuid_v4 } from "uuid";
+import ProductsSection from "./products/ProductsSection";
 
 const ServicesSection = () => {
   const serviceCardItems = [
@@ -35,6 +36,8 @@ const ServicesSection = () => {
     },
   ];
 
+  
+
   return (
     <div className="max-w-7xl mx-auto" id="services">
       <h2 className="font-bold text-3xl text-center">Services</h2>
@@ -61,6 +64,7 @@ const ServicesSection = () => {
           );
         })}
       </div>
+      <ProductsSection />
     </div>
   );
 };
