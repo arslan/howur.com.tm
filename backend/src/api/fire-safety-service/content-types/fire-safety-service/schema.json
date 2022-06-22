@@ -4,7 +4,8 @@
   "info": {
     "singularName": "fire-safety-service",
     "pluralName": "fire-safety-services",
-    "displayName": "fire_safety_service"
+    "displayName": "fire_safety_service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "fire_safety": {
+    "component": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
