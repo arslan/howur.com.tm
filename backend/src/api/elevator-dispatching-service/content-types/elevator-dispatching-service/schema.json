@@ -4,7 +4,8 @@
   "info": {
     "singularName": "elevator-dispatching-service",
     "pluralName": "elevator-dispatching-services",
-    "displayName": "elevator_dispatching_service"
+    "displayName": "elevator_dispatching_service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "elevator_dispatching": {
+    "component": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {

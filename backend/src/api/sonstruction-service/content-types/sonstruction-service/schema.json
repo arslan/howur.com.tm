@@ -4,7 +4,8 @@
   "info": {
     "singularName": "sonstruction-service",
     "pluralName": "sonstruction-services",
-    "displayName": "сonstruction_service"
+    "displayName": "сonstruction_service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "construction": {
+    "component": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
