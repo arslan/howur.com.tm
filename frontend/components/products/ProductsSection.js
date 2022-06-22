@@ -1,9 +1,14 @@
+import GridCarousel from "./GridCarousel";
 import ProductsGrid from "./ProductsGrid";
+import Carousel from "./ProductsGrid";
+
 
 const ProductsSection = () => {
     return (
-        <div className="flex my-6 flex-col">
-        <div className="w-full mb-12">
+        <div className="flex py-16 flex-col bg-[url('/q.svg')]">
+            <div className="max-w-7xl mx-auto">
+
+        <div className="w-full pb-12">
           <h2 className="font-bold text-3xl">
             Höwür - прочность, стойкость и уверенность.
           </h2>
@@ -16,7 +21,10 @@ const ProductsSection = () => {
           </p>
         </div>
 
-        <ProductsGrid />
+        {/* <ProductsGrid /> */}
+        {/* <GridCarousel /> */}
+        <Carousel />
+        </div>
 
 
       </div>

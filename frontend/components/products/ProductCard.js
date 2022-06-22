@@ -4,8 +4,8 @@ import Image from "next/image";
 const ProductCard = (props) => {
   return (
     <div>
-      <div class="relative overflow-hidden">
-        <div class="object-contain  ">
+      <div className="relative overflow-hidden">
+        <div className="object-contain  ">
           <Image
             // layout="fill"
             // objectFit="cover"
@@ -16,8 +16,8 @@ const ProductCard = (props) => {
           />
         </div>
 
-        <div class="absolute bottom-2 px-8 w-full bg-[#000]/50">
-          <h4 class="my-2 text-xl font-semibold tracking-tight text-white">
+        <div className="absolute bottom-2 px-8 w-full bg-[#000]/50">
+          <h4 className="my-2 text-xl font-semibold tracking-tight text-white">
           4 MP Fixed Color Maker Turret Camera. TC-C34XP
           </h4>
         </div>
