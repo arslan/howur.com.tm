@@ -4,7 +4,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 
 import dynamic from "next/dynamic";
-import FormMapSection from "../components/FormMapSection";
 
 export default function Home() {
   const { t } = useTranslation("common");

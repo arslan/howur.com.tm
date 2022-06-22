@@ -60,7 +60,7 @@ function Lang() {
                   <button
                     className={`cursor-pointer pt-2 hover:bg-gray-200 hover:text-red w-full group flex items-center rounded-md py-2 px-5 text-sm my-1 ${
                     language === currentLang
-                        ?  " bg-red rounded-md text-white pl-2"
+                        ?  " bg-red rounded-md text-white pl-2 hover:text-white"
                         : ""
                     }`}
                   >

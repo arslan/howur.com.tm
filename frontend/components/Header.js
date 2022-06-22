@@ -42,7 +42,7 @@ const Header = () => {
             </div>
           </div>
         </div>
-        <NavbarServices />
+        {/* <NavbarServices /> */}
       </div>
     </div>
   );
