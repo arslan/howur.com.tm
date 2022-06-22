@@ -13,8 +13,10 @@ const Header = () => {
 			<div className='max-w-7xl mx-auto w-full py-2'>
 				<div className='flex justify-between items-center self-center pb-4'>
 					<span className='cursor-pointer'>
-						<Link href='/'>
-							<Image src='/hovurLogo.svg' width={98} height={118} alt='' />
+						<Link href='/' passHref>
+							<a>
+								<Image src='/hovurLogo.svg' width={98} height={118} alt='' />
+							</a>
 						</Link>
 					</span>
 					<div className=''>
@@ -40,7 +42,7 @@ const Header = () => {
 						</div>
 					</div>
 				</div>
-				<NavbarServices />
+				{/* <NavbarServices /> */}
 			</div>
 		</div>
 	);
