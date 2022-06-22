@@ -7,12 +7,12 @@ import Form from "./Form";
 
 const ContactSection = () => {
   return (
-    <div className="max-w-7xl mx-auto my-12" id='contacts'>
-      <h2 className="font-bold text-3xl">
-        Contact section
-      </h2>
+    <div className="max-w-7xl mx-auto my-12" id="contacts">
+      <h2 className="font-bold text-3xl">Contact section</h2>
       <div className="w-full flex my-16">
-        <div className="w-1/2"><Form /></div>
+        <div className="w-1/2">
+          <Form />
+        </div>
         <div className="w-1/2  space-y-10 pl-12 py-8 border-solid border-2 border-red">
           <div className="flex items-center">
             <HiOutlineLocationMarker />
@@ -21,16 +21,16 @@ const ContactSection = () => {
             </p>
           </div>
           <div className="flex items-center">
-            <MdOutlineEmail className="mr-2"/>
+            <MdOutlineEmail className="mr-2" />
             <Link className="" href="mailto:sales@pursatlyyorish.com">
-              sales@pursatlyyorish.com
+              <a>sales@pursatlyyorish.com</a>
             </Link>
           </div>
           <div className="flex items-center">
-          <FiPhone />
-              <a href="tel:+99365039539" className="text-black pl-2 pt-1">
-                +993 65039539
-              </a>
+            <FiPhone />
+            <a href="tel:+99365039539" className="text-black pl-2 pt-1">
+              +993 65039539
+            </a>
           </div>
           <Socialicons />
         </div>

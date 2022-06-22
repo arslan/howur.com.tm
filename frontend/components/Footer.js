@@ -9,7 +9,9 @@ const Footer = () => {
         <div className="w-1/12 mr-12">
           <span className="cursor-pointer">
             <Link href="/">
-              <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+              <a>
+                <Image src="/hovurLogo.svg" width={98} height={118} alt="" />
+              </a>
             </Link>
           </span>
         </div>
@@ -24,7 +26,7 @@ const Footer = () => {
           <div className="mr-8 w-1/2">
             <h3 className="font-bold ">blablabla</h3>
             <Link href="mailto:sales@pursatlyyorish.com">
-              sales@pursatlyyorish.com
+              <a>sales@pursatlyyorish.com</a>
             </Link>
           </div>
           <div className="w-1/2 flex justify-end">
@@ -34,15 +36,19 @@ const Footer = () => {
       </div>
       <div className="w-full h-14 bg-black">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <p className="text-white ">©2022 Pursatly Yorish. All Rights Reserved.</p>
+          <p className="text-white ">
+            ©2022 Pursatly Yorish. All Rights Reserved.
+          </p>
           <span className="cursor-pointer pt-[3px] self-center">
             <Link href="https://hillitilsimat.com.tm/">
-              <Image
-                src="/logo.svg"
-                width={180}
-                height={46}
-                alt="Hilli tilsimat"
-              />
+              <a>
+                <Image
+                  src="/logo.svg"
+                  width={180}
+                  height={46}
+                  alt="Hilli tilsimat"
+                />
+              </a>
             </Link>
           </span>
         </div>

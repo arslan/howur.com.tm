@@ -28,13 +28,13 @@ function NavbarMain(props) {
           return (
               <li className="text-black text-xl w-32" key={uuid_v4()}>
                 <Link href={href} passHref>
-                  <span
+                  <a
                     className={`cursor-pointer px-4 py-2 hover:text-red ${
-                      currentSection === "/"+href ? " text-red border-t-2 border-red" : " "
+                      currentSection === "/"+href ? " text-red border-t-2 border-red" : " px-4"
                     }`}
                   >
                     {name}
-                  </span>
+                  </a>
                 </Link>
               </li>
           );
