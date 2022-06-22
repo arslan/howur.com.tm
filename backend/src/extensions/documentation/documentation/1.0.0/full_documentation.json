@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-21T08:11:22.662Z"
+    "x-generation-date": "2022-06-22T10:04:11.464Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -2235,7 +2235,7 @@
         ],
         "type": "object",
         "properties": {
-          "design": {
+          "component": {
             "type": "object",
             "properties": {
               "heading": {
@@ -2297,7 +2297,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "design": {
+              "component": {
                 "type": "object",
                 "properties": {
                   "heading": {
@@ -2357,7 +2357,7 @@
           "id": {
             "type": "string"
           },
-          "design": {
+          "component": {
             "type": "object",
             "properties": {
               "id": {
@@ -3803,7 +3803,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "design": {
+                    "component": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -5275,7 +5275,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "design": {
+                  "component": {
                     "type": "object",
                     "properties": {
                       "id": {
@@ -6720,7 +6720,7 @@
         ],
         "type": "object",
         "properties": {
-          "elevator_dispatching": {
+          "component": {
             "type": "object",
             "properties": {
               "heading": {
@@ -6782,7 +6782,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "elevator_dispatching": {
+              "component": {
                 "type": "object",
                 "properties": {
                   "heading": {
@@ -6842,7 +6842,7 @@
           "id": {
             "type": "string"
           },
-          "elevator_dispatching": {
+          "component": {
             "type": "object",
             "properties": {
               "id": {
@@ -8288,7 +8288,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "elevator_dispatching": {
+                    "component": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -9760,7 +9760,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "elevator_dispatching": {
+                  "component": {
                     "type": "object",
                     "properties": {
                       "id": {
@@ -11205,7 +11205,7 @@
         ],
         "type": "object",
         "properties": {
-          "fire_safety": {
+          "component": {
             "type": "object",
             "properties": {
               "heading": {
@@ -11267,7 +11267,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "fire_safety": {
+              "component": {
                 "type": "object",
                 "properties": {
                   "heading": {
@@ -11327,7 +11327,7 @@
           "id": {
             "type": "string"
           },
-          "fire_safety": {
+          "component": {
             "type": "object",
             "properties": {
               "id": {
@@ -12773,7 +12773,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "fire_safety": {
+                    "component": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -14245,7 +14245,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "fire_safety": {
+                  "component": {
                     "type": "object",
                     "properties": {
                       "id": {
@@ -16752,6 +16752,9 @@
                             "name": {
                               "type": "string"
                             },
+                            "slug": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -18466,6 +18469,9 @@
                                     "type": "object",
                                     "properties": {
                                       "name": {
+                                        "type": "string"
+                                      },
+                                      "slug": {
                                         "type": "string"
                                       },
                                       "createdAt": {
@@ -20208,6 +20214,9 @@
                                   "type": "object",
                                   "properties": {
                                     "name": {
+                                      "type": "string"
+                                    },
+                                    "slug": {
                                       "type": "string"
                                     },
                                     "createdAt": {
@@ -33362,7 +33371,7 @@
         ],
         "type": "object",
         "properties": {
-          "network": {
+          "component": {
             "type": "object",
             "properties": {
               "heading": {
@@ -33424,7 +33433,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "network": {
+              "component": {
                 "type": "object",
                 "properties": {
                   "heading": {
@@ -33484,7 +33493,7 @@
           "id": {
             "type": "string"
           },
-          "network": {
+          "component": {
             "type": "object",
             "properties": {
               "id": {
@@ -34930,7 +34939,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "network": {
+                    "component": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -36402,7 +36411,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "network": {
+                  "component": {
                     "type": "object",
                     "properties": {
                       "id": {
@@ -44318,7 +44327,7 @@
         ],
         "type": "object",
         "properties": {
-          "construction": {
+          "component": {
             "type": "object",
             "properties": {
               "heading": {
@@ -44380,7 +44389,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "construction": {
+              "component": {
                 "type": "object",
                 "properties": {
                   "heading": {
@@ -44440,7 +44449,7 @@
           "id": {
             "type": "string"
           },
-          "construction": {
+          "component": {
             "type": "object",
             "properties": {
               "id": {
@@ -45886,7 +45895,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "construction": {
+                    "component": {
                       "type": "object",
                       "properties": {
                         "id": {
@@ -47358,7 +47367,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "construction": {
+                  "component": {
                     "type": "object",
                     "properties": {
                       "id": {
@@ -48806,6 +48815,9 @@
           "name": {
             "type": "string"
           },
+          "slug": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -48824,6 +48836,9 @@
               "name": {
                 "type": "string"
               },
+              "slug": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               }
@@ -48838,6 +48853,9 @@
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "slug": {
             "type": "string"
           },
           "createdAt": {
@@ -49160,6 +49178,9 @@
                   "type": "object",
                   "properties": {
                     "name": {
+                      "type": "string"
+                    },
+                    "slug": {
                       "type": "string"
                     },
                     "createdAt": {
@@ -49508,6 +49529,9 @@
                 "type": "object",
                 "properties": {
                   "name": {
+                    "type": "string"
+                  },
+                  "slug": {
                     "type": "string"
                   },
                   "createdAt": {
