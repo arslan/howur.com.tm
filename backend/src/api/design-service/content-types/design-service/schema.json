@@ -4,7 +4,8 @@
   "info": {
     "singularName": "design-service",
     "pluralName": "design-services",
-    "displayName": "design_service"
+    "displayName": "design_service",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -15,7 +16,7 @@
     }
   },
   "attributes": {
-    "design": {
+    "component": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {
