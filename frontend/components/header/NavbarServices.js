@@ -24,19 +24,17 @@ function NavbarServices(props) {
       <ul className="flex justify-between">
         {navigation.map(({ name, href }) => {
           return (
-            <>
               <li className="text-black text-xl w-32 h-20 flex flex-wrap" key={uuid_v4()}>
                 <Link href={href} passHref>
-                  <span
+                  <a
                     className={`self-center cursor-pointer mx-1 p-2 hover:outline hover:outline-offset-0 hover:outline-red ${
                       currentPage === href ? " text-black" : ""
                     }`}
                   >
                     {name}
-                  </span>
+                  </a>
                 </Link>
               </li>
-            </>
           );
         })}
       </ul>
