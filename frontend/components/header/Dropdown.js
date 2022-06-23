@@ -1,7 +1,6 @@
 import { Menu, Transition } from "@headlessui/react";
-import { useTranslation } from "next-i18next";
 import Link from "next/link";
-import { Fragment } from "react";
+import { Fragment, useEffect } from "react";
 import { useRouter } from "next/router";
 import { v4 as uuid_v4 } from "uuid";
 import { AiOutlineCheck } from "react-icons/ai";
@@ -10,22 +9,23 @@ import { GoChevronDown } from "react-icons/go";
 import { layoutContext } from "../../pages/_app";
 import { useContext } from "react";
 
-export default function Dropdown() {
-	const { t } = useTranslation("common");
+export default function Dropdown({ name }) {
 	const router = useRouter();
 	const currentPage = router.pathname;
 	const {
 		attributes: {
+			locale,
 			navbar: {
 				under_navs: { data: underNav },
 			},
 		},
 	} = useContext(layoutContext);
+
 	return (
 		<Menu as='div' className='relative inline-block'>
 			<div>
 				<Menu.Button className='w-full px-4  cursor-pointer relative flex hover:text-red text-xl'>
-					services
+					{name}
 					<div className='w-4 self-center ml-2 mt-[3px]'>
 						<GoChevronDown />
 					</div>
@@ -48,15 +48,17 @@ export default function Dropdown() {
 									className='absolute shadow-lg  focus:outline-none z-20 '
 									key={uuid_v4()}
 								>
-									<Link href={`/services/${slug}`} passHref>
+									<Link href={`/services/${slug}`} locale={locale} passHref>
 										<span
 											className={`cursor-pointer pt-2  hover:text-red group flex items-center rounded-md py-2 px-6 text-sm my-1 ${
-												currentPage === slug
+												currentPage === `/services/${slug}`
 													? " bg-red rounded-md  text-white pl-3 hover:text-white"
 													: ""
 											}`}
 										>
-											{currentPage === slug && <AiOutlineCheck />}
+											{currentPage === `/services/${slug}` && (
+												<AiOutlineCheck />
+											)}
 											<span className='pl-6'>{name}</span>
 										</span>
 									</Link>

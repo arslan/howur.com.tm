@@ -37,7 +37,7 @@ MyApp.getInitialProps = async (ctx) => {
 			"footer.logo",
 			"footer",
 		],
-		locale: "ru",
+		locale,
 	});
 	return { ...appProps, pageProps: { layout: data } };
 };
