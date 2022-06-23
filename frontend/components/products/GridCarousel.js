@@ -10,7 +10,6 @@ import {
   SideOverlayRight,
 } from "../common/CarouselSideOverlays";
 import ProductsGrid1 from "./ProductsGrid1";
-import ProductsGrid from "./ProductsGrid2";
 import ProductsGrid2 from "./ProductsGrid2";
 import ProductsGrid3 from "./ProductsGrid3";
 
@@ -37,7 +36,9 @@ const GridCarousel = () => {
           nextEl: ".next-button-hero",
           prevEl: ".prev-button-hero",
         }}
-        pagination={true}
+        pagination={{
+            clickable: true,
+          }}
         mousewheel={true}
         keyboard={true}
         autoplay={true}
