@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard";
 import { v4 as uuid_v4 } from "uuid";
 
-const ProductsGrid = () => {
+const ProductsGrid1 = () => {
   const items = [
     {
       img: "/example.jpeg",
@@ -22,7 +22,7 @@ const ProductsGrid = () => {
   ];
   return (
     <div>
-      <div className="w-full flex  ">
+      <div className="w-full flex my-20">
         <div className="w-1/2 h-full  ">
           <ProductCard
             img="/example.jpeg"
@@ -30,7 +30,7 @@ const ProductsGrid = () => {
           />
         </div>
 
-        <div className="w-1/2 h-full   flex flex-wrap">
+        <div className="w-1/2 h-full flex flex-wrap">
           {items.map(({ img, text }) => {
             return (
               <div key={uuid_v4()} className="w-[47%] ml-[3%] mb-[3%] relative">
@@ -44,4 +44,4 @@ const ProductsGrid = () => {
   );
 };
 
-export default ProductsGrid;
+export default ProductsGrid1;
