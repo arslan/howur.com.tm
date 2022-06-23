@@ -4,12 +4,12 @@ const ProductCard = ({ src, desc }) => {
 	return (
 		<div>
 			<div className='relative overflow-hidden'>
-				<div className='object-contain  '>
+				<div className=''>
 					<Image
+						// objectFit="contain"
 						// layout="fill"
-						// objectFit="cover"
-						width={700}
-						height={700}
+						width={800}
+						height={800}
 						src={src}
 						alt=''
 					/>
@@ -26,3 +26,5 @@ const ProductCard = ({ src, desc }) => {
 };
 
 export default ProductCard;
+
+
