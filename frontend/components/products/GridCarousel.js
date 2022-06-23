@@ -49,7 +49,9 @@ const GridCarousel = ({ product_lists }) => {
 					<ProductsGrid1 data={product_lists} />
 				</SwiperSlide>
 				<SwiperSlide>
-					<ProductsGrid2 data={product_lists} />
+					{/* <ProductsGrid2 data={product_lists} /> */}
+					<ProductsGrid2 />
+
 				</SwiperSlide>
 				<SwiperSlide>
 					<ProductsGrid3 data={product_lists} />

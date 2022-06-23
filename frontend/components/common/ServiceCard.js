@@ -6,7 +6,7 @@ const ServiceCard = (props) => {
 			<span className='w-1/2'>
 				<Image src={props.src} width={319} height={219} alt='' />
 			</span>
-			<span className='px-12 w-1/2 space-y-6'>
+			<span className='px-2 w-1/2 space-y-2'>
 				<h4 className='text-xl'>{props.cardTitle}</h4>
 				<p className=''>{props.cardDesc}</p>
 			</span>
