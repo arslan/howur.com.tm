@@ -1,8 +1,9 @@
+import Image from "next/image";
+
 const Hero = () => {
   return (
-    <div className="" id="home">
-      <div className="w-full h-[602px]  bg-[url('/hero.png')]"></div>
-      <div className="bg-red w-[2px] h-16 ml-[50.3%] -translate-y-8 flex justify-center"></div>
+    <div className="relative h-[30rem]" id="home">
+      <Image src='/hero.png' layout='fill' alt="" priority/>
     </div>
   );
 };
