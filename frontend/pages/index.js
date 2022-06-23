@@ -7,6 +7,7 @@ import AboutUsSection from "../components/AboutUsSection";
 import SertificatesSection from "../components/SertificatesSection";
 import ContactSection from "../components/ContactSection";
 import Hero from "../components/Hero";
+import ProductsSection from "../components/products/ProductsSection";
 
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       </Head>
       <Hero />
       <ServicesSection />
+      <ProductsSection />
       <AboutUsSection />
       <SertificatesSection />
       <ContactSection />

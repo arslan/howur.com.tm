@@ -6,22 +6,44 @@ import NavbarMain from "./header/NavbarMain";
 import Lang from "./header/Lang";
 import NavbarServices from "./header/NavbarServices";
 import Link from "next/link";
+import { useContext } from "react";
+import { layoutContext } from "../pages/_app";
 
 const Header = () => {
+	const {
+		attributes: {
+			number: { number },
+			navbar: {
+				logo: {
+					data: {
+						attributes: { url },
+					},
+				},
+			},
+			address: { address },
+		},
+	} = useContext(layoutContext);
 	return (
 		<div className='w-full bg-white sticky top-0 z-50'>
 			<div className='max-w-7xl mx-auto w-full py-2'>
 				<div className='flex justify-between items-center self-center pb-4'>
 					<span className='cursor-pointer'>
-						<Link href='/'>
-							<Image src='/hovurLogo.svg' width={98} height={118} alt='' />
+						<Link href='/' passHref>
+							<a>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url}`}
+									width={98}
+									height={118}
+									alt=''
+								/>
+							</a>
 						</Link>
 					</span>
 					<div className=''>
 						<div className='flex items-center justify-end text-red'>
 							<FiPhone />
 							<a href='tel:+99365039539' className='text-black pl-2 pt-1'>
-								+993 65039539
+								{number}
 							</a>
 
 							<span className='text-red pl-4'>
@@ -30,9 +52,7 @@ const Header = () => {
 						</div>
 						<div className='flex items-center text-red justify-end'>
 							<HiOutlineLocationMarker />
-							<p className='text-black pl-2 pt-1'>
-								Туркменистан / Ашгабад, Парахат 1, Здание 68
-							</p>
+							<p className='text-black pl-2 pt-1'>{address}</p>
 						</div>
 						<div className='flex items-center border-t-2 border-grey mt-2'>
 							<NavbarMain />
@@ -40,7 +60,7 @@ const Header = () => {
 						</div>
 					</div>
 				</div>
-				<NavbarServices />
+				{/* <NavbarServices /> */}
 			</div>
 		</div>
 	);
