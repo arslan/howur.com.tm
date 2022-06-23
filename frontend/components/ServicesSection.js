@@ -36,7 +36,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <div className="bg-[url('/bgGrad.svg')]">
+    <div className="bg-[linear-gradient(301.68deg,#cd320212_0%,#cd320200_41.63%)]">
       <div className="max-w-7xl mx-auto" id="services">
         <h2 className="font-bold text-3xl text-center">Services</h2>
         <div className="flex py-6">
