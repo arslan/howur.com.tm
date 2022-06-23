@@ -8,8 +8,8 @@ import Form from "./Form";
 
 const AboutUsSection = () => {
   return (
-    <div className="bg-[linear-gradient(45deg,#cd320212_0%,#cd320200_41.63%)]">
-      <div className="max-w-7xl mx-auto my-12" id="aboutUs">
+    <div className="bg-[linear-gradient(40deg,#cd320212_0%,#cd320200_41.63%)]">
+      <div className="max-w-7xl mx-auto " id="aboutUs">
         <div className="flex items-center">
           <div className="w-1/2 relative">
             <Image src="/example.jpeg" width={800} height={500} alt="" />
