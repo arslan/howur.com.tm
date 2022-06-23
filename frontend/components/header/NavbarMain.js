@@ -28,10 +28,10 @@ function NavbarMain(props) {
 			<ul className='flex justify-between mt-[5px] pr-2 mb-[6px]'>
 				{navigations.map(({ attributes: { name, href } }, i) => {
 					if (href === null) {
-						return <Dropdown name={name} />;
+						return <Dropdown name={name} key={uuid_v4()}/>;
 					}
 					return (
-						<li className='text-black text-xl w-32' key={uuid_v4()}>
+						<li className='text-black text-xl w-32' >
 							<Link href={href} passHref>
 								<a
 									className={`cursor-pointer px-4 py-2 hover:text-red ${
