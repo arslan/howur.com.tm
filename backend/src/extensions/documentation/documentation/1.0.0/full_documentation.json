@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-22T10:04:11.464Z"
+    "x-generation-date": "2022-06-23T06:44:12.586Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -16676,6 +16676,9 @@
                             "name": {
                               "type": "string"
                             },
+                            "href": {
+                              "type": "string"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -18393,6 +18396,9 @@
                                     "type": "object",
                                     "properties": {
                                       "name": {
+                                        "type": "string"
+                                      },
+                                      "href": {
                                         "type": "string"
                                       },
                                       "createdAt": {
@@ -20138,6 +20144,9 @@
                                   "type": "object",
                                   "properties": {
                                     "name": {
+                                      "type": "string"
+                                    },
+                                    "href": {
                                       "type": "string"
                                     },
                                     "createdAt": {
@@ -32349,6 +32358,9 @@
           "name": {
             "type": "string"
           },
+          "href": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -32367,6 +32379,9 @@
               "name": {
                 "type": "string"
               },
+              "href": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               }
@@ -32381,6 +32396,9 @@
             "type": "string"
           },
           "name": {
+            "type": "string"
+          },
+          "href": {
             "type": "string"
           },
           "createdAt": {
@@ -32703,6 +32721,9 @@
                   "type": "object",
                   "properties": {
                     "name": {
+                      "type": "string"
+                    },
+                    "href": {
                       "type": "string"
                     },
                     "createdAt": {
@@ -33051,6 +33072,9 @@
                 "type": "object",
                 "properties": {
                   "name": {
+                    "type": "string"
+                  },
+                  "href": {
                     "type": "string"
                   },
                   "createdAt": {
