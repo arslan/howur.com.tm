@@ -24,7 +24,7 @@ const AboutUsSection = ({
 	},
 }) => {
 	return (
-		<div className='bg-[linear-gradient(40deg,#cd320212_0%,#cd320200_41.63%)]'>
+		<div className='bg-[linear-gradient(40deg,#cd320212_0%,#cd320200_41.63%)] pt-12'>
 			<div className='max-w-7xl mx-auto ' id='aboutUs'>
 				<div className='flex items-center'>
 					<div className='w-1/2 relative'>
