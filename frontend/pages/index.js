@@ -25,11 +25,13 @@ export default function Home({
 		product: {
 			heading: proHeading,
 			description: proDesc,
-			product_lists: { data: product_lists },
+			brands: {
+				product_lists: { data: product_lists },
+				name: brand,
+			},
 		},
 	},
 }) {
-	console.log(product_lists, 9999);
 	return (
 		<div className=''>
 			<Head>
@@ -51,6 +53,7 @@ export default function Home({
 					proHeading,
 					proDesc,
 					product_lists,
+					brand,
 				}}
 			/>
 			<AboutUsSection />
@@ -69,7 +72,7 @@ export const getStaticProps = async ({ locale }) => {
 			"services",
 			"services.service_lists.img",
 			"product",
-			"product.product_lists.img",
+			"product.brands.product_lists.img",
 			"about",
 			"about.headImg",
 			"about.descImg",
