@@ -36,6 +36,12 @@
         }
       },
       "type": "text"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "product_lists"
     }
   }
 }
