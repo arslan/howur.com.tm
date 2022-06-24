@@ -5,17 +5,17 @@ import Link from "next/link";
 export default function Socialicons() {
 	return (
 		<div className='flex flex-row'>
-			<Link href='https://www.facebook.com/tylla.nal.9'>
+			<Link href='https://www.facebook.com/'>
 				<a className='pr-2'>
 					<FaFacebookSquare />
 				</a>
 			</Link>
-			<Link href='https://www.instagram.com/tylla_nal/?hl=ru'>
+			<Link href='https://www.instagram.com/'>
 				<a className='px-2'>
 					<FaInstagram />
 				</a>
 			</Link>
-			<Link href='https://tm.linkedin.com/company/tylla-nal-corp'>
+			<Link href='https://tm.linkedin.com/company/'>
 				<a className='pl-2'>
 					<FaLinkedinIn />
 				</a>
