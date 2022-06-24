@@ -1,9 +1,20 @@
 import ProductCard from "./ProductCard";
 import { v4 as uuid_v4 } from "uuid";
 
-const ProductsGrid1 = ({ data }) => {
+const ProductsGrid1 = ({
+	data: {
+		descTiady,
+		tiady: {
+			attributes: {
+				product_lists: { data },
+			},
+		},
+	},
+}) => {
+	const slide = [data[1], data[2], data[3], data[4]];
 	return (
 		<div>
+			<p className='w-1/2 pt-12'>{descTiady}</p>
 			<div className='w-full flex my-20'>
 				<div className='w-1/2 h-full  '>
 					<ProductCard
@@ -13,7 +24,7 @@ const ProductsGrid1 = ({ data }) => {
 				</div>
 
 				<div className='w-1/2 h-full flex flex-wrap'>
-					{data.map(
+					{slide.map(
 						({
 							attributes: {
 								img: {

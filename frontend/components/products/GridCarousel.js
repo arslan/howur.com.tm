@@ -13,7 +13,10 @@ import ProductsGrid1 from "./ProductsGrid1";
 import ProductsGrid2 from "./ProductsGrid2";
 import ProductsGrid3 from "./ProductsGrid3";
 
-const GridCarousel = ({ product_lists }) => {
+const GridCarousel = ({
+	product_lists: { descTiady, descONV, descOB, brands },
+}) => {
+	const [tiady, onv, ob] = brands;
 	return (
 		<>
 			<button
@@ -29,6 +32,13 @@ const GridCarousel = ({ product_lists }) => {
 			>
 				<HiArrowNarrowRight color='red' size={36} />
 			</button>
+			{brands.map(({ name }) => {
+				return (
+					<>
+						<p>{name}</p>
+					</>
+				);
+			})}
 
 			<Swiper
 				loop={true}
@@ -46,15 +56,28 @@ const GridCarousel = ({ product_lists }) => {
 				className='w-full'
 			>
 				<SwiperSlide>
-					<ProductsGrid1 data={product_lists} />
+					<ProductsGrid1
+						data={{
+							descTiady,
+							tiady,
+						}}
+					/>
 				</SwiperSlide>
 				<SwiperSlide>
-					{/* <ProductsGrid2 data={product_lists} /> */}
-					<ProductsGrid2 />
-
+					<ProductsGrid2
+						data={{
+							descONV,
+							onv,
+						}}
+					/>
 				</SwiperSlide>
 				<SwiperSlide>
-					<ProductsGrid3 data={product_lists} />
+					<ProductsGrid3
+						data={{
+							descOB,
+							ob,
+						}}
+					/>
 				</SwiperSlide>
 			</Swiper>
 			<SideOverlayLeft />
