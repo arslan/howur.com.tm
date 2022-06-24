@@ -2,7 +2,48 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
+
+@font-face {
+    font-family: "proximanova-black";
+    src: local("proximanova-black"), local("proximanova-black"),
+        url("../public/proximanova/proximanova-black.otf") format("opentype");
+}
+@font-face {
+    font-family: "proximanova-bold";
+    src: local("proximanova-bold"), local("proximanova-bold"),
+        url("../public/proximanova/proximanova-bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "proximanova-extrabold";
+    src: local("proximanova-extrabold"), local("proximanova-extrabold"),
+        url("../public/proximanova/proximanova-extrabold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "proximanova-light";
+    src: local("proximanova-light"), local("proximanova-light"),
+        url("../public/proximanova/proximanova-light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "proximanova-regular";
+    src: local("proximanova-regular"), local("proximanova-regular"),
+        url("../public/proximanova/proximanova-regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "proximanova-semibold";
+    src: local("proximanova-semibold"), local("proximanova-semibold"),
+        url("../public/proximanova/proximanova-semibold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Proximanova;
+    font-weight: bold;
+    src: url("../public/proximanova/proximanova-bold.otf") format("opentype");
+}
+
 html,
 body {
     padding: 0;
@@ -18,7 +59,7 @@ a {
 
 * {
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Segoe UI;
 }
 
 h2 {
