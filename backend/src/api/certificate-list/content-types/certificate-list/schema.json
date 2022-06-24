@@ -4,7 +4,8 @@
   "info": {
     "singularName": "certificate-list",
     "pluralName": "certificate-lists",
-    "displayName": "certificate_list"
+    "displayName": "certificate_list",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,11 +17,12 @@
   },
   "attributes": {
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
