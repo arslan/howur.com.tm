@@ -24,11 +24,10 @@ export default function Home({
 		},
 		product: {
 			heading: proHeading,
-			description: proDesc,
-			brands: {
-				product_lists: { data: product_lists },
-				name: brand,
-			},
+			descTiady,
+			descONV,
+			descOB,
+			brands: { data: brands },
 		},
 	},
 }) {
@@ -51,9 +50,10 @@ export default function Home({
 			<ProductsSection
 				data={{
 					proHeading,
-					proDesc,
-					product_lists,
-					brand,
+					descTiady,
+					descONV,
+					descOB,
+					brands,
 				}}
 			/>
 			<AboutUsSection />
