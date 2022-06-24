@@ -10,13 +10,19 @@
     "heading": {
       "type": "string"
     },
-    "description": {
+    "descTiady": {
       "type": "text"
     },
-    "product_lists": {
+    "descONV": {
+      "type": "text"
+    },
+    "descOB": {
+      "type": "text"
+    },
+    "brands": {
       "type": "relation",
       "relation": "oneToMany",
-      "target": "api::product-list.product-list"
+      "target": "api::brand.brand"
     }
   }
 }
