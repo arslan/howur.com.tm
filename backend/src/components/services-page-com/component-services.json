@@ -2,7 +2,8 @@
   "collectionName": "components_services_page_com_component_services",
   "info": {
     "displayName": "component-services",
-    "icon": "adjust"
+    "icon": "adjust",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -16,25 +17,34 @@
       "type": "text"
     },
     "img1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "img2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "img3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "buttonBack": {
+      "type": "string"
+    },
+    "buttonNext": {
+      "type": "string"
     }
   }
 }
