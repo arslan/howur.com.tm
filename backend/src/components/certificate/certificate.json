@@ -21,6 +21,9 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::certificate-list.certificate-list"
+    },
+    "heading": {
+      "type": "string"
     }
   }
 }
