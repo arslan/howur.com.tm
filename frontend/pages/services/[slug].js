@@ -26,7 +26,7 @@ export async function getStaticPaths({ locales }) {
 
 export async function getStaticProps(ctx) {
 	const { slug } = ctx.params;
-	const { locale } = ctx.locale;
+	const { locale } = ctx;
 
 	const {
 		data: { attributes: data },
