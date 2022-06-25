@@ -10,7 +10,6 @@ const ProductsSection = ({
           <div className="w-full">
             <h2 className="font-bold text-3xl">{proHeading}</h2>
           </div>
-
           <GridCarousel
             product_lists={{ descTiady, descONV, descOB, brands }}
           />

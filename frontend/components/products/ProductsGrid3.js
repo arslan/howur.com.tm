@@ -12,7 +12,7 @@ const ProductsGrid3 = ({
 }) => {
   return (
     <>
-      <h4 className="text-xl leading-7 w-1/2 pb-12">{descOB}</h4>
+      <h4 className="text-xl leading-7 w-1/2 pb-12 h-48">{descOB}</h4>
       <div class="grid gap-4 grid-cols-4 grid-rows-2 h-[700px] pb-12">
         {data.map(
           ({

@@ -1,39 +1,45 @@
-// import ProductCard from "./ProductCard";
-// import { v4 as uuid_v4 } from "uuid";
-
 import ProductCard from "./ProductCard";
 
 const ProductsGrid2 = ({
-	data: {
-		descONV,
-		onv: {
-			attributes: {
-				product_lists: { data },
-			},
-		},
-	},
+  data: {
+    descONV,
+    onv: {
+      attributes: {
+        product_lists: { data },
+      },
+    },
+  },
 }) => {
-	return (
-		<div class='grid grid-rows-2 grid-cols-5 gap-6'>
-			<p className='w-1/2 pt-12'>{descONV}</p>
-			<div class='col-span-3 ...'>
-				<ProductCard
-					src={data[0].attributes.img.data.attributes.url}
-					desc={data[0].attributes.description}
-				/>
-			</div>
-			<div class='col-span-2'>
-				<ProductCard
-					src={data[1].attributes.img.data.attributes.url}
-					desc={data[1].attributes.description}
-				/>
-				<ProductCard
-					src={data[2].attributes.img.data.attributes.url}
-					desc={data[2].attributes.description}
-				/>
-			</div>
-		</div>
-	);
+  return (
+    <>
+      <h4 className="text-xl leading-7 w-1/2 pb-12 h-48">{descONV}</h4>
+
+      <div className="grid grid-cols-5 grid-rows-1 gap-4 h-[700px] pb-12">
+        <div className="col-span-3">
+          <ProductCard
+		//   все 3 изображения не подтягиваются
+            // src={data[0].attributes.img.data.attributes.url}
+            src="/example.jpeg"
+            desc={data[0].attributes.description}
+          />
+        </div>
+        <div className="grid grid-rows-2 grid-cols-1 col-span-2 gap-4">
+          <ProductCard
+		//   все 3 изображения не подтягиваются
+            // src={data[1].attributes.img.data.attributes.url}
+            src="/example.jpeg"
+            desc={data[1].attributes.description}
+          />
+          <ProductCard
+		//   все 3 изображения не подтягиваются
+            // src={data[2].attributes.img.data.attributes.url}
+            src="/example.jpeg"
+            desc={data[2].attributes.description}
+          />
+        </div>
+      </div>
+    </>
+  );
 };
 
 export default ProductsGrid2;
