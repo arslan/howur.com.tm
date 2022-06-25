@@ -63,14 +63,14 @@ const GridCarousel = ({
             }}
           />
         </SwiperSlide>
-        {/*	<SwiperSlide>
-					<ProductsGrid2
-						data={{
-							descONV,
-							onv,
-						}}
-					/>
-				</SwiperSlide> */}
+        <SwiperSlide>
+          <ProductsGrid2
+            data={{
+              descONV,
+              onv,
+            }}
+          />
+        </SwiperSlide>
         <SwiperSlide>
           <ProductsGrid3
             data={{
