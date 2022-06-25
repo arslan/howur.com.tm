@@ -21,14 +21,14 @@ const GridCarousel = ({
     <>
       <button
         as="div"
-        className="prev-button-hero relative btn left-[73rem] z-20"
+        className="prev-button-hero relative btn left-[73rem] -bottom-24 z-20"
       >
         <HiArrowNarrowLeft color="red" size={36} />
       </button>
 
       <button
         as="div"
-        className="next-button-hero relative btn left-[75rem] z-20"
+        className="next-button-hero relative btn left-[75rem] -bottom-24 z-20"
       >
         <HiArrowNarrowRight color="red" size={36} />
       </button>
@@ -55,15 +55,15 @@ const GridCarousel = ({
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
         className="w-full"
       >
-        {/* <SwiperSlide>
-					<ProductsGrid1
-						data={{
-							descTiady,
-							tiady,
-						}}
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
+        <SwiperSlide>
+          <ProductsGrid1
+            data={{
+              descTiady,
+              tiady,
+            }}
+          />
+        </SwiperSlide>
+        {/*	<SwiperSlide>
 					<ProductsGrid2
 						data={{
 							descONV,
