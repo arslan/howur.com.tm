@@ -66,8 +66,8 @@ export default function Home({
         <meta name="Hovur's Website" content="Construction" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {/* <Hero img={headImg} /> */}
-      {/* <ServicesSection
+      <Hero img={headImg} />
+      <ServicesSection
         data={{
           heading,
           under_heading,
@@ -75,7 +75,7 @@ export default function Home({
           button,
           service_lists,
         }}
-      /> */}
+      />
       {/* <ProductsSection
         data={{
           proHeading,
