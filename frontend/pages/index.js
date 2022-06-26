@@ -66,8 +66,8 @@ export default function Home({
         <meta name="Hovur's Website" content="Construction" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero img={headImg} />
-      <ServicesSection
+      {/* <Hero img={headImg} /> */}
+      {/* <ServicesSection
         data={{
           heading,
           under_heading,
@@ -75,8 +75,8 @@ export default function Home({
           button,
           service_lists,
         }}
-      />
-      <ProductsSection
+      /> */}
+      {/* <ProductsSection
         data={{
           proHeading,
           descTiady,
@@ -84,9 +84,8 @@ export default function Home({
           descOB,
           brands,
         }}
-      />
-
-      <AboutUsSection
+      /> */}
+      {/* <AboutUsSection
         data={{
           aboutHeading,
           aboutUnderHeading,
@@ -94,16 +93,16 @@ export default function Home({
           aboutDesc,
           aboutDescImg,
         }}
-      />
-      <SertificatesSection
+      /> */}
+      {/* <SertificatesSection
         data={{
           headCert,
           underHeadCert,
           certificate_lists,
           logoCert,
         }}
-      />
-      <ContactSection
+      /> */}
+      {/* <ContactSection
         data={{
           formHead,
           formName,
@@ -114,7 +113,7 @@ export default function Home({
           form_mail,
           form_address,
         }}
-      />
+      /> */}
     </div>
   );
 }
