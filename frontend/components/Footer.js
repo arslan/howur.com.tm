@@ -51,7 +51,7 @@ const Footer = () => {
           </div>
           <div className="mr-8 w-1/2">
             <h3 className="font-bold ">{title_mail}</h3>
-            <Link href="mailto:sales@pursatlyyorish.com">{mail}</Link>
+            <Link href="mailto:howurtm@gmail.com">{mail}</Link>
           </div>
           <div className="w-1/2 flex justify-end">
             <Socialicons />
