@@ -1,73 +1,43 @@
-// import ProductCard from "./ProductCard";
-// import { v4 as uuid_v4 } from "uuid";
-
 import ProductCard from "./ProductCard";
 
-// const ProductsGrid3 = ({ data }) => {
-// 	return (
-// 		<div>
-// 			<div className='w-full flex my-20'>
-// 				<div className='w-1/2 h-full  '>
-// 					<ProductCard
-// 						src='/example.jpeg'
-// 						desc='4 MP Fixed Color Maker Turret Camera. TC-C34XP'
-// 					/>
-// 				</div>
-
-// 				<div className='w-1/2 h-full flex flex-wrap'>
-// 					{data.map(
-// 						({
-// 							attributes: {
-// 								description,
-// 								img: {
-// 									data: {
-// 										attributes: { url },
-// 									},
-// 								},
-// 							},
-// 						}) => {
-// 							return (
-// 								<div
-// 									key={uuid_v4()}
-// 									className='w-[47%] ml-[3%] mb-[3%] relative'
-// 								>
-// 									<ProductCard
-// 										src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url}`}
-// 										desc={description}
-// 									/>
-// 								</div>
-// 							);
-// 						}
-// 					)}
-// 				</div>
-// 			</div>
-// 		</div>
-// 	);
-// };
-
-// export default ProductsGrid3;
-
-const ProductsGrid3 = () => {
-	const items =[
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-		{img:'/example.jpeg', text:'blablabla blablabla blablabla'},
-	]
+const ProductsGrid3 = ({
+  data: {
+    descOB,
+    ob: {
+      attributes: {
+        product_lists: { data },
+      },
+    },
+  },
+}) => {
   return (
-    <div class="grid gap-4 grid-cols-4 grid-rows-2">
-      {items.map(({ img, text }) => {
-        return (
-          <div>
-            <ProductCard src={img} desc={text} />
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <h4 className="text-xl leading-7 w-1/2 pb-12 h-48">{descOB}</h4>
+      <div class="grid gap-4 grid-cols-4 grid-rows-2 h-[700px] pb-12">
+        {data.map(
+          ({
+            attributes: {
+              img: {
+                data: {
+                  attributes: { url },
+                },
+              },
+              description,
+            },
+          }) => {
+            return (
+              <div>
+                <ProductCard
+                  src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url}`}
+                  //   Не подтягивает текстовые данные изображения
+                  desc={description}
+                />
+              </div>
+            );
+          }
+        )}
+      </div>
+    </>
   );
 };
 
