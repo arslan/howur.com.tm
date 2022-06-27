@@ -34,6 +34,7 @@ MyApp.getInitialProps = async (ctx) => {
 			"number",
 			"footer_dev",
 			"footer_dev.logo_dev",
+			"footer_dev.logo_dev1",
 			"footer.logo",
 			"footer",
 		],
