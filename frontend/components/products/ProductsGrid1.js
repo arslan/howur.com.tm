@@ -13,8 +13,8 @@ const ProductsGrid1 = ({
 }) => {
 	const slide = [data[1], data[2], data[3], data[4]];
 	return (
-		<div className='sm:px-12 2xl:px-0'>
-			<h4 className='text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48'>{descTiady}</h4>
+		<div className='sm:px-12 2xl:px-0 2xl:w-full sm:w-screen'>
+			<h4 className='mb-2 ml-0.5 text-xl leading-7 sm:w-full xl:w-1/2'>{descTiady}</h4>
 			<div className='grid lg:grid-rows-1 lg:grid-cols-2 sm:grid-rows-2 sm:grid-cols-1 gap-4 lg:h-[700px] sm:h-screen pb-12 w-full mx-auto'>
 				<div className='w-full  h-full'>
 					<ProductCard

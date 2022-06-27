@@ -75,31 +75,35 @@ const Footer = () => {
 					</div>
 				</div>
 			</div>
-			<div className='w-full md:h-10 xl:h-14 sm:bg-grey xl:bg-black sm:px-12 2xl:px-0 '>
-				<div className='max-w-7xl mx-auto flex items-center justify-between sm:border-t-2 sm:py-2 xl:py-1 sm:border-white xl:border-none'>
+			<div className='w-full md:h-10 xl:h-14 sm:bg-grey xl:bg-black sm:px-12 2xl:px-0'>
+				<div className='max-w-7xl mx-auto flex justify-between sm:border-t-2 sm:py-2 xl:py-1 sm:border-white xl:border-none relative h-full items-center'>
 					<p className='xl:text-white sm:w-1/2 md:w-full sm:text-xs md:text-base'>
 						{permission}
 					</p>
-					<span className='cursor-pointer self-center sm:hidden xl:block'>
+					<span className='sm:hidden xl:block relative w-32 mb-2 lg:mb-0 h-6'>
 						<Link href='https://hillitilsimat.com.tm/'>
 							<a>
 								<Image
 									src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${urlFooter_dev}`}
-									width={200}
-									height={54}
+									objectFit="contain"
+                                    layout="fill"
+                                    priority
+                                    className="cursor-pointer"
 									alt='Hilli tilsimat'
 								/>
 							</a>
 						</Link>
 					</span>
-					<span className='cursor-pointer self-center xl:hidden sm:block'>
+					<span className='xl:hidden sm:block relative w-32 mb-2 lg:mb-0 h-6'>
 						<Link href='https://hillitilsimat.com.tm/'>
 							<a>
 								<Image
 									// Тут рендерится черный лого
 									src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${urlFooter_dev1}`}
-									width={100}
-									height={27}
+									objectFit="contain"
+                                    layout="fill"
+                                    priority
+                                    className="cursor-pointer"
 									alt='Hilli tilsimat'
 								/>
 							</a>
