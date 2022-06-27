@@ -102,7 +102,7 @@ export default function Home({
           logoCert,
         }}
       /> */}
-      {/* <ContactSection
+      <ContactSection
         data={{
           formHead,
           formName,
@@ -113,7 +113,7 @@ export default function Home({
           form_mail,
           form_address,
         }}
-      /> */}
+      />
     </div>
   );
 }
