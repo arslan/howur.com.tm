@@ -37,23 +37,33 @@ const AboutUsSection = ({
               />
             </div>
 
-            <div className="sm:border-l-8 lg:border-l-[16px] border-red sm:-translate-x-1 lg:-translate-x-2 h-20"></div>
+            <div className="sm:border-l-8 lg:border-l-[16px] border-red :-translate-x-1 lg:-translate-x-2 h-20"></div>
             <h2 className="font-bold text-3xl">{aboutHeading}</h2>
           </div>
-          <div className="w-1/2 relative sm:ml-auto xl:mr-12 -top-10 sm:-translate-x-12">
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${aboutDescImg}`}
-              width={800}
-              height={500}
-              alt=""
-            />
+          <div className="flex">
+            <div className="px-6  w-1/3 ">
+              <div className="sm:hidden xl:block">
+                <h2 className="font-bold sm:text-sm lg:text-lg 2xl:text-[28px]">
+                  {aboutUnderHeading}
+                </h2>
+                <p>{aboutDesc}</p>
+              </div>
+            </div>
+            <div className="w-1/2 relative sm:ml-auto xl:mr-12 sm:-translate-x-12 -translate-y-12">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${aboutDescImg}`}
+                width={800}
+                height={500}
+                alt=""
+              />
+            </div>
           </div>
-          <div className="sm:w-full xl:w-1/3 px-2 xl:-translate-y-[19rem] 2xl:-translate-y-96">
-            <h2 className="font-bold sm:text-sm lg:text-lg 2xl:text-[28px]">
-              {aboutUnderHeading}
-            </h2>
-            <p>{aboutDesc}</p>
-          </div>
+          <div className="sm:block xl:hidden ">
+                <h2 className="font-bold sm:text-sm lg:text-lg 2xl:text-[28px]">
+                  {aboutUnderHeading}
+                </h2>
+                <p>{aboutDesc}</p>
+              </div>
         </div>
       </div>
     </div>
