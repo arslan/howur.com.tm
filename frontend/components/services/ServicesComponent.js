@@ -69,25 +69,40 @@ export const ServicesComponent = ({
       </Head>
 
       <div>
-        <div className="max-w-7xl mx-auto space-x-12 flex py-12 px-12">
-          <div className="w-1/4">
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url1}`}
-              width={316}
-              height={238}
-              className="rounded-sm"
-            />
-            <div className="h-6"></div>
-            <Image
-              src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url2}`}
-              width={316}
-              height={347}
-              className="rounded-sm"
-            />
+        <div className="max-w-7xl mx-auto space-x-12 xl:flex p-12">
+          <div className="xl:w-1/4 sm:w-full flex sm:flex-row xl:flex-col items-center justify-center md:space-x-6 sm:space-x-0">
+            <div>
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url1}`}
+                width={316}
+                height={238}
+                className="rounded-sm"
+              />
+              <div className="h-6"></div>
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url2}`}
+                width={316}
+                height={347}
+                className="rounded-sm"
+              />
+            </div>
+            <span className="sm:block xl:hidden sm:-translate-x-6 md:translate-x-0">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url3}`}
+                width={316}
+                height={500}
+                className="rounded-sm "
+              />
+            </span>
           </div>
           <div className="w-3/4">
+            <div className="bg-white rounded-lg drop-shadow-lg sm:w-full xl:w-1/2 py-10 xl:hidden sm:block">
+              <div className="border-l-4 border-red ml-6 px-6">
+                <p className="font-bold text-2xl">{under_description}</p>
+              </div>
+            </div>
             <div className="flex space-x-8 h-3/5">
-              <div className="w-1/3">
+              <div className="w-1/3 xl:block sm:hidden">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url3}`}
                   width={316}
@@ -95,18 +110,19 @@ export const ServicesComponent = ({
                   className="rounded-sm"
                 />
               </div>
-              <div className="w-2/3 ">
+
+              <div className="xl:w-2/3 sm:w-full sm:mt-8 xl:mt-0">
                 <h1 className="text-[32px] font-bold pb-6 ">{heading}</h1>
                 <p className="leading-8">{description}</p>
               </div>
             </div>
-            <div className="flex space-x-8 mt-12">
-              <div className="bg-white rounded-lg drop-shadow-lg w-1/2 py-10">
-                <div className="border-l-4 border-red ml-6 px-6">
+            <div className="flex space-x-8 xl:mt-6 2xl:mt-12">
+              <div className="bg-white rounded-lg drop-shadow-lg w-1/2 py-10 xl:block sm:hidden">
+                <div className="border-l-4 border-red sm:ml-0 xl:ml-6 px-6">
                   <p className="font-bold text-2xl">{under_description}</p>
                 </div>
               </div>
-              <div className="w-1/2 flex space-x-6 items-end ">
+              <div className="sm:w-full xl:w-1/2 flex space-x-6 items-end xl:mt-0 sm:mt-8">
                 <button
                   onClick={() => prev()}
                   className="bg-red rounded-md h-12 w-1/2 text-white "

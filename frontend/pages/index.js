@@ -76,7 +76,7 @@ export default function Home({
           service_lists,
         }}
       />
-      <ProductsSection
+      {/* <ProductsSection
         data={{
           proHeading,
           descTiady,
@@ -84,9 +84,8 @@ export default function Home({
           descOB,
           brands,
         }}
-      />
-
-      <AboutUsSection
+      /> */}
+      {/* <AboutUsSection
         data={{
           aboutHeading,
           aboutUnderHeading,
@@ -94,15 +93,15 @@ export default function Home({
           aboutDesc,
           aboutDescImg,
         }}
-      />
-      <SertificatesSection
+      /> */}
+      {/* <SertificatesSection
         data={{
           headCert,
           underHeadCert,
           certificate_lists,
           logoCert,
         }}
-      />
+      /> */}
       <ContactSection
         data={{
           formHead,

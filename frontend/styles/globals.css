@@ -76,3 +76,7 @@ p {
 .swiper-pagination-bullets .swiper-pagination-bullet-active {
     background: #CD3202;
 }
+
+#react-burger-cross-btn {
+    top: 0
+}
