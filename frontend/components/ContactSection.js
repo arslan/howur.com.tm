@@ -19,13 +19,13 @@ const ContactSection = ({
 }) => {
   return (
     <div className="bg-[linear-gradient(140deg,#cd320212_0%,#cd320200_41.63%)]">
-      <div className="max-w-7xl mx-auto py-12" id="contacts">
+      <div className="max-w-7xl mx-auto py-12 sm:px-12 2xl:px-0" id="contacts">
         <h2 className="font-bold text-3xl">{formHead}</h2>
-        <div className="w-full flex my-16">
-          <div className="w-1/2">
+        <div className="w-full lg:flex my-16">
+          <div className="lg:w-1/2 sm:w-full">
             <Form data={{ formName, formMess, formMail, formButton }} />
           </div>
-          <div className="w-1/2  space-y-10 pl-12 py-8 border-solid border-2 border-red">
+          <div className="lg:w-1/2 sm:w-full sm:mt-12 lg:mt-0  space-y-10 pl-12 py-8 border-solid border-2 border-red">
             <div className="flex items-center">
               <HiOutlineLocationMarker />
               <p className="text-black pl-2 pt-1">{form_address}</p>
