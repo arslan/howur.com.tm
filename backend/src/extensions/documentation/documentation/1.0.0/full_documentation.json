@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-27T12:17:03.875Z"
+    "x-generation-date": "2022-06-27T13:06:22.465Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -19461,6 +19461,9 @@
                             "href": {
                               "type": "string"
                             },
+                            "sort_id": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -21552,6 +21555,9 @@
                                       },
                                       "href": {
                                         "type": "string"
+                                      },
+                                      "sort_id": {
+                                        "type": "integer"
                                       },
                                       "createdAt": {
                                         "type": "string",
@@ -23670,6 +23676,9 @@
                                     },
                                     "href": {
                                       "type": "string"
+                                    },
+                                    "sort_id": {
+                                      "type": "integer"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -36577,6 +36586,9 @@
           "href": {
             "type": "string"
           },
+          "sort_id": {
+            "type": "integer"
+          },
           "locale": {
             "type": "string"
           }
@@ -36598,6 +36610,9 @@
               "href": {
                 "type": "string"
               },
+              "sort_id": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               }
@@ -36616,6 +36631,9 @@
           },
           "href": {
             "type": "string"
+          },
+          "sort_id": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -36941,6 +36959,9 @@
                     },
                     "href": {
                       "type": "string"
+                    },
+                    "sort_id": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -37292,6 +37313,9 @@
                   },
                   "href": {
                     "type": "string"
+                  },
+                  "sort_id": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
