@@ -53,7 +53,7 @@ const GridCarousel = ({
         keyboard={true}
         autoplay={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-        className="w-full"
+        className="xl:w-full sm:w-screen sm:px-12 2xl:px-0"
       >
         <SwiperSlide>
           <ProductsGrid1
@@ -61,6 +61,7 @@ const GridCarousel = ({
               descTiady,
               tiady,
             }}
+            className=""
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -69,6 +70,7 @@ const GridCarousel = ({
               descONV,
               onv,
             }}
+            className=""
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -77,6 +79,7 @@ const GridCarousel = ({
               descOB,
               ob,
             }}
+            className=""
           />
         </SwiperSlide>
       </Swiper>
