@@ -33,4 +33,4 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-cat db-dump.sql | docker-compose exec -T postgres psql -U postgres howur_db
+sudo cat db-dump.sql |sudo docker-compose exec -T postgres psql -U postgres howur_db
