@@ -76,7 +76,7 @@ function NavbarMain(props) {
 						return <Dropdown name={name} key={uuid_v4()} />;
 					}
 					return (
-						<li className='text-black text-xl'>
+						<li className='text-black text-xl' key={uuid_v4()}>
 							<Link href={href} passHref>
 								<a
 									className={`cursor-pointer px-4 py-2 hover:text-red ${

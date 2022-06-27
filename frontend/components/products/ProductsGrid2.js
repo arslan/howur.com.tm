@@ -11,8 +11,8 @@ const ProductsGrid2 = ({
   },
 }) => {
   return (
-    <div className="sm:px-12 2xl:px-0">
-      <h4 className="text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48">
+    <div className="sm:px-12 2xl:px-0 2xl:w-full sm:w-screen">
+      <h4 className="mb-2 ml-0.5 text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48">
         {descONV}
       </h4>
 

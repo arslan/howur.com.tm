@@ -132,7 +132,7 @@ function BurgerMenu(props) {
           return <BurgerDropdown name={name} key={uuid_v4()} className="text-black"/>;
         }
         return (
-          <li className="text-black text-xl pb-4">
+          <li className="text-black text-xl pb-4" key={uuid_v4()}>
             <Link href={href} passHref>
               <a
                 className={`cursor-pointer hover:text-red ${
