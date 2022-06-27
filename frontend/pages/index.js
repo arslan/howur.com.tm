@@ -85,7 +85,7 @@ export default function Home({
 					brands,
 				}}
 			/>
-			<AboutUsSection
+			{/* <AboutUsSection
 				data={{
 					aboutHeading,
 					aboutUnderHeading,
@@ -101,7 +101,7 @@ export default function Home({
 					certificate_lists,
 					logoCert,
 				}}
-			/>
+			/> */}
 			<ContactSection
 				data={{
 					formHead,

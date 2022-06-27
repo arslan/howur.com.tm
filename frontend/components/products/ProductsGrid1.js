@@ -13,16 +13,16 @@ const ProductsGrid1 = ({
 }) => {
 	const slide = [data[1], data[2], data[3], data[4]];
 	return (
-		<div className=''>
-			<h4 className='text-xl leading-7 w-1/2 pb-12 h-48'>{descTiady}</h4>
-			<div className='grid grid-rows-1 grid-cols-2 gap-4 h-[700px] pb-12'>
+		<div className='sm:px-12 2xl:px-0'>
+			<h4 className='text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48'>{descTiady}</h4>
+			<div className='grid lg:grid-rows-1 lg:grid-cols-2 sm:grid-rows-2 sm:grid-cols-1 gap-4 lg:h-[700px] sm:h-screen pb-12 w-full mx-auto'>
 				<div className='w-full  h-full'>
 					<ProductCard
 						src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${data[0].attributes.img.data.attributes.url}`}
 						desc={data[0].attributes.description}
 					/>
 				</div>
-				<div className='w-full h-full grid grid-rows-2 grid-cols-2 gap-4'>
+				<div className='sm:w-full lg:w-5/6 xl:w-full h-full grid grid-rows-2 grid-cols-2 gap-4'>
 					{slide.map(
 						({
 							attributes: {
