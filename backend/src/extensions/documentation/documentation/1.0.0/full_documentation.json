@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-06-27T13:13:47.855Z"
+    "x-generation-date": "2022-06-28T07:49:19.477Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -19543,6 +19543,9 @@
                             "slug": {
                               "type": "string"
                             },
+                            "sort_id": {
+                              "type": "integer"
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -21637,6 +21640,9 @@
                                       },
                                       "slug": {
                                         "type": "string"
+                                      },
+                                      "sort_id": {
+                                        "type": "integer"
                                       },
                                       "createdAt": {
                                         "type": "string",
@@ -23758,6 +23764,9 @@
                                     },
                                     "slug": {
                                       "type": "string"
+                                    },
+                                    "sort_id": {
+                                      "type": "integer"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -26073,7 +26082,7 @@
         ],
         "type": "object",
         "properties": {
-          "headImg": {
+          "headVideo": {
             "oneOf": [
               {
                 "type": "integer"
@@ -26263,6 +26272,15 @@
               }
             }
           },
+          "head": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "headButton": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -26278,7 +26296,7 @@
             "required": [],
             "type": "object",
             "properties": {
-              "headImg": {
+              "headVideo": {
                 "oneOf": [
                   {
                     "type": "integer"
@@ -26468,6 +26486,15 @@
                   }
                 }
               },
+              "head": {
+                "type": "string"
+              },
+              "desc": {
+                "type": "string"
+              },
+              "headButton": {
+                "type": "string"
+              },
               "locale": {
                 "type": "string"
               }
@@ -26481,7 +26508,7 @@
           "id": {
             "type": "string"
           },
-          "headImg": {
+          "headVideo": {
             "type": "object",
             "properties": {
               "data": {
@@ -27255,6 +27282,9 @@
                             },
                             "description": {
                               "type": "string"
+                            },
+                            "sort_id": {
+                              "type": "integer"
                             },
                             "createdAt": {
                               "type": "string",
@@ -29771,6 +29801,15 @@
               }
             }
           },
+          "head": {
+            "type": "string"
+          },
+          "desc": {
+            "type": "string"
+          },
+          "headButton": {
+            "type": "string"
+          },
           "createdAt": {
             "type": "string",
             "format": "date-time"
@@ -29839,7 +29878,7 @@
                 "attributes": {
                   "type": "object",
                   "properties": {
-                    "headImg": {
+                    "headVideo": {
                       "type": "object",
                       "properties": {
                         "data": {
@@ -30613,6 +30652,9 @@
                                       },
                                       "description": {
                                         "type": "string"
+                                      },
+                                      "sort_id": {
+                                        "type": "integer"
                                       },
                                       "createdAt": {
                                         "type": "string",
@@ -33129,6 +33171,15 @@
                         }
                       }
                     },
+                    "head": {
+                      "type": "string"
+                    },
+                    "desc": {
+                      "type": "string"
+                    },
+                    "headButton": {
+                      "type": "string"
+                    },
                     "createdAt": {
                       "type": "string",
                       "format": "date-time"
@@ -33223,7 +33274,7 @@
               "attributes": {
                 "type": "object",
                 "properties": {
-                  "headImg": {
+                  "headVideo": {
                     "type": "object",
                     "properties": {
                       "data": {
@@ -33997,6 +34048,9 @@
                                     },
                                     "description": {
                                       "type": "string"
+                                    },
+                                    "sort_id": {
+                                      "type": "integer"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -36512,6 +36566,15 @@
                         "type": "string"
                       }
                     }
+                  },
+                  "head": {
+                    "type": "string"
+                  },
+                  "desc": {
+                    "type": "string"
+                  },
+                  "headButton": {
+                    "type": "string"
                   },
                   "createdAt": {
                     "type": "string",
@@ -45954,6 +46017,9 @@
           "description": {
             "type": "string"
           },
+          "sort_id": {
+            "type": "integer"
+          },
           "locale": {
             "type": "string"
           }
@@ -45985,6 +46051,9 @@
               },
               "description": {
                 "type": "string"
+              },
+              "sort_id": {
+                "type": "integer"
               },
               "locale": {
                 "type": "string"
@@ -46374,6 +46443,9 @@
           },
           "description": {
             "type": "string"
+          },
+          "sort_id": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -47069,6 +47141,9 @@
                     },
                     "description": {
                       "type": "string"
+                    },
+                    "sort_id": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -47790,6 +47865,9 @@
                   },
                   "description": {
                     "type": "string"
+                  },
+                  "sort_id": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
@@ -52630,6 +52708,9 @@
           "slug": {
             "type": "string"
           },
+          "sort_id": {
+            "type": "integer"
+          },
           "locale": {
             "type": "string"
           }
@@ -52651,6 +52732,9 @@
               "slug": {
                 "type": "string"
               },
+              "sort_id": {
+                "type": "integer"
+              },
               "locale": {
                 "type": "string"
               }
@@ -52669,6 +52753,9 @@
           },
           "slug": {
             "type": "string"
+          },
+          "sort_id": {
+            "type": "integer"
           },
           "createdAt": {
             "type": "string",
@@ -52994,6 +53081,9 @@
                     },
                     "slug": {
                       "type": "string"
+                    },
+                    "sort_id": {
+                      "type": "integer"
                     },
                     "createdAt": {
                       "type": "string",
@@ -53345,6 +53435,9 @@
                   },
                   "slug": {
                     "type": "string"
+                  },
+                  "sort_id": {
+                    "type": "integer"
                   },
                   "createdAt": {
                     "type": "string",
