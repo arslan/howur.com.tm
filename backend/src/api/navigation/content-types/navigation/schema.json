@@ -31,6 +31,14 @@
         }
       },
       "type": "string"
+    },
+    "sort_id": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }

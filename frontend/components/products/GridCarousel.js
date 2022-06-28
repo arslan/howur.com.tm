@@ -5,10 +5,7 @@ import "swiper/css/pagination";
 
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-import {
-  SideOverlayLeft,
-  SideOverlayRight,
-} from "../common/CarouselSideOverlays";
+
 import ProductsGrid1 from "./ProductsGrid1";
 import ProductsGrid2 from "./ProductsGrid2";
 import ProductsGrid3 from "./ProductsGrid3";
@@ -18,27 +15,16 @@ const GridCarousel = ({
 }) => {
   const [tiady, onv, ob] = brands;
   return (
-    <>
-      <button
-        as="div"
-        className="prev-button-hero relative btn left-[73rem] -bottom-24 z-20"
-      >
-        <HiArrowNarrowLeft color="red" size={36} />
-      </button>
+    <div className="relative">
+      <div className="sm:hidden xl:block absolute flex justify-end right-5 top-28  z-20">
+        <button as="div" className="prev-button-hero z-20">
+          <HiArrowNarrowLeft color="red" size={36} />
+        </button>
 
-      <button
-        as="div"
-        className="next-button-hero relative btn left-[75rem] -bottom-24 z-20"
-      >
-        <HiArrowNarrowRight color="red" size={36} />
-      </button>
-      {brands.map(({ name }) => {
-        return (
-          <>
-            <p>{name}</p>
-          </>
-        );
-      })}
+        <button as="div" className="next-button-hero z-20">
+          <HiArrowNarrowRight color="red" size={36} />
+        </button>
+      </div>
 
       <Swiper
         loop={true}
@@ -53,7 +39,7 @@ const GridCarousel = ({
         keyboard={true}
         autoplay={true}
         modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
-        className="w-full"
+        className="2xl:w-full sm:w-screen sm:px-12 2xl:px-0"
       >
         <SwiperSlide>
           <ProductsGrid1
@@ -61,6 +47,7 @@ const GridCarousel = ({
               descTiady,
               tiady,
             }}
+            className=""
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -69,6 +56,7 @@ const GridCarousel = ({
               descONV,
               onv,
             }}
+            className=""
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -77,12 +65,11 @@ const GridCarousel = ({
               descOB,
               ob,
             }}
+            className=""
           />
         </SwiperSlide>
       </Swiper>
-      <SideOverlayLeft />
-      <SideOverlayRight />
-    </>
+    </div>
   );
 };
 
