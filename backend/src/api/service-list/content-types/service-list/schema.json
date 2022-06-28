@@ -4,7 +4,8 @@
   "info": {
     "singularName": "service-list",
     "pluralName": "service-lists",
-    "displayName": "service_list"
+    "displayName": "service_list",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -16,11 +17,12 @@
   },
   "attributes": {
     "img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
       ],
-      "type": "media",
-      "multiple": false,
       "pluginOptions": {
         "i18n": {
           "localized": false
@@ -42,6 +44,14 @@
         }
       },
       "type": "text"
+    },
+    "sort_id": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "integer"
     }
   }
 }
