@@ -28,11 +28,15 @@ MyApp.getInitialProps = async (ctx) => {
 		sort: "sort_id",
 		locale,
 	});
+	const under_navs = await fetchAPI("/under-navs", {
+		sort: "sort_id",
+		locale,
+	});
 	const { data } = await fetchAPI("/layout", {
 		populate: [
 			"navbar.logo",
 			"navbar.locals",
-			"navbar.under_navs",
+			// "navbar.under_navs",
 			"address",
 			"number",
 			"footer_dev",
@@ -43,7 +47,11 @@ MyApp.getInitialProps = async (ctx) => {
 		],
 		locale,
 	});
-	data.attributes.navbar = { ...data.attributes.navbar, navigations };
+	data.attributes.navbar = {
+		...data.attributes.navbar,
+		navigations,
+		under_navs,
+	};
 	const layout = { ...data };
 
 	return { ...appProps, pageProps: { layout } };
