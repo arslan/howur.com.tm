@@ -24,22 +24,29 @@ MyApp.getInitialProps = async (ctx) => {
 		router: { locale },
 	} = ctx;
 	const appProps = await App.getInitialProps(ctx);
+	const navigations = await fetchAPI("/navigations", {
+		sort: "sort_id",
+		locale,
+	});
 	const { data } = await fetchAPI("/layout", {
 		populate: [
 			"navbar.logo",
 			"navbar.locals",
-			"navbar.navigations",
 			"navbar.under_navs",
 			"address",
 			"number",
 			"footer_dev",
 			"footer_dev.logo_dev",
+			"footer_dev.logo_dev1",
 			"footer.logo",
 			"footer",
 		],
 		locale,
 	});
-	return { ...appProps, pageProps: { layout: data } };
+	data.attributes.navbar = { ...data.attributes.navbar, navigations };
+	const layout = { ...data };
+
+	return { ...appProps, pageProps: { layout } };
 };
 
 export default appWithTranslation(MyApp);

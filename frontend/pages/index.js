@@ -7,8 +7,6 @@ import ContactSection from "../components/ContactSection";
 import Hero from "../components/Hero";
 import ProductsSection from "../components/products/ProductsSection";
 import { fetchAPI } from "../lib/api";
-import ProductCard from "../components/products/ProductCard";
-import ProductsGrid3 from "../components/products/ProductsGrid3";
 
 export default function Home({
   data: {
@@ -85,7 +83,6 @@ export default function Home({
           brands,
         }}
       />
-
       <AboutUsSection
         data={{
           aboutHeading,
