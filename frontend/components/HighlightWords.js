@@ -5,7 +5,7 @@ const HighlightWords = (props) => {
   return (
     <>
       <Highlighter
-        highlightClassName={styles.Highlight}
+        highlightClassName={styles.highlight}
         searchWords={[
           "прочность, стойкость и уверенность.",
           "stands for strength, resilience and confidence.",
