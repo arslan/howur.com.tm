@@ -37,6 +37,7 @@ export const ServicesComponent = ({
 		"/services/network-service",
 		"/services/video-surveillance",
 	];
+	let validButton = links.indexOf(router.asPath);
 	const prev = () => {
 		let currentIndex = links.indexOf(router.asPath);
 		let index = currentIndex;
@@ -44,6 +45,7 @@ export const ServicesComponent = ({
 			index = 5;
 		} else {
 			index = currentIndex - 1;
+			validButton = currentIndex - 1;
 		}
 		Router.push({
 			pathname: links[index],
@@ -57,6 +59,7 @@ export const ServicesComponent = ({
 			index = 0;
 		} else {
 			index = currentIndex + 1;
+			validButton = currentIndex + 1;
 		}
 		Router.push({
 			pathname: links[index],
@@ -124,19 +127,23 @@ export const ServicesComponent = ({
 									<p className='font-bold text-2xl'>{under_description}</p>
 								</div>
 							</div>
-							<div className='sm:w-full xl:w-1/2 flex space-x-6 items-end xl:mt-0 sm:mt-8'>
-								<button
-									onClick={() => prev()}
-									className='bg-red rounded-md h-12 w-1/2 text-white '
-								>
-									{buttonBack}
-								</button>
-								<button
-									onClick={() => next()}
-									className='bg-red rounded-md h-12 w-1/2 text-white '
-								>
-									{buttonNext}
-								</button>
+							<div className='sm:w-full xl:w-1/2 flex space-x-6 items-end xl:mt-0 sm:mt-8 justify-center'>
+								{validButton > 0 && (
+									<button
+										onClick={() => prev()}
+										className='bg-red rounded-md h-12 w-1/2 text-white '
+									>
+										{buttonBack}
+									</button>
+								)}
+								{validButton < links.length - 1 && (
+									<button
+										onClick={() => next()}
+										className='bg-red rounded-md h-12 w-1/2 text-white '
+									>
+										{buttonNext}
+									</button>
+								)}
 							</div>
 						</div>
 					</div>
