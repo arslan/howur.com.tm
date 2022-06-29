@@ -3185,9 +3185,9 @@ COPY public.certificate_lists_localizations_links (certificate_list_id, inv_cert
 --
 
 COPY public.components_about_abouts (id, heading, under_heading, description) FROM stdin;
-1	О нас	“Höwür” имеет все необходимые функции	Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем зданиям и сети, строим коммерческие, гражданские объекты, а также промышленные объекты, оснащаем их высокотехнологическим оборудованием. Мы работаем с учетом всех строительных, пожарных, технических стандартов и норм и гарантируем качество и безопасность наших объектов.
 2	About Us	"Höwür" has all the necessary functions	The sole proprietorship "Höwür" was founded in 2016. Having established ourselves in the market as a reliable construction contractor, we design buildings and networks, build commercial, civil facilities, as well as industrial facilities, equip them with high-tech equipment. We work taking into account all construction, fire, technical standards and norms and guarantee the quality and safety of our facilities.
 3	Biz hakda	"Höwür" ähli zerur funksiýalara eýedir	"Höwür" -iň ýeke-täk eýeçiligi 2016-njy ýylda esaslandyryldy. Ygtybarly gurluşyk potratçysy hökmünde bazara çykanymyzdan soň, binalary we torlary dizaýn edýäris, täjirçilik, raýat desgalaryny, şeýle hem senagat desgalaryny gurýarys, ýokary tehnologiýaly enjamlar bilen enjamlaşdyrýarys. Constructionhli gurluşyk, ýangyn, tehniki ülňüleri we kadalary göz öňünde tutup işleýäris we desgalarymyzyň hilini we howpsuzlygyny kepillendirýäris.
+1	О нас	“Höwür” имеет все необходимые функции	Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем зданиям и сети, строим коммерческие, гражданские объекты, а также промышленные объекты, оснащаем их высокотехнологическим оборудованием. Мы работаем с учетом всех строительных, пожарных, технических стандартов и норм и гарантируем качество и безопасность наших объектов.
 \.
 
 
@@ -3196,9 +3196,9 @@ COPY public.components_about_abouts (id, heading, under_heading, description) FR
 --
 
 COPY public.components_certificate_certificates (id, under_heading, heading) FROM stdin;
-1	Сертификаты, полученные нашей компанией на сегодняшний день	Лицензии и Сертификаты
 2	\N	Licenses and Certificates
 3	\N	Ygtyýarnamalar we şahadatnamalar
+1	Сертификаты, полученные нашей компанией на сегодняшний день	Лицензии и Сертификаты
 \.
 
 
@@ -3207,11 +3207,6 @@ COPY public.components_certificate_certificates (id, under_heading, heading) FRO
 --
 
 COPY public.components_certificate_certificates_certificate_lists_links (certificate_id, certificate_list_id) FROM stdin;
-1	3
-1	1
-1	4
-1	5
-1	2
 2	6
 2	8
 2	10
@@ -3222,6 +3217,11 @@ COPY public.components_certificate_certificates_certificate_lists_links (certifi
 3	11
 3	13
 3	15
+1	1
+1	2
+1	3
+1	4
+1	5
 \.
 
 
@@ -3234,9 +3234,9 @@ COPY public.components_contacts_addresses (id, address) FROM stdin;
 3	Туркменистан / Ашгабад, Парахат 1, Здание 68 
 4	Turkmenistan / Ashgabat, Archabil Avenue, Building 55
 5	Türkmenistan / Aşgabat, Arçabil şaýoly, 55-nji bina
-2	Туркменистан / Ашгабад, Парахат 1, Здание 68 
 6	Turkmenistan, Ashgabad, Archabil Avenue, Building 55
 7	Türkmenistan, Aşgabad, Arçabil şaýoly, 55-nji bina
+2	Туркменистан / Ашгабад, Парахат 1, Здание 68 
 \.
 
 
@@ -3245,9 +3245,9 @@ COPY public.components_contacts_addresses (id, address) FROM stdin;
 --
 
 COPY public.components_contacts_mail (id, mail) FROM stdin;
-1	howurtm@gmail.com
 2	howurtm@gmail.com
 3	howurtm@gmail.com
+1	howurtm@gmail.com
 \.
 
 
@@ -3260,9 +3260,9 @@ COPY public.components_contacts_phone_numbers (id, number) FROM stdin;
 3	+99312480812
 4	+99312480812
 5	+99312480812
-2	99365701221  / 99312480812
 6	99365701221  / 99312480812
 7	99365701221  / 99312480812
+2	99365701221  / 99312480812
 \.
 
 
@@ -3293,9 +3293,9 @@ COPY public.components_footer_footer_mains (id, description, title_mail, mail) F
 --
 
 COPY public.components_form_form_mains (id, heading, name, message, mail, button) FROM stdin;
-1	Остались вопросы? Свяжитесь с нами.	ФИО	Введите сообщение	Введите адрес электронной почты	Отправлять
 2	Do you have any questions? Contact us.	Full name	Enter your message	Email	Send
 3	Soragyňyz barmy? Biz bilen habarlaşyň.	Doly ady	Habaryňyzy giriziň	E-poçta iberiň	Iber
+1	Остались вопросы? Свяжитесь с нами.	ФИО	Введите сообщение	Введите адрес электронной почты	Отправлять
 \.
 
 
@@ -3304,15 +3304,15 @@ COPY public.components_form_form_mains (id, heading, name, message, mail, button
 --
 
 COPY public.components_form_form_mains_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-46	1	2	contacts.address	form_address	1
-47	1	1	contacts.mail	form_mail	1
-48	1	2	contacts.phone-number	form_number	1
 49	2	6	contacts.address	form_address	1
 50	2	2	contacts.mail	form_mail	1
 51	2	6	contacts.phone-number	form_number	1
 55	3	7	contacts.address	form_address	1
 56	3	3	contacts.mail	form_mail	1
 57	3	7	contacts.phone-number	form_number	1
+58	1	2	contacts.address	form_address	1
+59	1	1	contacts.mail	form_mail	1
+60	1	2	contacts.phone-number	form_number	1
 \.
 
 
@@ -3418,15 +3418,15 @@ COPY public.components_products_products (id, heading, desc_tiady, desc_onv, des
 --
 
 COPY public.components_products_products_brands_links (product_id, brand_id) FROM stdin;
-1	1
-1	2
-1	3
 2	4
 2	6
 2	8
 3	5
 3	7
 3	9
+1	1
+1	2
+1	3
 \.
 
 
@@ -3466,9 +3466,9 @@ COPY public.components_services_page_com_component_services (id, heading, descri
 --
 
 COPY public.components_services_services (id, heading, under_heading, description, button) FROM stdin;
-1	Наш услуги	Höwür - прочность, стойкость и уверенность.	 Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем, строим коммерческие и гражданские объекты, а также оснащаем им высокотехнологическим оборудованием  	Подробнее
 2	Our services	Höwür - strength, durability and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Подробнее
 3	Hyzmatlarymyz	Höwür - güýç, berklik we ynam.	 Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Подробнее
+1	Наш услуги	Höwür - прочность, стойкость и уверенность.	 Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем, строим коммерческие и гражданские объекты, а также оснащаем им высокотехнологическим оборудованием  	Подробнее
 \.
 
 
@@ -3638,7 +3638,7 @@ COPY public.files (id, name, alternative_text, caption, width, height, formats, 
 67	загружено (66) 1.png	загружено (66) 1.png	загружено (66) 1.png	307	287	{"thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_zagruzheno_66_1_097d79b686.png", "hash": "thumbnail_zagruzheno_66_1_097d79b686", "mime": "image/png", "name": "thumbnail_загружено (66) 1.png", "path": null, "size": 20.85, "width": 167, "height": 156}}	zagruzheno_66_1_097d79b686	.png	image/png	14.85	/uploads/zagruzheno_66_1_097d79b686.png	\N	local	\N	2022-06-27 13:25:50.098	2022-06-27 13:25:50.098	1	1
 68	Vector (1).svg	Vector (1).svg	Vector (1).svg	\N	\N	\N	Vector_1_102a476cef	.svg	image/svg+xml	4.24	/uploads/Vector_1_102a476cef.svg	\N	local	\N	2022-06-27 13:46:15.283	2022-06-27 13:46:15.283	1	1
 69	Frame 8 (1).png	Frame 8 (1).png	Frame 8 (1).png	319	219	{"thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_Frame_8_1_098b973cdd.png", "hash": "thumbnail_Frame_8_1_098b973cdd", "mime": "image/png", "name": "thumbnail_Frame 8 (1).png", "path": null, "size": 47.6, "width": 227, "height": 156}}	Frame_8_1_098b973cdd	.png	image/png	26.75	/uploads/Frame_8_1_098b973cdd.png	\N	local	\N	2022-06-28 12:16:52.687	2022-06-28 12:16:52.687	1	1
-70	02.02 Git – Основы – Создание репозитория, первый коммит.mp4	02.02 Git – Основы – Создание репозитория, первый коммит.mp4	02.02 Git – Основы – Создание репозитория, первый коммит.mp4	\N	\N	\N	02_02_Git_Osnovy_Sozdanie_repozitoriya_pervyj_kommit_1ca8a1bc44	.mp4	video/mp4	8250.83	/uploads/02_02_Git_Osnovy_Sozdanie_repozitoriya_pervyj_kommit_1ca8a1bc44.mp4	\N	local	\N	2022-06-28 12:46:34.287	2022-06-28 12:46:34.287	1	1
+71	Howur_Hero_lg.mp4	Howur_Hero_lg.mp4	Howur_Hero_lg.mp4	\N	\N	\N	Howur_Hero_lg_045673b807	.mp4	video/mp4	8097.54	/uploads/Howur_Hero_lg_045673b807.mp4	\N	local	\N	2022-06-28 15:07:12.364	2022-06-28 15:07:12.364	1	1
 \.
 
 
@@ -3723,10 +3723,15 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 7	1	api::service-list.service-list	img	1
 58	9	services-page-com.component-services	img2	1
 59	9	services-page-com.component-services	img3	1
+11	1	about.about	headImg	1
+12	1	about.about	descImg	1
 64	8	api::service-list.service-list	img	1
 64	3	api::service-list.service-list	img	1
 69	16	api::service-list.service-list	img	1
 20	13	api::certificate-list.certificate-list	img	1
+37	1	certificate.certificate	logo	1
+71	1	api::main.main	headVideo	1
+71	2	api::main.main	headVideo	1
 38	10	api::product-list.product-list	img	1
 38	7	api::product-list.product-list	img	1
 38	9	api::product-list.product-list	img	1
@@ -3757,13 +3762,10 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 37	1	footer.footer-main	logo	1
 18	1	footer.footer-dev	logo_dev	1
 68	1	footer.footer-dev	logo_dev1	1
-11	1	about.about	headImg	1
-12	1	about.about	descImg	1
-37	1	certificate.certificate	logo	1
 11	2	about.about	headImg	1
 12	2	about.about	descImg	1
 37	2	certificate.certificate	logo	1
-70	2	api::main.main	headVideo	1
+71	3	api::main.main	headVideo	1
 52	10	services-page-com.component-services	img1	1
 53	10	services-page-com.component-services	img2	1
 54	10	services-page-com.component-services	img3	1
@@ -3808,8 +3810,6 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 11	3	about.about	headImg	1
 12	3	about.about	descImg	1
 37	3	certificate.certificate	logo	1
-70	3	api::main.main	headVideo	1
-70	1	api::main.main	headVideo	1
 1	3	api::main.main	headImg	1
 1	1	api::main.main	headImg	1
 67	51	api::product-list.product-list	img	1
@@ -3971,9 +3971,9 @@ COPY public.locals_localizations_links (local_id, inv_local_id) FROM stdin;
 --
 
 COPY public.mains (id, created_at, updated_at, created_by_id, updated_by_id, locale, head, "desc", head_button) FROM stdin;
-3	2022-06-24 16:22:30.188	2022-06-28 12:46:40.557	1	1	tk	Höwür güýç, çydamlylyk we ynam diýmekdir.	Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Habarlaşmak
-1	2022-06-20 12:06:20.758	2022-06-28 12:46:40.64	1	1	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
-2	2022-06-24 16:20:55.711	2022-06-28 12:46:40.645	1	1	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact
+2	2022-06-24 16:20:55.711	2022-06-28 15:07:16.284	1	1	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact
+3	2022-06-24 16:22:30.188	2022-06-28 15:07:16.29	1	1	tk	Höwür güýç, çydamlylyk we ynam diýmekdir.	Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Habarlaşmak
+1	2022-06-20 12:06:20.758	2022-06-28 15:07:16.188	1	1	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
 \.
 
 
@@ -3985,11 +3985,6 @@ COPY public.mains_components (id, entity_id, component_id, component_type, field
 65	1	1	navbar-header.navbar	navbar	1
 66	1	1	contacts.phone-number	phone	1
 67	1	1	contacts.address	address	1
-139	1	1	services.services	services	1
-140	1	1	products.product	product	1
-141	1	1	about.about	about	1
-142	1	1	certificate.certificate	certificate	1
-143	1	1	form.form-main	form	1
 144	2	2	services.services	services	1
 145	2	2	products.product	product	1
 146	2	2	about.about	about	1
@@ -4000,6 +3995,11 @@ COPY public.mains_components (id, entity_id, component_id, component_type, field
 156	3	3	about.about	about	1
 157	3	3	certificate.certificate	certificate	1
 158	3	3	form.form-main	form	1
+159	1	1	services.services	services	1
+160	1	1	products.product	product	1
+161	1	1	about.about	about	1
+162	1	1	certificate.certificate	certificate	1
+163	1	1	form.form-main	form	1
 \.
 
 
@@ -4807,7 +4807,7 @@ SELECT pg_catalog.setval('public.components_footer_footer_mains_id_seq', 3, true
 -- Name: components_form_form_mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 57, true);
+SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 60, true);
 
 
 --
@@ -4877,7 +4877,7 @@ SELECT pg_catalog.setval('public.elevator_dispatching_services_id_seq', 3, true)
 -- Name: files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.files_id_seq', 70, true);
+SELECT pg_catalog.setval('public.files_id_seq', 71, true);
 
 
 --
@@ -4926,7 +4926,7 @@ SELECT pg_catalog.setval('public.locals_id_seq', 9, true);
 -- Name: mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.mains_components_id_seq', 158, true);
+SELECT pg_catalog.setval('public.mains_components_id_seq', 163, true);
 
 
 --
