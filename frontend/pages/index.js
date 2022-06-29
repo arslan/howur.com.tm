@@ -17,6 +17,7 @@ export default function Home({
 		},
 		head,
 		desc,
+		headButton,
 		services: {
 			heading,
 			under_heading,
@@ -66,7 +67,7 @@ export default function Home({
 				<meta name="Hovur's Website" content='Construction' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<Hero data={{ headVideo, head, desc }} />
+			<Hero data={{ headVideo, head, desc, headButton }} />
 			<ServicesSection
 				data={{
 					heading,
