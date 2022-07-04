@@ -15,7 +15,7 @@ export default function Socialicons() {
 					<FaInstagram />
 				</a>
 			</Link>
-			<Link href='https://tm.linkedin.com/company/'>
+			<Link href='https://tm.linkedin.com/'>
 				<a className='pl-2'>
 					<FaLinkedinIn />
 				</a>
