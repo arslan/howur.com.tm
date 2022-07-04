@@ -14,7 +14,9 @@
     "@strapi/plugin-documentation": "4.2.0",
     "@strapi/plugin-i18n": "4.2.0",
     "@strapi/plugin-users-permissions": "4.2.0",
+    "@strapi/provider-email-nodemailer": "^4.2.2",
     "@strapi/strapi": "4.2.0",
+    "nodemailer": "^6.7.6",
     "pg": "8.6.0"
   },
   "author": {
