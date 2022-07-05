@@ -9,5 +9,5 @@ services:
       - ./postgres-database:/var/lib/postgresql/data
     environment:
       - POSTGRES_PASSWORD=123r
-      - POSTGRES_USER=root
+      - POSTGRES_USER=postgres
       - POSTGRES_DB=howur_db
