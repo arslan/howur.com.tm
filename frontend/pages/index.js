@@ -63,10 +63,6 @@ export default function Home({
 }) {
 	return (
 		<div className=''>
-			<Head>
-				<meta name="Hovur's Website" content='Construction' />
-				<link rel='icon' href='/favicon.ico' />
-			</Head>
 			<Hero data={{ headVideo, head, desc, headButton }} />
 			<ServicesSection
 				data={{

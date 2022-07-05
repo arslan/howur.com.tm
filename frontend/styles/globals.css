@@ -4,79 +4,77 @@
 @tailwind utilities;
 
 @font-face {
-    font-family: "proximanova-black";
-    src: local("proximanova-black"), local("proximanova-black"),
-        url("../public/proximanova/proximanova-black.otf") format("opentype");
+	font-family: "proximanova-black";
+	src: local("proximanova-black"), local("proximanova-black"),
+		url("../public/proximanova/proximanova-black.otf") format("opentype");
 }
 @font-face {
-    font-family: "proximanova-bold";
-    src: local("proximanova-bold"), local("proximanova-bold"),
-        url("../public/proximanova/proximanova-bold.otf") format("opentype");
+	font-family: "proximanova-bold";
+	src: local("proximanova-bold"), local("proximanova-bold"),
+		url("../public/proximanova/proximanova-bold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "proximanova-extrabold";
-    src: local("proximanova-extrabold"), local("proximanova-extrabold"),
-        url("../public/proximanova/proximanova-extrabold.otf") format("opentype");
+	font-family: "proximanova-extrabold";
+	src: local("proximanova-extrabold"), local("proximanova-extrabold"),
+		url("../public/proximanova/proximanova-extrabold.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "proximanova-light";
-    src: local("proximanova-light"), local("proximanova-light"),
-        url("../public/proximanova/proximanova-light.otf") format("opentype");
+	font-family: "proximanova-light";
+	src: local("proximanova-light"), local("proximanova-light"),
+		url("../public/proximanova/proximanova-light.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "proximanova-regular";
-    src: local("proximanova-regular"), local("proximanova-regular"),
-        url("../public/proximanova/proximanova-regular.otf") format("opentype");
+	font-family: "proximanova-regular";
+	src: local("proximanova-regular"), local("proximanova-regular"),
+		url("../public/proximanova/proximanova-regular.otf") format("opentype");
 }
 
 @font-face {
-    font-family: "proximanova-semibold";
-    src: local("proximanova-semibold"), local("proximanova-semibold"),
-        url("../public/proximanova/proximanova-semibold.otf") format("opentype");
+	font-family: "proximanova-semibold";
+	src: local("proximanova-semibold"), local("proximanova-semibold"),
+		url("../public/proximanova/proximanova-semibold.otf") format("opentype");
 }
-
 html,
 body {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:  sans-serif;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+	color: inherit;
+	text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
-    font-family: proximanova-regular;
+	box-sizing: border-box;
+	font-family: "Montserrat", sans-serif;
 }
 
 h2 {
-    @apply font-bold text-3xl mb-4 mt-4;
+	@apply font-bold text-3xl mb-4 mt-4;
 }
 
 p {
-    @apply leading-relaxed;
+	@apply leading-relaxed;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet {
-    width: 150px;
-    border-radius: 2px;
-    color: #C1C1C1;
-    height: 4px;
-    padding-right: 10px;
-    margin-top: 10px;
+	width: 150px;
+	border-radius: 2px;
+	color: #c1c1c1;
+	height: 4px;
+	padding-right: 10px;
+	margin-top: 10px;
 }
 
 .swiper-pagination-bullets .swiper-pagination-bullet-active {
-    background: #CD3202;
+	background: #cd3202;
 }
 
 #react-burger-cross-btn {
-    top: 0
+	top: 0;
 }
