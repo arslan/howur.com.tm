@@ -2,9 +2,25 @@ import { useState } from "react";
 
 const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
 	const [data, setData] = useState();
+	const [button, setButton] = useState(false);
 
-	const onSubmitData = () => {
-		console.log(data);
+	const onSubmitData = async () => {
+		setButton(true);
+		const requestOptions = {
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify(data),
+		};
+		const response = await fetch(
+			`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/email`,
+			requestOptions
+		);
+		const dataResponse = await response.json();
+		if (dataResponse) {
+			setButton(false);
+		}
 	};
 	return (
 		<form className='space-y-8'>
@@ -33,7 +49,8 @@ const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
 				onChange={(e) => setData({ ...data, message: e.target.value })}
 			/>
 			<button
-				onClick={() => onSubmitData()}
+				disabled={button}
+				onClick={onSubmitData}
 				type='submit'
 				className='bg-red sm:w-full lg:w-4/5 h-12 rounded-md text-white'
 			>
