@@ -24,7 +24,7 @@ const Header = () => {
     },
   } = useContext(layoutContext);
   return (
-    <div className="w-full bg-white sticky top-0 z-50">
+    <div className="w-full bg-white sticky top-0 z-20">
       <div className="max-w-7xl mx-auto w-full py-2">
         <div className="flex justify-between items-center self-center sm:px-12 2xl:px-0">
           <span className="cursor-pointer sm:hidden xl:block">

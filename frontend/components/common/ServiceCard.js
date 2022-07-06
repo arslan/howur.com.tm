@@ -6,8 +6,8 @@ const ServiceCard = (props) => {
       <div className="h-full md:w-1/2 relative sm:mb-4 md:mb-0 ">
         <Image src={props.src} alt="" layout="fill" objectFit="cover" />
       </div>
-      <div className="relative md:w-1/2 p-4">
-        <h3 className="text-base md:text-xl font-medium">{props.cardTitle}</h3>
+      <div className="relative md:w-1/2 px-4">
+        <h3 className="text-base md:text-xl font-bold pb-4">{props.cardTitle}</h3>
         <p className="mt-1 text-sm md:text-lg ">{props.cardDesc}</p>
       </div>
     </div>

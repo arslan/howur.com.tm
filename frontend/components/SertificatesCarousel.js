@@ -1,7 +1,11 @@
+import { Dialog, Transition } from "@headlessui/react";
+// import { Fragment, useState } from "react";
+
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
+import { MdClose } from "react-icons/md";
 import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-import styles from "../styles/Home.module.css";
+// import styles from "../styles/Home.module.css";
 
 const SertificateSlider = ({ data }) => {
   const img = data.map(
@@ -67,6 +71,21 @@ const SertificateSlider = ({ data }) => {
       }
     }
   };
+  const [clickModal, setClickModal] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+
+  function closeModal() {
+    setIsOpen(false);
+  }
+
+  function openModal() {
+    setIsOpen(true);
+  }
+
+  const openHandler = (data) => {
+    setIsOpen(true);
+    setClickModal(data);
+  };
   return (
     <>
       <div className="flex justify-center mt-6 ">
@@ -94,13 +113,17 @@ const SertificateSlider = ({ data }) => {
                 }
               >
                 <Image
+                  onClick={() =>
+                    openHandler(
+                      `${process.env.NEXT_PUBLIC_STRAPI_API_URL}${img}`
+                    )
+                  }
                   src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${img}`}
                   alt=""
                   layout="fill"
                   objectFit="contain"
                   className="w-full h-full"
                 />
-                {/* {i != pivot && <div className='w-full h-full bg-black/50 absolute top-0'></div>} */}
               </div>
             );
           })}
@@ -125,6 +148,55 @@ const SertificateSlider = ({ data }) => {
           className="mr-4 rounded-sm w-28 h-1 bg-grey hover:bg-red"
         ></button>
       </div>
+
+      <Transition appear show={isOpen} as={Fragment}>
+        <Dialog
+          as="div"
+          className="fixed inset-x-0 -inset-y-6 z-30 w-screen h-screen"
+          onClose={closeModal}
+        >
+          <div className="">
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0"
+              enterTo="opacity-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Dialog.Overlay className="fixed inset-0" />
+            </Transition.Child>
+
+            {/* This element is to trick the browser into centering the modal contents. */}
+            <span className="" aria-hidden="true">
+              &#8203;
+            </span>
+            <Transition.Child
+              as={Fragment}
+              enter="ease-out duration-300"
+              enterFrom="opacity-0 scale-95"
+              enterTo="opacity-100 scale-100"
+              leave="ease-in duration-200"
+              leaveFrom="opacity-100 scale-100"
+              leaveTo="opacity-0 scale-95"
+            >
+              <div className="w-screen h-screen bg-black/90 overflow-y-auto">
+                <div className="top-5 sticky z-50 flex text-3xl justify-end mr-14 ">
+                  <button type="button" onClick={closeModal} className='outline-none'>
+                    <MdClose size={50} color={"red"} />
+                  </button>
+                </div>
+                <div className="flex flex-col items-center justify-center">
+                  <div className="p-6 relative">
+                    <Image src={clickModal} alt="" width={700} height={900} />
+                  </div>
+                </div>
+              </div>
+            </Transition.Child>
+          </div>
+        </Dialog>
+      </Transition>
     </>
   );
 };
