@@ -82,7 +82,7 @@ const Footer = () => {
             {permission}
           </p>
           <div className="flex self-center w-1/2 justify-end">
-            <span className="sm:text-black xl:text-white sm:text-xs md:text-base">{devBy}</span>
+            <span className="sm:text-black xl:text-white sm:text-xs md:text-base mr-2">{devBy}</span>
 
             <span className="sm:hidden xl:block relative w-32 mb-2 lg:mb-0 h-6">
               <Link href="https://hillitilsimat.com.tm/">
