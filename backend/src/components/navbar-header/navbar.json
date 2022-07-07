@@ -24,11 +24,6 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::navigation.navigation"
-    },
-    "under_navs": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::under-nav.under-nav"
     }
   }
 }
