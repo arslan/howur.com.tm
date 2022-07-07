@@ -1,17 +1,14 @@
+import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
 import { Navigation, Pagination, Mousewheel, Keyboard, Autoplay } from "swiper";
-import { HiArrowNarrowLeft, HiArrowNarrowRight } from "react-icons/hi";
-
-import ProductsGrid1 from "./ProductsGrid1";
-import ProductsGrid2 from "./ProductsGrid2";
-import ProductsGrid3 from "./ProductsGrid3";
+import Carousel from "./Carousel";
 
 const GridCarousel = ({ product_lists: { brands } }) => {
-	const [tiady, onv, ob] = brands;
+	// const [tiady, onv, ob] = brands;
 	return (
 		<div className='relative'>
 			<div className='sm:hidden xl:block absolute flex justify-end right-5 top-28  z-10'>
@@ -23,7 +20,6 @@ const GridCarousel = ({ product_lists: { brands } }) => {
 					<HiArrowNarrowRight color='red' size={36} />
 				</button>
 			</div>
-
 			<Swiper
 				loop={true}
 				navigation={{
@@ -39,30 +35,25 @@ const GridCarousel = ({ product_lists: { brands } }) => {
 				modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
 				className='2xl:w-full sm:w-screen sm:px-12 2xl:px-0'
 			>
-				<SwiperSlide>
-					<ProductsGrid1
-						data={{
-							tiady,
-						}}
-						className=''
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<ProductsGrid2
-						data={{
-							onv,
-						}}
-						className=''
-					/>
-				</SwiperSlide>
-				<SwiperSlide>
-					<ProductsGrid3
-						data={{
-							ob,
-						}}
-						className=''
-					/>
-				</SwiperSlide>
+				{brands.map(
+					({
+						attributes: {
+							description,
+							product_lists: { data: product_lists },
+						},
+					}) => {
+						return (
+							<SwiperSlide>
+								<div className='sm:px-12 2xl:px-0 2xl:w-full sm:w-screen'>
+									<h4 className='mb-2 ml-0.5 text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48'>
+										{description}
+									</h4>
+								</div>
+								<Carousel props={product_lists} />
+							</SwiperSlide>
+						);
+					}
+				)}
 			</Swiper>
 		</div>
 	);
