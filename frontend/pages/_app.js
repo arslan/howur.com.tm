@@ -28,7 +28,7 @@ MyApp.getInitialProps = async (ctx) => {
 		sort: "sort_id",
 		locale,
 	});
-	const under_navs = await fetchAPI("/under-navs", {
+	const under_navs = await fetchAPI("/pagas-services", {
 		sort: "sort_id",
 		locale,
 	});
