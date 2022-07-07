@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-07T08:45:39.146Z"
+    "x-generation-date": "2022-07-07T10:26:20.212Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -110,6 +110,9 @@
               "example": "string or id"
             }
           },
+          "description": {
+            "type": "string"
+          },
           "locale": {
             "type": "string"
           }
@@ -141,6 +144,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "description": {
+                "type": "string"
               },
               "locale": {
                 "type": "string"
@@ -580,6 +586,9 @@
                                         }
                                       }
                                     },
+                                    "description": {
+                                      "type": "string"
+                                    },
                                     "createdAt": {
                                       "type": "string",
                                       "format": "date-time"
@@ -947,6 +956,9 @@
                 }
               }
             }
+          },
+          "description": {
+            "type": "string"
           },
           "createdAt": {
             "type": "string",
@@ -1441,6 +1453,9 @@
                                                   }
                                                 }
                                               },
+                                              "description": {
+                                                "type": "string"
+                                              },
                                               "createdAt": {
                                                 "type": "string",
                                                 "format": "date-time"
@@ -1808,6 +1823,9 @@
                           }
                         }
                       }
+                    },
+                    "description": {
+                      "type": "string"
                     },
                     "createdAt": {
                       "type": "string",
@@ -2328,6 +2346,9 @@
                                                 }
                                               }
                                             },
+                                            "description": {
+                                              "type": "string"
+                                            },
                                             "createdAt": {
                                               "type": "string",
                                               "format": "date-time"
@@ -2695,6 +2716,9 @@
                         }
                       }
                     }
+                  },
+                  "description": {
+                    "type": "string"
                   },
                   "createdAt": {
                     "type": "string",
@@ -12326,15 +12350,6 @@
               "heading": {
                 "type": "string"
               },
-              "descTiady": {
-                "type": "string"
-              },
-              "descONV": {
-                "type": "string"
-              },
-              "descOB": {
-                "type": "string"
-              },
               "brands": {
                 "type": "array",
                 "items": {
@@ -12538,15 +12553,6 @@
                 "type": "object",
                 "properties": {
                   "heading": {
-                    "type": "string"
-                  },
-                  "descTiady": {
-                    "type": "string"
-                  },
-                  "descONV": {
-                    "type": "string"
-                  },
-                  "descOB": {
                     "type": "string"
                   },
                   "brands": {
@@ -13806,15 +13812,6 @@
               "heading": {
                 "type": "string"
               },
-              "descTiady": {
-                "type": "string"
-              },
-              "descONV": {
-                "type": "string"
-              },
-              "descOB": {
-                "type": "string"
-              },
               "brands": {
                 "type": "object",
                 "properties": {
@@ -14294,6 +14291,9 @@
                                   }
                                 }
                               }
+                            },
+                            "description": {
+                              "type": "string"
                             },
                             "createdAt": {
                               "type": "string",
@@ -17176,15 +17176,6 @@
                         "heading": {
                           "type": "string"
                         },
-                        "descTiady": {
-                          "type": "string"
-                        },
-                        "descONV": {
-                          "type": "string"
-                        },
-                        "descOB": {
-                          "type": "string"
-                        },
                         "brands": {
                           "type": "object",
                           "properties": {
@@ -17664,6 +17655,9 @@
                                             }
                                           }
                                         }
+                                      },
+                                      "description": {
+                                        "type": "string"
                                       },
                                       "createdAt": {
                                         "type": "string",
@@ -20572,15 +20566,6 @@
                       "heading": {
                         "type": "string"
                       },
-                      "descTiady": {
-                        "type": "string"
-                      },
-                      "descONV": {
-                        "type": "string"
-                      },
-                      "descOB": {
-                        "type": "string"
-                      },
                       "brands": {
                         "type": "object",
                         "properties": {
@@ -21060,6 +21045,9 @@
                                           }
                                         }
                                       }
+                                    },
+                                    "description": {
+                                      "type": "string"
                                     },
                                     "createdAt": {
                                       "type": "string",
@@ -29540,6 +29528,9 @@
                           }
                         }
                       },
+                      "description": {
+                        "type": "string"
+                      },
                       "createdAt": {
                         "type": "string",
                         "format": "date-time"
@@ -30767,6 +30758,9 @@
                                       }
                                     }
                                   }
+                                },
+                                "description": {
+                                  "type": "string"
                                 },
                                 "createdAt": {
                                   "type": "string",
@@ -32021,6 +32015,9 @@
                                     }
                                   }
                                 }
+                              },
+                              "description": {
+                                "type": "string"
                               },
                               "createdAt": {
                                 "type": "string",

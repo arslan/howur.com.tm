@@ -10,15 +10,6 @@
     "heading": {
       "type": "string"
     },
-    "descTiady": {
-      "type": "text"
-    },
-    "descONV": {
-      "type": "text"
-    },
-    "descOB": {
-      "type": "text"
-    },
     "brands": {
       "type": "relation",
       "relation": "oneToMany",
