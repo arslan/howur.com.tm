@@ -1,20 +1,10 @@
 import { fetchAPI } from "../../lib/api";
 import { ServicesComponent } from "../../components/services/ServicesComponent";
 export async function getStaticPaths({ locales }) {
-	const {
-		data: {
-			attributes: {
-				navbar: {
-					under_navs: { data },
-				},
-			},
-		},
-	} = await fetchAPI("/layout", {
-		populate: ["navbar.under_navs"],
-	});
-	const paths = data.flatMap(({ attributes: { slug } }) => {
+	const { data } = await fetchAPI("/pagas-services", {});
+	const paths = data.flatMap(({ attributes: { sort_id } }) => {
 		return locales.map((locale) => ({
-			params: { slug },
+			params: { slug: sort_id + "" },
 			locale,
 		}));
 	});
@@ -28,15 +18,9 @@ export async function getStaticProps(ctx) {
 	const { slug } = ctx.params;
 	const { locale } = ctx;
 
-	const {
-		data: { attributes: data },
-	} = await fetchAPI(`/${slug}`, {
-		populate: [
-			"component",
-			"component.img1",
-			"component.img2",
-			"component.img3",
-		],
+	const { data } = await fetchAPI(`/pagas-services`, {
+		populate: "*",
+		"filters[sort_id][$eq]": parseInt(slug),
 		locale,
 	});
 
@@ -45,10 +29,12 @@ export async function getStaticProps(ctx) {
 			notFound: "blocking",
 		};
 	}
+	console.log(data);
+	const responseData = data[0].attributes;
 	return {
-		props: { data },
+		props: { responseData },
 	};
 }
-export default function Services({ data: { component } }) {
-	return <ServicesComponent props={component} />;
+export default function Services({ responseData }) {
+	return <ServicesComponent props={responseData} />;
 }
