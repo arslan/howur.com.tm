@@ -16,11 +16,6 @@ SET xmloption = content;
 SET client_min_messages = warning;
 SET row_security = off;
 
-ALTER TABLE ONLY public.video_surveillances DROP CONSTRAINT video_surveillances_updated_by_id_fk;
-ALTER TABLE ONLY public.video_surveillances_localizations_links DROP CONSTRAINT video_surveillances_localizations_links_inv_fk;
-ALTER TABLE ONLY public.video_surveillances_localizations_links DROP CONSTRAINT video_surveillances_localizations_links_fk;
-ALTER TABLE ONLY public.video_surveillances_components DROP CONSTRAINT video_surveillances_entity_fk;
-ALTER TABLE ONLY public.video_surveillances DROP CONSTRAINT video_surveillances_created_by_id_fk;
 ALTER TABLE ONLY public.up_users DROP CONSTRAINT up_users_updated_by_id_fk;
 ALTER TABLE ONLY public.up_users_role_links DROP CONSTRAINT up_users_role_links_inv_fk;
 ALTER TABLE ONLY public.up_users_role_links DROP CONSTRAINT up_users_role_links_fk;
@@ -31,17 +26,8 @@ ALTER TABLE ONLY public.up_permissions DROP CONSTRAINT up_permissions_updated_by
 ALTER TABLE ONLY public.up_permissions_role_links DROP CONSTRAINT up_permissions_role_links_inv_fk;
 ALTER TABLE ONLY public.up_permissions_role_links DROP CONSTRAINT up_permissions_role_links_fk;
 ALTER TABLE ONLY public.up_permissions DROP CONSTRAINT up_permissions_created_by_id_fk;
-ALTER TABLE ONLY public.under_navs DROP CONSTRAINT under_navs_updated_by_id_fk;
-ALTER TABLE ONLY public.under_navs_localizations_links DROP CONSTRAINT under_navs_localizations_links_inv_fk;
-ALTER TABLE ONLY public.under_navs_localizations_links DROP CONSTRAINT under_navs_localizations_links_fk;
-ALTER TABLE ONLY public.under_navs DROP CONSTRAINT under_navs_created_by_id_fk;
 ALTER TABLE ONLY public.strapi_api_tokens DROP CONSTRAINT strapi_api_tokens_updated_by_id_fk;
 ALTER TABLE ONLY public.strapi_api_tokens DROP CONSTRAINT strapi_api_tokens_created_by_id_fk;
-ALTER TABLE ONLY public.sonstruction_services DROP CONSTRAINT sonstruction_services_updated_by_id_fk;
-ALTER TABLE ONLY public.sonstruction_services_localizations_links DROP CONSTRAINT sonstruction_services_localizations_links_inv_fk;
-ALTER TABLE ONLY public.sonstruction_services_localizations_links DROP CONSTRAINT sonstruction_services_localizations_links_fk;
-ALTER TABLE ONLY public.sonstruction_services_components DROP CONSTRAINT sonstruction_services_entity_fk;
-ALTER TABLE ONLY public.sonstruction_services DROP CONSTRAINT sonstruction_services_created_by_id_fk;
 ALTER TABLE ONLY public.service_lists DROP CONSTRAINT service_lists_updated_by_id_fk;
 ALTER TABLE ONLY public.service_lists_localizations_links DROP CONSTRAINT service_lists_localizations_links_inv_fk;
 ALTER TABLE ONLY public.service_lists_localizations_links DROP CONSTRAINT service_lists_localizations_links_fk;
@@ -52,11 +38,10 @@ ALTER TABLE ONLY public.product_lists_localizations_links DROP CONSTRAINT produc
 ALTER TABLE ONLY public.product_lists DROP CONSTRAINT product_lists_created_by_id_fk;
 ALTER TABLE ONLY public.product_lists_brand_links DROP CONSTRAINT product_lists_brand_links_inv_fk;
 ALTER TABLE ONLY public.product_lists_brand_links DROP CONSTRAINT product_lists_brand_links_fk;
-ALTER TABLE ONLY public.network_services DROP CONSTRAINT network_services_updated_by_id_fk;
-ALTER TABLE ONLY public.network_services_localizations_links DROP CONSTRAINT network_services_localizations_links_inv_fk;
-ALTER TABLE ONLY public.network_services_localizations_links DROP CONSTRAINT network_services_localizations_links_fk;
-ALTER TABLE ONLY public.network_services_components DROP CONSTRAINT network_services_entity_fk;
-ALTER TABLE ONLY public.network_services DROP CONSTRAINT network_services_created_by_id_fk;
+ALTER TABLE ONLY public.pagas_services DROP CONSTRAINT pagas_services_updated_by_id_fk;
+ALTER TABLE ONLY public.pagas_services_localizations_links DROP CONSTRAINT pagas_services_localizations_links_inv_fk;
+ALTER TABLE ONLY public.pagas_services_localizations_links DROP CONSTRAINT pagas_services_localizations_links_fk;
+ALTER TABLE ONLY public.pagas_services DROP CONSTRAINT pagas_services_created_by_id_fk;
 ALTER TABLE ONLY public.navigations DROP CONSTRAINT navigations_updated_by_id_fk;
 ALTER TABLE ONLY public.navigations_localizations_links DROP CONSTRAINT navigations_localizations_links_inv_fk;
 ALTER TABLE ONLY public.navigations_localizations_links DROP CONSTRAINT navigations_localizations_links_fk;
@@ -77,30 +62,13 @@ ALTER TABLE ONLY public.layouts_components DROP CONSTRAINT layouts_entity_fk;
 ALTER TABLE ONLY public.layouts DROP CONSTRAINT layouts_created_by_id_fk;
 ALTER TABLE ONLY public.i18n_locale DROP CONSTRAINT i18n_locale_updated_by_id_fk;
 ALTER TABLE ONLY public.i18n_locale DROP CONSTRAINT i18n_locale_created_by_id_fk;
-ALTER TABLE ONLY public.fire_safety_services DROP CONSTRAINT fire_safety_services_updated_by_id_fk;
-ALTER TABLE ONLY public.fire_safety_services_localizations_links DROP CONSTRAINT fire_safety_services_localizations_links_inv_fk;
-ALTER TABLE ONLY public.fire_safety_services_localizations_links DROP CONSTRAINT fire_safety_services_localizations_links_fk;
-ALTER TABLE ONLY public.fire_safety_services_components DROP CONSTRAINT fire_safety_services_entity_fk;
-ALTER TABLE ONLY public.fire_safety_services DROP CONSTRAINT fire_safety_services_created_by_id_fk;
 ALTER TABLE ONLY public.files DROP CONSTRAINT files_updated_by_id_fk;
 ALTER TABLE ONLY public.files_related_morphs DROP CONSTRAINT files_related_morphs_fk;
 ALTER TABLE ONLY public.files DROP CONSTRAINT files_created_by_id_fk;
-ALTER TABLE ONLY public.elevator_dispatching_services DROP CONSTRAINT elevator_dispatching_services_updated_by_id_fk;
-ALTER TABLE ONLY public.elevator_dispatching_services_localizations_links DROP CONSTRAINT elevator_dispatching_services_localizations_links_inv_fk;
-ALTER TABLE ONLY public.elevator_dispatching_services_localizations_links DROP CONSTRAINT elevator_dispatching_services_localizations_links_fk;
-ALTER TABLE ONLY public.elevator_dispatching_services_components DROP CONSTRAINT elevator_dispatching_services_entity_fk;
-ALTER TABLE ONLY public.elevator_dispatching_services DROP CONSTRAINT elevator_dispatching_services_created_by_id_fk;
-ALTER TABLE ONLY public.design_services DROP CONSTRAINT design_services_updated_by_id_fk;
-ALTER TABLE ONLY public.design_services_localizations_links DROP CONSTRAINT design_services_localizations_links_inv_fk;
-ALTER TABLE ONLY public.design_services_localizations_links DROP CONSTRAINT design_services_localizations_links_fk;
-ALTER TABLE ONLY public.design_services_components DROP CONSTRAINT design_services_entity_fk;
-ALTER TABLE ONLY public.design_services DROP CONSTRAINT design_services_created_by_id_fk;
 ALTER TABLE ONLY public.components_services_services_service_lists_links DROP CONSTRAINT components_services_services_service_lists_links_inv_fk;
 ALTER TABLE ONLY public.components_services_services_service_lists_links DROP CONSTRAINT components_services_services_service_lists_links_fk;
 ALTER TABLE ONLY public.components_products_products_brands_links DROP CONSTRAINT components_products_products_brands_links_inv_fk;
 ALTER TABLE ONLY public.components_products_products_brands_links DROP CONSTRAINT components_products_products_brands_links_fk;
-ALTER TABLE ONLY public.components_navbar_header_navbars_under_navs_links DROP CONSTRAINT components_navbar_header_navbars_under_navs_links_inv_fk;
-ALTER TABLE ONLY public.components_navbar_header_navbars_under_navs_links DROP CONSTRAINT components_navbar_header_navbars_under_navs_links_fk;
 ALTER TABLE ONLY public.components_navbar_header_navbars_navigations_links DROP CONSTRAINT components_navbar_header_navbars_navigations_links_inv_fk;
 ALTER TABLE ONLY public.components_navbar_header_navbars_navigations_links DROP CONSTRAINT components_navbar_header_navbars_navigations_links_fk;
 ALTER TABLE ONLY public.components_navbar_header_navbars_locals_links DROP CONSTRAINT components_navbar_header_navbars_locals_links_inv_fk;
@@ -126,13 +94,6 @@ ALTER TABLE ONLY public.admin_permissions DROP CONSTRAINT admin_permissions_upda
 ALTER TABLE ONLY public.admin_permissions_role_links DROP CONSTRAINT admin_permissions_role_links_inv_fk;
 ALTER TABLE ONLY public.admin_permissions_role_links DROP CONSTRAINT admin_permissions_role_links_fk;
 ALTER TABLE ONLY public.admin_permissions DROP CONSTRAINT admin_permissions_created_by_id_fk;
-DROP INDEX public.video_surveillances_updated_by_id_fk;
-DROP INDEX public.video_surveillances_localizations_links_inv_fk;
-DROP INDEX public.video_surveillances_localizations_links_fk;
-DROP INDEX public.video_surveillances_field_index;
-DROP INDEX public.video_surveillances_entity_fk;
-DROP INDEX public.video_surveillances_created_by_id_fk;
-DROP INDEX public.video_surveillances_component_type_index;
 DROP INDEX public.up_users_updated_by_id_fk;
 DROP INDEX public.up_users_role_links_inv_fk;
 DROP INDEX public.up_users_role_links_fk;
@@ -143,19 +104,8 @@ DROP INDEX public.up_permissions_updated_by_id_fk;
 DROP INDEX public.up_permissions_role_links_inv_fk;
 DROP INDEX public.up_permissions_role_links_fk;
 DROP INDEX public.up_permissions_created_by_id_fk;
-DROP INDEX public.under_navs_updated_by_id_fk;
-DROP INDEX public.under_navs_localizations_links_inv_fk;
-DROP INDEX public.under_navs_localizations_links_fk;
-DROP INDEX public.under_navs_created_by_id_fk;
 DROP INDEX public.strapi_api_tokens_updated_by_id_fk;
 DROP INDEX public.strapi_api_tokens_created_by_id_fk;
-DROP INDEX public.sonstruction_services_updated_by_id_fk;
-DROP INDEX public.sonstruction_services_localizations_links_inv_fk;
-DROP INDEX public.sonstruction_services_localizations_links_fk;
-DROP INDEX public.sonstruction_services_field_index;
-DROP INDEX public.sonstruction_services_entity_fk;
-DROP INDEX public.sonstruction_services_created_by_id_fk;
-DROP INDEX public.sonstruction_services_component_type_index;
 DROP INDEX public.service_lists_updated_by_id_fk;
 DROP INDEX public.service_lists_localizations_links_inv_fk;
 DROP INDEX public.service_lists_localizations_links_fk;
@@ -166,13 +116,10 @@ DROP INDEX public.product_lists_localizations_links_fk;
 DROP INDEX public.product_lists_created_by_id_fk;
 DROP INDEX public.product_lists_brand_links_inv_fk;
 DROP INDEX public.product_lists_brand_links_fk;
-DROP INDEX public.network_services_updated_by_id_fk;
-DROP INDEX public.network_services_localizations_links_inv_fk;
-DROP INDEX public.network_services_localizations_links_fk;
-DROP INDEX public.network_services_field_index;
-DROP INDEX public.network_services_entity_fk;
-DROP INDEX public.network_services_created_by_id_fk;
-DROP INDEX public.network_services_component_type_index;
+DROP INDEX public.pagas_services_updated_by_id_fk;
+DROP INDEX public.pagas_services_localizations_links_inv_fk;
+DROP INDEX public.pagas_services_localizations_links_fk;
+DROP INDEX public.pagas_services_created_by_id_fk;
 DROP INDEX public.navigations_updated_by_id_fk;
 DROP INDEX public.navigations_localizations_links_inv_fk;
 DROP INDEX public.navigations_localizations_links_fk;
@@ -197,36 +144,13 @@ DROP INDEX public.layouts_created_by_id_fk;
 DROP INDEX public.layouts_component_type_index;
 DROP INDEX public.i18n_locale_updated_by_id_fk;
 DROP INDEX public.i18n_locale_created_by_id_fk;
-DROP INDEX public.fire_safety_services_updated_by_id_fk;
-DROP INDEX public.fire_safety_services_localizations_links_inv_fk;
-DROP INDEX public.fire_safety_services_localizations_links_fk;
-DROP INDEX public.fire_safety_services_field_index;
-DROP INDEX public.fire_safety_services_entity_fk;
-DROP INDEX public.fire_safety_services_created_by_id_fk;
-DROP INDEX public.fire_safety_services_component_type_index;
 DROP INDEX public.files_updated_by_id_fk;
 DROP INDEX public.files_related_morphs_fk;
 DROP INDEX public.files_created_by_id_fk;
-DROP INDEX public.elevator_dispatching_services_updated_by_id_fk;
-DROP INDEX public.elevator_dispatching_services_localizations_links_inv_fk;
-DROP INDEX public.elevator_dispatching_services_localizations_links_fk;
-DROP INDEX public.elevator_dispatching_services_field_index;
-DROP INDEX public.elevator_dispatching_services_entity_fk;
-DROP INDEX public.elevator_dispatching_services_created_by_id_fk;
-DROP INDEX public.elevator_dispatching_services_component_type_index;
-DROP INDEX public.design_services_updated_by_id_fk;
-DROP INDEX public.design_services_localizations_links_inv_fk;
-DROP INDEX public.design_services_localizations_links_fk;
-DROP INDEX public.design_services_field_index;
-DROP INDEX public.design_services_entity_fk;
-DROP INDEX public.design_services_created_by_id_fk;
-DROP INDEX public.design_services_component_type_index;
 DROP INDEX public.components_services_services_service_lists_links_inv_fk;
 DROP INDEX public.components_services_services_service_lists_links_fk;
 DROP INDEX public.components_products_products_brands_links_inv_fk;
 DROP INDEX public.components_products_products_brands_links_fk;
-DROP INDEX public.components_navbar_header_navbars_under_navs_links_inv_fk;
-DROP INDEX public.components_navbar_header_navbars_under_navs_links_fk;
 DROP INDEX public.components_navbar_header_navbars_navigations_links_inv_fk;
 DROP INDEX public.components_navbar_header_navbars_navigations_links_fk;
 DROP INDEX public.components_navbar_header_navbars_locals_links_inv_fk;
@@ -254,23 +178,17 @@ DROP INDEX public.admin_permissions_updated_by_id_fk;
 DROP INDEX public.admin_permissions_role_links_inv_fk;
 DROP INDEX public.admin_permissions_role_links_fk;
 DROP INDEX public.admin_permissions_created_by_id_fk;
-ALTER TABLE ONLY public.video_surveillances DROP CONSTRAINT video_surveillances_pkey;
-ALTER TABLE ONLY public.video_surveillances_components DROP CONSTRAINT video_surveillances_components_pkey;
 ALTER TABLE ONLY public.up_users DROP CONSTRAINT up_users_pkey;
 ALTER TABLE ONLY public.up_roles DROP CONSTRAINT up_roles_pkey;
 ALTER TABLE ONLY public.up_permissions DROP CONSTRAINT up_permissions_pkey;
-ALTER TABLE ONLY public.under_navs DROP CONSTRAINT under_navs_pkey;
 ALTER TABLE ONLY public.strapi_webhooks DROP CONSTRAINT strapi_webhooks_pkey;
 ALTER TABLE ONLY public.strapi_migrations DROP CONSTRAINT strapi_migrations_pkey;
 ALTER TABLE ONLY public.strapi_database_schema DROP CONSTRAINT strapi_database_schema_pkey;
 ALTER TABLE ONLY public.strapi_core_store_settings DROP CONSTRAINT strapi_core_store_settings_pkey;
 ALTER TABLE ONLY public.strapi_api_tokens DROP CONSTRAINT strapi_api_tokens_pkey;
-ALTER TABLE ONLY public.sonstruction_services DROP CONSTRAINT sonstruction_services_pkey;
-ALTER TABLE ONLY public.sonstruction_services_components DROP CONSTRAINT sonstruction_services_components_pkey;
 ALTER TABLE ONLY public.service_lists DROP CONSTRAINT service_lists_pkey;
 ALTER TABLE ONLY public.product_lists DROP CONSTRAINT product_lists_pkey;
-ALTER TABLE ONLY public.network_services DROP CONSTRAINT network_services_pkey;
-ALTER TABLE ONLY public.network_services_components DROP CONSTRAINT network_services_components_pkey;
+ALTER TABLE ONLY public.pagas_services DROP CONSTRAINT pagas_services_pkey;
 ALTER TABLE ONLY public.navigations DROP CONSTRAINT navigations_pkey;
 ALTER TABLE ONLY public.mains DROP CONSTRAINT mains_pkey;
 ALTER TABLE ONLY public.mains_components DROP CONSTRAINT mains_components_pkey;
@@ -278,15 +196,8 @@ ALTER TABLE ONLY public.locals DROP CONSTRAINT locals_pkey;
 ALTER TABLE ONLY public.layouts DROP CONSTRAINT layouts_pkey;
 ALTER TABLE ONLY public.layouts_components DROP CONSTRAINT layouts_components_pkey;
 ALTER TABLE ONLY public.i18n_locale DROP CONSTRAINT i18n_locale_pkey;
-ALTER TABLE ONLY public.fire_safety_services DROP CONSTRAINT fire_safety_services_pkey;
-ALTER TABLE ONLY public.fire_safety_services_components DROP CONSTRAINT fire_safety_services_components_pkey;
 ALTER TABLE ONLY public.files DROP CONSTRAINT files_pkey;
-ALTER TABLE ONLY public.elevator_dispatching_services DROP CONSTRAINT elevator_dispatching_services_pkey;
-ALTER TABLE ONLY public.elevator_dispatching_services_components DROP CONSTRAINT elevator_dispatching_services_components_pkey;
-ALTER TABLE ONLY public.design_services DROP CONSTRAINT design_services_pkey;
-ALTER TABLE ONLY public.design_services_components DROP CONSTRAINT design_services_components_pkey;
 ALTER TABLE ONLY public.components_services_services DROP CONSTRAINT components_services_services_pkey;
-ALTER TABLE ONLY public.components_services_page_com_component_services DROP CONSTRAINT components_services_page_com_component_services_pkey;
 ALTER TABLE ONLY public.components_products_products DROP CONSTRAINT components_products_products_pkey;
 ALTER TABLE ONLY public.components_navbar_header_navbars DROP CONSTRAINT components_navbar_header_navbars_pkey;
 ALTER TABLE ONLY public.components_form_form_mains DROP CONSTRAINT components_form_form_mains_pkey;
@@ -303,23 +214,17 @@ ALTER TABLE ONLY public.brands DROP CONSTRAINT brands_pkey;
 ALTER TABLE ONLY public.admin_users DROP CONSTRAINT admin_users_pkey;
 ALTER TABLE ONLY public.admin_roles DROP CONSTRAINT admin_roles_pkey;
 ALTER TABLE ONLY public.admin_permissions DROP CONSTRAINT admin_permissions_pkey;
-ALTER TABLE public.video_surveillances_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.video_surveillances ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.up_users ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.up_roles ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.up_permissions ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.under_navs ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.strapi_webhooks ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.strapi_migrations ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.strapi_database_schema ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.strapi_core_store_settings ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.strapi_api_tokens ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.sonstruction_services_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.sonstruction_services ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.service_lists ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.product_lists ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.network_services_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.network_services ALTER COLUMN id DROP DEFAULT;
+ALTER TABLE public.pagas_services ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.navigations ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.mains_components ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.mains ALTER COLUMN id DROP DEFAULT;
@@ -327,15 +232,8 @@ ALTER TABLE public.locals ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.layouts_components ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.layouts ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.i18n_locale ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.fire_safety_services_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.fire_safety_services ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.files ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.elevator_dispatching_services_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.elevator_dispatching_services ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.design_services_components ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.design_services ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.components_services_services ALTER COLUMN id DROP DEFAULT;
-ALTER TABLE public.components_services_page_com_component_services ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.components_products_products ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.components_navbar_header_navbars ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.components_form_form_mains_components ALTER COLUMN id DROP DEFAULT;
@@ -352,11 +250,6 @@ ALTER TABLE public.brands ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.admin_users ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.admin_roles ALTER COLUMN id DROP DEFAULT;
 ALTER TABLE public.admin_permissions ALTER COLUMN id DROP DEFAULT;
-DROP TABLE public.video_surveillances_localizations_links;
-DROP SEQUENCE public.video_surveillances_id_seq;
-DROP SEQUENCE public.video_surveillances_components_id_seq;
-DROP TABLE public.video_surveillances_components;
-DROP TABLE public.video_surveillances;
 DROP TABLE public.up_users_role_links;
 DROP SEQUENCE public.up_users_id_seq;
 DROP TABLE public.up_users;
@@ -365,9 +258,6 @@ DROP TABLE public.up_roles;
 DROP TABLE public.up_permissions_role_links;
 DROP SEQUENCE public.up_permissions_id_seq;
 DROP TABLE public.up_permissions;
-DROP TABLE public.under_navs_localizations_links;
-DROP SEQUENCE public.under_navs_id_seq;
-DROP TABLE public.under_navs;
 DROP SEQUENCE public.strapi_webhooks_id_seq;
 DROP TABLE public.strapi_webhooks;
 DROP SEQUENCE public.strapi_migrations_id_seq;
@@ -378,11 +268,6 @@ DROP SEQUENCE public.strapi_core_store_settings_id_seq;
 DROP TABLE public.strapi_core_store_settings;
 DROP SEQUENCE public.strapi_api_tokens_id_seq;
 DROP TABLE public.strapi_api_tokens;
-DROP TABLE public.sonstruction_services_localizations_links;
-DROP SEQUENCE public.sonstruction_services_id_seq;
-DROP SEQUENCE public.sonstruction_services_components_id_seq;
-DROP TABLE public.sonstruction_services_components;
-DROP TABLE public.sonstruction_services;
 DROP TABLE public.service_lists_localizations_links;
 DROP SEQUENCE public.service_lists_id_seq;
 DROP TABLE public.service_lists;
@@ -390,11 +275,9 @@ DROP TABLE public.product_lists_localizations_links;
 DROP SEQUENCE public.product_lists_id_seq;
 DROP TABLE public.product_lists_brand_links;
 DROP TABLE public.product_lists;
-DROP TABLE public.network_services_localizations_links;
-DROP SEQUENCE public.network_services_id_seq;
-DROP SEQUENCE public.network_services_components_id_seq;
-DROP TABLE public.network_services_components;
-DROP TABLE public.network_services;
+DROP TABLE public.pagas_services_localizations_links;
+DROP SEQUENCE public.pagas_services_id_seq;
+DROP TABLE public.pagas_services;
 DROP TABLE public.navigations_localizations_links;
 DROP SEQUENCE public.navigations_id_seq;
 DROP TABLE public.navigations;
@@ -413,33 +296,15 @@ DROP TABLE public.layouts_components;
 DROP TABLE public.layouts;
 DROP SEQUENCE public.i18n_locale_id_seq;
 DROP TABLE public.i18n_locale;
-DROP TABLE public.fire_safety_services_localizations_links;
-DROP SEQUENCE public.fire_safety_services_id_seq;
-DROP SEQUENCE public.fire_safety_services_components_id_seq;
-DROP TABLE public.fire_safety_services_components;
-DROP TABLE public.fire_safety_services;
 DROP TABLE public.files_related_morphs;
 DROP SEQUENCE public.files_id_seq;
 DROP TABLE public.files;
-DROP TABLE public.elevator_dispatching_services_localizations_links;
-DROP SEQUENCE public.elevator_dispatching_services_id_seq;
-DROP SEQUENCE public.elevator_dispatching_services_components_id_seq;
-DROP TABLE public.elevator_dispatching_services_components;
-DROP TABLE public.elevator_dispatching_services;
-DROP TABLE public.design_services_localizations_links;
-DROP SEQUENCE public.design_services_id_seq;
-DROP SEQUENCE public.design_services_components_id_seq;
-DROP TABLE public.design_services_components;
-DROP TABLE public.design_services;
 DROP TABLE public.components_services_services_service_lists_links;
 DROP SEQUENCE public.components_services_services_id_seq;
 DROP TABLE public.components_services_services;
-DROP SEQUENCE public.components_services_page_com_component_services_id_seq;
-DROP TABLE public.components_services_page_com_component_services;
 DROP SEQUENCE public.components_products_products_id_seq;
 DROP TABLE public.components_products_products_brands_links;
 DROP TABLE public.components_products_products;
-DROP TABLE public.components_navbar_header_navbars_under_navs_links;
 DROP TABLE public.components_navbar_header_navbars_navigations_links;
 DROP TABLE public.components_navbar_header_navbars_locals_links;
 DROP SEQUENCE public.components_navbar_header_navbars_id_seq;
@@ -628,7 +493,8 @@ CREATE TABLE public.brands (
     updated_at timestamp(6) without time zone,
     created_by_id integer,
     updated_by_id integer,
-    locale character varying(255)
+    locale character varying(255),
+    description text
 );
 
 
@@ -1050,25 +916,12 @@ CREATE TABLE public.components_navbar_header_navbars_navigations_links (
 
 
 --
--- Name: components_navbar_header_navbars_under_navs_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.components_navbar_header_navbars_under_navs_links (
-    navbar_id integer,
-    under_nav_id integer
-);
-
-
---
 -- Name: components_products_products; Type: TABLE; Schema: public; Owner: -
 --
 
 CREATE TABLE public.components_products_products (
     id integer NOT NULL,
-    heading character varying(255),
-    desc_tiady text,
-    desc_onv text,
-    desc_ob text
+    heading character varying(255)
 );
 
 
@@ -1100,40 +953,6 @@ CREATE SEQUENCE public.components_products_products_id_seq
 --
 
 ALTER SEQUENCE public.components_products_products_id_seq OWNED BY public.components_products_products.id;
-
-
---
--- Name: components_services_page_com_component_services; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.components_services_page_com_component_services (
-    id integer NOT NULL,
-    heading character varying(255),
-    description text,
-    under_description text,
-    button_back character varying(255),
-    button_next character varying(255)
-);
-
-
---
--- Name: components_services_page_com_component_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.components_services_page_com_component_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: components_services_page_com_component_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.components_services_page_com_component_services_id_seq OWNED BY public.components_services_page_com_component_services.id;
 
 
 --
@@ -1176,162 +995,6 @@ ALTER SEQUENCE public.components_services_services_id_seq OWNED BY public.compon
 CREATE TABLE public.components_services_services_service_lists_links (
     services_id integer,
     service_list_id integer
-);
-
-
---
--- Name: design_services; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.design_services (
-    id integer NOT NULL,
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255)
-);
-
-
---
--- Name: design_services_components; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.design_services_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: design_services_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.design_services_components_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: design_services_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.design_services_components_id_seq OWNED BY public.design_services_components.id;
-
-
---
--- Name: design_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.design_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: design_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.design_services_id_seq OWNED BY public.design_services.id;
-
-
---
--- Name: design_services_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.design_services_localizations_links (
-    design_service_id integer,
-    inv_design_service_id integer
-);
-
-
---
--- Name: elevator_dispatching_services; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.elevator_dispatching_services (
-    id integer NOT NULL,
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255)
-);
-
-
---
--- Name: elevator_dispatching_services_components; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.elevator_dispatching_services_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: elevator_dispatching_services_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.elevator_dispatching_services_components_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: elevator_dispatching_services_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.elevator_dispatching_services_components_id_seq OWNED BY public.elevator_dispatching_services_components.id;
-
-
---
--- Name: elevator_dispatching_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.elevator_dispatching_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: elevator_dispatching_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.elevator_dispatching_services_id_seq OWNED BY public.elevator_dispatching_services.id;
-
-
---
--- Name: elevator_dispatching_services_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.elevator_dispatching_services_localizations_links (
-    elevator_dispatching_service_id integer,
-    inv_elevator_dispatching_service_id integer
 );
 
 
@@ -1392,84 +1055,6 @@ CREATE TABLE public.files_related_morphs (
     related_type character varying(255),
     field character varying(255),
     "order" integer
-);
-
-
---
--- Name: fire_safety_services; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.fire_safety_services (
-    id integer NOT NULL,
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255)
-);
-
-
---
--- Name: fire_safety_services_components; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.fire_safety_services_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: fire_safety_services_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.fire_safety_services_components_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: fire_safety_services_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.fire_safety_services_components_id_seq OWNED BY public.fire_safety_services_components.id;
-
-
---
--- Name: fire_safety_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.fire_safety_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: fire_safety_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.fire_safety_services_id_seq OWNED BY public.fire_safety_services.id;
-
-
---
--- Name: fire_safety_services_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.fire_safety_services_localizations_links (
-    fire_safety_service_id integer,
-    inv_fire_safety_service_id integer
 );
 
 
@@ -1760,38 +1345,28 @@ CREATE TABLE public.navigations_localizations_links (
 
 
 --
--- Name: network_services; Type: TABLE; Schema: public; Owner: -
+-- Name: pagas_services; Type: TABLE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.network_services (
+CREATE TABLE public.pagas_services (
     id integer NOT NULL,
     created_at timestamp(6) without time zone,
     updated_at timestamp(6) without time zone,
     created_by_id integer,
     updated_by_id integer,
-    locale character varying(255)
+    locale character varying(255),
+    name character varying(255),
+    sort_id integer,
+    description text,
+    under_description text
 );
 
 
 --
--- Name: network_services_components; Type: TABLE; Schema: public; Owner: -
+-- Name: pagas_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
 --
 
-CREATE TABLE public.network_services_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: network_services_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.network_services_components_id_seq
+CREATE SEQUENCE public.pagas_services_id_seq
     AS integer
     START WITH 1
     INCREMENT BY 1
@@ -1801,39 +1376,19 @@ CREATE SEQUENCE public.network_services_components_id_seq
 
 
 --
--- Name: network_services_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: pagas_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.network_services_components_id_seq OWNED BY public.network_services_components.id;
-
-
---
--- Name: network_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.network_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
+ALTER SEQUENCE public.pagas_services_id_seq OWNED BY public.pagas_services.id;
 
 
 --
--- Name: network_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+-- Name: pagas_services_localizations_links; Type: TABLE; Schema: public; Owner: -
 --
 
-ALTER SEQUENCE public.network_services_id_seq OWNED BY public.network_services.id;
-
-
---
--- Name: network_services_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.network_services_localizations_links (
-    network_service_id integer,
-    inv_network_service_id integer
+CREATE TABLE public.pagas_services_localizations_links (
+    pagas_service_id integer,
+    inv_pagas_service_id integer
 );
 
 
@@ -1936,84 +1491,6 @@ ALTER SEQUENCE public.service_lists_id_seq OWNED BY public.service_lists.id;
 CREATE TABLE public.service_lists_localizations_links (
     service_list_id integer,
     inv_service_list_id integer
-);
-
-
---
--- Name: sonstruction_services; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.sonstruction_services (
-    id integer NOT NULL,
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255)
-);
-
-
---
--- Name: sonstruction_services_components; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.sonstruction_services_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: sonstruction_services_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.sonstruction_services_components_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: sonstruction_services_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.sonstruction_services_components_id_seq OWNED BY public.sonstruction_services_components.id;
-
-
---
--- Name: sonstruction_services_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.sonstruction_services_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: sonstruction_services_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.sonstruction_services_id_seq OWNED BY public.sonstruction_services.id;
-
-
---
--- Name: sonstruction_services_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.sonstruction_services_localizations_links (
-    sonstruction_service_id integer,
-    inv_sonstruction_service_id integer
 );
 
 
@@ -2186,53 +1663,6 @@ ALTER SEQUENCE public.strapi_webhooks_id_seq OWNED BY public.strapi_webhooks.id;
 
 
 --
--- Name: under_navs; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.under_navs (
-    id integer NOT NULL,
-    name character varying(255),
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255),
-    slug character varying(255),
-    sort_id integer
-);
-
-
---
--- Name: under_navs_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.under_navs_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: under_navs_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.under_navs_id_seq OWNED BY public.under_navs.id;
-
-
---
--- Name: under_navs_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.under_navs_localizations_links (
-    under_nav_id integer,
-    inv_under_nav_id integer
-);
-
-
---
 -- Name: up_permissions; Type: TABLE; Schema: public; Owner: -
 --
 
@@ -2364,84 +1794,6 @@ CREATE TABLE public.up_users_role_links (
 
 
 --
--- Name: video_surveillances; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.video_surveillances (
-    id integer NOT NULL,
-    created_at timestamp(6) without time zone,
-    updated_at timestamp(6) without time zone,
-    created_by_id integer,
-    updated_by_id integer,
-    locale character varying(255)
-);
-
-
---
--- Name: video_surveillances_components; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.video_surveillances_components (
-    id integer NOT NULL,
-    entity_id integer,
-    component_id integer,
-    component_type character varying(255),
-    field character varying(255),
-    "order" integer DEFAULT 0
-);
-
-
---
--- Name: video_surveillances_components_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.video_surveillances_components_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: video_surveillances_components_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.video_surveillances_components_id_seq OWNED BY public.video_surveillances_components.id;
-
-
---
--- Name: video_surveillances_id_seq; Type: SEQUENCE; Schema: public; Owner: -
---
-
-CREATE SEQUENCE public.video_surveillances_id_seq
-    AS integer
-    START WITH 1
-    INCREMENT BY 1
-    NO MINVALUE
-    NO MAXVALUE
-    CACHE 1;
-
-
---
--- Name: video_surveillances_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
---
-
-ALTER SEQUENCE public.video_surveillances_id_seq OWNED BY public.video_surveillances.id;
-
-
---
--- Name: video_surveillances_localizations_links; Type: TABLE; Schema: public; Owner: -
---
-
-CREATE TABLE public.video_surveillances_localizations_links (
-    video_surveillance_id integer,
-    inv_video_surveillance_id integer
-);
-
-
---
 -- Name: admin_permissions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2554,13 +1906,6 @@ ALTER TABLE ONLY public.components_products_products ALTER COLUMN id SET DEFAULT
 
 
 --
--- Name: components_services_page_com_component_services id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.components_services_page_com_component_services ALTER COLUMN id SET DEFAULT nextval('public.components_services_page_com_component_services_id_seq'::regclass);
-
-
---
 -- Name: components_services_services id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2568,52 +1913,10 @@ ALTER TABLE ONLY public.components_services_services ALTER COLUMN id SET DEFAULT
 
 
 --
--- Name: design_services id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services ALTER COLUMN id SET DEFAULT nextval('public.design_services_id_seq'::regclass);
-
-
---
--- Name: design_services_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services_components ALTER COLUMN id SET DEFAULT nextval('public.design_services_components_id_seq'::regclass);
-
-
---
--- Name: elevator_dispatching_services id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services ALTER COLUMN id SET DEFAULT nextval('public.elevator_dispatching_services_id_seq'::regclass);
-
-
---
--- Name: elevator_dispatching_services_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services_components ALTER COLUMN id SET DEFAULT nextval('public.elevator_dispatching_services_components_id_seq'::regclass);
-
-
---
 -- Name: files id; Type: DEFAULT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.files ALTER COLUMN id SET DEFAULT nextval('public.files_id_seq'::regclass);
-
-
---
--- Name: fire_safety_services id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services ALTER COLUMN id SET DEFAULT nextval('public.fire_safety_services_id_seq'::regclass);
-
-
---
--- Name: fire_safety_services_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services_components ALTER COLUMN id SET DEFAULT nextval('public.fire_safety_services_components_id_seq'::regclass);
 
 
 --
@@ -2666,17 +1969,10 @@ ALTER TABLE ONLY public.navigations ALTER COLUMN id SET DEFAULT nextval('public.
 
 
 --
--- Name: network_services id; Type: DEFAULT; Schema: public; Owner: -
+-- Name: pagas_services id; Type: DEFAULT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.network_services ALTER COLUMN id SET DEFAULT nextval('public.network_services_id_seq'::regclass);
-
-
---
--- Name: network_services_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.network_services_components ALTER COLUMN id SET DEFAULT nextval('public.network_services_components_id_seq'::regclass);
+ALTER TABLE ONLY public.pagas_services ALTER COLUMN id SET DEFAULT nextval('public.pagas_services_id_seq'::regclass);
 
 
 --
@@ -2691,20 +1987,6 @@ ALTER TABLE ONLY public.product_lists ALTER COLUMN id SET DEFAULT nextval('publi
 --
 
 ALTER TABLE ONLY public.service_lists ALTER COLUMN id SET DEFAULT nextval('public.service_lists_id_seq'::regclass);
-
-
---
--- Name: sonstruction_services id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services ALTER COLUMN id SET DEFAULT nextval('public.sonstruction_services_id_seq'::regclass);
-
-
---
--- Name: sonstruction_services_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services_components ALTER COLUMN id SET DEFAULT nextval('public.sonstruction_services_components_id_seq'::regclass);
 
 
 --
@@ -2743,13 +2025,6 @@ ALTER TABLE ONLY public.strapi_webhooks ALTER COLUMN id SET DEFAULT nextval('pub
 
 
 --
--- Name: under_navs id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs ALTER COLUMN id SET DEFAULT nextval('public.under_navs_id_seq'::regclass);
-
-
---
 -- Name: up_permissions id; Type: DEFAULT; Schema: public; Owner: -
 --
 
@@ -2768,20 +2043,6 @@ ALTER TABLE ONLY public.up_roles ALTER COLUMN id SET DEFAULT nextval('public.up_
 --
 
 ALTER TABLE ONLY public.up_users ALTER COLUMN id SET DEFAULT nextval('public.up_users_id_seq'::regclass);
-
-
---
--- Name: video_surveillances id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances ALTER COLUMN id SET DEFAULT nextval('public.video_surveillances_id_seq'::regclass);
-
-
---
--- Name: video_surveillances_components id; Type: DEFAULT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances_components ALTER COLUMN id SET DEFAULT nextval('public.video_surveillances_components_id_seq'::regclass);
 
 
 --
@@ -2849,19 +2110,12 @@ COPY public.admin_permissions (id, action, subject, properties, conditions, crea
 58	admin::api-tokens.delete	\N	{}	[]	2022-06-20 11:57:03.242	2022-06-20 11:57:03.242	\N	\N
 59	admin::project-settings.update	\N	{}	[]	2022-06-20 11:57:03.249	2022-06-20 11:57:03.249	\N	\N
 60	admin::project-settings.read	\N	{}	[]	2022-06-20 11:57:03.256	2022-06-20 11:57:03.256	\N	\N
-206	plugin::content-manager.explorer.create	api::brand.brand	{"fields": ["name", "product_lists"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:58:43.334	2022-06-24 10:58:43.334	\N	\N
 64	plugin::content-manager.explorer.delete	api::main.main	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:04:12.854	2022-06-20 12:04:12.854	\N	\N
-161	plugin::content-manager.explorer.delete	api::sonstruction-service.sonstruction-service	{"locales": ["en", "tk", "ru"]}	[]	2022-06-21 12:52:42.347	2022-06-21 12:52:42.347	\N	\N
-290	plugin::content-manager.explorer.create	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.descTiady", "product.descONV", "product.descOB", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:38:16.133	2022-06-28 12:38:16.133	\N	\N
-291	plugin::content-manager.explorer.read	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.descTiady", "product.descONV", "product.descOB", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:38:16.142	2022-06-28 12:38:16.142	\N	\N
-207	plugin::content-manager.explorer.read	api::brand.brand	{"fields": ["name", "product_lists"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:58:43.344	2022-06-24 10:58:43.344	\N	\N
 73	plugin::content-manager.explorer.create	api::local.local	{"fields": ["name"], "locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:16:35.843	2022-06-20 12:16:35.843	\N	\N
 74	plugin::content-manager.explorer.read	api::local.local	{"fields": ["name"], "locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:16:35.862	2022-06-20 12:16:35.862	\N	\N
 75	plugin::content-manager.explorer.update	api::local.local	{"fields": ["name"], "locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:16:35.878	2022-06-20 12:16:35.878	\N	\N
 76	plugin::content-manager.explorer.delete	api::local.local	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:16:35.895	2022-06-20 12:16:35.895	\N	\N
-292	plugin::content-manager.explorer.update	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.descTiady", "product.descONV", "product.descOB", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:38:16.151	2022-06-28 12:38:16.151	\N	\N
 80	plugin::content-manager.explorer.delete	api::navigation.navigation	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:16:51.889	2022-06-20 12:16:51.889	\N	\N
-208	plugin::content-manager.explorer.update	api::brand.brand	{"fields": ["name", "product_lists"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:58:43.352	2022-06-24 10:58:43.352	\N	\N
 209	plugin::content-manager.explorer.delete	api::brand.brand	{"locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:58:43.361	2022-06-24 10:58:43.361	\N	\N
 93	plugin::content-manager.explorer.delete	api::service-list.service-list	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:44:32.064	2022-06-20 12:44:32.064	\N	\N
 100	plugin::content-manager.explorer.delete	api::product-list.product-list	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 12:56:35.231	2022-06-20 12:56:35.231	\N	\N
@@ -2869,50 +2123,33 @@ COPY public.admin_permissions (id, action, subject, properties, conditions, crea
 109	plugin::content-manager.explorer.read	api::certificate-list.certificate-list	{"fields": ["img"], "locales": ["en", "tk", "ru"]}	[]	2022-06-20 13:13:44.329	2022-06-20 13:13:44.329	\N	\N
 110	plugin::content-manager.explorer.update	api::certificate-list.certificate-list	{"fields": ["img"], "locales": ["en", "tk", "ru"]}	[]	2022-06-20 13:13:44.356	2022-06-20 13:13:44.356	\N	\N
 111	plugin::content-manager.explorer.delete	api::certificate-list.certificate-list	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 13:13:44.379	2022-06-20 13:13:44.379	\N	\N
-115	plugin::content-manager.explorer.delete	api::under-nav.under-nav	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 13:19:09.916	2022-06-20 13:19:09.916	\N	\N
-173	plugin::content-manager.explorer.delete	api::elevator-dispatching-service.elevator-dispatching-service	{"locales": ["en", "tk", "ru"]}	[]	2022-06-21 12:56:41.936	2022-06-21 12:56:41.936	\N	\N
 281	plugin::content-manager.explorer.create	api::navigation.navigation	{"fields": ["name", "href", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-27 17:12:34.798	2022-06-27 17:12:34.798	\N	\N
 282	plugin::content-manager.explorer.read	api::navigation.navigation	{"fields": ["name", "href", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-27 17:12:34.808	2022-06-27 17:12:34.808	\N	\N
 283	plugin::content-manager.explorer.update	api::navigation.navigation	{"fields": ["name", "href", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-27 17:12:34.816	2022-06-27 17:12:34.816	\N	\N
 284	plugin::content-manager.explorer.create	api::service-list.service-list	{"fields": ["img", "heading", "description", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:06:40.428	2022-06-28 12:06:40.428	\N	\N
 285	plugin::content-manager.explorer.read	api::service-list.service-list	{"fields": ["img", "heading", "description", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:06:40.438	2022-06-28 12:06:40.438	\N	\N
 286	plugin::content-manager.explorer.update	api::service-list.service-list	{"fields": ["img", "heading", "description", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:06:40.446	2022-06-28 12:06:40.446	\N	\N
-213	plugin::content-manager.explorer.delete	api::video-surveillance.video-surveillance	{"locales": ["en", "tk", "ru"]}	[]	2022-06-24 11:18:34.484	2022-06-24 11:18:34.484	\N	\N
 138	plugin::content-manager.explorer.delete	api::layout.layout	{"locales": ["en", "tk", "ru"]}	[]	2022-06-20 14:44:24.494	2022-06-20 14:44:24.494	\N	\N
 154	plugin::documentation.read	\N	{}	[]	2022-06-20 15:00:12.222	2022-06-20 15:00:12.222	\N	\N
 155	plugin::documentation.settings.update	\N	{}	[]	2022-06-20 15:00:12.231	2022-06-20 15:00:12.231	\N	\N
 156	plugin::documentation.settings.regenerate	\N	{}	[]	2022-06-20 15:00:12.239	2022-06-20 15:00:12.239	\N	\N
 157	plugin::documentation.settings.read	\N	{}	[]	2022-06-20 15:00:12.247	2022-06-20 15:00:12.247	\N	\N
-165	plugin::content-manager.explorer.delete	api::design-service.design-service	{"locales": ["en", "tk", "ru"]}	[]	2022-06-21 12:53:49.09	2022-06-21 12:53:49.09	\N	\N
-169	plugin::content-manager.explorer.delete	api::fire-safety-service.fire-safety-service	{"locales": ["en", "tk", "ru"]}	[]	2022-06-21 12:55:09.635	2022-06-21 12:55:09.635	\N	\N
-177	plugin::content-manager.explorer.delete	api::network-service.network-service	{"locales": ["en", "tk", "ru"]}	[]	2022-06-21 12:58:20.17	2022-06-21 12:58:20.17	\N	\N
 200	plugin::content-manager.explorer.create	api::product-list.product-list	{"fields": ["img", "description", "brand"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:50:35.003	2022-06-24 10:50:35.003	\N	\N
 202	plugin::content-manager.explorer.read	api::product-list.product-list	{"fields": ["img", "description", "brand"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:50:35.02	2022-06-24 10:50:35.02	\N	\N
 204	plugin::content-manager.explorer.update	api::product-list.product-list	{"fields": ["img", "description", "brand"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 10:50:35.039	2022-06-24 10:50:35.039	\N	\N
-260	plugin::content-manager.explorer.create	api::design-service.design-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.842	2022-06-24 16:29:37.842	\N	\N
-261	plugin::content-manager.explorer.create	api::elevator-dispatching-service.elevator-dispatching-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.851	2022-06-24 16:29:37.851	\N	\N
-262	plugin::content-manager.explorer.create	api::fire-safety-service.fire-safety-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.858	2022-06-24 16:29:37.858	\N	\N
-263	plugin::content-manager.explorer.create	api::network-service.network-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.87	2022-06-24 16:29:37.87	\N	\N
-264	plugin::content-manager.explorer.create	api::sonstruction-service.sonstruction-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.878	2022-06-24 16:29:37.878	\N	\N
-265	plugin::content-manager.explorer.create	api::video-surveillance.video-surveillance	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.885	2022-06-24 16:29:37.885	\N	\N
-266	plugin::content-manager.explorer.read	api::design-service.design-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.892	2022-06-24 16:29:37.892	\N	\N
-267	plugin::content-manager.explorer.read	api::elevator-dispatching-service.elevator-dispatching-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.9	2022-06-24 16:29:37.9	\N	\N
-268	plugin::content-manager.explorer.read	api::fire-safety-service.fire-safety-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.907	2022-06-24 16:29:37.907	\N	\N
-269	plugin::content-manager.explorer.read	api::network-service.network-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.916	2022-06-24 16:29:37.916	\N	\N
-270	plugin::content-manager.explorer.read	api::sonstruction-service.sonstruction-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.924	2022-06-24 16:29:37.924	\N	\N
-271	plugin::content-manager.explorer.read	api::video-surveillance.video-surveillance	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.933	2022-06-24 16:29:37.933	\N	\N
-272	plugin::content-manager.explorer.update	api::design-service.design-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.941	2022-06-24 16:29:37.941	\N	\N
-273	plugin::content-manager.explorer.update	api::elevator-dispatching-service.elevator-dispatching-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.951	2022-06-24 16:29:37.951	\N	\N
-274	plugin::content-manager.explorer.update	api::fire-safety-service.fire-safety-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.961	2022-06-24 16:29:37.961	\N	\N
-275	plugin::content-manager.explorer.update	api::network-service.network-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.972	2022-06-24 16:29:37.972	\N	\N
-276	plugin::content-manager.explorer.update	api::sonstruction-service.sonstruction-service	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.982	2022-06-24 16:29:37.982	\N	\N
-277	plugin::content-manager.explorer.update	api::video-surveillance.video-surveillance	{"fields": ["component.heading", "component.description", "component.under_description", "component.img1", "component.img2", "component.img3", "component.buttonBack", "component.buttonNext"], "locales": ["en", "tk", "ru"]}	[]	2022-06-24 16:29:37.989	2022-06-24 16:29:37.989	\N	\N
-287	plugin::content-manager.explorer.create	api::under-nav.under-nav	{"fields": ["name", "slug", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:19:11.43	2022-06-28 12:19:11.43	\N	\N
-288	plugin::content-manager.explorer.read	api::under-nav.under-nav	{"fields": ["name", "slug", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:19:11.442	2022-06-28 12:19:11.442	\N	\N
-289	plugin::content-manager.explorer.update	api::under-nav.under-nav	{"fields": ["name", "slug", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-06-28 12:19:11.45	2022-06-28 12:19:11.45	\N	\N
-293	plugin::content-manager.explorer.create	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "navbar.under_navs", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-06-29 17:29:28.612	2022-06-29 17:29:28.612	\N	\N
-294	plugin::content-manager.explorer.read	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "navbar.under_navs", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-06-29 17:29:28.618	2022-06-29 17:29:28.618	\N	\N
-295	plugin::content-manager.explorer.update	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "navbar.under_navs", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-06-29 17:29:28.624	2022-06-29 17:29:28.624	\N	\N
+299	plugin::content-manager.explorer.delete	api::pagas-service.pagas-service	{"locales": ["en", "tk", "ru"]}	[]	2022-07-06 16:33:22.107	2022-07-06 16:33:22.107	\N	\N
+335	plugin::content-manager.explorer.create	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:14.75	2022-07-07 12:20:14.75	\N	\N
+336	plugin::content-manager.explorer.read	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:14.758	2022-07-07 12:20:14.758	\N	\N
+337	plugin::content-manager.explorer.update	api::layout.layout	{"fields": ["navbar.logo", "navbar.locals", "navbar.navigations", "address.address", "number.number", "footer.logo", "footer.description", "footer.title_mail", "footer.mail", "footer_dev.permission", "footer_dev.logo_dev", "footer_dev.logo_dev1", "footer_dev.devBy"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:14.768	2022-07-07 12:20:14.768	\N	\N
+338	plugin::content-manager.explorer.create	api::pagas-service.pagas-service	{"fields": ["name", "description", "under_description", "img1", "img2", "img3", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:32.674	2022-07-07 12:20:32.674	\N	\N
+339	plugin::content-manager.explorer.read	api::pagas-service.pagas-service	{"fields": ["name", "description", "under_description", "img1", "img2", "img3", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:32.683	2022-07-07 12:20:32.683	\N	\N
+340	plugin::content-manager.explorer.update	api::pagas-service.pagas-service	{"fields": ["name", "description", "under_description", "img1", "img2", "img3", "sort_id"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 12:20:32.689	2022-07-07 12:20:32.689	\N	\N
+341	plugin::content-manager.explorer.create	api::brand.brand	{"fields": ["name", "product_lists", "description"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:20:18.875	2022-07-07 15:20:18.875	\N	\N
+342	plugin::content-manager.explorer.read	api::brand.brand	{"fields": ["name", "product_lists", "description"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:20:18.883	2022-07-07 15:20:18.883	\N	\N
+343	plugin::content-manager.explorer.update	api::brand.brand	{"fields": ["name", "product_lists", "description"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:20:18.891	2022-07-07 15:20:18.891	\N	\N
+344	plugin::content-manager.explorer.create	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:22:57.981	2022-07-07 15:22:57.981	\N	\N
+345	plugin::content-manager.explorer.read	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:22:57.991	2022-07-07 15:22:57.991	\N	\N
+346	plugin::content-manager.explorer.update	api::main.main	{"fields": ["headVideo", "services.heading", "services.under_heading", "services.description", "services.service_lists", "services.button", "product.heading", "product.brands", "about.headImg", "about.heading", "about.under_heading", "about.description", "about.descImg", "certificate.logo", "certificate.under_heading", "certificate.certificate_lists", "certificate.heading", "form.heading", "form.name", "form.message", "form.mail", "form.form_address.address", "form.form_mail.mail", "form.form_number.number", "form.button", "head", "desc", "headButton"], "locales": ["en", "tk", "ru"]}	[]	2022-07-07 15:22:57.998	2022-07-07 15:22:57.998	\N	\N
 \.
 
 
@@ -2988,63 +2225,39 @@ COPY public.admin_permissions_role_links (permission_id, role_id) FROM stdin;
 285	1
 286	1
 64	1
-287	1
 200	1
-288	1
 202	1
-289	1
 204	1
-290	1
 73	1
 74	1
 75	1
 76	1
-291	1
-292	1
 80	1
-206	1
-207	1
-208	1
 209	1
-213	1
 93	1
 100	1
 108	1
 109	1
 110	1
 111	1
-115	1
 138	1
 154	1
 155	1
 156	1
 157	1
-161	1
-165	1
-169	1
-260	1
-173	1
-177	1
-261	1
-262	1
-263	1
-264	1
-265	1
-266	1
-267	1
-268	1
-269	1
-270	1
-271	1
-272	1
-273	1
-274	1
-275	1
-276	1
-277	1
-293	1
-294	1
-295	1
+299	1
+335	1
+336	1
+337	1
+338	1
+339	1
+340	1
+341	1
+342	1
+343	1
+344	1
+345	1
+346	1
 \.
 
 
@@ -3081,16 +2294,16 @@ COPY public.admin_users_roles_links (user_id, role_id) FROM stdin;
 -- Data for Name: brands; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.brands (id, name, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-5	Tiady	2022-06-24 10:59:10.114	2022-06-24 10:59:10.114	1	1	tk
-1	Tiady	2022-06-24 10:51:06.897	2022-06-24 10:59:10.13	1	1	ru
-4	Tiady	2022-06-24 10:59:05.777	2022-06-24 10:59:10.13	1	1	en
-7	ONV	2022-06-24 11:00:55.139	2022-06-24 11:00:55.139	1	1	tk
-2	ONV	2022-06-24 10:51:13.223	2022-06-24 11:00:55.152	1	1	ru
-6	ONV	2022-06-24 11:00:51.789	2022-06-24 11:00:55.152	1	1	en
-9	ОБЬ	2022-06-24 11:01:13.203	2022-06-24 11:01:13.203	1	1	tk
-3	ОБЬ	2022-06-24 10:51:19.885	2022-06-24 11:01:13.218	1	1	ru
-8	ОБЬ	2022-06-24 11:01:09.323	2022-06-24 11:01:13.218	1	1	en
+COPY public.brands (id, name, created_at, updated_at, created_by_id, updated_by_id, locale, description) FROM stdin;
+2	ONV	2022-06-24 10:51:13.223	2022-07-07 15:20:44.439	1	1	ru	Оптико-теллекомуникационные решения от ONV, с разнообразным выбором свитчей и модулей - отличное решение для вашего бизнеса и автоматизации бизнес процессов. ONV известен своими “Инновационными исследованиями” и “Интеллектуальным производством”.
+1	Tiady	2022-06-24 10:51:06.897	2022-07-07 15:20:54.577	1	1	ru	“Höwür” - официальный дистрибьютер компаний - производителей технического и телекоммуникационного оборудования. Мы можем предложить Вам камеры и системы видеонаблюдения “Tiady”.Tiandy Technologies предлагает комплексные решения в сфере видеонаблюдения. Решения Tiady в области искусственного интеллекта, Big Data, видеонаблюдения ориентированы на безопасность.
+3	ОБЬ	2022-06-24 10:51:19.885	2022-07-07 15:21:06.888	1	1	ru	Наши парнеры предлагают полный диспетчерский комплекс “ОБЬ”, которая состоит из автоматизированной системы контроля, управления, диспетчеризации лифтов, разграничения доступа в лифтовые кабины, систему видеонаблюдения в лифтах, а также комплекс, обеспечивающий связь пожарного поста с пасажирами лифта.
+8	ОБЬ	2022-06-24 11:01:09.323	2022-07-07 15:21:17.389	1	1	en	Our partners offer a complete dispatch complex "OB", which consists of an automated control system, control, dispatching of elevators, access control to elevator cabins, a video surveillance system in elevators, as well as a complex that provides communication between the fire station and elevator passengers.
+4	Tiady	2022-06-24 10:59:05.777	2022-07-07 15:21:33.355	1	1	en	“Höwür” is the official distributor of companies - manufacturers of technical and telecommunication equipment. We can offer you "Tiady" cameras and video surveillance systems. Tiandy Technologies offers comprehensive solutions in the field of video surveillance. Tiady's solutions in the field of artificial intelligence, Big Data, video surveillance are focused on security.
+6	ONV	2022-06-24 11:00:51.789	2022-07-07 15:21:43.638	1	1	en	Optical telecom solutions from ONV, with a diverse selection of switches and modules, is an excellent solution for your business and business process automation. ONV is known for its "Innovative Research" and "Smart Manufacturing".
+7	ONV	2022-06-24 11:00:55.139	2022-07-07 15:22:00.111	1	1	tk	ONV-den optiki telekom çözgütleri, dürli wyklýuçateller we modullar bilen, işiňiz we işiňiziň awtomatlaşdyrylmagy üçin ajaýyp çözgütdir. ONV “Innowasiýa gözlegleri” we “Akylly önümçilik” bilen tanalýar.
+5	Tiady	2022-06-24 10:59:10.114	2022-07-07 15:22:12.096	1	1	tk	“Höwür” kompaniýalaryň resmi paýlaýjysy - tehniki we telekommunikasiýa enjamlaryny öndürijilerdir. Size "Tiady" kameralaryny we wideo gözegçilik ulgamlaryny hödürläp bileris. Tiandy Technologies wideo gözegçilik ulgamynda giňişleýin çözgütleri hödürleýär. Tiadiniň emeli intellekt, Uly maglumatlar, wideo gözegçilik ulgamynda çözgütleri howpsuzlyga gönükdirilendir.
+9	ОБЬ	2022-06-24 11:01:13.203	2022-07-07 15:22:29.279	1	1	tk	Hyzmatdaşlarymyz awtomatlaşdyrylan dolandyryş ulgamyndan, elewatorlara gözegçilikden, iberişden, lift kabinalaryna giriş gözegçiliginden, liftlerde wideo gözegçilik ulgamyndan we ýangyn bekediniň arasynda aragatnaşyk saklaýan toplumdan ybarat doly “OB” toplumy hödürleýär. we lifti ýolagçylary.
 \.
 
 
@@ -3234,10 +2447,10 @@ COPY public.components_contacts_addresses (id, address) FROM stdin;
 1	Туркменистан / Ашгабад, Парахат 1, Здание 68
 6	Turkmenistan, Ashgabad, Archabil Avenue, Building 55
 7	Türkmenistan, Aşgabad, Arçabil şaýoly, 55-nji bina
+3	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
 2	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
 4	Turkmenistan / Ashgabat, Archabil Avenue, Building 55
 5	Türkmenistan / Aşgabat, Arçabil şaýoly, 55-nji bina
-3	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
 \.
 
 
@@ -3260,10 +2473,10 @@ COPY public.components_contacts_phone_numbers (id, number) FROM stdin;
 1	+993 65039539
 6	99365701221  / 99312480812
 7	99365701221  / 99312480812
+3	+99312480812
 2	99365701221  / 99312480812
 4	+99312480812
 5	+99312480812
-3	+99312480812
 \.
 
 
@@ -3272,9 +2485,9 @@ COPY public.components_contacts_phone_numbers (id, number) FROM stdin;
 --
 
 COPY public.components_footer_footer_devs (id, permission, dev_by) FROM stdin;
+1	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
 2	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
 3	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
-1	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
 \.
 
 
@@ -3283,9 +2496,9 @@ COPY public.components_footer_footer_devs (id, permission, dev_by) FROM stdin;
 --
 
 COPY public.components_footer_footer_mains (id, description, title_mail, mail) FROM stdin;
+1	Индивидуальное предприятие “Höwür” - строительная компания, объединяющая талантливых инженеров, проектировщиков, строителей.  Вместе мы строим будущее.	Электронная почта 	info@howur.com.tm
 2	Individual enterprise “Höwür” is a construction company uniting talented engineers, designers, builders. Together we are building the future.	Email	info@howur.com.tm
 3	Aýry-aýry kärhana "Höwür" zehinli inersenerleri, dizaýnerleri, gurluşykçylary birleşdirýän gurluşyk kompaniýasydyr. Bilelikde geljegi gurýarys.	E-poçta iberiň	info@howur.com.tm
-1	Индивидуальное предприятие “Höwür” - строительная компания, объединяющая талантливых инженеров, проектировщиков, строителей.  Вместе мы строим будущее.	Электронная почта 	info@howur.com.tm
 \.
 
 
@@ -3311,9 +2524,9 @@ COPY public.components_form_form_mains_components (id, entity_id, component_id, 
 55	3	7	contacts.address	form_address	1
 56	3	3	contacts.mail	form_mail	1
 57	3	7	contacts.phone-number	form_number	1
-61	1	2	contacts.address	form_address	1
-62	1	1	contacts.mail	form_mail	1
-63	1	2	contacts.phone-number	form_number	1
+64	1	2	contacts.address	form_address	1
+65	1	1	contacts.mail	form_mail	1
+66	1	2	contacts.phone-number	form_number	1
 \.
 
 
@@ -3323,9 +2536,9 @@ COPY public.components_form_form_mains_components (id, entity_id, component_id, 
 
 COPY public.components_navbar_header_navbars (id) FROM stdin;
 1
+2
 3
 4
-2
 \.
 
 
@@ -3337,15 +2550,15 @@ COPY public.components_navbar_header_navbars_locals_links (navbar_id, local_id) 
 1	1
 1	2
 1	3
+2	1
+2	2
+2	3
 3	4
 3	6
 3	8
 4	5
 4	7
 4	9
-2	1
-2	2
-2	3
 \.
 
 
@@ -3354,6 +2567,11 @@ COPY public.components_navbar_header_navbars_locals_links (navbar_id, local_id) 
 --
 
 COPY public.components_navbar_header_navbars_navigations_links (navbar_id, navigation_id) FROM stdin;
+2	5
+2	6
+2	7
+2	8
+2	9
 3	10
 3	12
 3	14
@@ -3364,42 +2582,6 @@ COPY public.components_navbar_header_navbars_navigations_links (navbar_id, navig
 4	15
 4	17
 4	19
-2	5
-2	6
-2	7
-2	8
-2	9
-\.
-
-
---
--- Data for Name: components_navbar_header_navbars_under_navs_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.components_navbar_header_navbars_under_navs_links (navbar_id, under_nav_id) FROM stdin;
-1	1
-1	2
-1	3
-1	4
-1	5
-3	7
-3	9
-3	11
-3	13
-3	15
-3	17
-4	8
-4	10
-4	12
-4	14
-4	16
-4	18
-2	1
-2	2
-2	3
-2	4
-2	5
-2	6
 \.
 
 
@@ -3407,10 +2589,10 @@ COPY public.components_navbar_header_navbars_under_navs_links (navbar_id, under_
 -- Data for Name: components_products_products; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.components_products_products (id, heading, desc_tiady, desc_onv, desc_ob) FROM stdin;
-2	Our Products	“Höwür” is the official distributor of companies - manufacturers of technical and telecommunication equipment. We can offer you "Tiady" cameras and video surveillance systems. Tiandy Technologies offers comprehensive solutions in the field of video surveillance. Tiady's solutions in the field of artificial intelligence, Big Data, video surveillance are focused on security.	Optical telecom solutions from ONV, with a diverse selection of switches and modules, is an excellent solution for your business and business process automation. ONV is known for its "Innovative Research" and "Smart Manufacturing".	Our partners offer a complete dispatch complex "OB", which consists of an automated control system, control, dispatching of elevators, access control to elevator cabins, a video surveillance system in elevators, as well as a complex that provides communication between the fire station and elevator passengers.
-3	Önümlerimiz	“Höwür” kompaniýalaryň resmi paýlaýjysy - tehniki we telekommunikasiýa enjamlaryny öndürijilerdir. Size "Tiady" kameralaryny we wideo gözegçilik ulgamlaryny hödürläp bileris. Tiandy Technologies wideo gözegçilik ulgamynda giňişleýin çözgütleri hödürleýär. Tiadiniň emeli intellekt, Uly maglumatlar, wideo gözegçilik ulgamynda çözgütleri howpsuzlyga gönükdirilendir.	ONV-den optiki telekom çözgütleri, dürli wyklýuçateller we modullar bilen, işiňiz we işiňiziň awtomatlaşdyrylmagy üçin ajaýyp çözgütdir. ONV “Innowasiýa gözlegleri” we “Akylly önümçilik” bilen tanalýar.	Hyzmatdaşlarymyz awtomatlaşdyrylan dolandyryş ulgamyndan, elewatorlara gözegçilikden, iberişden, lift kabinalaryna giriş gözegçiliginden, liftlerde wideo gözegçilik ulgamyndan we ýangyn bekediniň arasynda aragatnaşyk saklaýan toplumdan ybarat doly “OB” toplumy hödürleýär. we lifti ýolagçylary.
-1	Наш продукты	“Höwür” - официальный дистрибьютер компаний - производителей технического и телекоммуникационного оборудования. Мы можем предложить Вам камеры и системы видеонаблюдения “Tiady”.Tiandy Technologies предлагает комплексные решения в сфере видеонаблюдения. Решения Tiady в области искусственного интеллекта, Big Data, видеонаблюдения ориентированы на безопасность.	Оптико-теллекомуникационные решения от ONV, с разнообразным выбором свитчей и модулей - отличное решение для вашего бизнеса и автоматизации бизнес процессов. ONV известен своими “Инновационными исследованиями” и “Интеллектуальным производством”.	Наши парнеры предлагают полный диспетчерский комплекс “ОБЬ”, которая состоит из автоматизированной системы контроля, управления, диспетчеризации лифтов, разграничения доступа в лифтовые кабины, систему видеонаблюдения в лифтах, а также комплекс, обеспечивающий связь пожарного поста с пасажирами лифта.
+COPY public.components_products_products (id, heading) FROM stdin;
+2	Our Products
+3	Önümlerimiz
+1	Наши продукты
 \.
 
 
@@ -3432,44 +2614,13 @@ COPY public.components_products_products_brands_links (product_id, brand_id) FRO
 
 
 --
--- Data for Name: components_services_page_com_component_services; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.components_services_page_com_component_services (id, heading, description, under_description, button_back, button_next) FROM stdin;
-1	Строительство	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. Меи ат сапиентем елояуентиам. Ин вих сцрибентур инструцтиор.\n\nВолумус адиписци диспутатиони ат нец, при еррор малорум не. Делицата ехплицари продессет мел те, вивендум симилияуе сцрипторем ан нам, усу аццоммодаре цонтентионес ид. 	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. 	\N	\N
-2	Проектирование	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. Меи ат сапиентем елояуентиам. Ин вих сцрибентур инструцтиор.\n\nВолумус адиписци диспутатиони ат нец, при еррор малорум не. Делицата ехплицари продессет мел те, вивендум симилияуе сцрипторем ан нам, усу аццоммодаре цонтентионес ид. 	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. 	\N	\N
-3	Пожарная безопасность	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. Меи ат сапиентем елояуентиам. Ин вих сцрибентур инструцтиор.\n\nВолумус адиписци диспутатиони ат нец, при еррор малорум не. Делицата ехплицари продессет мел те, вивендум симилияуе сцрипторем ан нам, усу аццоммодаре цонтентионес ид. 	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. 	\N	\N
-4	Лифтовая диспечеризация	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. Меи ат сапиентем елояуентиам. Ин вих сцрибентур инструцтиор.\n\nВолумус адиписци диспутатиони ат нец, при еррор малорум не. Делицата ехплицари продессет мел те, вивендум симилияуе сцрипторем ан нам, усу аццоммодаре цонтентионес ид. 	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. 	\N	\N
-5	Проектирование Сети	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. Меи ат сапиентем елояуентиам. Ин вих сцрибентур инструцтиор.\n\nВолумус адиписци диспутатиони ат нец, при еррор малорум не. Делицата ехплицари продессет мел те, вивендум симилияуе сцрипторем ан нам, усу аццоммодаре цонтентионес ид. 	Лорем ипсум долор сит амет, ин еос мелиус бонорум молестиае, еос ан деленити цонституам. Ад хомеро сцрипторем усу. Ет яуем солута вулпутате еам, вих ад пробатус партиендо ассуеверит. 	\N	\N
-6	Проектирование	Строительное проектирование - важный этап строительства, который состоит из разработки технической документации, а также проекта слаботочных сетей, который определяет расположение телефонных соединений, систем отопления, водоснабжения и вентиляции.\n\nПроектирование осуществляется в Autocad. После чего наши специалисты осущестляют замерку длины сетей, линий и проводов. Мы гарантием полное соответсвие и экономие строительных материалов.	С нашими работами Вы можете ознакомиться ниже.	Строительство	Пожарная безопасность
-8	Пожарная безопасность	Пожарная безопасность зданий и сооружений должна обеспечить защиту от возгораний и других чрезвычайных ситуаций, минимизировать опасные последствия для людей и имущества. Требования к безопасности определяются индивидуально по виду объекта, его категориям и классам опасности, по видам деятельности, другим показателям.\n\nВ систему пожарной безопасности входит: \tСистема автоматической или ручной сигнализации, \tСистема оповещения и управление эвакуацией людей, Система пожаротушения.	С нашими работами Вы можете ознакомиться ниже.	Проектирование	Лифтовая диспетчеризация
-7	Лифтовая диспечеризация	Цетрализация оперативного контроля работы лифтов и голосовой связи пассажиров лифта с диспетчером осуществляется при помощи лифтовой диспетчеризации.\n\nРешения наших парнеров “ОБЬ” по комплексному и своевременному реагированию на сбои, а также техническая поддержка позволяют нам гарантировать нам удобсто, безопасность и надежность.   Мы устанавливаем систему управления и реагирования, систему наблюдения, а также комплекс мер по обеспечению связи пасажиров лифта и диспетчеров.	С нашими работами Вы можете ознакомиться ниже.	Пожарная безопасность	Проектирование ЛВ сети
-11	Design	Structural design is an important stage of construction, which consists of the development of technical documentation, as well as a project for low-voltage networks, which determines the location of telephone connections, heating, water supply and ventilation systems.\n\nDesign is carried out in Autocad. After that, our specialists measure the length of networks, lines and wires. We guarantee full compliance and economy of building materials.	You can see our work below.	Design	Fire safety
-12	Dizaýn	Gurluşyk dizaýny, tehniki resminamalaryň işlenip düzülmeginden, şeýle hem telefon birikmeleriniň, ýyladyş, suw üpjünçiligi we howa çalşygy ulgamlarynyň ýerleşýän ýerini kesgitleýän pes woltly torlar üçin taslamadan ybarat gurluşygyň möhüm tapgyrydyr.\n\nDizaýn “Autocad” -da amala aşyrylýar. Ondan soň hünärmenlerimiz torlaryň, çyzyklaryň we simleriň uzynlygyny ölçýärler. Gurluşyk materiallarynyň doly laýyklygyny we tygşytlylygyny kepillendirýäris.	Işimizi aşakda görüp bilersiňiz.	Dizaýn	Fireangyn howpsuzlygy
-13	Elevator dispatching	The centralization of the operational control of the operation of elevators and the voice communication of elevator passengers with the dispatcher is carried out using elevator dispatching.\n\nSolutions of our partners "OB" for complex and timely response to failures, as well as technical support, allow us to guarantee us convenience, safety and reliability. We install a control and response system, a surveillance system, as well as a set of measures to ensure communication between elevator passengers and dispatchers.	You can see our work below.	Fire safety	LAN network design
-10	Комплексное строительство 	Туркменистан стал огромной строительной площадкой, каждый день здесь сдаются в эксплуатацию здания и объекты гражданского, промышленного и коммерческого назначений.\n\n“Höwür” имеет разрешительные документы на строительство жилых и нежилых помещений, строительство трудопроводов, работы по благоустройству территорий, монтаж водопроводных систем, систем отопления, вентиляции, кондиционирования, а также прочие строителные и монтажные работы.	С нашими работами Вы можете ознакомиться ниже.		Проектирование
-9	Проектирование ЛВ сети	Локально-вычислительная сеть — это группа вычислительных устройств, образующая структуру с покрытием на конкретной, как правило, небольшой территории. Такая сеть может объединять компьютеры и периферию, находящиеся в одном помещении, здании, или в нескольких гражданских или промышленных сооружениях.	С нашими работами Вы можете ознакомиться ниже.	Пожарная безопасность	Видеонаблюдение
-17	LAN network design	A local area network is a group of computing devices that forms a structure with coverage in a specific, usually small area. Such a network can unite computers and peripherals located in the same room, building, or in several civil or industrial buildings.\n\nWe carry out installation and commissioning of the network using the equipment of our partners ONV. Devices can be connected using cables, fiber optics or Wi-Fi.	You can see our work below.	Fire safety	CCTV
-14	Lift ugratmak	Liftleriň işleýşine gözegçilik etmegiň we lifti ýolagçylaryň dispetçer bilen ses aragatnaşygynyň merkezleşdirilmegi lifti ibermek arkaly amala aşyrylýar.\n\nŞowsuzlyklara çylşyrymly we wagtynda jogap bermek, şeýle hem tehniki goldaw üçin hyzmatdaşlarymyzyň "OB" çözgütleri bize amatlylygy, howpsuzlygy we ygtybarlylygy kepillendirýär. Dolandyryş we jogap ulgamyny, gözegçilik ulgamyny, şeýle hem liftdäki ýolagçylar bilen dispetçerleriň arasynda aragatnaşygy üpjün etmek üçin çäreler toplumyny gurýarys.	Işimizi aşakda görüp bilersiňiz.	Fireangyn howpsuzlygy	LAN tor dizaýny
-18	LAN tor dizaýny	Areaerli sebit ulgamy, belli bir, adatça kiçi bir ýerde gurşap alýan gurluşy emele getirýän hasaplaýyş enjamlarynyň toparydyr. Şeýle tor bir otagda, binada ýa-da birnäçe raýat ýa-da senagat binalarynda ýerleşýän kompýuterleri we periferiýa enjamlaryny birleşdirip biler.\n\nHyzmatdaşlarymyzyň ONV enjamlaryny ulanyp, tor gurmak we işe girizmek. Enjamlary kabel, süýüm optikasy ýa-da Wi-Fi ulanyp birikdirip bolýar.	Işimizi aşakda görüp bilersiňiz.	Fireangyn howpsuzlygy	CCTV
-22	CCTV	Video surveillance - a system that provides video recording of what is happening within the range of IP cameras.\n\nModern digital equipment of Tiady can be installed in private houses, cottages, supermarkets, restaurants, as well as in any administrative offices, which will ensure the necessary level of security in a certain area. Our company is ready to install a video surveillance system at any facility.	С нашими работами Вы можете ознакомиться ниже.	LAN network design	Construction
-15	Fire safety	Fire safety of buildings and structures should provide protection against fires and other emergencies, minimize dangerous consequences for people and property. Safety requirements are determined individually by the type of object, its categories and hazard classes, by types of activity, and other indicators.\n\nThe fire safety system includes: Automatic or manual signaling system, Warning system and people evacuation management, Fire extinguishing system.	You can see our work below.	Design	Elevator dispatching
-16	Fireangyn howpsuzlygy	Binalaryň we desgalaryň ýangyn howpsuzlygy ýangyndan we beýleki adatdan daşary ýagdaýlardan goramagy üpjün etmeli, adamlar we emläk üçin howply netijeleri azaltmalydyr. Howpsuzlyk talaplary obýektiň görnüşi, kategoriýalary we howp synplary, iş görnüşleri we beýleki görkezijiler boýunça aýratynlykda kesgitlenýär.\n\nFireangyn howpsuzlygy ulgamy şulary öz içine alýar: Awtomatiki ýa-da el bilen duýduryş ulgamy, Duýduryş ulgamy we adamlary ewakuasiýa dolandyryşy, ýangyn söndüriş ulgamy.	Işimizi aşakda görüp bilersiňiz.	Dizaýn	Lift ugratmak
-19	Integrated construction	Turkmenistan has become a huge construction site; buildings and facilities for civil, industrial and commercial purposes are commissioned here every day.\n\n“Höwür” has permits for the construction of residential and non-residential premises, the construction of labor pipelines, landscaping works, installation of plumbing systems, heating, ventilation, air conditioning systems, as well as other construction and installation work.	You can see our work below.		Design
-21	Видеонаблюдение	Видеонаблюдение - система, обеспечивающая видеозапись происходящего в пределах действия IP камер. \n\nСовременное цифровое оборудование компании «Tiady» можно установить в частных домах, котеджах, супермаркетах, ресторанах, а также в любых административных, что позволит обеспечить необходимый уровень безопасности на определенной территории.	С нашими работами Вы можете ознакомиться ниже.	Проектирование ЛВ сети	Cтроительство
-23	CCTV	Wideo gözegçilik - IP kameralaryň çäginde bolup geçýän wakalary wideo ýazga geçirýän ulgam.\n\n“Tiady” -nyň häzirki zaman sanly enjamlary hususy jaýlarda, kottejlerde, supermarketlerde, restoranlarda, şeýle hem belli bir sebitde zerur howpsuzlyk derejesini üpjün etjek islendik administratiw ofislerde oturdylyp bilner. Kompaniýamyz islendik desgada wideo gözegçilik ulgamyny gurmaga taýyn.	Işimizi aşakda görüp bilersiňiz.	LAN tor dizaýny	Gurluşyk
-20	Toplumlaýyn gurluşyk	Türkmenistan ullakan gurluşyk meýdançasyna öwrüldi, bu ýerde raýat, senagat we söwda maksatly binalar we desgalar her gün işe girizilýär.\n\n“Höwür” ýaşaýyş we ýaşaýyş jaýy gurmak, zähmet turbalaryny gurmak, abadanlaşdyryş işleri, sanitar-tehniki ulgamlary oturtmak, ýyladyş, howa çalşygy, kondisioner ulgamlary we beýleki gurluşyk we gurnama işleri üçin rugsatnamalara eýe.	Işimizi aşakda görüp bilersiňiz.		Dizaýn
-\.
-
-
---
 -- Data for Name: components_services_services; Type: TABLE DATA; Schema: public; Owner: -
 --
 
 COPY public.components_services_services (id, heading, under_heading, description, button) FROM stdin;
 2	Our services	Höwür - strength, durability and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Подробнее
 3	Hyzmatlarymyz	Höwür - güýç, berklik we ynam.	 Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Подробнее
-1	Наш услуги	Höwür - прочность, стойкость и уверенность.	 Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем, строим коммерческие и гражданские объекты, а также оснащаем им высокотехнологическим оборудованием  	Подробнее
+1	Наши услуги	Höwür - прочность, стойкость и уверенность.	 Индивидуальное предприятие “Höwür” было основано в 2016 году. Зарекомендовав себя на рынке, как надежный подрядчик по выполнению строительных работ, мы проектируем, строим коммерческие и гражданские объекты, а также оснащаем им высокотехнологическим оборудованием  	Подробнее
 \.
 
 
@@ -3496,80 +2647,6 @@ COPY public.components_services_services_service_lists_links (services_id, servi
 1	4
 1	5
 1	6
-\.
-
-
---
--- Data for Name: design_services; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.design_services (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-21 13:04:38.262	2022-06-28 12:28:38.532	1	1	ru
-2	2022-06-22 15:58:32.843	2022-06-28 12:29:18.178	1	1	en
-3	2022-06-22 15:59:08.015	2022-06-28 12:29:27.225	1	1	tk
-\.
-
-
---
--- Data for Name: design_services_components; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.design_services_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-1	1	2	services-page-com.component-services	design	1
-12	1	6	services-page-com.component-services	component	1
-14	2	11	services-page-com.component-services	component	1
-15	3	12	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: design_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.design_services_localizations_links (design_service_id, inv_design_service_id) FROM stdin;
-3	2
-3	1
-1	3
-1	2
-2	3
-2	1
-\.
-
-
---
--- Data for Name: elevator_dispatching_services; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.elevator_dispatching_services (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-21 13:07:07.069	2022-06-28 12:31:33.11	1	1	ru
-2	2022-06-22 15:59:30.225	2022-06-28 12:31:52.625	1	1	en
-3	2022-06-22 15:59:51.935	2022-06-28 12:32:20.001	1	1	tk
-\.
-
-
---
--- Data for Name: elevator_dispatching_services_components; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.elevator_dispatching_services_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-1	1	4	services-page-com.component-services	elevator_dispatching	1
-12	1	7	services-page-com.component-services	component	1
-13	2	13	services-page-com.component-services	component	1
-14	3	14	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: elevator_dispatching_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.elevator_dispatching_services_localizations_links (elevator_dispatching_service_id, inv_elevator_dispatching_service_id) FROM stdin;
-3	2
-3	1
-1	3
-1	2
-2	3
-2	1
 \.
 
 
@@ -3726,8 +2803,6 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 7	1	api::service-list.service-list	img	1
 58	9	services-page-com.component-services	img2	1
 59	9	services-page-com.component-services	img3	1
-64	8	api::service-list.service-list	img	1
-64	3	api::service-list.service-list	img	1
 69	16	api::service-list.service-list	img	1
 20	13	api::certificate-list.certificate-list	img	1
 38	10	api::product-list.product-list	img	1
@@ -3751,6 +2826,9 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 20	4	api::certificate-list.certificate-list	img	1
 19	5	api::certificate-list.certificate-list	img	1
 31	13	services-page-com.component-services	img1	1
+37	3	navbar-header.navbar	logo	1
+37	2	footer.footer-main	logo	1
+72	2	footer.footer-dev	logo_dev	1
 32	13	services-page-com.component-services	img2	1
 33	13	services-page-com.component-services	img3	1
 31	14	services-page-com.component-services	img1	1
@@ -3790,7 +2868,6 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 48	38	api::product-list.product-list	img	1
 19	15	api::certificate-list.certificate-list	img	1
 19	14	api::certificate-list.certificate-list	img	1
-64	7	api::service-list.service-list	img	1
 34	18	services-page-com.component-services	img1	1
 69	2	api::service-list.service-list	img	1
 69	15	api::service-list.service-list	img	1
@@ -3809,61 +2886,78 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 50	44	api::product-list.product-list	img	1
 51	48	api::product-list.product-list	img	1
 51	46	api::product-list.product-list	img	1
+37	2	navbar-header.navbar	logo	1
+37	1	footer.footer-main	logo	1
+72	1	footer.footer-dev	logo_dev	1
+73	1	footer.footer-dev	logo_dev1	1
+52	3	api::pagas-service.pagas-service	img1	1
+53	3	api::pagas-service.pagas-service	img2	1
+54	3	api::pagas-service.pagas-service	img3	1
+52	1	api::pagas-service.pagas-service	img1	1
+52	2	api::pagas-service.pagas-service	img1	1
+53	1	api::pagas-service.pagas-service	img2	1
+53	2	api::pagas-service.pagas-service	img2	1
+54	1	api::pagas-service.pagas-service	img3	1
+54	2	api::pagas-service.pagas-service	img3	1
+55	6	api::pagas-service.pagas-service	img1	1
+56	6	api::pagas-service.pagas-service	img2	1
+57	6	api::pagas-service.pagas-service	img3	1
+55	4	api::pagas-service.pagas-service	img1	1
+55	5	api::pagas-service.pagas-service	img1	1
+56	4	api::pagas-service.pagas-service	img2	1
+56	5	api::pagas-service.pagas-service	img2	1
+57	4	api::pagas-service.pagas-service	img3	1
+57	5	api::pagas-service.pagas-service	img3	1
+4	9	api::pagas-service.pagas-service	img1	1
+29	9	api::pagas-service.pagas-service	img2	1
+30	9	api::pagas-service.pagas-service	img3	1
+4	7	api::pagas-service.pagas-service	img1	1
+29	7	api::pagas-service.pagas-service	img2	1
+30	7	api::pagas-service.pagas-service	img3	1
+34	15	api::pagas-service.pagas-service	img1	1
+58	15	api::pagas-service.pagas-service	img2	1
+59	15	api::pagas-service.pagas-service	img3	1
+34	13	api::pagas-service.pagas-service	img1	1
+58	13	api::pagas-service.pagas-service	img2	1
+59	13	api::pagas-service.pagas-service	img3	1
+60	16	api::pagas-service.pagas-service	img1	1
+61	16	api::pagas-service.pagas-service	img2	1
+63	16	api::pagas-service.pagas-service	img3	1
+71	3	api::main.main	headVideo	1
+38	3	api::service-list.service-list	img	1
+38	7	api::service-list.service-list	img	1
+73	2	footer.footer-dev	logo_dev1	1
+4	8	api::pagas-service.pagas-service	img1	1
+29	8	api::pagas-service.pagas-service	img2	1
+30	8	api::pagas-service.pagas-service	img3	1
+34	14	api::pagas-service.pagas-service	img1	1
+58	14	api::pagas-service.pagas-service	img2	1
+59	14	api::pagas-service.pagas-service	img3	1
+60	18	api::pagas-service.pagas-service	img1	1
+61	18	api::pagas-service.pagas-service	img2	1
+63	18	api::pagas-service.pagas-service	img3	1
+60	17	api::pagas-service.pagas-service	img1	1
+61	17	api::pagas-service.pagas-service	img2	1
+63	17	api::pagas-service.pagas-service	img3	1
 11	1	about.about	headImg	1
 12	1	about.about	descImg	1
 37	1	certificate.certificate	logo	1
 71	1	api::main.main	headVideo	1
 71	2	api::main.main	headVideo	1
-71	3	api::main.main	headVideo	1
-37	3	navbar-header.navbar	logo	1
-37	2	footer.footer-main	logo	1
-18	2	footer.footer-dev	logo_dev	1
-68	2	footer.footer-dev	logo_dev1	1
+38	8	api::service-list.service-list	img	1
 37	4	navbar-header.navbar	logo	1
 37	3	footer.footer-main	logo	1
-18	3	footer.footer-dev	logo_dev	1
-68	3	footer.footer-dev	logo_dev1	1
-37	2	navbar-header.navbar	logo	1
-37	1	footer.footer-main	logo	1
-72	1	footer.footer-dev	logo_dev	1
-73	1	footer.footer-dev	logo_dev1	1
-\.
-
-
---
--- Data for Name: fire_safety_services; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.fire_safety_services (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-21 13:06:02.326	2022-06-28 12:29:55.589	1	1	ru
-2	2022-06-22 16:41:38.775	2022-06-28 12:30:52.93	1	1	en
-3	2022-06-22 16:41:43.029	2022-06-28 12:31:11.642	1	1	tk
-\.
-
-
---
--- Data for Name: fire_safety_services_components; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.fire_safety_services_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-1	1	3	services-page-com.component-services	fire_safety	1
-15	1	8	services-page-com.component-services	component	1
-16	2	15	services-page-com.component-services	component	1
-17	3	16	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: fire_safety_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.fire_safety_services_localizations_links (fire_safety_service_id, inv_fire_safety_service_id) FROM stdin;
-3	2
-3	1
-1	3
-1	2
-2	3
-2	1
+72	3	footer.footer-dev	logo_dev	1
+73	3	footer.footer-dev	logo_dev1	1
+31	12	api::pagas-service.pagas-service	img1	1
+32	12	api::pagas-service.pagas-service	img2	1
+33	12	api::pagas-service.pagas-service	img3	1
+31	10	api::pagas-service.pagas-service	img1	1
+31	11	api::pagas-service.pagas-service	img1	1
+32	10	api::pagas-service.pagas-service	img2	1
+32	11	api::pagas-service.pagas-service	img2	1
+33	10	api::pagas-service.pagas-service	img3	1
+33	11	api::pagas-service.pagas-service	img3	1
 \.
 
 
@@ -3883,9 +2977,9 @@ COPY public.i18n_locale (id, name, code, created_at, updated_at, created_by_id, 
 --
 
 COPY public.layouts (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-2	2022-06-24 16:09:16.305	2022-06-29 17:30:39.985	1	1	en
-3	2022-06-24 16:13:47.068	2022-06-29 17:31:03.637	1	1	tk
 1	2022-06-20 14:45:20.084	2022-07-05 18:07:55.647	1	1	ru
+2	2022-06-24 16:09:16.305	2022-07-07 14:59:17.1	1	1	en
+3	2022-06-24 16:13:47.068	2022-07-07 14:59:29.217	1	1	tk
 \.
 
 
@@ -3894,21 +2988,21 @@ COPY public.layouts (id, created_at, updated_at, created_by_id, updated_by_id, l
 --
 
 COPY public.layouts_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-126	2	3	navbar-header.navbar	navbar	1
-127	2	4	contacts.address	address	1
-128	2	4	contacts.phone-number	number	1
-129	2	2	footer.footer-main	footer	1
-130	2	2	footer.footer-dev	footer_dev	1
-131	3	4	navbar-header.navbar	navbar	1
-132	3	5	contacts.address	address	1
-133	3	5	contacts.phone-number	number	1
-134	3	3	footer.footer-main	footer	1
-135	3	3	footer.footer-dev	footer_dev	1
 136	1	2	navbar-header.navbar	navbar	1
 137	1	3	contacts.address	address	1
 138	1	3	contacts.phone-number	number	1
 139	1	1	footer.footer-main	footer	1
 140	1	1	footer.footer-dev	footer_dev	1
+141	2	3	navbar-header.navbar	navbar	1
+142	2	4	contacts.address	address	1
+143	2	4	contacts.phone-number	number	1
+144	2	2	footer.footer-main	footer	1
+145	2	2	footer.footer-dev	footer_dev	1
+146	3	4	navbar-header.navbar	navbar	1
+147	3	5	contacts.address	address	1
+148	3	5	contacts.phone-number	number	1
+149	3	3	footer.footer-main	footer	1
+150	3	3	footer.footer-dev	footer_dev	1
 \.
 
 
@@ -3974,9 +3068,9 @@ COPY public.locals_localizations_links (local_id, inv_local_id) FROM stdin;
 --
 
 COPY public.mains (id, created_at, updated_at, created_by_id, updated_by_id, locale, head, "desc", head_button) FROM stdin;
-1	2022-06-20 12:06:20.758	2022-06-29 17:27:07.764	1	1	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
-2	2022-06-24 16:20:55.711	2022-06-29 17:27:07.816	1	1	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact
-3	2022-06-24 16:22:30.188	2022-06-29 17:27:07.821	1	1	tk	Höwür güýç, çydamlylyk we ynam diýmekdir.	Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Habarlaşmak
+1	2022-06-20 12:06:20.758	2022-07-07 10:50:07.82	1	1	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
+2	2022-06-24 16:20:55.711	2022-07-07 10:50:07.897	1	1	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact
+3	2022-06-24 16:22:30.188	2022-07-07 10:50:07.902	1	1	tk	Höwür güýç, çydamlylyk we ynam diýmekdir.	Aýry-aýry kärhanalar "Höwür", binany we desgalary dizaýn etmekde, gurmakda, ýangyn duýduryş ulgamlaryny tehniki taýdan hyzmat etmekde, lifti ibermäge başarnykly sazlamakda uly tejribä eýe.	Habarlaşmak
 \.
 
 
@@ -3998,11 +3092,11 @@ COPY public.mains_components (id, entity_id, component_id, component_type, field
 156	3	3	about.about	about	1
 157	3	3	certificate.certificate	certificate	1
 158	3	3	form.form-main	form	1
-164	1	1	services.services	services	1
-165	1	1	products.product	product	1
-166	1	1	about.about	about	1
-167	1	1	certificate.certificate	certificate	1
-168	1	1	form.form-main	form	1
+169	1	1	services.services	services	1
+170	1	1	products.product	product	1
+171	1	1	about.about	about	1
+172	1	1	certificate.certificate	certificate	1
+173	1	1	form.form-main	form	1
 \.
 
 
@@ -4082,39 +3176,72 @@ COPY public.navigations_localizations_links (navigation_id, inv_navigation_id) F
 
 
 --
--- Data for Name: network_services; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: pagas_services; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.network_services (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-3	2022-06-22 16:41:54.455	2022-06-28 12:33:07.687	1	1	tk
-2	2022-06-22 16:41:50.113	2022-06-28 12:33:14.81	1	1	en
-1	2022-06-21 13:07:50.045	2022-06-28 12:35:14.933	1	1	ru
+COPY public.pagas_services (id, created_at, updated_at, created_by_id, updated_by_id, locale, name, sort_id, description, under_description) FROM stdin;
+3	2022-07-07 10:21:24.136	2022-07-07 10:21:24.136	1	1	tk	Toplumlaýyn gurluşyk	1	Türkmenistan ullakan gurluşyk meýdançasyna öwrüldi, bu ýerde raýat, senagat we söwda maksatly binalar we desgalar her gün işe girizilýär.\n\n“Höwür” ýaşaýyş we ýaşaýyş jaýy gurmak, zähmet turbalaryny gurmak, abadanlaşdyryş işleri, sanitar-tehniki ulgamlary oturtmak, ýyladyş, howa çalşygy, kondisioner ulgamlary we beýleki gurluşyk we gurnama işleri üçin rugsatnamalara eýe.	Işimizi aşakda görüp bilersiňiz.
+6	2022-07-07 10:23:29.585	2022-07-07 10:23:29.585	1	1	tk	Dizaýn	2	Gurluşyk dizaýny, tehniki resminamalaryň işlenip düzülmeginden, şeýle hem telefon birikmeleriniň, ýyladyş, suw üpjünçiligi we howa çalşygy ulgamlarynyň ýerleşýän ýerini kesgitleýän pes woltly torlar üçin taslamadan ybarat gurluşygyň möhüm tapgyrydyr.\n\nDizaýn “Autocad” -da amala aşyrylýar. Ondan soň hünärmenlerimiz torlaryň, çyzyklaryň we simleriň uzynlygyny ölçýärler. Gurluşyk materiallarynyň doly laýyklygyny we tygşytlylygyny kepillendirýäris.	Işimizi aşakda görüp bilersiňiz.
+1	2022-07-07 10:12:03.81	2022-07-07 10:21:24.187	1	1	ru	Комплексное строительство	1	Туркменистан стал огромной строительной площадкой, каждый день здесь сдаются в эксплуатацию здания и объекты гражданского, промышленного и коммерческого назначений.\n\n“Höwür” имеет разрешительные документы на строительство жилых и нежилых помещений, строительство трудопроводов, работы по благоустройству территорий, монтаж водопроводных систем, систем отопления, вентиляции, кондиционирования, а также прочие строителные и монтажные работы.	С нашими работами Вы можете ознакомиться ниже.
+2	2022-07-07 10:21:05.001	2022-07-07 10:21:24.189	1	1	en	Integrated construction	1	Turkmenistan has become a huge construction site; buildings and facilities for civil, industrial and commercial purposes are commissioned here every day.\n\n“Höwür” has permits for the construction of residential and non-residential premises, the construction of labor pipelines, landscaping works, installation of plumbing systems, heating, ventilation, air conditioning systems, as well as other construction and installation work.	You can see our work below.
+4	2022-07-07 10:22:42.406	2022-07-07 10:23:29.636	1	1	ru	Проектирование	2	Строительное проектирование - важный этап строительства, который состоит из разработки технической документации, а также проекта слаботочных сетей, который определяет расположение телефонных соединений, систем отопления, водоснабжения и вентиляции.\n\nПроектирование осуществляется в Autocad. После чего наши специалисты осущестляют замерку длины сетей, линий и проводов. Мы гарантием полное соответсвие и экономие строительных материалов.	С нашими работами Вы можете ознакомиться ниже.
+5	2022-07-07 10:23:02.934	2022-07-07 10:23:29.638	1	1	en	Design	2	Structural design is an important stage of construction, which consists of the development of technical documentation, as well as a project for low-voltage networks, which determines the location of telephone connections, heating, water supply and ventilation systems.\n\nDesign is carried out in Autocad. After that, our specialists measure the length of networks, lines and wires. We guarantee full compliance and economy of building materials.	You can see our work below.
+8	2022-07-07 10:25:15.556	2022-07-07 10:25:33.806	1	1	en	Fire safety	3	Fire safety of buildings and structures should provide protection against fires and other emergencies, minimize dangerous consequences for people and property. Safety requirements are determined individually by the type of object, its categories and hazard classes, by types of activity, and other indicators.\n\nThe fire safety system includes: Automatic or manual signaling system, Warning system and people evacuation management, Fire extinguishing system.	You can see our work below.
+9	2022-07-07 10:25:33.755	2022-07-07 10:25:33.755	1	1	tk	Fireangyn howpsuzlygy	3	Binalaryň we desgalaryň ýangyn howpsuzlygy ýangyndan we beýleki adatdan daşary ýagdaýlardan goramagy üpjün etmeli, adamlar we emläk üçin howply netijeleri azaltmalydyr. Howpsuzlyk talaplary obýektiň görnüşi, kategoriýalary we howp synplary, iş görnüşleri we beýleki görkezijiler boýunça aýratynlykda kesgitlenýär.\n\nFireangyn howpsuzlygy ulgamy şulary öz içine alýar: Awtomatiki ýa-da el bilen duýduryş ulgamy, Duýduryş ulgamy we adamlary ewakuasiýa dolandyryşy, ýangyn söndüriş ulgamy.	Işimizi aşakda görüp bilersiňiz.
+7	2022-07-07 10:24:56.251	2022-07-07 10:25:33.803	1	1	ru	Пожарная безопасность	3	Пожарная безопасность зданий и сооружений должна обеспечить защиту от возгораний и других чрезвычайных ситуаций, минимизировать опасные последствия для людей и имущества. Требования к безопасности определяются индивидуально по виду объекта, его категориям и классам опасности, по видам деятельности, другим показателям.\n\nВ систему пожарной безопасности входит: \tСистема автоматической или ручной сигнализации, \tСистема оповещения и управление эвакуацией людей, Система пожаротушения.	С нашими работами Вы можете ознакомиться ниже.
+11	2022-07-07 10:27:58.634	2022-07-07 10:41:26.51	1	1	en	Elevator dispatching	4	The centralization of the operational control of the operation of elevators and the voice communication of elevator passengers with the dispatcher is carried out using elevator dispatching.\n\nSolutions of our partners "OB" for complex and timely response to failures, as well as technical support, allow us to guarantee us convenience, safety and reliability. We install a control and response system, a surveillance system, as well as a set of measures to ensure communication between elevator passengers and dispatchers.	You can see our work below.
+12	2022-07-07 10:28:40.662	2022-07-07 10:41:26.462	1	1	tk	Lift ugratmak	4	Liftleriň işleýşine gözegçilik etmegiň we lifti ýolagçylaryň dispetçer bilen ses aragatnaşygynyň merkezleşdirilmegi lifti ibermek arkaly amala aşyrylýar.\n\nŞowsuzlyklara çylşyrymly we wagtynda jogap bermek, şeýle hem tehniki goldaw üçin hyzmatdaşlarymyzyň "OB" çözgütleri bize amatlylygy, howpsuzlygy we ygtybarlylygy kepillendirýär. Dolandyryş we jogap ulgamyny, gözegçilik ulgamyny, şeýle hem liftdäki ýolagçylar bilen dispetçerleriň arasynda aragatnaşygy üpjün etmek üçin çäreler toplumyny gurýarys.	Işimizi aşakda görüp bilersiňiz.
+14	2022-07-07 10:42:36.286	2022-07-07 10:47:04.936	1	1	en	LP design networks	5	A local area network is a group of computing devices that forms a structure with coverage in a specific, usually small area. Such a network can unite computers and peripherals located in the same room, building, or in several civil or industrial buildings.\n\nWe carry out installation and commissioning of the network using the equipment of our partners ONV. Devices can be connected using cables, fiber optics or Wi-Fi.	You can see our work below.
+10	2022-07-07 10:27:22.731	2022-07-07 10:41:26.506	1	1	ru	Лифтовая диспечеризация	4	Цетрализация оперативного контроля работы лифтов и голосовой связи пассажиров лифта с диспетчером осуществляется при помощи лифтовой диспетчеризации.\n\nРешения наших парнеров “ОБЬ” по комплексному и своевременному реагированию на сбои, а также техническая поддержка позволяют нам гарантировать нам удобсто, безопасность и надежность.   Мы устанавливаем систему управления и реагирования, систему наблюдения, а также комплекс мер по обеспечению связи пасажиров лифта и диспетчеров.	С нашими работами Вы можете ознакомиться ниже.
+15	2022-07-07 10:42:44.98	2022-07-07 10:47:04.888	1	1	tk	LP dizaýny torlar	5	Areaerli sebit ulgamy, belli bir, adatça kiçi bir ýerde gurşap alýan gurluşy emele getirýän hasaplaýyş enjamlarynyň toparydyr. Şeýle tor bir otagda, binada ýa-da birnäçe raýat ýa-da senagat binalarynda ýerleşýän kompýuterleri we periferiýa enjamlaryny birleşdirip biler.\n\nHyzmatdaşlarymyzyň ONV enjamlaryny ulanyp, tor gurmak we işe girizmek. Enjamlary kabel, süýüm optikasy ýa-da Wi-Fi ulanyp birikdirip bolýar.	Işimizi aşakda görüp bilersiňiz.
+13	2022-07-07 10:39:16.484	2022-07-07 10:47:04.934	1	1	ru	Проектирование ЛВ  сетей	5	Локально-вычислительная сеть — это группа вычислительных устройств, образующая структуру с покрытием на конкретной, как правило, небольшой территории. Такая сеть может объединять компьютеры и периферию, находящиеся в одном помещении, здании, или в нескольких гражданских или промышленных сооружениях.	С нашими работами Вы можете ознакомиться ниже.
+17	2022-07-07 10:48:58.485	2022-07-07 10:49:17.446	1	1	en	CCTV	6	Video surveillance - a system that provides video recording of what is happening within the range of IP cameras.\n\nModern digital equipment of Tiady can be installed in private houses, cottages, supermarkets, restaurants, as well as in any administrative offices, which will ensure the necessary level of security in a certain area. Our company is ready to install a video surveillance system at any facility.	С нашими работами Вы можете ознакомиться ниже.
+18	2022-07-07 10:49:17.391	2022-07-07 10:49:17.391	1	1	tk	CCTV	6	Wideo gözegçilik - IP kameralaryň çäginde bolup geçýän wakalary wideo ýazga geçirýän ulgam.\n\n“Tiady” -nyň häzirki zaman sanly enjamlary hususy jaýlarda, kottejlerde, supermarketlerde, restoranlarda, şeýle hem belli bir sebitde zerur howpsuzlyk derejesini üpjün etjek islendik administratiw ofislerde oturdylyp bilner. Kompaniýamyz islendik desgada wideo gözegçilik ulgamyny gurmaga taýyn.	Işimizi aşakda görüp bilersiňiz.
+16	2022-07-07 10:48:41.422	2022-07-07 10:49:17.442	1	1	ru	Видеонаблюдение	6	Видеонаблюдение - система, обеспечивающая видеозапись происходящего в пределах действия IP камер. \n\nСовременное цифровое оборудование компании «Tiady» можно установить в частных домах, котеджах, супермаркетах, ресторанах, а также в любых административных, что позволит обеспечить необходимый уровень безопасности на определенной территории.	С нашими работами Вы можете ознакомиться ниже.
 \.
 
 
 --
--- Data for Name: network_services_components; Type: TABLE DATA; Schema: public; Owner: -
+-- Data for Name: pagas_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
 --
 
-COPY public.network_services_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-1	1	5	services-page-com.component-services	network	1
-16	3	18	services-page-com.component-services	component	1
-17	2	17	services-page-com.component-services	component	1
-18	1	9	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: network_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.network_services_localizations_links (network_service_id, inv_network_service_id) FROM stdin;
+COPY public.pagas_services_localizations_links (pagas_service_id, inv_pagas_service_id) FROM stdin;
 3	2
 3	1
 1	3
 1	2
 2	3
 2	1
+6	5
+6	4
+4	6
+4	5
+5	6
+5	4
+9	8
+9	7
+7	9
+7	8
+8	9
+8	7
+12	11
+12	10
+10	12
+10	11
+11	12
+11	10
+15	14
+15	13
+13	15
+13	14
+14	15
+14	13
+18	17
+18	16
+16	18
+16	17
+17	18
+17	16
 \.
 
 
@@ -4176,51 +3303,51 @@ COPY public.product_lists (id, description, created_at, updated_at, created_by_i
 --
 
 COPY public.product_lists_brand_links (product_list_id, brand_id) FROM stdin;
-7	1
-9	4
-10	5
-8	1
-11	4
-12	5
-13	1
-14	4
-15	5
-16	1
-17	4
-18	5
-19	1
-20	4
-21	5
 22	2
-23	6
-24	7
 25	2
-26	6
-27	7
 28	2
-29	6
-30	7
+7	1
+8	1
+13	1
+16	1
+19	1
 31	3
-32	8
-33	9
 34	3
-35	8
-36	9
 37	3
-38	8
-39	9
 40	3
-41	8
-42	9
-51	9
-50	8
-49	3
 43	3
-44	8
-45	9
 46	3
+49	3
+32	8
+35	8
+38	8
+41	8
+44	8
 47	8
+50	8
+9	4
+11	4
+14	4
+17	4
+20	4
+23	6
+26	6
+29	6
+24	7
+27	7
+30	7
+10	5
+12	5
+15	5
+18	5
+21	5
+33	9
+36	9
+39	9
+42	9
+45	9
 48	9
+51	9
 \.
 
 
@@ -4339,12 +3466,12 @@ COPY public.service_lists (id, heading, description, created_at, updated_at, cre
 14	Fireangyn howpsuzlygy	Kompaniýa binalarda we kärhanalarda howpsuz gurşawy üpjün edýän zerur in engineeringener we tehniki çözgütleri üstünlikli dizaýn edýär we durmuşa geçirýär.	2022-06-24 15:24:53.991	2022-06-28 12:14:27.939	1	1	tk	3
 5	Лифтовая диспетчеризация	Мы в состоянии обеспечить эффективное реагирование на сбой, поломку лифтового оборудования, при помощи оперативного контроля безопасности пасажиров и их своевременной связи с диспетчером.	2022-06-23 15:00:04.677	2022-06-28 12:14:42.982	1	1	ru	4
 4	Пожарная безопасность	Компания успешно проектирует и внедряет необходимые инженерно-технические решения, которые обеспечивают безопасную среду в зданиях и предприятиях.	2022-06-20 12:51:16.715	2022-06-28 12:14:27.961	1	1	ru	3
-8	CCTV	Wizual gözegçilik ulgamyny üstünlikli durmuşa geçirýäris, wizual dolandyryşyň we awtomatiki maglumatlaryň derňewiniň hilini kepillendirýäris.	2022-06-24 15:20:58.58	2022-06-28 12:14:58.798	1	1	tk	5
 1	Комплексное строительство	Компания имеет все ресурсы для выполнения комплекса работ по строительству, помещений и зданий, трубопроводов, установке систем отопления, кондиционирования, вентиляции, а также прочие строительные работы.	2022-06-20 12:49:13.72	2022-06-28 12:07:11.427	1	1	ru	1
 6	Проектировка слаботочных  сетей	Проектирование, монтаж, пуско-наладка необходима для успешной автоматизации процессов предприятий, мы объединяем компьютерное оборудование и комплектующие в общую сеть, обеспечивающие надежную оптимизацию.	2022-06-23 15:00:50.943	2022-06-28 12:08:30.411	1	1	ru	6
 13	Fire safety	The company successfully designs and implements the necessary engineering and technical solutions that provide a safe environment in buildings and enterprises.	2022-06-24 15:23:51.624	2022-06-28 12:14:27.962	1	1	en	3
-3	Видеонаблюдение	Мы успешно внедряем системы видеонаблюдения, гарантируя качество визуального контроля и автоматического анализа данных.	2022-06-20 12:50:49.435	2022-06-28 12:14:58.82	1	1	ru	5
-7	CCTV	We successfully implement video surveillance systems, guaranteeing the quality of visual control and automatic data analysis.	2022-06-24 15:19:54.377	2022-06-28 12:14:58.822	1	1	en	5
+3	Видеонаблюдение	Мы успешно внедряем системы видеонаблюдения, гарантируя качество визуального контроля и автоматического анализа данных.	2022-06-20 12:50:49.435	2022-07-07 10:50:53.65	1	1	ru	5
+7	CCTV	We successfully implement video surveillance systems, guaranteeing the quality of visual control and automatic data analysis.	2022-06-24 15:19:54.377	2022-07-07 10:50:53.675	1	1	en	5
+8	CCTV	Wizual gözegçilik ulgamyny üstünlikli durmuşa geçirýäris, wizual dolandyryşyň we awtomatiki maglumatlaryň derňewiniň hilini kepillendirýäris.	2022-06-24 15:20:58.58	2022-07-07 10:50:53.677	1	1	tk	5
 \.
 
 
@@ -4393,43 +3520,6 @@ COPY public.service_lists_localizations_links (service_list_id, inv_service_list
 
 
 --
--- Data for Name: sonstruction_services; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.sonstruction_services (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-21 13:02:32.753	2022-06-28 12:27:31.081	1	1	ru
-2	2022-06-22 16:41:59.137	2022-06-28 12:28:05.826	1	1	en
-3	2022-06-22 16:42:07.295	2022-06-28 12:28:19.256	1	1	tk
-\.
-
-
---
--- Data for Name: sonstruction_services_components; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.sonstruction_services_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-1	1	1	services-page-com.component-services	construction	1
-12	1	10	services-page-com.component-services	component	1
-13	2	19	services-page-com.component-services	component	1
-14	3	20	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: sonstruction_services_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.sonstruction_services_localizations_links (sonstruction_service_id, inv_sonstruction_service_id) FROM stdin;
-3	2
-3	1
-1	3
-1	2
-2	3
-2	1
-\.
-
-
---
 -- Data for Name: strapi_api_tokens; Type: TABLE DATA; Schema: public; Owner: -
 --
 
@@ -4456,36 +3546,29 @@ COPY public.strapi_core_store_settings (id, key, value, type, environment, tag) 
 13	plugin_users-permissions_email	{"reset_password":{"display":"Email.template.reset_password","icon":"sync","options":{"from":{"name":"Administration Panel","email":"no-reply@strapi.io"},"response_email":"","object":"Reset password","message":"<p>We heard that you lost your password. Sorry about that!</p>\\n\\n<p>But don’t worry! You can use the following link to reset your password:</p>\\n<p><%= URL %>?code=<%= TOKEN %></p>\\n\\n<p>Thanks.</p>"}},"email_confirmation":{"display":"Email.template.email_confirmation","icon":"check-square","options":{"from":{"name":"Administration Panel","email":"no-reply@strapi.io"},"response_email":"","object":"Account confirmation","message":"<p>Thank you for registering!</p>\\n\\n<p>You have to confirm your email address. Please click on the link below.</p>\\n\\n<p><%= URL %>?confirmation=<%= CODE %></p>\\n\\n<p>Thanks.</p>"}}}	object	\N	\N
 14	plugin_users-permissions_advanced	{"unique_email":true,"allow_register":true,"email_confirmation":false,"email_reset_password":null,"email_confirmation_redirection":null,"default_role":"authenticated"}	object	\N	\N
 10	plugin_content_manager_configuration_content_types::plugin::i18n.locale	{"uid":"plugin::i18n.locale","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"code":{"edit":{"label":"code","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"code","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","code","createdAt"],"editRelations":[],"edit":[[{"name":"name","size":6},{"name":"code","size":6}]]}}	object	\N	\N
-38	plugin_content_manager_configuration_components::services-page-com.component-services	{"uid":"services-page-com.component-services","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"under_description":{"edit":{"label":"under_description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"under_description","searchable":true,"sortable":true}},"img1":{"edit":{"label":"img1","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img1","searchable":false,"sortable":false}},"img2":{"edit":{"label":"img2","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img2","searchable":false,"sortable":false}},"img3":{"edit":{"label":"img3","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img3","searchable":false,"sortable":false}},"buttonBack":{"edit":{"label":"buttonBack","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"buttonBack","searchable":true,"sortable":true}},"buttonNext":{"edit":{"label":"buttonNext","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"buttonNext","searchable":true,"sortable":true}}},"layouts":{"list":["id","heading","description","under_description"],"edit":[[{"name":"heading","size":6},{"name":"description","size":6}],[{"name":"under_description","size":6},{"name":"img1","size":6}],[{"name":"img2","size":6},{"name":"img3","size":6}],[{"name":"buttonBack","size":6},{"name":"buttonNext","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
-1	strapi_content_types_schema	{"admin::permission":{"collectionName":"admin_permissions","info":{"name":"Permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","minLength":1,"configurable":false,"required":true},"subject":{"type":"string","minLength":1,"configurable":false,"required":false},"properties":{"type":"json","configurable":false,"required":false,"default":{}},"conditions":{"type":"json","configurable":false,"required":false,"default":[]},"role":{"configurable":false,"type":"relation","relation":"manyToOne","inversedBy":"permissions","target":"admin::role"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_permissions","info":{"name":"Permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","minLength":1,"configurable":false,"required":true},"subject":{"type":"string","minLength":1,"configurable":false,"required":false},"properties":{"type":"json","configurable":false,"required":false,"default":{}},"conditions":{"type":"json","configurable":false,"required":false,"default":[]},"role":{"configurable":false,"type":"relation","relation":"manyToOne","inversedBy":"permissions","target":"admin::role"}},"kind":"collectionType"},"modelType":"contentType","modelName":"permission","connection":"default","uid":"admin::permission","plugin":"admin","globalId":"AdminPermission"},"admin::user":{"collectionName":"admin_users","info":{"name":"User","description":"","singularName":"user","pluralName":"users","displayName":"User"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"firstname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"lastname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"username":{"type":"string","unique":false,"configurable":false,"required":false},"email":{"type":"email","minLength":6,"configurable":false,"required":true,"unique":true,"private":true},"password":{"type":"password","minLength":6,"configurable":false,"required":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"registrationToken":{"type":"string","configurable":false,"private":true},"isActive":{"type":"boolean","default":false,"configurable":false,"private":true},"roles":{"configurable":false,"private":true,"type":"relation","relation":"manyToMany","inversedBy":"users","target":"admin::role","collectionName":"strapi_users_roles"},"blocked":{"type":"boolean","default":false,"configurable":false,"private":true},"preferedLanguage":{"type":"string","configurable":false,"required":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_users","info":{"name":"User","description":"","singularName":"user","pluralName":"users","displayName":"User"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"firstname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"lastname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"username":{"type":"string","unique":false,"configurable":false,"required":false},"email":{"type":"email","minLength":6,"configurable":false,"required":true,"unique":true,"private":true},"password":{"type":"password","minLength":6,"configurable":false,"required":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"registrationToken":{"type":"string","configurable":false,"private":true},"isActive":{"type":"boolean","default":false,"configurable":false,"private":true},"roles":{"configurable":false,"private":true,"type":"relation","relation":"manyToMany","inversedBy":"users","target":"admin::role","collectionName":"strapi_users_roles"},"blocked":{"type":"boolean","default":false,"configurable":false,"private":true},"preferedLanguage":{"type":"string","configurable":false,"required":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"user","connection":"default","uid":"admin::user","plugin":"admin","globalId":"AdminUser"},"admin::role":{"collectionName":"admin_roles","info":{"name":"Role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"code":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"description":{"type":"string","configurable":false},"users":{"configurable":false,"type":"relation","relation":"manyToMany","mappedBy":"roles","target":"admin::user"},"permissions":{"configurable":false,"type":"relation","relation":"oneToMany","mappedBy":"role","target":"admin::permission"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_roles","info":{"name":"Role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"code":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"description":{"type":"string","configurable":false},"users":{"configurable":false,"type":"relation","relation":"manyToMany","mappedBy":"roles","target":"admin::user"},"permissions":{"configurable":false,"type":"relation","relation":"oneToMany","mappedBy":"role","target":"admin::permission"}},"kind":"collectionType"},"modelType":"contentType","modelName":"role","connection":"default","uid":"admin::role","plugin":"admin","globalId":"AdminRole"},"admin::api-token":{"collectionName":"strapi_api_tokens","info":{"name":"Api Token","singularName":"api-token","pluralName":"api-tokens","displayName":"Api Token","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"configurable":false,"required":true},"description":{"type":"string","minLength":1,"configurable":false,"required":false,"default":""},"type":{"type":"enumeration","enum":["read-only","full-access"],"configurable":false,"required":false,"default":"read-only"},"accessKey":{"type":"string","minLength":1,"configurable":false,"required":true},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"strapi_api_tokens","info":{"name":"Api Token","singularName":"api-token","pluralName":"api-tokens","displayName":"Api Token","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"configurable":false,"required":true},"description":{"type":"string","minLength":1,"configurable":false,"required":false,"default":""},"type":{"type":"enumeration","enum":["read-only","full-access"],"configurable":false,"required":false,"default":"read-only"},"accessKey":{"type":"string","minLength":1,"configurable":false,"required":true}},"kind":"collectionType"},"modelType":"contentType","modelName":"api-token","connection":"default","uid":"admin::api-token","plugin":"admin","globalId":"AdminApiToken"},"plugin::upload.file":{"collectionName":"files","info":{"singularName":"file","pluralName":"files","displayName":"File","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","configurable":false,"required":true},"alternativeText":{"type":"string","configurable":false},"caption":{"type":"string","configurable":false},"width":{"type":"integer","configurable":false},"height":{"type":"integer","configurable":false},"formats":{"type":"json","configurable":false},"hash":{"type":"string","configurable":false,"required":true},"ext":{"type":"string","configurable":false},"mime":{"type":"string","configurable":false,"required":true},"size":{"type":"decimal","configurable":false,"required":true},"url":{"type":"string","configurable":false,"required":true},"previewUrl":{"type":"string","configurable":false},"provider":{"type":"string","configurable":false,"required":true},"provider_metadata":{"type":"json","configurable":false},"related":{"type":"relation","relation":"morphToMany","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"files","info":{"singularName":"file","pluralName":"files","displayName":"File","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","configurable":false,"required":true},"alternativeText":{"type":"string","configurable":false},"caption":{"type":"string","configurable":false},"width":{"type":"integer","configurable":false},"height":{"type":"integer","configurable":false},"formats":{"type":"json","configurable":false},"hash":{"type":"string","configurable":false,"required":true},"ext":{"type":"string","configurable":false},"mime":{"type":"string","configurable":false,"required":true},"size":{"type":"decimal","configurable":false,"required":true},"url":{"type":"string","configurable":false,"required":true},"previewUrl":{"type":"string","configurable":false},"provider":{"type":"string","configurable":false,"required":true},"provider_metadata":{"type":"json","configurable":false},"related":{"type":"relation","relation":"morphToMany","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"file","connection":"default","uid":"plugin::upload.file","plugin":"upload","globalId":"UploadFile"},"plugin::i18n.locale":{"info":{"singularName":"locale","pluralName":"locales","collectionName":"locales","displayName":"Locale","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","min":1,"max":50,"configurable":false},"code":{"type":"string","unique":true,"configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"info":{"singularName":"locale","pluralName":"locales","collectionName":"locales","displayName":"Locale","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","min":1,"max":50,"configurable":false},"code":{"type":"string","unique":true,"configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"locale","connection":"default","uid":"plugin::i18n.locale","plugin":"i18n","collectionName":"i18n_locale","globalId":"I18NLocale"},"plugin::users-permissions.permission":{"collectionName":"up_permissions","info":{"name":"permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","required":true,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"permissions","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"up_permissions","info":{"name":"permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","required":true,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"permissions","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"permission","connection":"default","uid":"plugin::users-permissions.permission","plugin":"users-permissions","globalId":"UsersPermissionsPermission"},"plugin::users-permissions.role":{"collectionName":"up_roles","info":{"name":"role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":3,"required":true,"configurable":false},"description":{"type":"string","configurable":false},"type":{"type":"string","unique":true,"configurable":false},"permissions":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.permission","mappedBy":"role","configurable":false},"users":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.user","mappedBy":"role","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"up_roles","info":{"name":"role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":3,"required":true,"configurable":false},"description":{"type":"string","configurable":false},"type":{"type":"string","unique":true,"configurable":false},"permissions":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.permission","mappedBy":"role","configurable":false},"users":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.user","mappedBy":"role","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"role","connection":"default","uid":"plugin::users-permissions.role","plugin":"users-permissions","globalId":"UsersPermissionsRole"},"plugin::users-permissions.user":{"collectionName":"up_users","info":{"name":"user","description":"","singularName":"user","pluralName":"users","displayName":"User"},"options":{"draftAndPublish":false,"timestamps":true},"attributes":{"username":{"type":"string","minLength":3,"unique":true,"configurable":false,"required":true},"email":{"type":"email","minLength":6,"configurable":false,"required":true},"provider":{"type":"string","configurable":false},"password":{"type":"password","minLength":6,"configurable":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"confirmationToken":{"type":"string","configurable":false,"private":true},"confirmed":{"type":"boolean","default":false,"configurable":false},"blocked":{"type":"boolean","default":false,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"users","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"config":{"attributes":{"resetPasswordToken":{"hidden":true},"confirmationToken":{"hidden":true},"provider":{"hidden":true}}},"kind":"collectionType","__schema__":{"collectionName":"up_users","info":{"name":"user","description":"","singularName":"user","pluralName":"users","displayName":"User"},"options":{"draftAndPublish":false,"timestamps":true},"attributes":{"username":{"type":"string","minLength":3,"unique":true,"configurable":false,"required":true},"email":{"type":"email","minLength":6,"configurable":false,"required":true},"provider":{"type":"string","configurable":false},"password":{"type":"password","minLength":6,"configurable":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"confirmationToken":{"type":"string","configurable":false,"private":true},"confirmed":{"type":"boolean","default":false,"configurable":false},"blocked":{"type":"boolean","default":false,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"users","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"user","connection":"default","uid":"plugin::users-permissions.user","plugin":"users-permissions","globalId":"UsersPermissionsUser"},"api::brand.brand":{"kind":"collectionType","collectionName":"brands","info":{"singularName":"brand","pluralName":"brands","displayName":"brand","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"product_lists":{"type":"relation","relation":"oneToMany","target":"api::product-list.product-list","mappedBy":"brand"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::brand.brand"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"brands","info":{"singularName":"brand","pluralName":"brands","displayName":"brand","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"product_lists":{"type":"relation","relation":"oneToMany","target":"api::product-list.product-list","mappedBy":"brand"}},"kind":"collectionType"},"modelType":"contentType","modelName":"brand","connection":"default","uid":"api::brand.brand","apiName":"brand","globalId":"Brand","actions":{},"lifecycles":{}},"api::certificate-list.certificate-list":{"kind":"collectionType","collectionName":"certificate_lists","info":{"singularName":"certificate-list","pluralName":"certificate-lists","displayName":"certificate_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::certificate-list.certificate-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"certificate_lists","info":{"singularName":"certificate-list","pluralName":"certificate-lists","displayName":"certificate_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}}},"kind":"collectionType"},"modelType":"contentType","modelName":"certificate-list","connection":"default","uid":"api::certificate-list.certificate-list","apiName":"certificate-list","globalId":"CertificateList","actions":{},"lifecycles":{}},"api::design-service.design-service":{"kind":"singleType","collectionName":"design_services","info":{"singularName":"design-service","pluralName":"design-services","displayName":"design_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::design-service.design-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"design_services","info":{"singularName":"design-service","pluralName":"design-services","displayName":"design_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"design-service","connection":"default","uid":"api::design-service.design-service","apiName":"design-service","globalId":"DesignService","actions":{},"lifecycles":{}},"api::elevator-dispatching-service.elevator-dispatching-service":{"kind":"singleType","collectionName":"elevator_dispatching_services","info":{"singularName":"elevator-dispatching-service","pluralName":"elevator-dispatching-services","displayName":"elevator_dispatching_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::elevator-dispatching-service.elevator-dispatching-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"elevator_dispatching_services","info":{"singularName":"elevator-dispatching-service","pluralName":"elevator-dispatching-services","displayName":"elevator_dispatching_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"elevator-dispatching-service","connection":"default","uid":"api::elevator-dispatching-service.elevator-dispatching-service","apiName":"elevator-dispatching-service","globalId":"ElevatorDispatchingService","actions":{},"lifecycles":{}},"api::fire-safety-service.fire-safety-service":{"kind":"singleType","collectionName":"fire_safety_services","info":{"singularName":"fire-safety-service","pluralName":"fire-safety-services","displayName":"fire_safety_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::fire-safety-service.fire-safety-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"fire_safety_services","info":{"singularName":"fire-safety-service","pluralName":"fire-safety-services","displayName":"fire_safety_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"fire-safety-service","connection":"default","uid":"api::fire-safety-service.fire-safety-service","apiName":"fire-safety-service","globalId":"FireSafetyService","actions":{},"lifecycles":{}},"api::layout.layout":{"kind":"singleType","collectionName":"layouts","info":{"singularName":"layout","pluralName":"layouts","displayName":"layout","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"navbar":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"navbar-header.navbar"},"address":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.address"},"number":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.phone-number"},"footer":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-main"},"footer_dev":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-dev"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::layout.layout"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"layouts","info":{"singularName":"layout","pluralName":"layouts","displayName":"layout","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"navbar":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"navbar-header.navbar"},"address":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.address"},"number":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.phone-number"},"footer":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-main"},"footer_dev":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-dev"}},"kind":"singleType"},"modelType":"contentType","modelName":"layout","connection":"default","uid":"api::layout.layout","apiName":"layout","globalId":"Layout","actions":{},"lifecycles":{}},"api::local.local":{"kind":"collectionType","collectionName":"locals","info":{"singularName":"local","pluralName":"locals","displayName":"local","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::local.local"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"locals","info":{"singularName":"local","pluralName":"locals","displayName":"local","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}}},"kind":"collectionType"},"modelType":"contentType","modelName":"local","connection":"default","uid":"api::local.local","apiName":"local","globalId":"Local","actions":{},"lifecycles":{}},"api::main.main":{"kind":"singleType","collectionName":"mains","info":{"singularName":"main","pluralName":"mains","displayName":"main","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"headVideo":{"type":"media","multiple":false,"required":false,"allowedTypes":["videos"],"pluginOptions":{"i18n":{"localized":false}}},"services":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services.services"},"product":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"products.product"},"about":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"about.about"},"certificate":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"certificate.certificate"},"form":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"form.form-main"},"head":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"desc":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"headButton":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::main.main"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"mains","info":{"singularName":"main","pluralName":"mains","displayName":"main","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"headVideo":{"type":"media","multiple":false,"required":false,"allowedTypes":["videos"],"pluginOptions":{"i18n":{"localized":false}}},"services":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services.services"},"product":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"products.product"},"about":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"about.about"},"certificate":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"certificate.certificate"},"form":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"form.form-main"},"head":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"desc":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"headButton":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"}},"kind":"singleType"},"modelType":"contentType","modelName":"main","connection":"default","uid":"api::main.main","apiName":"main","globalId":"Main","actions":{},"lifecycles":{}},"api::navigation.navigation":{"kind":"collectionType","collectionName":"navigations","info":{"singularName":"navigation","pluralName":"navigations","displayName":"navigation","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"href":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::navigation.navigation"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"navigations","info":{"singularName":"navigation","pluralName":"navigations","displayName":"navigation","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"href":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"navigation","connection":"default","uid":"api::navigation.navigation","apiName":"navigation","globalId":"Navigation","actions":{},"lifecycles":{}},"api::network-service.network-service":{"kind":"singleType","collectionName":"network_services","info":{"singularName":"network-service","pluralName":"network-services","displayName":"network_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::network-service.network-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"network_services","info":{"singularName":"network-service","pluralName":"network-services","displayName":"network_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"network-service","connection":"default","uid":"api::network-service.network-service","apiName":"network-service","globalId":"NetworkService","actions":{},"lifecycles":{}},"api::product-list.product-list":{"kind":"collectionType","collectionName":"product_lists","info":{"singularName":"product-list","pluralName":"product-lists","displayName":"product_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"brand":{"type":"relation","relation":"manyToOne","target":"api::brand.brand","inversedBy":"product_lists"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::product-list.product-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"product_lists","info":{"singularName":"product-list","pluralName":"product-lists","displayName":"product_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"brand":{"type":"relation","relation":"manyToOne","target":"api::brand.brand","inversedBy":"product_lists"}},"kind":"collectionType"},"modelType":"contentType","modelName":"product-list","connection":"default","uid":"api::product-list.product-list","apiName":"product-list","globalId":"ProductList","actions":{},"lifecycles":{}},"api::service-list.service-list":{"kind":"collectionType","collectionName":"service_lists","info":{"singularName":"service-list","pluralName":"service-lists","displayName":"service_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"heading":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::service-list.service-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"service_lists","info":{"singularName":"service-list","pluralName":"service-lists","displayName":"service_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"heading":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"service-list","connection":"default","uid":"api::service-list.service-list","apiName":"service-list","globalId":"ServiceList","actions":{},"lifecycles":{}},"api::sonstruction-service.sonstruction-service":{"kind":"singleType","collectionName":"sonstruction_services","info":{"singularName":"sonstruction-service","pluralName":"sonstruction-services","displayName":"сonstruction_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::sonstruction-service.sonstruction-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"sonstruction_services","info":{"singularName":"sonstruction-service","pluralName":"sonstruction-services","displayName":"сonstruction_service","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"sonstruction-service","connection":"default","uid":"api::sonstruction-service.sonstruction-service","apiName":"sonstruction-service","globalId":"SonstructionService","actions":{},"lifecycles":{}},"api::under-nav.under-nav":{"kind":"collectionType","collectionName":"under_navs","info":{"singularName":"under-nav","pluralName":"under-navs","displayName":"under_nav","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"slug":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::under-nav.under-nav"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"under_navs","info":{"singularName":"under-nav","pluralName":"under-navs","displayName":"under_nav","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"slug":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"under-nav","connection":"default","uid":"api::under-nav.under-nav","apiName":"under-nav","globalId":"UnderNav","actions":{},"lifecycles":{}},"api::video-surveillance.video-surveillance":{"kind":"singleType","collectionName":"video_surveillances","info":{"singularName":"video-surveillance","pluralName":"video-surveillances","displayName":"video_surveillance"},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::video-surveillance.video-surveillance"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"video_surveillances","info":{"singularName":"video-surveillance","pluralName":"video-surveillances","displayName":"video_surveillance"},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"component":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services-page-com.component-services"}},"kind":"singleType"},"modelType":"contentType","modelName":"video-surveillance","connection":"default","uid":"api::video-surveillance.video-surveillance","apiName":"video-surveillance","globalId":"VideoSurveillance","actions":{},"lifecycles":{}}}	object	\N	\N
+1	strapi_content_types_schema	{"admin::permission":{"collectionName":"admin_permissions","info":{"name":"Permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","minLength":1,"configurable":false,"required":true},"subject":{"type":"string","minLength":1,"configurable":false,"required":false},"properties":{"type":"json","configurable":false,"required":false,"default":{}},"conditions":{"type":"json","configurable":false,"required":false,"default":[]},"role":{"configurable":false,"type":"relation","relation":"manyToOne","inversedBy":"permissions","target":"admin::role"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_permissions","info":{"name":"Permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","minLength":1,"configurable":false,"required":true},"subject":{"type":"string","minLength":1,"configurable":false,"required":false},"properties":{"type":"json","configurable":false,"required":false,"default":{}},"conditions":{"type":"json","configurable":false,"required":false,"default":[]},"role":{"configurable":false,"type":"relation","relation":"manyToOne","inversedBy":"permissions","target":"admin::role"}},"kind":"collectionType"},"modelType":"contentType","modelName":"permission","connection":"default","uid":"admin::permission","plugin":"admin","globalId":"AdminPermission"},"admin::user":{"collectionName":"admin_users","info":{"name":"User","description":"","singularName":"user","pluralName":"users","displayName":"User"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"firstname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"lastname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"username":{"type":"string","unique":false,"configurable":false,"required":false},"email":{"type":"email","minLength":6,"configurable":false,"required":true,"unique":true,"private":true},"password":{"type":"password","minLength":6,"configurable":false,"required":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"registrationToken":{"type":"string","configurable":false,"private":true},"isActive":{"type":"boolean","default":false,"configurable":false,"private":true},"roles":{"configurable":false,"private":true,"type":"relation","relation":"manyToMany","inversedBy":"users","target":"admin::role","collectionName":"strapi_users_roles"},"blocked":{"type":"boolean","default":false,"configurable":false,"private":true},"preferedLanguage":{"type":"string","configurable":false,"required":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_users","info":{"name":"User","description":"","singularName":"user","pluralName":"users","displayName":"User"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"firstname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"lastname":{"type":"string","unique":false,"minLength":1,"configurable":false,"required":false},"username":{"type":"string","unique":false,"configurable":false,"required":false},"email":{"type":"email","minLength":6,"configurable":false,"required":true,"unique":true,"private":true},"password":{"type":"password","minLength":6,"configurable":false,"required":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"registrationToken":{"type":"string","configurable":false,"private":true},"isActive":{"type":"boolean","default":false,"configurable":false,"private":true},"roles":{"configurable":false,"private":true,"type":"relation","relation":"manyToMany","inversedBy":"users","target":"admin::role","collectionName":"strapi_users_roles"},"blocked":{"type":"boolean","default":false,"configurable":false,"private":true},"preferedLanguage":{"type":"string","configurable":false,"required":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"user","connection":"default","uid":"admin::user","plugin":"admin","globalId":"AdminUser"},"admin::role":{"collectionName":"admin_roles","info":{"name":"Role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"code":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"description":{"type":"string","configurable":false},"users":{"configurable":false,"type":"relation","relation":"manyToMany","mappedBy":"roles","target":"admin::user"},"permissions":{"configurable":false,"type":"relation","relation":"oneToMany","mappedBy":"role","target":"admin::permission"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"admin_roles","info":{"name":"Role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"code":{"type":"string","minLength":1,"unique":true,"configurable":false,"required":true},"description":{"type":"string","configurable":false},"users":{"configurable":false,"type":"relation","relation":"manyToMany","mappedBy":"roles","target":"admin::user"},"permissions":{"configurable":false,"type":"relation","relation":"oneToMany","mappedBy":"role","target":"admin::permission"}},"kind":"collectionType"},"modelType":"contentType","modelName":"role","connection":"default","uid":"admin::role","plugin":"admin","globalId":"AdminRole"},"admin::api-token":{"collectionName":"strapi_api_tokens","info":{"name":"Api Token","singularName":"api-token","pluralName":"api-tokens","displayName":"Api Token","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"configurable":false,"required":true},"description":{"type":"string","minLength":1,"configurable":false,"required":false,"default":""},"type":{"type":"enumeration","enum":["read-only","full-access"],"configurable":false,"required":false,"default":"read-only"},"accessKey":{"type":"string","minLength":1,"configurable":false,"required":true},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"strapi_api_tokens","info":{"name":"Api Token","singularName":"api-token","pluralName":"api-tokens","displayName":"Api Token","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":1,"configurable":false,"required":true},"description":{"type":"string","minLength":1,"configurable":false,"required":false,"default":""},"type":{"type":"enumeration","enum":["read-only","full-access"],"configurable":false,"required":false,"default":"read-only"},"accessKey":{"type":"string","minLength":1,"configurable":false,"required":true}},"kind":"collectionType"},"modelType":"contentType","modelName":"api-token","connection":"default","uid":"admin::api-token","plugin":"admin","globalId":"AdminApiToken"},"plugin::upload.file":{"collectionName":"files","info":{"singularName":"file","pluralName":"files","displayName":"File","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","configurable":false,"required":true},"alternativeText":{"type":"string","configurable":false},"caption":{"type":"string","configurable":false},"width":{"type":"integer","configurable":false},"height":{"type":"integer","configurable":false},"formats":{"type":"json","configurable":false},"hash":{"type":"string","configurable":false,"required":true},"ext":{"type":"string","configurable":false},"mime":{"type":"string","configurable":false,"required":true},"size":{"type":"decimal","configurable":false,"required":true},"url":{"type":"string","configurable":false,"required":true},"previewUrl":{"type":"string","configurable":false},"provider":{"type":"string","configurable":false,"required":true},"provider_metadata":{"type":"json","configurable":false},"related":{"type":"relation","relation":"morphToMany","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"files","info":{"singularName":"file","pluralName":"files","displayName":"File","description":""},"options":{},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","configurable":false,"required":true},"alternativeText":{"type":"string","configurable":false},"caption":{"type":"string","configurable":false},"width":{"type":"integer","configurable":false},"height":{"type":"integer","configurable":false},"formats":{"type":"json","configurable":false},"hash":{"type":"string","configurable":false,"required":true},"ext":{"type":"string","configurable":false},"mime":{"type":"string","configurable":false,"required":true},"size":{"type":"decimal","configurable":false,"required":true},"url":{"type":"string","configurable":false,"required":true},"previewUrl":{"type":"string","configurable":false},"provider":{"type":"string","configurable":false,"required":true},"provider_metadata":{"type":"json","configurable":false},"related":{"type":"relation","relation":"morphToMany","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"file","connection":"default","uid":"plugin::upload.file","plugin":"upload","globalId":"UploadFile"},"plugin::i18n.locale":{"info":{"singularName":"locale","pluralName":"locales","collectionName":"locales","displayName":"Locale","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","min":1,"max":50,"configurable":false},"code":{"type":"string","unique":true,"configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"info":{"singularName":"locale","pluralName":"locales","collectionName":"locales","displayName":"Locale","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","min":1,"max":50,"configurable":false},"code":{"type":"string","unique":true,"configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"locale","connection":"default","uid":"plugin::i18n.locale","plugin":"i18n","collectionName":"i18n_locale","globalId":"I18NLocale"},"plugin::users-permissions.permission":{"collectionName":"up_permissions","info":{"name":"permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","required":true,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"permissions","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"up_permissions","info":{"name":"permission","description":"","singularName":"permission","pluralName":"permissions","displayName":"Permission"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"action":{"type":"string","required":true,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"permissions","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"permission","connection":"default","uid":"plugin::users-permissions.permission","plugin":"users-permissions","globalId":"UsersPermissionsPermission"},"plugin::users-permissions.role":{"collectionName":"up_roles","info":{"name":"role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":3,"required":true,"configurable":false},"description":{"type":"string","configurable":false},"type":{"type":"string","unique":true,"configurable":false},"permissions":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.permission","mappedBy":"role","configurable":false},"users":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.user","mappedBy":"role","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"kind":"collectionType","__schema__":{"collectionName":"up_roles","info":{"name":"role","description":"","singularName":"role","pluralName":"roles","displayName":"Role"},"pluginOptions":{"content-manager":{"visible":false},"content-type-builder":{"visible":false}},"attributes":{"name":{"type":"string","minLength":3,"required":true,"configurable":false},"description":{"type":"string","configurable":false},"type":{"type":"string","unique":true,"configurable":false},"permissions":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.permission","mappedBy":"role","configurable":false},"users":{"type":"relation","relation":"oneToMany","target":"plugin::users-permissions.user","mappedBy":"role","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"role","connection":"default","uid":"plugin::users-permissions.role","plugin":"users-permissions","globalId":"UsersPermissionsRole"},"plugin::users-permissions.user":{"collectionName":"up_users","info":{"name":"user","description":"","singularName":"user","pluralName":"users","displayName":"User"},"options":{"draftAndPublish":false,"timestamps":true},"attributes":{"username":{"type":"string","minLength":3,"unique":true,"configurable":false,"required":true},"email":{"type":"email","minLength":6,"configurable":false,"required":true},"provider":{"type":"string","configurable":false},"password":{"type":"password","minLength":6,"configurable":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"confirmationToken":{"type":"string","configurable":false,"private":true},"confirmed":{"type":"boolean","default":false,"configurable":false},"blocked":{"type":"boolean","default":false,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"users","configurable":false},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true}},"config":{"attributes":{"resetPasswordToken":{"hidden":true},"confirmationToken":{"hidden":true},"provider":{"hidden":true}}},"kind":"collectionType","__schema__":{"collectionName":"up_users","info":{"name":"user","description":"","singularName":"user","pluralName":"users","displayName":"User"},"options":{"draftAndPublish":false,"timestamps":true},"attributes":{"username":{"type":"string","minLength":3,"unique":true,"configurable":false,"required":true},"email":{"type":"email","minLength":6,"configurable":false,"required":true},"provider":{"type":"string","configurable":false},"password":{"type":"password","minLength":6,"configurable":false,"private":true},"resetPasswordToken":{"type":"string","configurable":false,"private":true},"confirmationToken":{"type":"string","configurable":false,"private":true},"confirmed":{"type":"boolean","default":false,"configurable":false},"blocked":{"type":"boolean","default":false,"configurable":false},"role":{"type":"relation","relation":"manyToOne","target":"plugin::users-permissions.role","inversedBy":"users","configurable":false}},"kind":"collectionType"},"modelType":"contentType","modelName":"user","connection":"default","uid":"plugin::users-permissions.user","plugin":"users-permissions","globalId":"UsersPermissionsUser"},"api::brand.brand":{"kind":"collectionType","collectionName":"brands","info":{"singularName":"brand","pluralName":"brands","displayName":"brand","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"product_lists":{"type":"relation","relation":"oneToMany","target":"api::product-list.product-list","mappedBy":"brand"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::brand.brand"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"brands","info":{"singularName":"brand","pluralName":"brands","displayName":"brand","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"product_lists":{"type":"relation","relation":"oneToMany","target":"api::product-list.product-list","mappedBy":"brand"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"}},"kind":"collectionType"},"modelType":"contentType","modelName":"brand","connection":"default","uid":"api::brand.brand","apiName":"brand","globalId":"Brand","actions":{},"lifecycles":{}},"api::certificate-list.certificate-list":{"kind":"collectionType","collectionName":"certificate_lists","info":{"singularName":"certificate-list","pluralName":"certificate-lists","displayName":"certificate_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::certificate-list.certificate-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"certificate_lists","info":{"singularName":"certificate-list","pluralName":"certificate-lists","displayName":"certificate_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}}},"kind":"collectionType"},"modelType":"contentType","modelName":"certificate-list","connection":"default","uid":"api::certificate-list.certificate-list","apiName":"certificate-list","globalId":"CertificateList","actions":{},"lifecycles":{}},"api::layout.layout":{"kind":"singleType","collectionName":"layouts","info":{"singularName":"layout","pluralName":"layouts","displayName":"layout","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"navbar":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"navbar-header.navbar"},"address":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.address"},"number":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.phone-number"},"footer":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-main"},"footer_dev":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-dev"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::layout.layout"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"layouts","info":{"singularName":"layout","pluralName":"layouts","displayName":"layout","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"navbar":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"navbar-header.navbar"},"address":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.address"},"number":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"contacts.phone-number"},"footer":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-main"},"footer_dev":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"footer.footer-dev"}},"kind":"singleType"},"modelType":"contentType","modelName":"layout","connection":"default","uid":"api::layout.layout","apiName":"layout","globalId":"Layout","actions":{},"lifecycles":{}},"api::local.local":{"kind":"collectionType","collectionName":"locals","info":{"singularName":"local","pluralName":"locals","displayName":"local","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::local.local"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"locals","info":{"singularName":"local","pluralName":"locals","displayName":"local","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}}},"kind":"collectionType"},"modelType":"contentType","modelName":"local","connection":"default","uid":"api::local.local","apiName":"local","globalId":"Local","actions":{},"lifecycles":{}},"api::main.main":{"kind":"singleType","collectionName":"mains","info":{"singularName":"main","pluralName":"mains","displayName":"main","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"headVideo":{"type":"media","multiple":false,"required":false,"allowedTypes":["videos"],"pluginOptions":{"i18n":{"localized":false}}},"services":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services.services"},"product":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"products.product"},"about":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"about.about"},"certificate":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"certificate.certificate"},"form":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"form.form-main"},"head":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"desc":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"headButton":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::main.main"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"mains","info":{"singularName":"main","pluralName":"mains","displayName":"main","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"headVideo":{"type":"media","multiple":false,"required":false,"allowedTypes":["videos"],"pluginOptions":{"i18n":{"localized":false}}},"services":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"services.services"},"product":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"products.product"},"about":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"about.about"},"certificate":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"certificate.certificate"},"form":{"type":"component","repeatable":false,"pluginOptions":{"i18n":{"localized":true}},"component":"form.form-main"},"head":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"desc":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"headButton":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"}},"kind":"singleType"},"modelType":"contentType","modelName":"main","connection":"default","uid":"api::main.main","apiName":"main","globalId":"Main","actions":{},"lifecycles":{}},"api::navigation.navigation":{"kind":"collectionType","collectionName":"navigations","info":{"singularName":"navigation","pluralName":"navigations","displayName":"navigation","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"href":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::navigation.navigation"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"navigations","info":{"singularName":"navigation","pluralName":"navigations","displayName":"navigation","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"type":"string","pluginOptions":{"i18n":{"localized":true}}},"href":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"navigation","connection":"default","uid":"api::navigation.navigation","apiName":"navigation","globalId":"Navigation","actions":{},"lifecycles":{}},"api::pagas-service.pagas-service":{"kind":"collectionType","collectionName":"pagas_services","info":{"singularName":"pagas-service","pluralName":"pagas-services","displayName":"страницы услуг","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"under_description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"img1":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"img2":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"img3":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"sort_id":{"pluginOptions":{"i18n":{"localized":false}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::pagas-service.pagas-service"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"pagas_services","info":{"singularName":"pagas-service","pluralName":"pagas-services","displayName":"страницы услуг","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"name":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"under_description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"img1":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"img2":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"img3":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"sort_id":{"pluginOptions":{"i18n":{"localized":false}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"pagas-service","connection":"default","uid":"api::pagas-service.pagas-service","apiName":"pagas-service","globalId":"PagasService","actions":{},"lifecycles":{}},"api::product-list.product-list":{"kind":"collectionType","collectionName":"product_lists","info":{"singularName":"product-list","pluralName":"product-lists","displayName":"product_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"brand":{"type":"relation","relation":"manyToOne","target":"api::brand.brand","inversedBy":"product_lists"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::product-list.product-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"product_lists","info":{"singularName":"product-list","pluralName":"product-lists","displayName":"product_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"brand":{"type":"relation","relation":"manyToOne","target":"api::brand.brand","inversedBy":"product_lists"}},"kind":"collectionType"},"modelType":"contentType","modelName":"product-list","connection":"default","uid":"api::product-list.product-list","apiName":"product-list","globalId":"ProductList","actions":{},"lifecycles":{}},"api::service-list.service-list":{"kind":"collectionType","collectionName":"service_lists","info":{"singularName":"service-list","pluralName":"service-lists","displayName":"service_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"heading":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"},"createdAt":{"type":"datetime"},"updatedAt":{"type":"datetime"},"createdBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"updatedBy":{"type":"relation","relation":"oneToOne","target":"admin::user","configurable":false,"writable":false,"visible":false,"useJoinTable":false,"private":true},"localizations":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"relation","relation":"oneToMany","target":"api::service-list.service-list"},"locale":{"writable":true,"private":false,"configurable":false,"visible":false,"type":"string"}},"__schema__":{"collectionName":"service_lists","info":{"singularName":"service-list","pluralName":"service-lists","displayName":"service_list","description":""},"options":{"draftAndPublish":false},"pluginOptions":{"i18n":{"localized":true}},"attributes":{"img":{"type":"media","multiple":false,"required":false,"allowedTypes":["images"],"pluginOptions":{"i18n":{"localized":false}}},"heading":{"pluginOptions":{"i18n":{"localized":true}},"type":"string"},"description":{"pluginOptions":{"i18n":{"localized":true}},"type":"text"},"sort_id":{"pluginOptions":{"i18n":{"localized":true}},"type":"integer"}},"kind":"collectionType"},"modelType":"contentType","modelName":"service-list","connection":"default","uid":"api::service-list.service-list","apiName":"service-list","globalId":"ServiceList","actions":{},"lifecycles":{}}}	object	\N	\N
 16	core_admin_auth	{"providers":{"autoRegister":false,"defaultRole":null}}	object	\N	\N
 20	plugin_content_manager_configuration_content_types::api::local.local	{"uid":"api::local.local","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","createdAt","updatedAt"],"editRelations":[],"edit":[[{"name":"name","size":6}]]}}	object	\N	\N
-40	plugin_content_manager_configuration_content_types::api::design-service.design-service	{"uid":"api::design-service.design-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","component"],"edit":[[{"name":"component","size":12}]],"editRelations":[]}}	object	\N	\N
 27	plugin_content_manager_configuration_content_types::api::product-list.product-list	{"uid":"api::product-list.product-list","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"img":{"edit":{"label":"img","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img","searchable":false,"sortable":false}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"brand":{"edit":{"label":"brand","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"brand","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","img","description","createdAt"],"edit":[[{"name":"img","size":6},{"name":"description","size":6}]],"editRelations":["brand"]}}	object	\N	\N
-26	plugin_content_manager_configuration_components::products.product	{"uid":"products.product","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"descTiady":{"edit":{"label":"descTiady","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"descTiady","searchable":true,"sortable":true}},"descONV":{"edit":{"label":"descONV","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"descONV","searchable":true,"sortable":true}},"descOB":{"edit":{"label":"descOB","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"descOB","searchable":true,"sortable":true}},"brands":{"edit":{"label":"brands","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"brands","searchable":false,"sortable":false}}},"layouts":{"list":["id","heading","descTiady","descONV"],"edit":[[{"name":"heading","size":6},{"name":"descTiady","size":6}],[{"name":"descONV","size":6},{"name":"descOB","size":6}],[{"name":"brands","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
-41	plugin_content_manager_configuration_content_types::api::fire-safety-service.fire-safety-service	{"uid":"api::fire-safety-service.fire-safety-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","component"],"edit":[[{"name":"component","size":12}]],"editRelations":[]}}	object	\N	\N
 21	plugin_content_manager_configuration_components::contacts.address	{"uid":"contacts.address","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"address","defaultSortBy":"address","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"address":{"edit":{"label":"address","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"address","searchable":true,"sortable":true}}},"layouts":{"list":["id","address"],"edit":[[{"name":"address","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 22	plugin_content_manager_configuration_components::contacts.mail	{"uid":"contacts.mail","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"mail":{"edit":{"label":"mail","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"mail","searchable":true,"sortable":true}}},"layouts":{"list":["id","mail"],"edit":[[{"name":"mail","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 23	plugin_content_manager_configuration_components::contacts.phone-number	{"uid":"contacts.phone-number","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"number","defaultSortBy":"number","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"number":{"edit":{"label":"number","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"number","searchable":true,"sortable":true}}},"layouts":{"list":["id","number"],"edit":[[{"name":"number","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
+26	plugin_content_manager_configuration_components::products.product	{"uid":"products.product","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"brands":{"edit":{"label":"brands","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"brands","searchable":false,"sortable":false}}},"layouts":{"list":["id","heading"],"edit":[[{"name":"heading","size":6}],[{"name":"brands","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 24	plugin_content_manager_configuration_components::services.services	{"uid":"services.services","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"under_heading":{"edit":{"label":"under_heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"under_heading","searchable":true,"sortable":true}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"service_lists":{"edit":{"label":"service_lists","description":"","placeholder":"","visible":true,"editable":true,"mainField":"heading"},"list":{"label":"service_lists","searchable":false,"sortable":false}},"button":{"edit":{"label":"button","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"button","searchable":true,"sortable":true}}},"layouts":{"list":["id","heading","under_heading","description"],"edit":[[{"name":"heading","size":6},{"name":"under_heading","size":6}],[{"name":"description","size":6},{"name":"service_lists","size":6}],[{"name":"button","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 35	plugin_content_manager_configuration_components::footer.footer-main	{"uid":"footer.footer-main","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"title_mail","defaultSortBy":"title_mail","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"logo":{"edit":{"label":"logo","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo","searchable":false,"sortable":false}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"title_mail":{"edit":{"label":"title_mail","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"title_mail","searchable":true,"sortable":true}},"mail":{"edit":{"label":"mail","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"mail","searchable":true,"sortable":true}}},"layouts":{"list":["id","logo","description","title_mail"],"edit":[[{"name":"logo","size":6},{"name":"description","size":6}],[{"name":"title_mail","size":6},{"name":"mail","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 25	plugin_content_manager_configuration_content_types::api::service-list.service-list	{"uid":"api::service-list.service-list","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"img":{"edit":{"label":"img","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"sort_id":{"edit":{"label":"sort_id","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"sort_id","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","img","heading","description"],"edit":[[{"name":"img","size":6},{"name":"heading","size":6}],[{"name":"description","size":6},{"name":"sort_id","size":4}]],"editRelations":[]}}	object	\N	\N
 28	plugin_content_manager_configuration_components::about.about	{"uid":"about.about","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"headImg":{"edit":{"label":"headImg","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"headImg","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"under_heading":{"edit":{"label":"under_heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"under_heading","searchable":true,"sortable":true}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"descImg":{"edit":{"label":"descImg","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"descImg","searchable":false,"sortable":false}}},"layouts":{"list":["id","headImg","heading","under_heading"],"edit":[[{"name":"headImg","size":6},{"name":"heading","size":6}],[{"name":"under_heading","size":6},{"name":"description","size":6}],[{"name":"descImg","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 30	plugin_content_manager_configuration_content_types::api::certificate-list.certificate-list	{"uid":"api::certificate-list.certificate-list","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"img":{"edit":{"label":"img","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","img","createdAt","updatedAt"],"editRelations":[],"edit":[[{"name":"img","size":6}]]}}	object	\N	\N
-39	plugin_content_manager_configuration_content_types::api::sonstruction-service.sonstruction-service	{"uid":"api::sonstruction-service.sonstruction-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","component"],"edit":[[{"name":"component","size":12}]],"editRelations":[]}}	object	\N	\N
-18	plugin_content_manager_configuration_components::navbar-header.navbar	{"uid":"navbar-header.navbar","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"logo":{"edit":{"label":"logo","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo","searchable":false,"sortable":false}},"locals":{"edit":{"label":"locals","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"locals","searchable":false,"sortable":false}},"navigations":{"edit":{"label":"navigations","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"navigations","searchable":false,"sortable":false}},"under_navs":{"edit":{"label":"under_navs","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"under_navs","searchable":false,"sortable":false}}},"layouts":{"list":["id","logo","locals","navigations"],"edit":[[{"name":"logo","size":6},{"name":"locals","size":6}],[{"name":"navigations","size":6},{"name":"under_navs","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 33	plugin_content_manager_configuration_components::form.form-main	{"uid":"form.form-main","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"message":{"edit":{"label":"message","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"message","searchable":true,"sortable":true}},"mail":{"edit":{"label":"mail","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"mail","searchable":true,"sortable":true}},"form_address":{"edit":{"label":"form_address","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"form_address","searchable":false,"sortable":false}},"form_mail":{"edit":{"label":"form_mail","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"form_mail","searchable":false,"sortable":false}},"form_number":{"edit":{"label":"form_number","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"form_number","searchable":false,"sortable":false}},"button":{"edit":{"label":"button","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"button","searchable":true,"sortable":true}}},"layouts":{"list":["id","heading","name","message"],"edit":[[{"name":"heading","size":6},{"name":"name","size":6}],[{"name":"message","size":6},{"name":"mail","size":6}],[{"name":"form_address","size":12}],[{"name":"form_mail","size":12}],[{"name":"form_number","size":12}],[{"name":"button","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 37	plugin_documentation_config	{"restrictedAccess":false}	object	\N	\N
 34	plugin_content_manager_configuration_content_types::api::layout.layout	{"uid":"api::layout.layout","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"navbar":{"edit":{"label":"navbar","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"navbar","searchable":false,"sortable":false}},"address":{"edit":{"label":"address","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"address","searchable":false,"sortable":false}},"number":{"edit":{"label":"number","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"number","searchable":false,"sortable":false}},"footer":{"edit":{"label":"footer","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"footer","searchable":false,"sortable":false}},"footer_dev":{"edit":{"label":"footer_dev","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"footer_dev","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","navbar","createdAt","updatedAt"],"edit":[[{"name":"navbar","size":12}],[{"name":"address","size":12}],[{"name":"number","size":12}],[{"name":"footer_dev","size":12}],[{"name":"footer","size":12}]],"editRelations":[]}}	object	\N	\N
 17	plugin_content_manager_configuration_content_types::api::main.main	{"uid":"api::main.main","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"headVideo":{"edit":{"label":"headVideo","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"headVideo","searchable":false,"sortable":false}},"services":{"edit":{"label":"services","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"services","searchable":false,"sortable":false}},"product":{"edit":{"label":"product","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"product","searchable":false,"sortable":false}},"about":{"edit":{"label":"about","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"about","searchable":false,"sortable":false}},"certificate":{"edit":{"label":"certificate","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"certificate","searchable":false,"sortable":false}},"form":{"edit":{"label":"form","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"form","searchable":false,"sortable":false}},"head":{"edit":{"label":"head","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"head","searchable":true,"sortable":true}},"desc":{"edit":{"label":"desc","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"desc","searchable":true,"sortable":true}},"headButton":{"edit":{"label":"headButton","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"headButton","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","headVideo"],"edit":[[{"name":"services","size":12}],[{"name":"product","size":12}],[{"name":"about","size":12}],[{"name":"certificate","size":12}],[{"name":"form","size":12}],[{"name":"headVideo","size":6},{"name":"head","size":6}],[{"name":"desc","size":6},{"name":"headButton","size":6}]],"editRelations":[]}}	object	\N	\N
-42	plugin_content_manager_configuration_content_types::api::elevator-dispatching-service.elevator-dispatching-service	{"uid":"api::elevator-dispatching-service.elevator-dispatching-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","component"],"edit":[[{"name":"component","size":12}]],"editRelations":[]}}	object	\N	\N
-43	plugin_content_manager_configuration_content_types::api::network-service.network-service	{"uid":"api::network-service.network-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt","component"],"edit":[[{"name":"component","size":12}]],"editRelations":[]}}	object	\N	\N
-44	plugin_content_manager_configuration_content_types::api::brand.brand	{"uid":"api::brand.brand","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"product_lists":{"edit":{"label":"product_lists","description":"","placeholder":"","visible":true,"editable":true,"mainField":"id"},"list":{"label":"product_lists","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","product_lists","createdAt"],"editRelations":["product_lists"],"edit":[[{"name":"name","size":6}]]}}	object	\N	\N
-45	plugin_content_manager_configuration_content_types::api::video-surveillance.video-surveillance	{"uid":"api::video-surveillance.video-surveillance","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"component":{"edit":{"label":"component","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"component","searchable":false,"sortable":false}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","component","createdAt","updatedAt"],"editRelations":[],"edit":[[{"name":"component","size":12}]]}}	object	\N	\N
+18	plugin_content_manager_configuration_components::navbar-header.navbar	{"uid":"navbar-header.navbar","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"id","defaultSortBy":"id","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"logo":{"edit":{"label":"logo","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo","searchable":false,"sortable":false}},"locals":{"edit":{"label":"locals","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"locals","searchable":false,"sortable":false}},"navigations":{"edit":{"label":"navigations","description":"","placeholder":"","visible":true,"editable":true,"mainField":"name"},"list":{"label":"navigations","searchable":false,"sortable":false}}},"layouts":{"list":["id","logo","locals","navigations"],"edit":[[{"name":"logo","size":6},{"name":"locals","size":6}],[{"name":"navigations","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
+44	plugin_content_manager_configuration_content_types::api::brand.brand	{"uid":"api::brand.brand","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"product_lists":{"edit":{"label":"product_lists","description":"","placeholder":"","visible":true,"editable":true,"mainField":"id"},"list":{"label":"product_lists","searchable":false,"sortable":false}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","product_lists","createdAt"],"edit":[[{"name":"name","size":6},{"name":"description","size":6}]],"editRelations":["product_lists"]}}	object	\N	\N
 29	plugin_content_manager_configuration_components::certificate.certificate	{"uid":"certificate.certificate","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"heading","defaultSortBy":"heading","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"logo":{"edit":{"label":"logo","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo","searchable":false,"sortable":false}},"under_heading":{"edit":{"label":"under_heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"under_heading","searchable":true,"sortable":true}},"certificate_lists":{"edit":{"label":"certificate_lists","description":"","placeholder":"","visible":true,"editable":true,"mainField":"id"},"list":{"label":"certificate_lists","searchable":false,"sortable":false}},"heading":{"edit":{"label":"heading","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"heading","searchable":true,"sortable":true}}},"layouts":{"list":["id","logo","under_heading","certificate_lists"],"edit":[[{"name":"logo","size":6},{"name":"under_heading","size":6}],[{"name":"certificate_lists","size":6},{"name":"heading","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
 19	plugin_content_manager_configuration_content_types::api::navigation.navigation	{"uid":"api::navigation.navigation","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"href":{"edit":{"label":"href","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"href","searchable":true,"sortable":true}},"sort_id":{"edit":{"label":"sort_id","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"sort_id","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","createdAt","updatedAt"],"edit":[[{"name":"name","size":6},{"name":"href","size":6}],[{"name":"sort_id","size":4}]],"editRelations":[]}}	object	\N	\N
-31	plugin_content_manager_configuration_content_types::api::under-nav.under-nav	{"uid":"api::under-nav.under-nav","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"slug":{"edit":{"label":"slug","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"slug","searchable":true,"sortable":true}},"sort_id":{"edit":{"label":"sort_id","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"sort_id","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","name","createdAt","updatedAt"],"edit":[[{"name":"name","size":6},{"name":"slug","size":6}],[{"name":"sort_id","size":4}]],"editRelations":[]}}	object	\N	\N
 36	plugin_content_manager_configuration_components::footer.footer-dev	{"uid":"footer.footer-dev","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"permission","defaultSortBy":"permission","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":false,"sortable":false}},"permission":{"edit":{"label":"permission","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"permission","searchable":true,"sortable":true}},"logo_dev":{"edit":{"label":"logo_dev","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo_dev","searchable":false,"sortable":false}},"logo_dev1":{"edit":{"label":"logo_dev1","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"logo_dev1","searchable":false,"sortable":false}},"devBy":{"edit":{"label":"devBy","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"devBy","searchable":true,"sortable":true}}},"layouts":{"list":["id","permission","logo_dev","logo_dev1"],"edit":[[{"name":"permission","size":6},{"name":"logo_dev","size":6}],[{"name":"logo_dev1","size":6},{"name":"devBy","size":6}]],"editRelations":[]},"isComponent":true}	object	\N	\N
+47	plugin_content_manager_configuration_content_types::api::pagas-service.pagas-service	{"uid":"api::pagas-service.pagas-service","settings":{"bulkable":true,"filterable":true,"searchable":true,"pageSize":10,"mainField":"name","defaultSortBy":"name","defaultSortOrder":"ASC"},"metadatas":{"id":{"edit":{},"list":{"label":"id","searchable":true,"sortable":true}},"name":{"edit":{"label":"name","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"name","searchable":true,"sortable":true}},"description":{"edit":{"label":"description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"description","searchable":false,"sortable":false}},"under_description":{"edit":{"label":"under_description","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"under_description","searchable":true,"sortable":true}},"img1":{"edit":{"label":"img1","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img1","searchable":false,"sortable":false}},"img2":{"edit":{"label":"img2","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img2","searchable":false,"sortable":false}},"img3":{"edit":{"label":"img3","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"img3","searchable":false,"sortable":false}},"sort_id":{"edit":{"label":"sort_id","description":"","placeholder":"","visible":true,"editable":true},"list":{"label":"sort_id","searchable":true,"sortable":true}},"createdAt":{"edit":{"label":"createdAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"createdAt","searchable":true,"sortable":true}},"updatedAt":{"edit":{"label":"updatedAt","description":"","placeholder":"","visible":false,"editable":true},"list":{"label":"updatedAt","searchable":true,"sortable":true}}},"layouts":{"list":["id","createdAt","updatedAt"],"edit":[[{"name":"name","size":6}],[{"name":"sort_id","size":6}],[{"name":"description","size":12}],[{"name":"under_description","size":6},{"name":"img1","size":6}],[{"name":"img2","size":6},{"name":"img3","size":6}]],"editRelations":[]}}	object	\N	\N
 \.
 
 
@@ -4494,7 +3577,7 @@ COPY public.strapi_core_store_settings (id, key, value, type, environment, tag) 
 --
 
 COPY public.strapi_database_schema (id, schema, "time", hash) FROM stdin;
-56	{"tables":[{"name":"strapi_core_store_settings","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"key","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"value","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"environment","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"tag","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"strapi_webhooks","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"url","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"headers","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"events","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"enabled","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"admin_permissions","indexes":[{"name":"admin_permissions_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_permissions_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_permissions_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_permissions_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"action","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"subject","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"properties","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"conditions","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_users","indexes":[{"name":"admin_users_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_users_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_users_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_users_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"firstname","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"lastname","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"username","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"email","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"password","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"reset_password_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"registration_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"is_active","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"blocked","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"prefered_language","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_roles","indexes":[{"name":"admin_roles_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_roles_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_roles_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_roles_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"code","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"strapi_api_tokens","indexes":[{"name":"strapi_api_tokens_created_by_id_fk","columns":["created_by_id"]},{"name":"strapi_api_tokens_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"strapi_api_tokens_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"strapi_api_tokens_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"access_key","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"files","indexes":[{"name":"files_created_by_id_fk","columns":["created_by_id"]},{"name":"files_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"files_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"files_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"alternative_text","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"caption","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"width","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"height","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"formats","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"hash","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"ext","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mime","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"size","type":"decimal","args":[10,2],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"url","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"preview_url","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider_metadata","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"i18n_locale","indexes":[{"name":"i18n_locale_created_by_id_fk","columns":["created_by_id"]},{"name":"i18n_locale_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"i18n_locale_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"i18n_locale_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"code","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_permissions","indexes":[{"name":"up_permissions_created_by_id_fk","columns":["created_by_id"]},{"name":"up_permissions_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_permissions_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_permissions_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"action","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_roles","indexes":[{"name":"up_roles_created_by_id_fk","columns":["created_by_id"]},{"name":"up_roles_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_roles_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_roles_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_users","indexes":[{"name":"up_users_created_by_id_fk","columns":["created_by_id"]},{"name":"up_users_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_users_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_users_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"username","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"email","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"password","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"reset_password_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"confirmation_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"confirmed","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"blocked","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"brands","indexes":[{"name":"brands_created_by_id_fk","columns":["created_by_id"]},{"name":"brands_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"brands_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"brands_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"certificate_lists","indexes":[{"name":"certificate_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"certificate_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"certificate_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"certificate_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"design_services","indexes":[{"name":"design_services_created_by_id_fk","columns":["created_by_id"]},{"name":"design_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"design_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"design_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"elevator_dispatching_services","indexes":[{"name":"elevator_dispatching_services_created_by_id_fk","columns":["created_by_id"]},{"name":"elevator_dispatching_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"elevator_dispatching_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"elevator_dispatching_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"fire_safety_services","indexes":[{"name":"fire_safety_services_created_by_id_fk","columns":["created_by_id"]},{"name":"fire_safety_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"fire_safety_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"fire_safety_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"layouts","indexes":[{"name":"layouts_created_by_id_fk","columns":["created_by_id"]},{"name":"layouts_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"layouts_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"layouts_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"locals","indexes":[{"name":"locals_created_by_id_fk","columns":["created_by_id"]},{"name":"locals_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"locals_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"locals_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"mains","indexes":[{"name":"mains_created_by_id_fk","columns":["created_by_id"]},{"name":"mains_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"mains_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"mains_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"head","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"desc","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"head_button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"navigations","indexes":[{"name":"navigations_created_by_id_fk","columns":["created_by_id"]},{"name":"navigations_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"navigations_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"navigations_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"href","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"network_services","indexes":[{"name":"network_services_created_by_id_fk","columns":["created_by_id"]},{"name":"network_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"network_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"network_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"product_lists","indexes":[{"name":"product_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"product_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"product_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"product_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"service_lists","indexes":[{"name":"service_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"service_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"service_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"service_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"sonstruction_services","indexes":[{"name":"sonstruction_services_created_by_id_fk","columns":["created_by_id"]},{"name":"sonstruction_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"sonstruction_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"sonstruction_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"under_navs","indexes":[{"name":"under_navs_created_by_id_fk","columns":["created_by_id"]},{"name":"under_navs_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"under_navs_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"under_navs_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"slug","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"video_surveillances","indexes":[{"name":"video_surveillances_created_by_id_fk","columns":["created_by_id"]},{"name":"video_surveillances_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"video_surveillances_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"video_surveillances_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_about_abouts","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_certificate_certificates","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_addresses","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"address","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_mail","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_phone_numbers","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"number","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_footer_footer_devs","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"permission","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"dev_by","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_footer_footer_mains","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"title_mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_form_form_mains","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"message","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_navbar_header_navbars","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false}]},{"name":"components_products_products","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"desc_tiady","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"desc_onv","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"desc_ob","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_services_page_com_component_services","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button_back","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button_next","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_services_services","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"admin_permissions_role_links","indexes":[{"name":"admin_permissions_role_links_fk","columns":["permission_id"]},{"name":"admin_permissions_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"admin_permissions_role_links_fk","columns":["permission_id"],"referencedColumns":["id"],"referencedTable":"admin_permissions","onDelete":"CASCADE"},{"name":"admin_permissions_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"admin_roles","onDelete":"CASCADE"}],"columns":[{"name":"permission_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_users_roles_links","indexes":[{"name":"admin_users_roles_links_fk","columns":["user_id"]},{"name":"admin_users_roles_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"admin_users_roles_links_fk","columns":["user_id"],"referencedColumns":["id"],"referencedTable":"admin_users","onDelete":"CASCADE"},{"name":"admin_users_roles_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"admin_roles","onDelete":"CASCADE"}],"columns":[{"name":"user_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"files_related_morphs","indexes":[{"name":"files_related_morphs_fk","columns":["file_id"]}],"foreignKeys":[{"name":"files_related_morphs_fk","columns":["file_id"],"referencedColumns":["id"],"referencedTable":"files","onDelete":"CASCADE"}],"columns":[{"name":"file_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"related_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"related_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_permissions_role_links","indexes":[{"name":"up_permissions_role_links_fk","columns":["permission_id"]},{"name":"up_permissions_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"up_permissions_role_links_fk","columns":["permission_id"],"referencedColumns":["id"],"referencedTable":"up_permissions","onDelete":"CASCADE"},{"name":"up_permissions_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"up_roles","onDelete":"CASCADE"}],"columns":[{"name":"permission_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_users_role_links","indexes":[{"name":"up_users_role_links_fk","columns":["user_id"]},{"name":"up_users_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"up_users_role_links_fk","columns":["user_id"],"referencedColumns":["id"],"referencedTable":"up_users","onDelete":"CASCADE"},{"name":"up_users_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"up_roles","onDelete":"CASCADE"}],"columns":[{"name":"user_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"brands_localizations_links","indexes":[{"name":"brands_localizations_links_fk","columns":["brand_id"]},{"name":"brands_localizations_links_inv_fk","columns":["inv_brand_id"]}],"foreignKeys":[{"name":"brands_localizations_links_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"},{"name":"brands_localizations_links_inv_fk","columns":["inv_brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"certificate_lists_localizations_links","indexes":[{"name":"certificate_lists_localizations_links_fk","columns":["certificate_list_id"]},{"name":"certificate_lists_localizations_links_inv_fk","columns":["inv_certificate_list_id"]}],"foreignKeys":[{"name":"certificate_lists_localizations_links_fk","columns":["certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"},{"name":"certificate_lists_localizations_links_inv_fk","columns":["inv_certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"}],"columns":[{"name":"certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"design_services_components","indexes":[{"name":"design_services_field_index","columns":["field"],"type":null},{"name":"design_services_component_type_index","columns":["component_type"],"type":null},{"name":"design_services_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"design_services_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"design_services","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"design_services_localizations_links","indexes":[{"name":"design_services_localizations_links_fk","columns":["design_service_id"]},{"name":"design_services_localizations_links_inv_fk","columns":["inv_design_service_id"]}],"foreignKeys":[{"name":"design_services_localizations_links_fk","columns":["design_service_id"],"referencedColumns":["id"],"referencedTable":"design_services","onDelete":"CASCADE"},{"name":"design_services_localizations_links_inv_fk","columns":["inv_design_service_id"],"referencedColumns":["id"],"referencedTable":"design_services","onDelete":"CASCADE"}],"columns":[{"name":"design_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_design_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"elevator_dispatching_services_components","indexes":[{"name":"elevator_dispatching_services_field_index","columns":["field"],"type":null},{"name":"elevator_dispatching_services_component_type_index","columns":["component_type"],"type":null},{"name":"elevator_dispatching_services_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"elevator_dispatching_services_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"elevator_dispatching_services","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"elevator_dispatching_services_localizations_links","indexes":[{"name":"elevator_dispatching_services_localizations_links_fk","columns":["elevator_dispatching_service_id"]},{"name":"elevator_dispatching_services_localizations_links_inv_fk","columns":["inv_elevator_dispatching_service_id"]}],"foreignKeys":[{"name":"elevator_dispatching_services_localizations_links_fk","columns":["elevator_dispatching_service_id"],"referencedColumns":["id"],"referencedTable":"elevator_dispatching_services","onDelete":"CASCADE"},{"name":"elevator_dispatching_services_localizations_links_inv_fk","columns":["inv_elevator_dispatching_service_id"],"referencedColumns":["id"],"referencedTable":"elevator_dispatching_services","onDelete":"CASCADE"}],"columns":[{"name":"elevator_dispatching_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_elevator_dispatching_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"fire_safety_services_components","indexes":[{"name":"fire_safety_services_field_index","columns":["field"],"type":null},{"name":"fire_safety_services_component_type_index","columns":["component_type"],"type":null},{"name":"fire_safety_services_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"fire_safety_services_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"fire_safety_services","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"fire_safety_services_localizations_links","indexes":[{"name":"fire_safety_services_localizations_links_fk","columns":["fire_safety_service_id"]},{"name":"fire_safety_services_localizations_links_inv_fk","columns":["inv_fire_safety_service_id"]}],"foreignKeys":[{"name":"fire_safety_services_localizations_links_fk","columns":["fire_safety_service_id"],"referencedColumns":["id"],"referencedTable":"fire_safety_services","onDelete":"CASCADE"},{"name":"fire_safety_services_localizations_links_inv_fk","columns":["inv_fire_safety_service_id"],"referencedColumns":["id"],"referencedTable":"fire_safety_services","onDelete":"CASCADE"}],"columns":[{"name":"fire_safety_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_fire_safety_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"layouts_components","indexes":[{"name":"layouts_field_index","columns":["field"],"type":null},{"name":"layouts_component_type_index","columns":["component_type"],"type":null},{"name":"layouts_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"layouts_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"layouts_localizations_links","indexes":[{"name":"layouts_localizations_links_fk","columns":["layout_id"]},{"name":"layouts_localizations_links_inv_fk","columns":["inv_layout_id"]}],"foreignKeys":[{"name":"layouts_localizations_links_fk","columns":["layout_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"},{"name":"layouts_localizations_links_inv_fk","columns":["inv_layout_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"}],"columns":[{"name":"layout_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_layout_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"locals_localizations_links","indexes":[{"name":"locals_localizations_links_fk","columns":["local_id"]},{"name":"locals_localizations_links_inv_fk","columns":["inv_local_id"]}],"foreignKeys":[{"name":"locals_localizations_links_fk","columns":["local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"},{"name":"locals_localizations_links_inv_fk","columns":["inv_local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"}],"columns":[{"name":"local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"mains_components","indexes":[{"name":"mains_field_index","columns":["field"],"type":null},{"name":"mains_component_type_index","columns":["component_type"],"type":null},{"name":"mains_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"mains_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"mains_localizations_links","indexes":[{"name":"mains_localizations_links_fk","columns":["main_id"]},{"name":"mains_localizations_links_inv_fk","columns":["inv_main_id"]}],"foreignKeys":[{"name":"mains_localizations_links_fk","columns":["main_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"},{"name":"mains_localizations_links_inv_fk","columns":["inv_main_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"}],"columns":[{"name":"main_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_main_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"navigations_localizations_links","indexes":[{"name":"navigations_localizations_links_fk","columns":["navigation_id"]},{"name":"navigations_localizations_links_inv_fk","columns":["inv_navigation_id"]}],"foreignKeys":[{"name":"navigations_localizations_links_fk","columns":["navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"},{"name":"navigations_localizations_links_inv_fk","columns":["inv_navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"}],"columns":[{"name":"navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"network_services_components","indexes":[{"name":"network_services_field_index","columns":["field"],"type":null},{"name":"network_services_component_type_index","columns":["component_type"],"type":null},{"name":"network_services_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"network_services_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"network_services","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"network_services_localizations_links","indexes":[{"name":"network_services_localizations_links_fk","columns":["network_service_id"]},{"name":"network_services_localizations_links_inv_fk","columns":["inv_network_service_id"]}],"foreignKeys":[{"name":"network_services_localizations_links_fk","columns":["network_service_id"],"referencedColumns":["id"],"referencedTable":"network_services","onDelete":"CASCADE"},{"name":"network_services_localizations_links_inv_fk","columns":["inv_network_service_id"],"referencedColumns":["id"],"referencedTable":"network_services","onDelete":"CASCADE"}],"columns":[{"name":"network_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_network_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"product_lists_brand_links","indexes":[{"name":"product_lists_brand_links_fk","columns":["product_list_id"]},{"name":"product_lists_brand_links_inv_fk","columns":["brand_id"]}],"foreignKeys":[{"name":"product_lists_brand_links_fk","columns":["product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"},{"name":"product_lists_brand_links_inv_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"product_lists_localizations_links","indexes":[{"name":"product_lists_localizations_links_fk","columns":["product_list_id"]},{"name":"product_lists_localizations_links_inv_fk","columns":["inv_product_list_id"]}],"foreignKeys":[{"name":"product_lists_localizations_links_fk","columns":["product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"},{"name":"product_lists_localizations_links_inv_fk","columns":["inv_product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"}],"columns":[{"name":"product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"service_lists_localizations_links","indexes":[{"name":"service_lists_localizations_links_fk","columns":["service_list_id"]},{"name":"service_lists_localizations_links_inv_fk","columns":["inv_service_list_id"]}],"foreignKeys":[{"name":"service_lists_localizations_links_fk","columns":["service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"},{"name":"service_lists_localizations_links_inv_fk","columns":["inv_service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"}],"columns":[{"name":"service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"sonstruction_services_components","indexes":[{"name":"sonstruction_services_field_index","columns":["field"],"type":null},{"name":"sonstruction_services_component_type_index","columns":["component_type"],"type":null},{"name":"sonstruction_services_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"sonstruction_services_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"sonstruction_services","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"sonstruction_services_localizations_links","indexes":[{"name":"sonstruction_services_localizations_links_fk","columns":["sonstruction_service_id"]},{"name":"sonstruction_services_localizations_links_inv_fk","columns":["inv_sonstruction_service_id"]}],"foreignKeys":[{"name":"sonstruction_services_localizations_links_fk","columns":["sonstruction_service_id"],"referencedColumns":["id"],"referencedTable":"sonstruction_services","onDelete":"CASCADE"},{"name":"sonstruction_services_localizations_links_inv_fk","columns":["inv_sonstruction_service_id"],"referencedColumns":["id"],"referencedTable":"sonstruction_services","onDelete":"CASCADE"}],"columns":[{"name":"sonstruction_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_sonstruction_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"under_navs_localizations_links","indexes":[{"name":"under_navs_localizations_links_fk","columns":["under_nav_id"]},{"name":"under_navs_localizations_links_inv_fk","columns":["inv_under_nav_id"]}],"foreignKeys":[{"name":"under_navs_localizations_links_fk","columns":["under_nav_id"],"referencedColumns":["id"],"referencedTable":"under_navs","onDelete":"CASCADE"},{"name":"under_navs_localizations_links_inv_fk","columns":["inv_under_nav_id"],"referencedColumns":["id"],"referencedTable":"under_navs","onDelete":"CASCADE"}],"columns":[{"name":"under_nav_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_under_nav_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"video_surveillances_components","indexes":[{"name":"video_surveillances_field_index","columns":["field"],"type":null},{"name":"video_surveillances_component_type_index","columns":["component_type"],"type":null},{"name":"video_surveillances_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"video_surveillances_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"video_surveillances","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"video_surveillances_localizations_links","indexes":[{"name":"video_surveillances_localizations_links_fk","columns":["video_surveillance_id"]},{"name":"video_surveillances_localizations_links_inv_fk","columns":["inv_video_surveillance_id"]}],"foreignKeys":[{"name":"video_surveillances_localizations_links_fk","columns":["video_surveillance_id"],"referencedColumns":["id"],"referencedTable":"video_surveillances","onDelete":"CASCADE"},{"name":"video_surveillances_localizations_links_inv_fk","columns":["inv_video_surveillance_id"],"referencedColumns":["id"],"referencedTable":"video_surveillances","onDelete":"CASCADE"}],"columns":[{"name":"video_surveillance_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_video_surveillance_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_certificate_certificates_certificate_lists_links","indexes":[{"name":"components_certificate_certificates_certificate_lists_links_fk","columns":["certificate_id"]},{"name":"components_certificate_certificates_certificate_lists_links_inv_fk","columns":["certificate_list_id"]}],"foreignKeys":[{"name":"components_certificate_certificates_certificate_lists_links_fk","columns":["certificate_id"],"referencedColumns":["id"],"referencedTable":"components_certificate_certificates","onDelete":"CASCADE"},{"name":"components_certificate_certificates_certificate_lists_links_inv_fk","columns":["certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"}],"columns":[{"name":"certificate_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_form_form_mains_components","indexes":[{"name":"components_form_form_mains_field_index","columns":["field"],"type":null},{"name":"components_form_form_mains_component_type_index","columns":["component_type"],"type":null},{"name":"components_form_form_mains_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"components_form_form_mains_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"components_form_form_mains","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"components_navbar_header_navbars_locals_links","indexes":[{"name":"components_navbar_header_navbars_locals_links_fk","columns":["navbar_id"]},{"name":"components_navbar_header_navbars_locals_links_inv_fk","columns":["local_id"]}],"foreignKeys":[{"name":"components_navbar_header_navbars_locals_links_fk","columns":["navbar_id"],"referencedColumns":["id"],"referencedTable":"components_navbar_header_navbars","onDelete":"CASCADE"},{"name":"components_navbar_header_navbars_locals_links_inv_fk","columns":["local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"}],"columns":[{"name":"navbar_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_navbar_header_navbars_navigations_links","indexes":[{"name":"components_navbar_header_navbars_navigations_links_fk","columns":["navbar_id"]},{"name":"components_navbar_header_navbars_navigations_links_inv_fk","columns":["navigation_id"]}],"foreignKeys":[{"name":"components_navbar_header_navbars_navigations_links_fk","columns":["navbar_id"],"referencedColumns":["id"],"referencedTable":"components_navbar_header_navbars","onDelete":"CASCADE"},{"name":"components_navbar_header_navbars_navigations_links_inv_fk","columns":["navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"}],"columns":[{"name":"navbar_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_navbar_header_navbars_under_navs_links","indexes":[{"name":"components_navbar_header_navbars_under_navs_links_fk","columns":["navbar_id"]},{"name":"components_navbar_header_navbars_under_navs_links_inv_fk","columns":["under_nav_id"]}],"foreignKeys":[{"name":"components_navbar_header_navbars_under_navs_links_fk","columns":["navbar_id"],"referencedColumns":["id"],"referencedTable":"components_navbar_header_navbars","onDelete":"CASCADE"},{"name":"components_navbar_header_navbars_under_navs_links_inv_fk","columns":["under_nav_id"],"referencedColumns":["id"],"referencedTable":"under_navs","onDelete":"CASCADE"}],"columns":[{"name":"navbar_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"under_nav_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_products_products_brands_links","indexes":[{"name":"components_products_products_brands_links_fk","columns":["product_id"]},{"name":"components_products_products_brands_links_inv_fk","columns":["brand_id"]}],"foreignKeys":[{"name":"components_products_products_brands_links_fk","columns":["product_id"],"referencedColumns":["id"],"referencedTable":"components_products_products","onDelete":"CASCADE"},{"name":"components_products_products_brands_links_inv_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"product_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_services_services_service_lists_links","indexes":[{"name":"components_services_services_service_lists_links_fk","columns":["services_id"]},{"name":"components_services_services_service_lists_links_inv_fk","columns":["service_list_id"]}],"foreignKeys":[{"name":"components_services_services_service_lists_links_fk","columns":["services_id"],"referencedColumns":["id"],"referencedTable":"components_services_services","onDelete":"CASCADE"},{"name":"components_services_services_service_lists_links_inv_fk","columns":["service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"}],"columns":[{"name":"services_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]}]}	2022-06-29 17:29:28.079	3d0e30a3383165c0fdcc240dfeafbb60
+74	{"tables":[{"name":"strapi_core_store_settings","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"key","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"value","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"environment","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"tag","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"strapi_webhooks","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"url","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"headers","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"events","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"enabled","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"admin_permissions","indexes":[{"name":"admin_permissions_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_permissions_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_permissions_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_permissions_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"action","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"subject","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"properties","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"conditions","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_users","indexes":[{"name":"admin_users_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_users_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_users_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_users_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"firstname","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"lastname","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"username","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"email","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"password","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"reset_password_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"registration_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"is_active","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"blocked","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"prefered_language","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_roles","indexes":[{"name":"admin_roles_created_by_id_fk","columns":["created_by_id"]},{"name":"admin_roles_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"admin_roles_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"admin_roles_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"code","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"strapi_api_tokens","indexes":[{"name":"strapi_api_tokens_created_by_id_fk","columns":["created_by_id"]},{"name":"strapi_api_tokens_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"strapi_api_tokens_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"strapi_api_tokens_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"access_key","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"files","indexes":[{"name":"files_created_by_id_fk","columns":["created_by_id"]},{"name":"files_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"files_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"files_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"alternative_text","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"caption","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"width","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"height","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"formats","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"hash","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"ext","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mime","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"size","type":"decimal","args":[10,2],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"url","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"preview_url","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider_metadata","type":"jsonb","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"i18n_locale","indexes":[{"name":"i18n_locale_created_by_id_fk","columns":["created_by_id"]},{"name":"i18n_locale_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"i18n_locale_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"i18n_locale_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"code","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_permissions","indexes":[{"name":"up_permissions_created_by_id_fk","columns":["created_by_id"]},{"name":"up_permissions_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_permissions_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_permissions_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"action","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_roles","indexes":[{"name":"up_roles_created_by_id_fk","columns":["created_by_id"]},{"name":"up_roles_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_roles_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_roles_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_users","indexes":[{"name":"up_users_created_by_id_fk","columns":["created_by_id"]},{"name":"up_users_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"up_users_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"up_users_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"username","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"email","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"provider","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"password","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"reset_password_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"confirmation_token","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"confirmed","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"blocked","type":"boolean","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"brands","indexes":[{"name":"brands_created_by_id_fk","columns":["created_by_id"]},{"name":"brands_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"brands_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"brands_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"certificate_lists","indexes":[{"name":"certificate_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"certificate_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"certificate_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"certificate_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"layouts","indexes":[{"name":"layouts_created_by_id_fk","columns":["created_by_id"]},{"name":"layouts_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"layouts_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"layouts_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"locals","indexes":[{"name":"locals_created_by_id_fk","columns":["created_by_id"]},{"name":"locals_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"locals_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"locals_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"mains","indexes":[{"name":"mains_created_by_id_fk","columns":["created_by_id"]},{"name":"mains_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"mains_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"mains_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"head","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"desc","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"head_button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"navigations","indexes":[{"name":"navigations_created_by_id_fk","columns":["created_by_id"]},{"name":"navigations_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"navigations_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"navigations_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"href","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"pagas_services","indexes":[{"name":"pagas_services_created_by_id_fk","columns":["created_by_id"]},{"name":"pagas_services_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"pagas_services_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"pagas_services_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"product_lists","indexes":[{"name":"product_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"product_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"product_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"product_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"service_lists","indexes":[{"name":"service_lists_created_by_id_fk","columns":["created_by_id"]},{"name":"service_lists_updated_by_id_fk","columns":["updated_by_id"]}],"foreignKeys":[{"name":"service_lists_created_by_id_fk","columns":["created_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"},{"name":"service_lists_updated_by_id_fk","columns":["updated_by_id"],"referencedTable":"admin_users","referencedColumns":["id"],"onDelete":"SET NULL"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"sort_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"updated_at","type":"datetime","args":[{"useTz":false,"precision":6}],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"created_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"updated_by_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"locale","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_about_abouts","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_certificate_certificates","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_addresses","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"address","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_mail","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_contacts_phone_numbers","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"number","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_footer_footer_devs","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"permission","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"dev_by","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_footer_footer_mains","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"title_mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_form_form_mains","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"name","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"message","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"mail","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_navbar_header_navbars","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false}]},{"name":"components_products_products","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"components_services_services","indexes":[],"foreignKeys":[],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"heading","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"under_heading","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"description","type":"text","args":["longtext"],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"button","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false}]},{"name":"admin_permissions_role_links","indexes":[{"name":"admin_permissions_role_links_fk","columns":["permission_id"]},{"name":"admin_permissions_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"admin_permissions_role_links_fk","columns":["permission_id"],"referencedColumns":["id"],"referencedTable":"admin_permissions","onDelete":"CASCADE"},{"name":"admin_permissions_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"admin_roles","onDelete":"CASCADE"}],"columns":[{"name":"permission_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"admin_users_roles_links","indexes":[{"name":"admin_users_roles_links_fk","columns":["user_id"]},{"name":"admin_users_roles_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"admin_users_roles_links_fk","columns":["user_id"],"referencedColumns":["id"],"referencedTable":"admin_users","onDelete":"CASCADE"},{"name":"admin_users_roles_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"admin_roles","onDelete":"CASCADE"}],"columns":[{"name":"user_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"files_related_morphs","indexes":[{"name":"files_related_morphs_fk","columns":["file_id"]}],"foreignKeys":[{"name":"files_related_morphs_fk","columns":["file_id"],"referencedColumns":["id"],"referencedTable":"files","onDelete":"CASCADE"}],"columns":[{"name":"file_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"related_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"related_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_permissions_role_links","indexes":[{"name":"up_permissions_role_links_fk","columns":["permission_id"]},{"name":"up_permissions_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"up_permissions_role_links_fk","columns":["permission_id"],"referencedColumns":["id"],"referencedTable":"up_permissions","onDelete":"CASCADE"},{"name":"up_permissions_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"up_roles","onDelete":"CASCADE"}],"columns":[{"name":"permission_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"up_users_role_links","indexes":[{"name":"up_users_role_links_fk","columns":["user_id"]},{"name":"up_users_role_links_inv_fk","columns":["role_id"]}],"foreignKeys":[{"name":"up_users_role_links_fk","columns":["user_id"],"referencedColumns":["id"],"referencedTable":"up_users","onDelete":"CASCADE"},{"name":"up_users_role_links_inv_fk","columns":["role_id"],"referencedColumns":["id"],"referencedTable":"up_roles","onDelete":"CASCADE"}],"columns":[{"name":"user_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"role_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"brands_localizations_links","indexes":[{"name":"brands_localizations_links_fk","columns":["brand_id"]},{"name":"brands_localizations_links_inv_fk","columns":["inv_brand_id"]}],"foreignKeys":[{"name":"brands_localizations_links_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"},{"name":"brands_localizations_links_inv_fk","columns":["inv_brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"certificate_lists_localizations_links","indexes":[{"name":"certificate_lists_localizations_links_fk","columns":["certificate_list_id"]},{"name":"certificate_lists_localizations_links_inv_fk","columns":["inv_certificate_list_id"]}],"foreignKeys":[{"name":"certificate_lists_localizations_links_fk","columns":["certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"},{"name":"certificate_lists_localizations_links_inv_fk","columns":["inv_certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"}],"columns":[{"name":"certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"layouts_components","indexes":[{"name":"layouts_field_index","columns":["field"],"type":null},{"name":"layouts_component_type_index","columns":["component_type"],"type":null},{"name":"layouts_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"layouts_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"layouts_localizations_links","indexes":[{"name":"layouts_localizations_links_fk","columns":["layout_id"]},{"name":"layouts_localizations_links_inv_fk","columns":["inv_layout_id"]}],"foreignKeys":[{"name":"layouts_localizations_links_fk","columns":["layout_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"},{"name":"layouts_localizations_links_inv_fk","columns":["inv_layout_id"],"referencedColumns":["id"],"referencedTable":"layouts","onDelete":"CASCADE"}],"columns":[{"name":"layout_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_layout_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"locals_localizations_links","indexes":[{"name":"locals_localizations_links_fk","columns":["local_id"]},{"name":"locals_localizations_links_inv_fk","columns":["inv_local_id"]}],"foreignKeys":[{"name":"locals_localizations_links_fk","columns":["local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"},{"name":"locals_localizations_links_inv_fk","columns":["inv_local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"}],"columns":[{"name":"local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"mains_components","indexes":[{"name":"mains_field_index","columns":["field"],"type":null},{"name":"mains_component_type_index","columns":["component_type"],"type":null},{"name":"mains_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"mains_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"mains_localizations_links","indexes":[{"name":"mains_localizations_links_fk","columns":["main_id"]},{"name":"mains_localizations_links_inv_fk","columns":["inv_main_id"]}],"foreignKeys":[{"name":"mains_localizations_links_fk","columns":["main_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"},{"name":"mains_localizations_links_inv_fk","columns":["inv_main_id"],"referencedColumns":["id"],"referencedTable":"mains","onDelete":"CASCADE"}],"columns":[{"name":"main_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_main_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"navigations_localizations_links","indexes":[{"name":"navigations_localizations_links_fk","columns":["navigation_id"]},{"name":"navigations_localizations_links_inv_fk","columns":["inv_navigation_id"]}],"foreignKeys":[{"name":"navigations_localizations_links_fk","columns":["navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"},{"name":"navigations_localizations_links_inv_fk","columns":["inv_navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"}],"columns":[{"name":"navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"pagas_services_localizations_links","indexes":[{"name":"pagas_services_localizations_links_fk","columns":["pagas_service_id"]},{"name":"pagas_services_localizations_links_inv_fk","columns":["inv_pagas_service_id"]}],"foreignKeys":[{"name":"pagas_services_localizations_links_fk","columns":["pagas_service_id"],"referencedColumns":["id"],"referencedTable":"pagas_services","onDelete":"CASCADE"},{"name":"pagas_services_localizations_links_inv_fk","columns":["inv_pagas_service_id"],"referencedColumns":["id"],"referencedTable":"pagas_services","onDelete":"CASCADE"}],"columns":[{"name":"pagas_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_pagas_service_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"product_lists_brand_links","indexes":[{"name":"product_lists_brand_links_fk","columns":["product_list_id"]},{"name":"product_lists_brand_links_inv_fk","columns":["brand_id"]}],"foreignKeys":[{"name":"product_lists_brand_links_fk","columns":["product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"},{"name":"product_lists_brand_links_inv_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"product_lists_localizations_links","indexes":[{"name":"product_lists_localizations_links_fk","columns":["product_list_id"]},{"name":"product_lists_localizations_links_inv_fk","columns":["inv_product_list_id"]}],"foreignKeys":[{"name":"product_lists_localizations_links_fk","columns":["product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"},{"name":"product_lists_localizations_links_inv_fk","columns":["inv_product_list_id"],"referencedColumns":["id"],"referencedTable":"product_lists","onDelete":"CASCADE"}],"columns":[{"name":"product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_product_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"service_lists_localizations_links","indexes":[{"name":"service_lists_localizations_links_fk","columns":["service_list_id"]},{"name":"service_lists_localizations_links_inv_fk","columns":["inv_service_list_id"]}],"foreignKeys":[{"name":"service_lists_localizations_links_fk","columns":["service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"},{"name":"service_lists_localizations_links_inv_fk","columns":["inv_service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"}],"columns":[{"name":"service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"inv_service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_certificate_certificates_certificate_lists_links","indexes":[{"name":"components_certificate_certificates_certificate_lists_links_fk","columns":["certificate_id"]},{"name":"components_certificate_certificates_certificate_lists_links_inv_fk","columns":["certificate_list_id"]}],"foreignKeys":[{"name":"components_certificate_certificates_certificate_lists_links_fk","columns":["certificate_id"],"referencedColumns":["id"],"referencedTable":"components_certificate_certificates","onDelete":"CASCADE"},{"name":"components_certificate_certificates_certificate_lists_links_inv_fk","columns":["certificate_list_id"],"referencedColumns":["id"],"referencedTable":"certificate_lists","onDelete":"CASCADE"}],"columns":[{"name":"certificate_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"certificate_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_form_form_mains_components","indexes":[{"name":"components_form_form_mains_field_index","columns":["field"],"type":null},{"name":"components_form_form_mains_component_type_index","columns":["component_type"],"type":null},{"name":"components_form_form_mains_entity_fk","columns":["entity_id"]}],"foreignKeys":[{"name":"components_form_form_mains_entity_fk","columns":["entity_id"],"referencedColumns":["id"],"referencedTable":"components_form_form_mains","onDelete":"CASCADE"}],"columns":[{"name":"id","type":"increments","args":[{"primary":true,"primaryKey":true}],"defaultTo":null,"notNullable":true,"unsigned":false},{"name":"entity_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"component_type","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"field","type":"string","args":[],"defaultTo":null,"notNullable":false,"unsigned":false},{"name":"order","type":"integer","args":[],"defaultTo":0,"notNullable":false,"unsigned":true}]},{"name":"components_navbar_header_navbars_locals_links","indexes":[{"name":"components_navbar_header_navbars_locals_links_fk","columns":["navbar_id"]},{"name":"components_navbar_header_navbars_locals_links_inv_fk","columns":["local_id"]}],"foreignKeys":[{"name":"components_navbar_header_navbars_locals_links_fk","columns":["navbar_id"],"referencedColumns":["id"],"referencedTable":"components_navbar_header_navbars","onDelete":"CASCADE"},{"name":"components_navbar_header_navbars_locals_links_inv_fk","columns":["local_id"],"referencedColumns":["id"],"referencedTable":"locals","onDelete":"CASCADE"}],"columns":[{"name":"navbar_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"local_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_navbar_header_navbars_navigations_links","indexes":[{"name":"components_navbar_header_navbars_navigations_links_fk","columns":["navbar_id"]},{"name":"components_navbar_header_navbars_navigations_links_inv_fk","columns":["navigation_id"]}],"foreignKeys":[{"name":"components_navbar_header_navbars_navigations_links_fk","columns":["navbar_id"],"referencedColumns":["id"],"referencedTable":"components_navbar_header_navbars","onDelete":"CASCADE"},{"name":"components_navbar_header_navbars_navigations_links_inv_fk","columns":["navigation_id"],"referencedColumns":["id"],"referencedTable":"navigations","onDelete":"CASCADE"}],"columns":[{"name":"navbar_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"navigation_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_products_products_brands_links","indexes":[{"name":"components_products_products_brands_links_fk","columns":["product_id"]},{"name":"components_products_products_brands_links_inv_fk","columns":["brand_id"]}],"foreignKeys":[{"name":"components_products_products_brands_links_fk","columns":["product_id"],"referencedColumns":["id"],"referencedTable":"components_products_products","onDelete":"CASCADE"},{"name":"components_products_products_brands_links_inv_fk","columns":["brand_id"],"referencedColumns":["id"],"referencedTable":"brands","onDelete":"CASCADE"}],"columns":[{"name":"product_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"brand_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]},{"name":"components_services_services_service_lists_links","indexes":[{"name":"components_services_services_service_lists_links_fk","columns":["services_id"]},{"name":"components_services_services_service_lists_links_inv_fk","columns":["service_list_id"]}],"foreignKeys":[{"name":"components_services_services_service_lists_links_fk","columns":["services_id"],"referencedColumns":["id"],"referencedTable":"components_services_services","onDelete":"CASCADE"},{"name":"components_services_services_service_lists_links_inv_fk","columns":["service_list_id"],"referencedColumns":["id"],"referencedTable":"service_lists","onDelete":"CASCADE"}],"columns":[{"name":"services_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true},{"name":"service_list_id","type":"integer","args":[],"defaultTo":null,"notNullable":false,"unsigned":true}]}]}	2022-07-07 15:22:57.293	1b45df78fc026e0a5d0fa3698bf9de75
 \.
 
 
@@ -4511,76 +3594,6 @@ COPY public.strapi_migrations (id, name, "time") FROM stdin;
 --
 
 COPY public.strapi_webhooks (id, name, url, headers, events, enabled) FROM stdin;
-\.
-
-
---
--- Data for Name: under_navs; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.under_navs (id, name, created_at, updated_at, created_by_id, updated_by_id, locale, slug, sort_id) FROM stdin;
-6	Видеонаблюдение	2022-06-24 11:49:43.695	2022-06-28 12:23:06.908	1	1	ru	video-surveillance	6
-7	CCTV	2022-06-24 15:28:48.857	2022-06-28 12:23:13.475	1	1	en	video-surveillance	6
-8	CCTV	2022-06-24 15:28:58.567	2022-06-28 12:23:16.4	1	1	tk	video-surveillance	6
-1	Комплексное строительство	2022-06-20 13:19:31.618	2022-06-28 12:19:44.539	1	1	ru	sonstruction-service	1
-17	Integrated construction	2022-06-24 15:34:54.894	2022-06-28 12:19:49.137	1	1	en	sonstruction-service	1
-18	Toplumlaýyn gurluşyk	2022-06-24 15:35:18.72	2022-06-28 12:19:52.684	1	1	tk	sonstruction-service	1
-2	Проектирование	2022-06-20 13:19:42.549	2022-06-28 12:21:46.43	1	1	ru	design-service	2
-13	Design	2022-06-24 15:32:19.436	2022-06-28 12:21:52.05	1	1	en	design-service	2
-14	Dizaýn	2022-06-24 15:32:34.72	2022-06-28 12:21:55.452	1	1	tk	design-service	2
-3	Пожарная безопасность	2022-06-20 13:19:52.03	2022-06-28 12:22:03.96	1	1	ru	fire-safety-service	3
-11	Fire safety	2022-06-24 15:30:48.127	2022-06-28 12:22:08.37	1	1	en	fire-safety-service	3
-12	Fireangyn howpsuzlygy	2022-06-24 15:31:54.311	2022-06-28 12:22:11.404	1	1	tk	fire-safety-service	3
-4	Лифтовая диспетчеризация	2022-06-20 13:20:01.35	2022-06-28 12:22:27.094	1	1	ru	elevator-dispatching-service	4
-9	Elevator dispatching	2022-06-24 15:29:42.765	2022-06-28 12:22:31.375	1	1	en	elevator-dispatching-service	4
-10	Lift ugratmak	2022-06-24 15:29:57.376	2022-06-28 12:22:34.712	1	1	tk	elevator-dispatching-service	4
-5	Проектирование ЛВ  сетей	2022-06-20 13:20:10.275	2022-06-28 12:22:46.47	1	1	ru	network-service	5
-15	LP design networks	2022-06-24 15:32:56.279	2022-06-28 12:22:51.605	1	1	en	network-service	5
-16	LP dizaýny torlar	2022-06-24 15:33:09.959	2022-06-28 12:22:54.991	1	1	tk	network-service	5
-\.
-
-
---
--- Data for Name: under_navs_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.under_navs_localizations_links (under_nav_id, inv_under_nav_id) FROM stdin;
-8	7
-8	6
-6	8
-6	7
-7	8
-7	6
-10	9
-10	4
-4	10
-4	9
-9	10
-9	4
-12	11
-12	3
-3	12
-3	11
-11	12
-11	3
-14	13
-14	2
-2	14
-2	13
-13	14
-13	2
-16	15
-16	5
-5	16
-5	15
-15	16
-15	5
-18	17
-18	1
-1	18
-1	17
-17	18
-17	1
 \.
 
 
@@ -4607,20 +3620,14 @@ COPY public.up_permissions (id, action, created_at, updated_at, created_by_id, u
 21	api::product-list.product-list.findOne	2022-06-20 15:06:56.49	2022-06-20 15:06:56.49	\N	\N
 24	api::service-list.service-list.find	2022-06-20 15:06:56.49	2022-06-20 15:06:56.49	\N	\N
 25	api::service-list.service-list.findOne	2022-06-20 15:06:56.49	2022-06-20 15:06:56.49	\N	\N
-27	api::under-nav.under-nav.findOne	2022-06-20 15:06:56.49	2022-06-20 15:06:56.49	\N	\N
-26	api::under-nav.under-nav.find	2022-06-20 15:06:56.49	2022-06-20 15:06:56.49	\N	\N
-28	api::design-service.design-service.find	2022-06-22 11:18:19.99	2022-06-22 11:18:19.99	\N	\N
-29	api::elevator-dispatching-service.elevator-dispatching-service.find	2022-06-22 11:18:19.99	2022-06-22 11:18:19.99	\N	\N
-30	api::fire-safety-service.fire-safety-service.find	2022-06-22 11:18:19.99	2022-06-22 11:18:19.99	\N	\N
-31	api::network-service.network-service.find	2022-06-22 11:18:19.99	2022-06-22 11:18:19.99	\N	\N
-32	api::sonstruction-service.sonstruction-service.find	2022-06-22 12:57:27.455	2022-06-22 12:57:27.455	\N	\N
 33	plugin::upload.content-api.find	2022-06-23 12:41:22.734	2022-06-23 12:41:22.734	\N	\N
 34	plugin::upload.content-api.findOne	2022-06-23 12:41:22.734	2022-06-23 12:41:22.734	\N	\N
 35	api::brand.brand.find	2022-06-24 11:24:23.712	2022-06-24 11:24:23.712	\N	\N
 36	api::brand.brand.findOne	2022-06-24 11:24:23.712	2022-06-24 11:24:23.712	\N	\N
-37	api::video-surveillance.video-surveillance.find	2022-06-24 15:09:28.947	2022-06-24 15:09:28.947	\N	\N
 38	api::email.email.send	2022-07-04 13:33:36.59	2022-07-04 13:33:36.59	\N	\N
 39	plugin::email.email.send	2022-07-04 16:09:13.073	2022-07-04 16:09:13.073	\N	\N
+40	api::pagas-service.pagas-service.find	2022-07-07 10:30:47.74	2022-07-07 10:30:47.74	\N	\N
+41	api::pagas-service.pagas-service.findOne	2022-07-07 10:30:47.74	2022-07-07 10:30:47.74	\N	\N
 \.
 
 
@@ -4644,23 +3651,17 @@ COPY public.up_permissions_role_links (permission_id, role_id) FROM stdin;
 19	2
 18	2
 20	2
-27	2
 21	2
 24	2
-26	2
 25	2
-28	2
-30	2
-29	2
-31	2
-32	2
 33	2
 34	2
 35	2
 36	2
-37	2
 38	2
 39	2
+40	2
+41	2
 \.
 
 
@@ -4670,7 +3671,7 @@ COPY public.up_permissions_role_links (permission_id, role_id) FROM stdin;
 
 COPY public.up_roles (id, name, description, type, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
 1	Authenticated	Default role given to authenticated user.	authenticated	2022-06-20 11:57:02.676	2022-06-20 11:57:02.676	\N	\N
-2	Public	Default role given to unauthenticated user.	public	2022-06-20 11:57:02.682	2022-07-04 16:09:13.062	\N	\N
+2	Public	Default role given to unauthenticated user.	public	2022-06-20 11:57:02.682	2022-07-07 10:30:47.732	\N	\N
 \.
 
 
@@ -4691,46 +3692,10 @@ COPY public.up_users_role_links (user_id, role_id) FROM stdin;
 
 
 --
--- Data for Name: video_surveillances; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.video_surveillances (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-24 11:19:33.817	2022-06-28 12:33:38.945	1	1	ru
-3	2022-06-24 11:19:51.95	2022-06-28 12:34:18.466	1	1	tk
-2	2022-06-24 11:19:38.014	2022-06-28 12:34:25.359	1	1	en
-\.
-
-
---
--- Data for Name: video_surveillances_components; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.video_surveillances_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-11	1	21	services-page-com.component-services	component	1
-14	3	23	services-page-com.component-services	component	1
-15	2	22	services-page-com.component-services	component	1
-\.
-
-
---
--- Data for Name: video_surveillances_localizations_links; Type: TABLE DATA; Schema: public; Owner: -
---
-
-COPY public.video_surveillances_localizations_links (video_surveillance_id, inv_video_surveillance_id) FROM stdin;
-3	2
-3	1
-1	3
-1	2
-2	3
-2	1
-\.
-
-
---
 -- Name: admin_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.admin_permissions_id_seq', 295, true);
+SELECT pg_catalog.setval('public.admin_permissions_id_seq', 346, true);
 
 
 --
@@ -4814,7 +3779,7 @@ SELECT pg_catalog.setval('public.components_footer_footer_mains_id_seq', 3, true
 -- Name: components_form_form_mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 63, true);
+SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 66, true);
 
 
 --
@@ -4839,13 +3804,6 @@ SELECT pg_catalog.setval('public.components_products_products_id_seq', 3, true);
 
 
 --
--- Name: components_services_page_com_component_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.components_services_page_com_component_services_id_seq', 23, true);
-
-
---
 -- Name: components_services_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -4853,52 +3811,10 @@ SELECT pg_catalog.setval('public.components_services_services_id_seq', 3, true);
 
 
 --
--- Name: design_services_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.design_services_components_id_seq', 15, true);
-
-
---
--- Name: design_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.design_services_id_seq', 3, true);
-
-
---
--- Name: elevator_dispatching_services_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.elevator_dispatching_services_components_id_seq', 14, true);
-
-
---
--- Name: elevator_dispatching_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.elevator_dispatching_services_id_seq', 3, true);
-
-
---
 -- Name: files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
 SELECT pg_catalog.setval('public.files_id_seq', 73, true);
-
-
---
--- Name: fire_safety_services_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.fire_safety_services_components_id_seq', 17, true);
-
-
---
--- Name: fire_safety_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.fire_safety_services_id_seq', 3, true);
 
 
 --
@@ -4912,7 +3828,7 @@ SELECT pg_catalog.setval('public.i18n_locale_id_seq', 3, true);
 -- Name: layouts_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.layouts_components_id_seq', 140, true);
+SELECT pg_catalog.setval('public.layouts_components_id_seq', 150, true);
 
 
 --
@@ -4933,7 +3849,7 @@ SELECT pg_catalog.setval('public.locals_id_seq', 9, true);
 -- Name: mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.mains_components_id_seq', 168, true);
+SELECT pg_catalog.setval('public.mains_components_id_seq', 173, true);
 
 
 --
@@ -4951,17 +3867,10 @@ SELECT pg_catalog.setval('public.navigations_id_seq', 19, true);
 
 
 --
--- Name: network_services_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
+-- Name: pagas_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.network_services_components_id_seq', 18, true);
-
-
---
--- Name: network_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.network_services_id_seq', 3, true);
+SELECT pg_catalog.setval('public.pagas_services_id_seq', 18, true);
 
 
 --
@@ -4979,20 +3888,6 @@ SELECT pg_catalog.setval('public.service_lists_id_seq', 18, true);
 
 
 --
--- Name: sonstruction_services_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.sonstruction_services_components_id_seq', 14, true);
-
-
---
--- Name: sonstruction_services_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.sonstruction_services_id_seq', 3, true);
-
-
---
 -- Name: strapi_api_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
@@ -5003,14 +3898,14 @@ SELECT pg_catalog.setval('public.strapi_api_tokens_id_seq', 1, false);
 -- Name: strapi_core_store_settings_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.strapi_core_store_settings_id_seq', 46, true);
+SELECT pg_catalog.setval('public.strapi_core_store_settings_id_seq', 48, true);
 
 
 --
 -- Name: strapi_database_schema_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.strapi_database_schema_id_seq', 56, true);
+SELECT pg_catalog.setval('public.strapi_database_schema_id_seq', 74, true);
 
 
 --
@@ -5028,17 +3923,10 @@ SELECT pg_catalog.setval('public.strapi_webhooks_id_seq', 1, false);
 
 
 --
--- Name: under_navs_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.under_navs_id_seq', 18, true);
-
-
---
 -- Name: up_permissions_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
 --
 
-SELECT pg_catalog.setval('public.up_permissions_id_seq', 39, true);
+SELECT pg_catalog.setval('public.up_permissions_id_seq', 41, true);
 
 
 --
@@ -5053,20 +3941,6 @@ SELECT pg_catalog.setval('public.up_roles_id_seq', 2, true);
 --
 
 SELECT pg_catalog.setval('public.up_users_id_seq', 1, false);
-
-
---
--- Name: video_surveillances_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.video_surveillances_components_id_seq', 15, true);
-
-
---
--- Name: video_surveillances_id_seq; Type: SEQUENCE SET; Schema: public; Owner: -
---
-
-SELECT pg_catalog.setval('public.video_surveillances_id_seq', 3, true);
 
 
 --
@@ -5198,14 +4072,6 @@ ALTER TABLE ONLY public.components_products_products
 
 
 --
--- Name: components_services_page_com_component_services components_services_page_com_component_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.components_services_page_com_component_services
-    ADD CONSTRAINT components_services_page_com_component_services_pkey PRIMARY KEY (id);
-
-
---
 -- Name: components_services_services components_services_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5214,59 +4080,11 @@ ALTER TABLE ONLY public.components_services_services
 
 
 --
--- Name: design_services_components design_services_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services_components
-    ADD CONSTRAINT design_services_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: design_services design_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services
-    ADD CONSTRAINT design_services_pkey PRIMARY KEY (id);
-
-
---
--- Name: elevator_dispatching_services_components elevator_dispatching_services_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services_components
-    ADD CONSTRAINT elevator_dispatching_services_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: elevator_dispatching_services elevator_dispatching_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services
-    ADD CONSTRAINT elevator_dispatching_services_pkey PRIMARY KEY (id);
-
-
---
 -- Name: files files_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
 ALTER TABLE ONLY public.files
     ADD CONSTRAINT files_pkey PRIMARY KEY (id);
-
-
---
--- Name: fire_safety_services_components fire_safety_services_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services_components
-    ADD CONSTRAINT fire_safety_services_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: fire_safety_services fire_safety_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services
-    ADD CONSTRAINT fire_safety_services_pkey PRIMARY KEY (id);
 
 
 --
@@ -5326,19 +4144,11 @@ ALTER TABLE ONLY public.navigations
 
 
 --
--- Name: network_services_components network_services_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
+-- Name: pagas_services pagas_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.network_services_components
-    ADD CONSTRAINT network_services_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: network_services network_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.network_services
-    ADD CONSTRAINT network_services_pkey PRIMARY KEY (id);
+ALTER TABLE ONLY public.pagas_services
+    ADD CONSTRAINT pagas_services_pkey PRIMARY KEY (id);
 
 
 --
@@ -5355,22 +4165,6 @@ ALTER TABLE ONLY public.product_lists
 
 ALTER TABLE ONLY public.service_lists
     ADD CONSTRAINT service_lists_pkey PRIMARY KEY (id);
-
-
---
--- Name: sonstruction_services_components sonstruction_services_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services_components
-    ADD CONSTRAINT sonstruction_services_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: sonstruction_services sonstruction_services_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services
-    ADD CONSTRAINT sonstruction_services_pkey PRIMARY KEY (id);
 
 
 --
@@ -5414,14 +4208,6 @@ ALTER TABLE ONLY public.strapi_webhooks
 
 
 --
--- Name: under_navs under_navs_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs
-    ADD CONSTRAINT under_navs_pkey PRIMARY KEY (id);
-
-
---
 -- Name: up_permissions up_permissions_pkey; Type: CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -5443,22 +4229,6 @@ ALTER TABLE ONLY public.up_roles
 
 ALTER TABLE ONLY public.up_users
     ADD CONSTRAINT up_users_pkey PRIMARY KEY (id);
-
-
---
--- Name: video_surveillances_components video_surveillances_components_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances_components
-    ADD CONSTRAINT video_surveillances_components_pkey PRIMARY KEY (id);
-
-
---
--- Name: video_surveillances video_surveillances_pkey; Type: CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances
-    ADD CONSTRAINT video_surveillances_pkey PRIMARY KEY (id);
 
 
 --
@@ -5651,20 +4421,6 @@ CREATE INDEX components_navbar_header_navbars_navigations_links_inv_fk ON public
 
 
 --
--- Name: components_navbar_header_navbars_under_navs_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX components_navbar_header_navbars_under_navs_links_fk ON public.components_navbar_header_navbars_under_navs_links USING btree (navbar_id);
-
-
---
--- Name: components_navbar_header_navbars_under_navs_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX components_navbar_header_navbars_under_navs_links_inv_fk ON public.components_navbar_header_navbars_under_navs_links USING btree (under_nav_id);
-
-
---
 -- Name: components_products_products_brands_links_fk; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5693,104 +4449,6 @@ CREATE INDEX components_services_services_service_lists_links_inv_fk ON public.c
 
 
 --
--- Name: design_services_component_type_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_component_type_index ON public.design_services_components USING btree (component_type);
-
-
---
--- Name: design_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_created_by_id_fk ON public.design_services USING btree (created_by_id);
-
-
---
--- Name: design_services_entity_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_entity_fk ON public.design_services_components USING btree (entity_id);
-
-
---
--- Name: design_services_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_field_index ON public.design_services_components USING btree (field);
-
-
---
--- Name: design_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_localizations_links_fk ON public.design_services_localizations_links USING btree (design_service_id);
-
-
---
--- Name: design_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_localizations_links_inv_fk ON public.design_services_localizations_links USING btree (inv_design_service_id);
-
-
---
--- Name: design_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX design_services_updated_by_id_fk ON public.design_services USING btree (updated_by_id);
-
-
---
--- Name: elevator_dispatching_services_component_type_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_component_type_index ON public.elevator_dispatching_services_components USING btree (component_type);
-
-
---
--- Name: elevator_dispatching_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_created_by_id_fk ON public.elevator_dispatching_services USING btree (created_by_id);
-
-
---
--- Name: elevator_dispatching_services_entity_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_entity_fk ON public.elevator_dispatching_services_components USING btree (entity_id);
-
-
---
--- Name: elevator_dispatching_services_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_field_index ON public.elevator_dispatching_services_components USING btree (field);
-
-
---
--- Name: elevator_dispatching_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_localizations_links_fk ON public.elevator_dispatching_services_localizations_links USING btree (elevator_dispatching_service_id);
-
-
---
--- Name: elevator_dispatching_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_localizations_links_inv_fk ON public.elevator_dispatching_services_localizations_links USING btree (inv_elevator_dispatching_service_id);
-
-
---
--- Name: elevator_dispatching_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX elevator_dispatching_services_updated_by_id_fk ON public.elevator_dispatching_services USING btree (updated_by_id);
-
-
---
 -- Name: files_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -5809,55 +4467,6 @@ CREATE INDEX files_related_morphs_fk ON public.files_related_morphs USING btree 
 --
 
 CREATE INDEX files_updated_by_id_fk ON public.files USING btree (updated_by_id);
-
-
---
--- Name: fire_safety_services_component_type_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_component_type_index ON public.fire_safety_services_components USING btree (component_type);
-
-
---
--- Name: fire_safety_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_created_by_id_fk ON public.fire_safety_services USING btree (created_by_id);
-
-
---
--- Name: fire_safety_services_entity_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_entity_fk ON public.fire_safety_services_components USING btree (entity_id);
-
-
---
--- Name: fire_safety_services_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_field_index ON public.fire_safety_services_components USING btree (field);
-
-
---
--- Name: fire_safety_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_localizations_links_fk ON public.fire_safety_services_localizations_links USING btree (fire_safety_service_id);
-
-
---
--- Name: fire_safety_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_localizations_links_inv_fk ON public.fire_safety_services_localizations_links USING btree (inv_fire_safety_service_id);
-
-
---
--- Name: fire_safety_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX fire_safety_services_updated_by_id_fk ON public.fire_safety_services USING btree (updated_by_id);
 
 
 --
@@ -6029,52 +4638,31 @@ CREATE INDEX navigations_updated_by_id_fk ON public.navigations USING btree (upd
 
 
 --
--- Name: network_services_component_type_index; Type: INDEX; Schema: public; Owner: -
+-- Name: pagas_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX network_services_component_type_index ON public.network_services_components USING btree (component_type);
-
-
---
--- Name: network_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX network_services_created_by_id_fk ON public.network_services USING btree (created_by_id);
+CREATE INDEX pagas_services_created_by_id_fk ON public.pagas_services USING btree (created_by_id);
 
 
 --
--- Name: network_services_entity_fk; Type: INDEX; Schema: public; Owner: -
+-- Name: pagas_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX network_services_entity_fk ON public.network_services_components USING btree (entity_id);
-
-
---
--- Name: network_services_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX network_services_field_index ON public.network_services_components USING btree (field);
+CREATE INDEX pagas_services_localizations_links_fk ON public.pagas_services_localizations_links USING btree (pagas_service_id);
 
 
 --
--- Name: network_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
+-- Name: pagas_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX network_services_localizations_links_fk ON public.network_services_localizations_links USING btree (network_service_id);
-
-
---
--- Name: network_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX network_services_localizations_links_inv_fk ON public.network_services_localizations_links USING btree (inv_network_service_id);
+CREATE INDEX pagas_services_localizations_links_inv_fk ON public.pagas_services_localizations_links USING btree (inv_pagas_service_id);
 
 
 --
--- Name: network_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
+-- Name: pagas_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
 --
 
-CREATE INDEX network_services_updated_by_id_fk ON public.network_services USING btree (updated_by_id);
+CREATE INDEX pagas_services_updated_by_id_fk ON public.pagas_services USING btree (updated_by_id);
 
 
 --
@@ -6148,55 +4736,6 @@ CREATE INDEX service_lists_updated_by_id_fk ON public.service_lists USING btree 
 
 
 --
--- Name: sonstruction_services_component_type_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_component_type_index ON public.sonstruction_services_components USING btree (component_type);
-
-
---
--- Name: sonstruction_services_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_created_by_id_fk ON public.sonstruction_services USING btree (created_by_id);
-
-
---
--- Name: sonstruction_services_entity_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_entity_fk ON public.sonstruction_services_components USING btree (entity_id);
-
-
---
--- Name: sonstruction_services_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_field_index ON public.sonstruction_services_components USING btree (field);
-
-
---
--- Name: sonstruction_services_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_localizations_links_fk ON public.sonstruction_services_localizations_links USING btree (sonstruction_service_id);
-
-
---
--- Name: sonstruction_services_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_localizations_links_inv_fk ON public.sonstruction_services_localizations_links USING btree (inv_sonstruction_service_id);
-
-
---
--- Name: sonstruction_services_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX sonstruction_services_updated_by_id_fk ON public.sonstruction_services USING btree (updated_by_id);
-
-
---
 -- Name: strapi_api_tokens_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
 --
 
@@ -6208,34 +4747,6 @@ CREATE INDEX strapi_api_tokens_created_by_id_fk ON public.strapi_api_tokens USIN
 --
 
 CREATE INDEX strapi_api_tokens_updated_by_id_fk ON public.strapi_api_tokens USING btree (updated_by_id);
-
-
---
--- Name: under_navs_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX under_navs_created_by_id_fk ON public.under_navs USING btree (created_by_id);
-
-
---
--- Name: under_navs_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX under_navs_localizations_links_fk ON public.under_navs_localizations_links USING btree (under_nav_id);
-
-
---
--- Name: under_navs_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX under_navs_localizations_links_inv_fk ON public.under_navs_localizations_links USING btree (inv_under_nav_id);
-
-
---
--- Name: under_navs_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX under_navs_updated_by_id_fk ON public.under_navs USING btree (updated_by_id);
 
 
 --
@@ -6306,55 +4817,6 @@ CREATE INDEX up_users_role_links_inv_fk ON public.up_users_role_links USING btre
 --
 
 CREATE INDEX up_users_updated_by_id_fk ON public.up_users USING btree (updated_by_id);
-
-
---
--- Name: video_surveillances_component_type_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_component_type_index ON public.video_surveillances_components USING btree (component_type);
-
-
---
--- Name: video_surveillances_created_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_created_by_id_fk ON public.video_surveillances USING btree (created_by_id);
-
-
---
--- Name: video_surveillances_entity_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_entity_fk ON public.video_surveillances_components USING btree (entity_id);
-
-
---
--- Name: video_surveillances_field_index; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_field_index ON public.video_surveillances_components USING btree (field);
-
-
---
--- Name: video_surveillances_localizations_links_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_localizations_links_fk ON public.video_surveillances_localizations_links USING btree (video_surveillance_id);
-
-
---
--- Name: video_surveillances_localizations_links_inv_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_localizations_links_inv_fk ON public.video_surveillances_localizations_links USING btree (inv_video_surveillance_id);
-
-
---
--- Name: video_surveillances_updated_by_id_fk; Type: INDEX; Schema: public; Owner: -
---
-
-CREATE INDEX video_surveillances_updated_by_id_fk ON public.video_surveillances USING btree (updated_by_id);
 
 
 --
@@ -6558,22 +5020,6 @@ ALTER TABLE ONLY public.components_navbar_header_navbars_navigations_links
 
 
 --
--- Name: components_navbar_header_navbars_under_navs_links components_navbar_header_navbars_under_navs_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.components_navbar_header_navbars_under_navs_links
-    ADD CONSTRAINT components_navbar_header_navbars_under_navs_links_fk FOREIGN KEY (navbar_id) REFERENCES public.components_navbar_header_navbars(id) ON DELETE CASCADE;
-
-
---
--- Name: components_navbar_header_navbars_under_navs_links components_navbar_header_navbars_under_navs_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.components_navbar_header_navbars_under_navs_links
-    ADD CONSTRAINT components_navbar_header_navbars_under_navs_links_inv_fk FOREIGN KEY (under_nav_id) REFERENCES public.under_navs(id) ON DELETE CASCADE;
-
-
---
 -- Name: components_products_products_brands_links components_products_products_brands_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6606,86 +5052,6 @@ ALTER TABLE ONLY public.components_services_services_service_lists_links
 
 
 --
--- Name: design_services design_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services
-    ADD CONSTRAINT design_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: design_services_components design_services_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services_components
-    ADD CONSTRAINT design_services_entity_fk FOREIGN KEY (entity_id) REFERENCES public.design_services(id) ON DELETE CASCADE;
-
-
---
--- Name: design_services_localizations_links design_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services_localizations_links
-    ADD CONSTRAINT design_services_localizations_links_fk FOREIGN KEY (design_service_id) REFERENCES public.design_services(id) ON DELETE CASCADE;
-
-
---
--- Name: design_services_localizations_links design_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services_localizations_links
-    ADD CONSTRAINT design_services_localizations_links_inv_fk FOREIGN KEY (inv_design_service_id) REFERENCES public.design_services(id) ON DELETE CASCADE;
-
-
---
--- Name: design_services design_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.design_services
-    ADD CONSTRAINT design_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: elevator_dispatching_services elevator_dispatching_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services
-    ADD CONSTRAINT elevator_dispatching_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: elevator_dispatching_services_components elevator_dispatching_services_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services_components
-    ADD CONSTRAINT elevator_dispatching_services_entity_fk FOREIGN KEY (entity_id) REFERENCES public.elevator_dispatching_services(id) ON DELETE CASCADE;
-
-
---
--- Name: elevator_dispatching_services_localizations_links elevator_dispatching_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services_localizations_links
-    ADD CONSTRAINT elevator_dispatching_services_localizations_links_fk FOREIGN KEY (elevator_dispatching_service_id) REFERENCES public.elevator_dispatching_services(id) ON DELETE CASCADE;
-
-
---
--- Name: elevator_dispatching_services_localizations_links elevator_dispatching_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services_localizations_links
-    ADD CONSTRAINT elevator_dispatching_services_localizations_links_inv_fk FOREIGN KEY (inv_elevator_dispatching_service_id) REFERENCES public.elevator_dispatching_services(id) ON DELETE CASCADE;
-
-
---
--- Name: elevator_dispatching_services elevator_dispatching_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.elevator_dispatching_services
-    ADD CONSTRAINT elevator_dispatching_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
 -- Name: files files_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -6707,46 +5073,6 @@ ALTER TABLE ONLY public.files_related_morphs
 
 ALTER TABLE ONLY public.files
     ADD CONSTRAINT files_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: fire_safety_services fire_safety_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services
-    ADD CONSTRAINT fire_safety_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: fire_safety_services_components fire_safety_services_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services_components
-    ADD CONSTRAINT fire_safety_services_entity_fk FOREIGN KEY (entity_id) REFERENCES public.fire_safety_services(id) ON DELETE CASCADE;
-
-
---
--- Name: fire_safety_services_localizations_links fire_safety_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services_localizations_links
-    ADD CONSTRAINT fire_safety_services_localizations_links_fk FOREIGN KEY (fire_safety_service_id) REFERENCES public.fire_safety_services(id) ON DELETE CASCADE;
-
-
---
--- Name: fire_safety_services_localizations_links fire_safety_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services_localizations_links
-    ADD CONSTRAINT fire_safety_services_localizations_links_inv_fk FOREIGN KEY (inv_fire_safety_service_id) REFERENCES public.fire_safety_services(id) ON DELETE CASCADE;
-
-
---
--- Name: fire_safety_services fire_safety_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.fire_safety_services
-    ADD CONSTRAINT fire_safety_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
 
 
 --
@@ -6910,43 +5236,35 @@ ALTER TABLE ONLY public.navigations
 
 
 --
--- Name: network_services network_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: pagas_services pagas_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.network_services
-    ADD CONSTRAINT network_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: network_services_components network_services_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.network_services_components
-    ADD CONSTRAINT network_services_entity_fk FOREIGN KEY (entity_id) REFERENCES public.network_services(id) ON DELETE CASCADE;
+ALTER TABLE ONLY public.pagas_services
+    ADD CONSTRAINT pagas_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
 
 
 --
--- Name: network_services_localizations_links network_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: pagas_services_localizations_links pagas_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.network_services_localizations_links
-    ADD CONSTRAINT network_services_localizations_links_fk FOREIGN KEY (network_service_id) REFERENCES public.network_services(id) ON DELETE CASCADE;
-
-
---
--- Name: network_services_localizations_links network_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.network_services_localizations_links
-    ADD CONSTRAINT network_services_localizations_links_inv_fk FOREIGN KEY (inv_network_service_id) REFERENCES public.network_services(id) ON DELETE CASCADE;
+ALTER TABLE ONLY public.pagas_services_localizations_links
+    ADD CONSTRAINT pagas_services_localizations_links_fk FOREIGN KEY (pagas_service_id) REFERENCES public.pagas_services(id) ON DELETE CASCADE;
 
 
 --
--- Name: network_services network_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+-- Name: pagas_services_localizations_links pagas_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
-ALTER TABLE ONLY public.network_services
-    ADD CONSTRAINT network_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
+ALTER TABLE ONLY public.pagas_services_localizations_links
+    ADD CONSTRAINT pagas_services_localizations_links_inv_fk FOREIGN KEY (inv_pagas_service_id) REFERENCES public.pagas_services(id) ON DELETE CASCADE;
+
+
+--
+-- Name: pagas_services pagas_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY public.pagas_services
+    ADD CONSTRAINT pagas_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
 
 
 --
@@ -7030,46 +5348,6 @@ ALTER TABLE ONLY public.service_lists
 
 
 --
--- Name: sonstruction_services sonstruction_services_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services
-    ADD CONSTRAINT sonstruction_services_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: sonstruction_services_components sonstruction_services_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services_components
-    ADD CONSTRAINT sonstruction_services_entity_fk FOREIGN KEY (entity_id) REFERENCES public.sonstruction_services(id) ON DELETE CASCADE;
-
-
---
--- Name: sonstruction_services_localizations_links sonstruction_services_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services_localizations_links
-    ADD CONSTRAINT sonstruction_services_localizations_links_fk FOREIGN KEY (sonstruction_service_id) REFERENCES public.sonstruction_services(id) ON DELETE CASCADE;
-
-
---
--- Name: sonstruction_services_localizations_links sonstruction_services_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services_localizations_links
-    ADD CONSTRAINT sonstruction_services_localizations_links_inv_fk FOREIGN KEY (inv_sonstruction_service_id) REFERENCES public.sonstruction_services(id) ON DELETE CASCADE;
-
-
---
--- Name: sonstruction_services sonstruction_services_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.sonstruction_services
-    ADD CONSTRAINT sonstruction_services_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
 -- Name: strapi_api_tokens strapi_api_tokens_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
 --
 
@@ -7083,38 +5361,6 @@ ALTER TABLE ONLY public.strapi_api_tokens
 
 ALTER TABLE ONLY public.strapi_api_tokens
     ADD CONSTRAINT strapi_api_tokens_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: under_navs under_navs_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs
-    ADD CONSTRAINT under_navs_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: under_navs_localizations_links under_navs_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs_localizations_links
-    ADD CONSTRAINT under_navs_localizations_links_fk FOREIGN KEY (under_nav_id) REFERENCES public.under_navs(id) ON DELETE CASCADE;
-
-
---
--- Name: under_navs_localizations_links under_navs_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs_localizations_links
-    ADD CONSTRAINT under_navs_localizations_links_inv_fk FOREIGN KEY (inv_under_nav_id) REFERENCES public.under_navs(id) ON DELETE CASCADE;
-
-
---
--- Name: under_navs under_navs_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.under_navs
-    ADD CONSTRAINT under_navs_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
 
 
 --
@@ -7195,46 +5441,6 @@ ALTER TABLE ONLY public.up_users_role_links
 
 ALTER TABLE ONLY public.up_users
     ADD CONSTRAINT up_users_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: video_surveillances video_surveillances_created_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances
-    ADD CONSTRAINT video_surveillances_created_by_id_fk FOREIGN KEY (created_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
-
-
---
--- Name: video_surveillances_components video_surveillances_entity_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances_components
-    ADD CONSTRAINT video_surveillances_entity_fk FOREIGN KEY (entity_id) REFERENCES public.video_surveillances(id) ON DELETE CASCADE;
-
-
---
--- Name: video_surveillances_localizations_links video_surveillances_localizations_links_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances_localizations_links
-    ADD CONSTRAINT video_surveillances_localizations_links_fk FOREIGN KEY (video_surveillance_id) REFERENCES public.video_surveillances(id) ON DELETE CASCADE;
-
-
---
--- Name: video_surveillances_localizations_links video_surveillances_localizations_links_inv_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances_localizations_links
-    ADD CONSTRAINT video_surveillances_localizations_links_inv_fk FOREIGN KEY (inv_video_surveillance_id) REFERENCES public.video_surveillances(id) ON DELETE CASCADE;
-
-
---
--- Name: video_surveillances video_surveillances_updated_by_id_fk; Type: FK CONSTRAINT; Schema: public; Owner: -
---
-
-ALTER TABLE ONLY public.video_surveillances
-    ADD CONSTRAINT video_surveillances_updated_by_id_fk FOREIGN KEY (updated_by_id) REFERENCES public.admin_users(id) ON DELETE SET NULL;
 
 
 --

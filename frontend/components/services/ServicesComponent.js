@@ -1,15 +1,18 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
+
 import Router from "next/router";
 import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { VscDebugStackframeDot } from "react-icons/vsc";
+import { fetchAPI } from "../../lib/api";
 
 export const ServicesComponent = ({
 	props: {
-		heading,
+		name,
 		description,
 		under_description,
-		buttonBack,
-		buttonNext,
 		img1: {
 			data: {
 				attributes: { url: url1 },
@@ -28,47 +31,29 @@ export const ServicesComponent = ({
 	},
 }) => {
 	const router = useRouter();
-	console.log(router.asPath);
-	const links = [
-		"/services/sonstruction-service",
-		"/services/design-service",
-		"/services/fire-safety-service",
-		"/services/elevator-dispatching-service",
-		"/services/network-service",
-		"/services/video-surveillance",
-	];
-	let validButton = links.indexOf(router.asPath);
-	const prev = () => {
-		let currentIndex = links.indexOf(router.asPath);
-		let index = currentIndex;
-		if (currentIndex == 0) {
-			index = 5;
-		} else {
-			index = currentIndex - 1;
-			validButton = currentIndex - 1;
-		}
-		Router.push({
-			pathname: links[index],
+	const [links, setLinks] = useState(false);
+	const [loading, setLoading] = useState(true);
+	const useFetch = async () => {
+		const { data } = await fetchAPI("/pagas-services", {
+			locale: router.locale,
 		});
+		const link = await data.map(({ attributes: { sort_id, name } }) => {
+			return {
+				src: `/services/${sort_id}`,
+				name,
+			};
+		});
+		setLinks(link);
+		setLoading(false);
 	};
+	useEffect(() => {
+		useFetch();
+	}, []);
 
-	const next = () => {
-		let currentIndex = links.indexOf(router.asPath);
-		let index = currentIndex;
-		if (currentIndex == 5) {
-			index = 0;
-		} else {
-			index = currentIndex + 1;
-			validButton = currentIndex + 1;
-		}
-		Router.push({
-			pathname: links[index],
-		});
-	};
 	return (
 		<>
 			<Head>
-				<title>{heading}</title>
+				<title>{name}</title>
 				<meta name="Hovur's Website" content='Construction' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
@@ -117,34 +102,33 @@ export const ServicesComponent = ({
 							</div>
 
 							<div className='xl:w-2/3 sm:w-full sm:mt-8 xl:mt-0'>
-								<h1 className='text-[32px] font-bold pb-6 '>{heading}</h1>
+								<h1 className='text-[32px] font-bold pb-6 '>{name}</h1>
 								<p className='leading-8'>{description}</p>
 							</div>
 						</div>
-						<div className='flex space-x-8 xl:mt-6 2xl:mt-12'>
+						<div className='flex space-x-8 xl:mt-16 2xl:mt-12'>
 							<div className='bg-white rounded-lg drop-shadow-lg w-1/2 py-10 xl:block sm:hidden'>
 								<div className='border-l-4 border-red sm:ml-0 xl:ml-6 px-6'>
 									<p className='font-bold text-2xl'>{under_description}</p>
 								</div>
 							</div>
-							<div className='sm:w-full xl:w-1/2 flex space-x-6 items-end xl:mt-0 sm:mt-8 justify-center'>
-								{validButton > 0 && (
-									<button
-										onClick={() => prev()}
-										className='bg-red rounded-md h-12 w-1/2 text-white '
-									>
-										{buttonBack}
-									</button>
-								)}
-								{validButton < links.length - 1 && (
-									<button
-										onClick={() => next()}
-										className='bg-red rounded-md h-12 w-1/2 text-white '
-									>
-										{buttonNext}
-									</button>
-								)}
-							</div>
+
+							{loading ? (
+								<p>Loading...</p>
+							) : (
+								<div className='flex flex-wrap sm:w-full xl:w-1/2 sm:justify-start xl:justify-start xl:mt-0 sm:mt-8 sm:gap-y-6 xl:gap-y-0'>
+									{links.map(({ name, src }) => {
+										return (
+											<Link href={src}>
+												<a className='flex hover:text-red font-bold mr-4'>
+													<VscDebugStackframeDot className='mt-1' />
+													{name}
+												</a>
+											</Link>
+										);
+									})}
+								</div>
+							)}
 						</div>
 					</div>
 				</div>
