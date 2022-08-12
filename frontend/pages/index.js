@@ -1,5 +1,3 @@
-import Head from "next/head";
-
 import ServicesSection from "../components/ServicesSection";
 import AboutUsSection from "../components/AboutUsSection";
 import SertificatesSection from "../components/SertificatesSection";
@@ -20,9 +18,6 @@ export default function Home({
 		headButton,
 		services: {
 			heading,
-			under_heading,
-			description,
-			button,
 			service_lists: { data: service_lists },
 		},
 		product: {
@@ -67,9 +62,6 @@ export default function Home({
 			<ServicesSection
 				data={{
 					heading,
-					under_heading,
-					description,
-					button,
 					service_lists,
 				}}
 			/>

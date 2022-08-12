@@ -37,9 +37,9 @@ export const ServicesComponent = ({
 		const { data } = await fetchAPI("/pagas-services", {
 			locale: router.locale,
 		});
-		const link = await data.map(({ attributes: { sort_id, name } }) => {
+		const link = await data.map(({ attributes: { slug, name } }) => {
 			return {
-				src: `/services/${sort_id}`,
+				src: `/services/${slug}`,
 				name,
 			};
 		});
@@ -59,8 +59,8 @@ export const ServicesComponent = ({
 			</Head>
 
 			<div>
-				<div className='max-w-7xl mx-auto space-x-12 xl:flex p-12'>
-					<div className='xl:w-1/4 sm:w-full flex sm:flex-row xl:flex-col items-center justify-center md:space-x-6 sm:space-x-0'>
+				<div className='p-12 mx-auto space-x-12 max-w-7xl xl:flex'>
+					<div className='flex items-center justify-center xl:w-1/4 sm:w-full sm:flex-row xl:flex-col md:space-x-6 sm:space-x-0'>
 						<div>
 							<Image
 								src={`${process.env.NEXT_PUBLIC_STRAPI_API_URL}${url1}`}
@@ -86,9 +86,9 @@ export const ServicesComponent = ({
 						</span>
 					</div>
 					<div className='w-3/4'>
-						<div className='bg-white rounded-lg drop-shadow-lg sm:w-full xl:w-1/2 py-10 xl:hidden sm:block'>
-							<div className='border-l-4 border-red ml-6 px-6'>
-								<p className='font-bold text-2xl'>{under_description}</p>
+						<div className='py-10 bg-white rounded-lg drop-shadow-lg sm:w-full xl:w-1/2 xl:hidden sm:block'>
+							<div className='px-6 ml-6 border-l-4 border-red'>
+								<p className='text-2xl font-bold'>{under_description}</p>
 							</div>
 						</div>
 						<div className='flex space-x-8 h-3/5'>
@@ -107,9 +107,9 @@ export const ServicesComponent = ({
 							</div>
 						</div>
 						<div className='flex space-x-8 xl:mt-16 2xl:mt-12'>
-							<div className='bg-white rounded-lg drop-shadow-lg w-1/2 py-10 xl:block sm:hidden'>
-								<div className='border-l-4 border-red sm:ml-0 xl:ml-6 px-6'>
-									<p className='font-bold text-2xl'>{under_description}</p>
+							<div className='w-1/2 py-10 bg-white rounded-lg drop-shadow-lg xl:block sm:hidden'>
+								<div className='px-6 border-l-4 border-red sm:ml-0 xl:ml-6'>
+									<p className='text-2xl font-bold'>{under_description}</p>
 								</div>
 							</div>
 
@@ -120,7 +120,7 @@ export const ServicesComponent = ({
 									{links.map(({ name, src }) => {
 										return (
 											<Link href={src}>
-												<a className='flex hover:text-red font-bold mr-4'>
+												<a className='flex mr-4 font-bold hover:text-red'>
 													<VscDebugStackframeDot className='mt-1' />
 													{name}
 												</a>

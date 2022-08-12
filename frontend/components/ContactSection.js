@@ -19,26 +19,26 @@ const ContactSection = ({
 }) => {
   return (
     <div className="bg-[linear-gradient(140deg,#cd320212_0%,#cd320200_41.63%)]">
-      <div className="max-w-7xl mx-auto py-12 sm:px-12 2xl:px-0" id="contacts">
-        <h2 className="font-bold text-3xl">{formHead}</h2>
-        <div className="w-full lg:flex my-16">
+      <div className="py-12 mx-auto max-w-7xl sm:px-12 2xl:px-0" id="contacts">
+        <h2 className="text-3xl font-bold">{formHead}</h2>
+        <div className="w-full my-16 lg:flex">
           <div className="lg:w-1/2 sm:w-full">
             <Form data={{ formName, formMess, formMail, formButton }} />
           </div>
-          <div className="lg:w-1/2 sm:w-full sm:mt-12 lg:mt-0  space-y-10 pl-12 py-8 border-solid border-2 border-red">
+          <div className="py-8 pl-12 space-y-10 border-2 border-solid lg:w-1/2 sm:w-full sm:mt-12 lg:mt-0 border-red">
             <div className="flex items-center">
               <HiOutlineLocationMarker />
-              <p className="text-black pl-2 pt-1">{form_address}</p>
+              <p className="pt-1 pl-2 text-black">{form_address}</p>
             </div>
             <div className="flex items-center">
               <MdOutlineEmail className="mr-2" />
-              <Link className="" href="mailto:howur@gmail.com">
+              <Link className="" href="mailto:howurtm@gmail.com">
                 <a>{form_mail}</a>
               </Link>
             </div>
             <div className="flex items-center">
               <FiPhone />
-              <a href="tel:+99365039539" className="text-black pl-2 pt-1">
+              <a href="tel:+99365039539" className="pt-1 pl-2 text-black">
                 {form_number}
               </a>
             </div>

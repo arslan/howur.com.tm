@@ -10,19 +10,10 @@
     "heading": {
       "type": "string"
     },
-    "under_heading": {
-      "type": "text"
-    },
-    "description": {
-      "type": "text"
-    },
     "service_lists": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::service-list.service-list"
-    },
-    "button": {
-      "type": "string"
     }
   }
 }

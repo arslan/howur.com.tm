@@ -25,28 +25,4 @@ export default async function (options, res) {
     } catch (error) {
         res.status(500);
     }
-
-    // const transporter = nodemailer.createTransport({
-    //   port: 465,
-    //   host: "smtp.gmail.com",
-    //   auth: {
-    //     user: 'pursatly***REMOVED***@gmail.com',
-    //     pass: "***REMOVED***"
-    //   },
-    // //   secure: true,
-    // })
-    // const mailData = {
-    //   from: 'demo email den',
-    //   to: 'pursatly***REMOVED***@gmail.com',
-    //   subject: `Message From ${req.body.name}`,
-    //   text: req.body.message + " | Sent from: " + req.body.email,
-    // //   html: `<div>${req.body.message}</div><p>Sent from:
-    // //   ${req.body.email}</p>`
-    // }
-    // transporter.sendMail(mailData, function (err, info) {
-    //   if(err)
-    //     console.log(err)
-    //   else
-    //     console.log(info)
-    // })
 }

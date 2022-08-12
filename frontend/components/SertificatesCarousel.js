@@ -19,7 +19,6 @@ const SertificateSlider = ({ data }) => {
       },
     }) => ({ img })
   );
-  console.log(img);
   const [slides, setSlides] = useState(img);
   let pivot = 2;
 
@@ -96,8 +95,8 @@ const SertificateSlider = ({ data }) => {
           <HiArrowNarrowRight color="red" size={36} />
         </button>
       </div>
-      <div className="flex items-center relative">
-        <div className="flex items-center justify-evenly w-full lg:py-8">
+      <div className="relative flex items-center">
+        <div className="flex items-center w-full justify-evenly lg:py-8">
           {slides.map(({ img }, i) => {
             return (
               <div
@@ -129,30 +128,30 @@ const SertificateSlider = ({ data }) => {
           })}
         </div>
       </div>
-      <div className="flex m-1 justify-center">
+      <div className="flex justify-center m-1">
         <button
           onClick={() => clicked(0)}
-          className="mr-4 rounded-sm w-28 h-1 bg-grey hover:bg-red"
+          className="h-1 mr-4 rounded-sm w-28 bg-grey hover:bg-red"
         ></button>
         <button
           onClick={() => clicked(1)}
-          className="mr-4 rounded-sm w-28 h-1 bg-grey hover:bg-red"
+          className="h-1 mr-4 rounded-sm w-28 bg-grey hover:bg-red"
         ></button>
-        <button className="mr-4 rounded-sm w-28 h-1 bg-red"></button>
+        <button className="h-1 mr-4 rounded-sm w-28 bg-red"></button>
         <button
           onClick={() => clicked(3)}
-          className="mr-4 rounded-sm w-28 h-1 bg-grey hover:bg-red"
+          className="h-1 mr-4 rounded-sm w-28 bg-grey hover:bg-red"
         ></button>
         <button
           onClick={() => clicked(4)}
-          className="mr-4 rounded-sm w-28 h-1 bg-grey hover:bg-red"
+          className="h-1 mr-4 rounded-sm w-28 bg-grey hover:bg-red"
         ></button>
       </div>
 
       <Transition appear show={isOpen} as={Fragment}>
         <Dialog
           as="div"
-          className="fixed inset-x-0 -inset-y-6 z-30 w-screen h-screen"
+          className="fixed inset-x-0 z-30 w-screen h-screen -inset-y-6"
           onClose={closeModal}
         >
           <div className="">
@@ -181,14 +180,14 @@ const SertificateSlider = ({ data }) => {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="w-screen h-screen bg-black/90 overflow-y-auto">
-                <div className="top-5 sticky z-50 flex text-3xl justify-end mr-14 ">
+              <div className="w-screen h-screen overflow-y-auto bg-black/90">
+                <div className="sticky z-50 flex justify-end text-3xl top-5 mr-14 ">
                   <button type="button" onClick={closeModal} className='outline-none'>
                     <MdClose size={50} color={"red"} />
                   </button>
                 </div>
                 <div className="flex flex-col items-center justify-center">
-                  <div className="p-6 relative">
+                  <div className="relative p-6">
                     <Image src={clickModal} alt="" width={700} height={900} />
                   </div>
                 </div>

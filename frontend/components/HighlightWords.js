@@ -9,7 +9,7 @@ const HighlightWords = (props) => {
         searchWords={[
           "прочность, стойкость и уверенность.",
           "stands for strength, resilience and confidence.",
-          "güýç, çydamlylyk we ynam diýmekdir.",
+          "berklik, durnuklylyk we ynam.",
         ]}
         autoEscape={true}
         textToHighlight={props.text}

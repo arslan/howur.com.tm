@@ -30,13 +30,13 @@ function Lang() {
 	const router = useRouter();
 	const currentLang = router.locale;
 	const { pathname } = router;
-	const lang = { ru: "Русский", en: "English", tk: "Tükmen" };
+	const lang = { ru: "Русский", en: "English", tk: "Türkmen" };
 
 	return (
 		<Menu as='div' className='relative inline-block text-[#7A7A7A] ml-2'>
-			<Menu.Button className='w-full relative flex hover:text-red text-xl'>
+			<Menu.Button className='relative flex w-full text-xl hover:text-red'>
 				{lang[currentLang]}
-				<div className='w-4 self-center'>
+				<div className='self-center w-4'>
 					<GoChevronDown />
 				</div>
 			</Menu.Button>
@@ -49,7 +49,7 @@ function Lang() {
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<Menu.Items className='absolute right-0 mt-6 w-36 origin-top-right rounded-md bg-white shadow-lg focus:outline-none px-2'>
+				<Menu.Items className='absolute right-0 px-2 mt-6 origin-top-right bg-white rounded-md shadow-lg w-36 focus:outline-none'>
 					{flags.map(({ language, longName }) => {
 						return (
 							<Menu.Item key={uuid_v4()}>

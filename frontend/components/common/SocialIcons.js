@@ -1,16 +1,16 @@
-import { FaFacebookSquare, FaInstagram, FaLinkedinIn } from "react-icons/fa";
+import { FaSkype } from "react-icons/fa";
 
 import Link from "next/link";
 
 export default function Socialicons() {
 	return (
 		<div className='flex flex-row'>
-			<Link href='https://www.facebook.com/'>
+			<Link href='skype:live:.cid.e179022cb53b02aa?chat/'>
 				<a className='pr-2'>
-					<FaFacebookSquare />
+					<FaSkype />
 				</a>
 			</Link>
-			<Link href='https://www.instagram.com/'>
+			{/* <Link href='https://www.instagram.com/'>
 				<a className='px-2'>
 					<FaInstagram />
 				</a>
@@ -19,7 +19,7 @@ export default function Socialicons() {
 				<a className='pl-2'>
 					<FaLinkedinIn />
 				</a>
-			</Link>
+			</Link> */}
 		</div>
 	);
 }

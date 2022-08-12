@@ -19,13 +19,12 @@ export default function BurgerDropdown({ name }) {
 			},
 		},
 	} = useContext(layoutContext);
-	console.log(underNav);
 	return (
 		<Menu as='div' className='relative inline-block'>
 			<div>
-				<Menu.Button className='w-full pb-4 cursor-pointer relative flex hover:text-red text-xl text-black'>
+				<Menu.Button className='relative flex w-full pb-4 text-xl text-black cursor-pointer hover:text-red'>
 					{name}
-					<div className='w-4 self-center ml-1'>
+					<div className='self-center w-4 ml-1'>
 						<GoChevronDown size={12} />
 					</div>
 				</Menu.Button>
@@ -39,12 +38,12 @@ export default function BurgerDropdown({ name }) {
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<Menu.Items className='relative focus:outline-none text-black'>
-					<div className=' py-1 '>
+				<Menu.Items className='relative text-black focus:outline-none'>
+					<div className='py-1 '>
 						{underNav.map(({ attributes: { name, sort_id } }) => {
 							return (
 								<Menu.Item
-									className='absolute shadow-lg  focus:outline-none z-20 '
+									className='absolute z-20 shadow-lg focus:outline-none '
 									key={uuid_v4()}
 								>
 									<Link href={`/services/${sort_id}`} locale={locale} passHref>

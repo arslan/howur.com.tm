@@ -4,7 +4,7 @@
   "info": {
     "singularName": "service-list",
     "pluralName": "service-lists",
-    "displayName": "service_list",
+    "displayName": "Список услуг",
     "description": ""
   },
   "options": {

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-07-08T08:39:11.618Z"
+    "x-generation-date": "2022-08-12T09:07:47.363Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -12319,12 +12319,6 @@
               "heading": {
                 "type": "string"
               },
-              "under_heading": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
               "service_lists": {
                 "type": "array",
                 "items": {
@@ -12338,9 +12332,6 @@
                   ],
                   "example": "string or id"
                 }
-              },
-              "button": {
-                "type": "string"
               }
             }
           },
@@ -12524,12 +12515,6 @@
                   "heading": {
                     "type": "string"
                   },
-                  "under_heading": {
-                    "type": "string"
-                  },
-                  "description": {
-                    "type": "string"
-                  },
                   "service_lists": {
                     "type": "array",
                     "items": {
@@ -12543,9 +12528,6 @@
                       ],
                       "example": "string or id"
                     }
-                  },
-                  "button": {
-                    "type": "string"
                   }
                 }
               },
@@ -13087,12 +13069,6 @@
                 "type": "string"
               },
               "heading": {
-                "type": "string"
-              },
-              "under_heading": {
-                "type": "string"
-              },
-              "description": {
                 "type": "string"
               },
               "service_lists": {
@@ -13797,9 +13773,6 @@
                     }
                   }
                 }
-              },
-              "button": {
-                "type": "string"
               }
             }
           },
@@ -16453,12 +16426,6 @@
                         "heading": {
                           "type": "string"
                         },
-                        "under_heading": {
-                          "type": "string"
-                        },
-                        "description": {
-                          "type": "string"
-                        },
                         "service_lists": {
                           "type": "object",
                           "properties": {
@@ -17161,9 +17128,6 @@
                               }
                             }
                           }
-                        },
-                        "button": {
-                          "type": "string"
                         }
                       }
                     },
@@ -19843,12 +19807,6 @@
                       "heading": {
                         "type": "string"
                       },
-                      "under_heading": {
-                        "type": "string"
-                      },
-                      "description": {
-                        "type": "string"
-                      },
                       "service_lists": {
                         "type": "object",
                         "properties": {
@@ -20551,9 +20509,6 @@
                             }
                           }
                         }
-                      },
-                      "button": {
-                        "type": "string"
                       }
                     }
                   },

@@ -4,7 +4,7 @@
   "info": {
     "singularName": "product-list",
     "pluralName": "product-lists",
-    "displayName": "product_list",
+    "displayName": "Список продуктов",
     "description": ""
   },
   "options": {

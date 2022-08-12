@@ -4,7 +4,7 @@
   "info": {
     "singularName": "certificate-list",
     "pluralName": "certificate-lists",
-    "displayName": "certificate_list",
+    "displayName": "Сертификаты",
     "description": ""
   },
   "options": {
