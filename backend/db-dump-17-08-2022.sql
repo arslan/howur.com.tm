@@ -2266,9 +2266,9 @@ COPY public.components_about_abouts (id, heading, under_heading, description) FR
 --
 
 COPY public.components_certificate_certificates (id, under_heading, heading) FROM stdin;
-1	Сертификаты, полученные нашей компанией на сегодняшний день	Лицензии и Сертификаты
 2	\N	Licenses and Certificates
 3		Ygtyýarnamalar we sertifikatlar
+1	Сертификаты, полученные нашей компанией на сегодняшний день	Лицензии и Сертификаты
 \.
 
 
@@ -2277,11 +2277,6 @@ COPY public.components_certificate_certificates (id, under_heading, heading) FRO
 --
 
 COPY public.components_certificate_certificates_certificate_lists_links (certificate_id, certificate_list_id) FROM stdin;
-1	1
-1	2
-1	3
-1	4
-1	5
 2	6
 2	8
 2	10
@@ -2292,6 +2287,11 @@ COPY public.components_certificate_certificates_certificate_lists_links (certifi
 3	11
 3	13
 3	15
+1	1
+1	2
+1	3
+1	4
+1	5
 \.
 
 
@@ -2301,12 +2301,12 @@ COPY public.components_certificate_certificates_certificate_lists_links (certifi
 
 COPY public.components_contacts_addresses (id, address) FROM stdin;
 1	Туркменистан / Ашгабад, Парахат 1, Здание 68
-3	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
+6	Turkmenistan, Ashgabad, Archabil Avenue, Building 55
+7	Türkmenistan, Aşgabad, Arçabil şaýoly, 55-nji bina
 2	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
 4	Turkmenistan / Ashgabat, Archabil Avenue, Building 55
-6	Turkmenistan, Ashgabad, Archabil Avenue, Building 55
 5	Türkmenistan / Aşgabat, Arçabil şaýoly, 55-nji bina
-7	Türkmenistan, Aşgabad, Arçabil şaýoly, 55-nji bina
+3	Туркменистан / Ашгабад, проспект Арчабиль, Здание 55 
 \.
 
 
@@ -2315,9 +2315,9 @@ COPY public.components_contacts_addresses (id, address) FROM stdin;
 --
 
 COPY public.components_contacts_mail (id, mail) FROM stdin;
+2	howur@gmail.com
+3	howur@gmail.com
 1	howurtm@gmail.com
-2	howurtm@gmail.com
-3	howurtm@gmail.com
 \.
 
 
@@ -2327,12 +2327,12 @@ COPY public.components_contacts_mail (id, mail) FROM stdin;
 
 COPY public.components_contacts_phone_numbers (id, number) FROM stdin;
 1	+993 65039539
-3	+99312480812
-2	99365701221  / 99312480812
-4	+99312480812
 6	99365701221  / 99312480812
-5	+99312480812
 7	99365701221  / 99312480812
+2	+993 65 70-12-21 | +993 12 48-08-12
+4	+99312480812
+5	+99312480812
+3	+99312480812
 \.
 
 
@@ -2341,9 +2341,9 @@ COPY public.components_contacts_phone_numbers (id, number) FROM stdin;
 --
 
 COPY public.components_footer_footer_devs (id, permission, dev_by) FROM stdin;
-1	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
-2	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
-3	©2022 Höwür. All Rights Reserved. Privacy Policy.	Developed by
+2	©2022 Höwür. All Rights Reserved.	Developed by
+3	©2022 Höwür. Ähli hukuklar goralan.	Developed by
+1	©2022 Höwür. Все права защищены.	Developed by
 \.
 
 
@@ -2352,9 +2352,9 @@ COPY public.components_footer_footer_devs (id, permission, dev_by) FROM stdin;
 --
 
 COPY public.components_footer_footer_mains (id, description, title_mail, mail) FROM stdin;
-1	Индивидуальное предприятие “Höwür” - строительная компания, объединяющая талантливых инженеров, проектировщиков, строителей.  Вместе мы строим будущее.	Электронная почта 	info@howur.com.tm
-2	Individual enterprise "Höwür" is a construction company that brings together talented engineers, designers, builders. We are building the future together.	Email	info@howur.com.tm
-3	“Höwür” Hususy kärhanasy – zehinli inženerleri, taslamalaşdyryjylary, gurluşykçylary jemleýän gurluşyk kompaniýasydyr. Bilelikde biz geljegi gurýarys. 	E-poçta iberiň	info@howur.com.tm
+2	Individual enterprise "Höwür" is a construction company that brings together talented engineers, designers, builders. We are building the future together.	Email	howurtm@gmail.com
+3	“Höwür” Hususy kärhanasy – zehinli inženerleri, taslamalaşdyryjylary, gurluşykçylary jemleýän gurluşyk kompaniýasydyr. Bilelikde biz geljegi gurýarys. 	E-poçta iberiň	howurtm@gmail.com
+1	Индивидуальное предприятие “Höwür” - строительная компания, объединяющая талантливых инженеров, проектировщиков, строителей. Вместе мы строим будущее.	Электронная почта 	howurtm@gmail.com
 \.
 
 
@@ -2363,9 +2363,9 @@ COPY public.components_footer_footer_mains (id, description, title_mail, mail) F
 --
 
 COPY public.components_form_form_mains (id, heading, name, message, mail, button) FROM stdin;
-1	Остались вопросы? Свяжитесь с нами.	ФИО	Введите сообщение	Введите адрес электронной почты	Отправить
 2	Do you have any questions? Contact us.	Full name	Enter your message	Email	Send
 3	Soraglaryňyz bar bolsa, biz bilen habarlaşyň.	Doly ady	Habaryňyzy giriziň	E-poçta iberiň	Iber
+1	Остались вопросы? Свяжитесь с нами.	ФИО	Введите сообщение	Введите адрес электронной почты	Отправить
 \.
 
 
@@ -2374,15 +2374,15 @@ COPY public.components_form_form_mains (id, heading, name, message, mail, button
 --
 
 COPY public.components_form_form_mains_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-127	2	6	contacts.address	form_address	1
-128	2	2	contacts.mail	form_mail	1
-129	2	6	contacts.phone-number	form_number	1
-130	3	7	contacts.address	form_address	1
-131	3	3	contacts.mail	form_mail	1
-132	3	7	contacts.phone-number	form_number	1
-70	1	2	contacts.address	form_address	1
-71	1	1	contacts.mail	form_mail	1
-72	1	2	contacts.phone-number	form_number	1
+136	2	6	contacts.address	form_address	1
+137	2	2	contacts.mail	form_mail	1
+138	2	6	contacts.phone-number	form_number	1
+139	3	7	contacts.address	form_address	1
+140	3	3	contacts.mail	form_mail	1
+141	3	7	contacts.phone-number	form_number	1
+148	1	2	contacts.address	form_address	1
+149	1	1	contacts.mail	form_mail	1
+150	1	2	contacts.phone-number	form_number	1
 \.
 
 
@@ -2392,9 +2392,9 @@ COPY public.components_form_form_mains_components (id, entity_id, component_id, 
 
 COPY public.components_navbar_header_navbars (id) FROM stdin;
 1
-2
 3
 4
+2
 \.
 
 
@@ -2406,15 +2406,15 @@ COPY public.components_navbar_header_navbars_locals_links (navbar_id, local_id) 
 1	1
 1	2
 1	3
-2	1
-2	2
-2	3
 3	4
 3	6
 3	8
 4	5
 4	7
 4	9
+2	1
+2	2
+2	3
 \.
 
 
@@ -2446,9 +2446,9 @@ COPY public.components_navbar_header_navbars_navigations_links (navbar_id, navig
 --
 
 COPY public.components_products_products (id, heading) FROM stdin;
-1	Наши продукты
 2	Our products
 3	Biziň önümlerimiz
+1	Наши продукты
 \.
 
 
@@ -2474,9 +2474,9 @@ COPY public.components_products_products_brands_links (product_id, brand_id) FRO
 --
 
 COPY public.components_services_services (id, heading) FROM stdin;
-1	Наши услуги
 2	Our services
 3	Biziň hyzmatlarymyz
+1	Наши услуги
 \.
 
 
@@ -2511,6 +2511,13 @@ COPY public.components_services_services_service_lists_links (services_id, servi
 --
 
 COPY public.files (id, name, alternative_text, caption, width, height, formats, hash, ext, mime, size, url, preview_url, provider, provider_metadata, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
+74	benjamin-child-GWe0dlVD9e0-unsplash.jpg	benjamin-child-GWe0dlVD9e0-unsplash.jpg	benjamin-child-GWe0dlVD9e0-unsplash.jpg	5184	3456	{"large": {"ext": ".jpg", "url": "/uploads/large_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99.jpg", "hash": "large_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99", "mime": "image/jpeg", "name": "large_benjamin-child-GWe0dlVD9e0-unsplash.jpg", "path": null, "size": 89.39, "width": 1000, "height": 667}, "small": {"ext": ".jpg", "url": "/uploads/small_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99.jpg", "hash": "small_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99", "mime": "image/jpeg", "name": "small_benjamin-child-GWe0dlVD9e0-unsplash.jpg", "path": null, "size": 28.01, "width": 500, "height": 333}, "medium": {"ext": ".jpg", "url": "/uploads/medium_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99.jpg", "hash": "medium_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99", "mime": "image/jpeg", "name": "medium_benjamin-child-GWe0dlVD9e0-unsplash.jpg", "path": null, "size": 55.98, "width": 750, "height": 500}, "thumbnail": {"ext": ".jpg", "url": "/uploads/thumbnail_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99.jpg", "hash": "thumbnail_benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99", "mime": "image/jpeg", "name": "thumbnail_benjamin-child-GWe0dlVD9e0-unsplash.jpg", "path": null, "size": 8.12, "width": 234, "height": 156}}	benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99	.jpg	image/jpeg	1598.49	/uploads/benjamin_child_G_We0dl_VD_9e0_unsplash_9d670ebb99.jpg	\N	local	\N	2022-08-17 15:57:33.198	2022-08-17 15:57:33.198	2	2
+78	pexels-thirdman-5584052 1.png	pexels-thirdman-5584052 1.png	pexels-thirdman-5584052 1.png	1276	876	{"large": {"ext": ".png", "url": "/uploads/large_pexels_thirdman_5584052_1_17bfad98be.png", "hash": "large_pexels_thirdman_5584052_1_17bfad98be", "mime": "image/png", "name": "large_pexels-thirdman-5584052 1.png", "path": null, "size": 732.17, "width": 1000, "height": 687}, "small": {"ext": ".png", "url": "/uploads/small_pexels_thirdman_5584052_1_17bfad98be.png", "hash": "small_pexels_thirdman_5584052_1_17bfad98be", "mime": "image/png", "name": "small_pexels-thirdman-5584052 1.png", "path": null, "size": 202.65, "width": 500, "height": 343}, "medium": {"ext": ".png", "url": "/uploads/medium_pexels_thirdman_5584052_1_17bfad98be.png", "hash": "medium_pexels_thirdman_5584052_1_17bfad98be", "mime": "image/png", "name": "medium_pexels-thirdman-5584052 1.png", "path": null, "size": 430.22, "width": 750, "height": 515}, "thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_pexels_thirdman_5584052_1_17bfad98be.png", "hash": "thumbnail_pexels_thirdman_5584052_1_17bfad98be", "mime": "image/png", "name": "thumbnail_pexels-thirdman-5584052 1.png", "path": null, "size": 47.07, "width": 227, "height": 156}}	pexels_thirdman_5584052_1_17bfad98be	.png	image/png	345.61	/uploads/pexels_thirdman_5584052_1_17bfad98be.png	\N	local	\N	2022-08-17 15:59:13.268	2022-08-17 15:59:13.268	2	2
+79	8e9650b870b891e34f0c1404f28da48c 1.png	8e9650b870b891e34f0c1404f28da48c 1.png	8e9650b870b891e34f0c1404f28da48c 1.png	1273	876	{"large": {"ext": ".png", "url": "/uploads/large_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3.png", "hash": "large_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3", "mime": "image/png", "name": "large_8e9650b870b891e34f0c1404f28da48c 1.png", "path": null, "size": 1638.53, "width": 1000, "height": 688}, "small": {"ext": ".png", "url": "/uploads/small_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3.png", "hash": "small_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3", "mime": "image/png", "name": "small_8e9650b870b891e34f0c1404f28da48c 1.png", "path": null, "size": 444.23, "width": 500, "height": 344}, "medium": {"ext": ".png", "url": "/uploads/medium_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3.png", "hash": "medium_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3", "mime": "image/png", "name": "medium_8e9650b870b891e34f0c1404f28da48c 1.png", "path": null, "size": 954.41, "width": 750, "height": 516}, "thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3.png", "hash": "thumbnail_8e9650b870b891e34f0c1404f28da48c_1_fe193eded3", "mime": "image/png", "name": "thumbnail_8e9650b870b891e34f0c1404f28da48c 1.png", "path": null, "size": 99.37, "width": 227, "height": 156}}	8e9650b870b891e34f0c1404f28da48c_1_fe193eded3	.png	image/png	472.05	/uploads/8e9650b870b891e34f0c1404f28da48c_1_fe193eded3.png	\N	local	\N	2022-08-17 15:59:28.924	2022-08-17 15:59:28.924	2	2
+75	annie-spratt-FSFfEQkd1sc-unsplash.jpg	annie-spratt-FSFfEQkd1sc-unsplash.jpg	annie-spratt-FSFfEQkd1sc-unsplash.jpg	4914	3271	{"large": {"ext": ".jpg", "url": "/uploads/large_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d.jpg", "hash": "large_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d", "mime": "image/jpeg", "name": "large_annie-spratt-FSFfEQkd1sc-unsplash.jpg", "path": null, "size": 109.46, "width": 1000, "height": 665}, "small": {"ext": ".jpg", "url": "/uploads/small_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d.jpg", "hash": "small_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d", "mime": "image/jpeg", "name": "small_annie-spratt-FSFfEQkd1sc-unsplash.jpg", "path": null, "size": 35.4, "width": 500, "height": 332}, "medium": {"ext": ".jpg", "url": "/uploads/medium_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d.jpg", "hash": "medium_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d", "mime": "image/jpeg", "name": "medium_annie-spratt-FSFfEQkd1sc-unsplash.jpg", "path": null, "size": 68.88, "width": 750, "height": 499}, "thumbnail": {"ext": ".jpg", "url": "/uploads/thumbnail_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d.jpg", "hash": "thumbnail_annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d", "mime": "image/jpeg", "name": "thumbnail_annie-spratt-FSFfEQkd1sc-unsplash.jpg", "path": null, "size": 10.96, "width": 235, "height": 156}}	annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d	.jpg	image/jpeg	2644.99	/uploads/annie_spratt_FS_Ff_E_Qkd1sc_unsplash_6382afa10d.jpg	\N	local	\N	2022-08-17 15:57:46.199	2022-08-17 15:57:46.199	2	2
+76	ivan-bandura-0-no6ywKMPY-unsplash.jpg	ivan-bandura-0-no6ywKMPY-unsplash.jpg	ivan-bandura-0-no6ywKMPY-unsplash.jpg	3548	2660	{"large": {"ext": ".jpg", "url": "/uploads/large_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3.jpg", "hash": "large_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3", "mime": "image/jpeg", "name": "large_ivan-bandura-0-no6ywKMPY-unsplash.jpg", "path": null, "size": 230.1, "width": 1000, "height": 750}, "small": {"ext": ".jpg", "url": "/uploads/small_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3.jpg", "hash": "small_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3", "mime": "image/jpeg", "name": "small_ivan-bandura-0-no6ywKMPY-unsplash.jpg", "path": null, "size": 64.93, "width": 500, "height": 375}, "medium": {"ext": ".jpg", "url": "/uploads/medium_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3.jpg", "hash": "medium_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3", "mime": "image/jpeg", "name": "medium_ivan-bandura-0-no6ywKMPY-unsplash.jpg", "path": null, "size": 137.03, "width": 750, "height": 562}, "thumbnail": {"ext": ".jpg", "url": "/uploads/thumbnail_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3.jpg", "hash": "thumbnail_ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3", "mime": "image/jpeg", "name": "thumbnail_ivan-bandura-0-no6ywKMPY-unsplash.jpg", "path": null, "size": 13.27, "width": 208, "height": 156}}	ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3	.jpg	image/jpeg	2547.88	/uploads/ivan_bandura_0_no6yw_KMPY_unsplash_1b3ce6ffa3.jpg	\N	local	\N	2022-08-17 15:58:30.548	2022-08-17 15:58:30.548	2	2
+77	Lift 1.png	Lift 1.png	Lift 1.png	1276	876	{"large": {"ext": ".png", "url": "/uploads/large_Lift_1_ba4d35b464.png", "hash": "large_Lift_1_ba4d35b464", "mime": "image/png", "name": "large_Lift 1.png", "path": null, "size": 945.23, "width": 1000, "height": 687}, "small": {"ext": ".png", "url": "/uploads/small_Lift_1_ba4d35b464.png", "hash": "small_Lift_1_ba4d35b464", "mime": "image/png", "name": "small_Lift 1.png", "path": null, "size": 294.16, "width": 500, "height": 343}, "medium": {"ext": ".png", "url": "/uploads/medium_Lift_1_ba4d35b464.png", "hash": "medium_Lift_1_ba4d35b464", "mime": "image/png", "name": "medium_Lift 1.png", "path": null, "size": 583.24, "width": 750, "height": 515}, "thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_Lift_1_ba4d35b464.png", "hash": "thumbnail_Lift_1_ba4d35b464", "mime": "image/png", "name": "thumbnail_Lift 1.png", "path": null, "size": 74.89, "width": 227, "height": 156}}	Lift_1_ba4d35b464	.png	image/png	270.85	/uploads/Lift_1_ba4d35b464.png	\N	local	\N	2022-08-17 15:58:57.833	2022-08-17 15:58:57.833	2	2
+80	teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png	teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png	teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png	1276	876	{"large": {"ext": ".png", "url": "/uploads/large_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3.png", "hash": "large_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3", "mime": "image/png", "name": "large_teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png", "path": null, "size": 964.86, "width": 1000, "height": 687}, "small": {"ext": ".png", "url": "/uploads/small_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3.png", "hash": "small_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3", "mime": "image/png", "name": "small_teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png", "path": null, "size": 267.21, "width": 500, "height": 343}, "medium": {"ext": ".png", "url": "/uploads/medium_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3.png", "hash": "medium_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3", "mime": "image/png", "name": "medium_teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png", "path": null, "size": 562.56, "width": 750, "height": 515}, "thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3.png", "hash": "thumbnail_teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3", "mime": "image/png", "name": "thumbnail_teplovye-pozharnye-izveshchateli-harakteristiki-vidy-vybor-ekspluataciya-43-1024x478 1.png", "path": null, "size": 68.6, "width": 227, "height": 156}}	teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3	.png	image/png	314.32	/uploads/teplovye_pozharnye_izveshchateli_harakteristiki_vidy_vybor_ekspluataciya_43_1024x478_1_967c691bf3.png	\N	local	\N	2022-08-17 15:59:40.404	2022-08-17 15:59:40.404	2	2
 37	Group 2.svg	Group 2.svg	Group 2.svg	\N	\N	\N	Group_2_339089de73	.svg	image/svg+xml	11.03	/uploads/Group_2_339089de73.svg	\N	local	\N	2022-06-23 13:57:38.725	2022-06-23 13:57:38.725	\N	\N
 30	Frame 15 (3).png	Frame 15 (3).png	Frame 15 (3).png	316	347	{"thumbnail": {"ext": ".png", "url": "/uploads/thumbnail_Frame_15_3_16286e23a9.png", "hash": "thumbnail_Frame_15_3_16286e23a9", "mime": "image/png", "name": "thumbnail_Frame 15 (3).png", "path": null, "size": 29.19, "width": 142, "height": 156}}	Frame_15_3_16286e23a9	.png	image/png	29.40	/uploads/Frame_15_3_16286e23a9.png	\N	local	\N	2022-06-21 13:05:59.604	2022-06-21 13:05:59.604	\N	\N
 68	Vector (1).svg	Vector (1).svg	Vector (1).svg	\N	\N	\N	Vector_1_102a476cef	.svg	image/svg+xml	4.24	/uploads/Vector_1_102a476cef.svg	\N	local	\N	2022-06-27 13:46:15.283	2022-06-27 13:46:15.283	\N	\N
@@ -2615,11 +2622,12 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 29	16	services-page-com.component-services	img2	1
 30	16	services-page-com.component-services	img3	1
 60	21	services-page-com.component-services	img1	1
-11	1	about.about	headImg	1
-12	1	about.about	descImg	1
 61	21	services-page-com.component-services	img2	1
 63	21	services-page-com.component-services	img3	1
-37	1	certificate.certificate	logo	1
+37	3	navbar-header.navbar	logo	1
+37	2	footer.footer-main	logo	1
+72	2	footer.footer-dev	logo_dev	1
+73	2	footer.footer-dev	logo_dev1	1
 60	23	services-page-com.component-services	img1	1
 43	22	api::product-list.product-list	img	1
 43	23	api::product-list.product-list	img	1
@@ -2674,7 +2682,13 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 19	5	api::certificate-list.certificate-list	img	1
 31	13	services-page-com.component-services	img1	1
 59	13	api::pagas-service.pagas-service	img3	1
-71	2	api::main.main	headVideo	1
+31	10	api::pagas-service.pagas-service	img1	1
+32	10	api::pagas-service.pagas-service	img2	1
+33	10	api::pagas-service.pagas-service	img3	1
+31	11	api::pagas-service.pagas-service	img1	1
+32	11	api::pagas-service.pagas-service	img2	1
+33	11	api::pagas-service.pagas-service	img3	1
+76	10	api::service-list.service-list	img	1
 32	13	services-page-com.component-services	img2	1
 33	13	services-page-com.component-services	img3	1
 31	14	services-page-com.component-services	img1	1
@@ -2712,30 +2726,36 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 19	15	api::certificate-list.certificate-list	img	1
 19	14	api::certificate-list.certificate-list	img	1
 34	18	services-page-com.component-services	img1	1
+11	2	about.about	headImg	1
+12	2	about.about	descImg	1
 58	18	services-page-com.component-services	img2	1
+37	2	certificate.certificate	logo	1
 59	18	services-page-com.component-services	img3	1
 34	17	services-page-com.component-services	img1	1
 58	17	services-page-com.component-services	img2	1
 59	17	services-page-com.component-services	img3	1
 1	3	api::main.main	headImg	1
 1	1	api::main.main	headImg	1
-37	2	navbar-header.navbar	logo	1
-37	1	footer.footer-main	logo	1
-72	1	footer.footer-dev	logo_dev	1
-73	1	footer.footer-dev	logo_dev1	1
-37	3	navbar-header.navbar	logo	1
-37	2	footer.footer-main	logo	1
-72	2	footer.footer-dev	logo_dev	1
-73	2	footer.footer-dev	logo_dev1	1
+31	12	api::pagas-service.pagas-service	img1	1
+32	12	api::pagas-service.pagas-service	img2	1
+33	12	api::pagas-service.pagas-service	img3	1
+77	5	api::service-list.service-list	img	1
+77	11	api::service-list.service-list	img	1
+78	16	api::service-list.service-list	img	1
+79	6	api::service-list.service-list	img	1
+79	17	api::service-list.service-list	img	1
+80	4	api::service-list.service-list	img	1
+37	4	navbar-header.navbar	logo	1
+37	3	footer.footer-main	logo	1
+72	3	footer.footer-dev	logo_dev	1
+80	13	api::service-list.service-list	img	1
+73	3	footer.footer-dev	logo_dev1	1
 38	8	api::service-list.service-list	img	1
-7	9	api::service-list.service-list	img	1
-7	1	api::service-list.service-list	img	1
-32	12	api::service-list.service-list	img	1
-69	16	api::service-list.service-list	img	1
-65	17	api::service-list.service-list	img	1
-65	6	api::service-list.service-list	img	1
-4	4	api::service-list.service-list	img	1
-4	13	api::service-list.service-list	img	1
+74	1	about.about	headImg	1
+75	1	about.about	descImg	1
+37	1	certificate.certificate	logo	1
+71	1	api::main.main	headVideo	1
+71	2	api::main.main	headVideo	1
 60	17	api::pagas-service.pagas-service	img1	1
 61	17	api::pagas-service.pagas-service	img2	1
 63	17	api::pagas-service.pagas-service	img3	1
@@ -2745,36 +2765,19 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 52	3	api::pagas-service.pagas-service	img1	1
 53	3	api::pagas-service.pagas-service	img2	1
 54	3	api::pagas-service.pagas-service	img3	1
-31	11	api::pagas-service.pagas-service	img1	1
-32	11	api::pagas-service.pagas-service	img2	1
-33	11	api::pagas-service.pagas-service	img3	1
-31	10	api::pagas-service.pagas-service	img1	1
-32	10	api::pagas-service.pagas-service	img2	1
-33	10	api::pagas-service.pagas-service	img3	1
 4	9	api::pagas-service.pagas-service	img1	1
 29	9	api::pagas-service.pagas-service	img2	1
 30	9	api::pagas-service.pagas-service	img3	1
-37	4	navbar-header.navbar	logo	1
-37	3	footer.footer-main	logo	1
-72	3	footer.footer-dev	logo_dev	1
-73	3	footer.footer-dev	logo_dev1	1
+37	2	navbar-header.navbar	logo	1
+37	1	footer.footer-main	logo	1
+38	7	api::service-list.service-list	img	1
+38	3	api::service-list.service-list	img	1
+72	1	footer.footer-dev	logo_dev	1
+73	1	footer.footer-dev	logo_dev1	1
 11	3	about.about	headImg	1
 12	3	about.about	descImg	1
 37	3	certificate.certificate	logo	1
-71	3	api::main.main	headVideo	1
-71	1	api::main.main	headVideo	1
-38	7	api::service-list.service-list	img	1
-38	3	api::service-list.service-list	img	1
-7	10	api::service-list.service-list	img	1
-32	11	api::service-list.service-list	img	1
-32	5	api::service-list.service-list	img	1
-69	15	api::service-list.service-list	img	1
-69	2	api::service-list.service-list	img	1
-65	18	api::service-list.service-list	img	1
-4	14	api::service-list.service-list	img	1
-11	2	about.about	headImg	1
-12	2	about.about	descImg	1
-37	2	certificate.certificate	logo	1
+76	1	api::service-list.service-list	img	1
 60	18	api::pagas-service.pagas-service	img1	1
 61	18	api::pagas-service.pagas-service	img2	1
 63	18	api::pagas-service.pagas-service	img3	1
@@ -2784,15 +2787,19 @@ COPY public.files_related_morphs (file_id, related_id, related_type, field, "ord
 52	1	api::pagas-service.pagas-service	img1	1
 53	1	api::pagas-service.pagas-service	img2	1
 54	1	api::pagas-service.pagas-service	img3	1
-31	12	api::pagas-service.pagas-service	img1	1
-32	12	api::pagas-service.pagas-service	img2	1
-33	12	api::pagas-service.pagas-service	img3	1
 4	8	api::pagas-service.pagas-service	img1	1
 29	8	api::pagas-service.pagas-service	img2	1
 30	8	api::pagas-service.pagas-service	img3	1
 4	7	api::pagas-service.pagas-service	img1	1
 29	7	api::pagas-service.pagas-service	img2	1
 30	7	api::pagas-service.pagas-service	img3	1
+76	9	api::service-list.service-list	img	1
+77	12	api::service-list.service-list	img	1
+78	2	api::service-list.service-list	img	1
+78	15	api::service-list.service-list	img	1
+79	18	api::service-list.service-list	img	1
+80	14	api::service-list.service-list	img	1
+71	3	api::main.main	headVideo	1
 46	33	api::product-list.product-list	img	1
 46	31	api::product-list.product-list	img	1
 46	32	api::product-list.product-list	img	1
@@ -2833,9 +2840,9 @@ COPY public.i18n_locale (id, name, code, created_at, updated_at, created_by_id, 
 --
 
 COPY public.layouts (id, created_at, updated_at, created_by_id, updated_by_id, locale) FROM stdin;
-1	2022-06-20 14:45:20.084	2022-07-05 18:07:55.647	\N	\N	ru
-2	2022-06-24 16:09:16.305	2022-08-12 12:41:03.172	\N	2	en
-3	2022-06-24 16:13:47.068	2022-08-12 13:53:13.771	\N	2	tk
+2	2022-06-24 16:09:16.305	2022-08-17 23:05:24.14	\N	2	en
+3	2022-06-24 16:13:47.068	2022-08-17 23:07:31.355	\N	2	tk
+1	2022-06-20 14:45:20.084	2022-08-17 23:07:46.579	\N	2	ru
 \.
 
 
@@ -2844,21 +2851,21 @@ COPY public.layouts (id, created_at, updated_at, created_by_id, updated_by_id, l
 --
 
 COPY public.layouts_components (id, entity_id, component_id, component_type, field, "order") FROM stdin;
-136	1	2	navbar-header.navbar	navbar	1
-137	1	3	contacts.address	address	1
-138	1	3	contacts.phone-number	number	1
-139	1	1	footer.footer-main	footer	1
-140	1	1	footer.footer-dev	footer_dev	1
-151	2	3	navbar-header.navbar	navbar	1
-152	2	4	contacts.address	address	1
-153	2	4	contacts.phone-number	number	1
-154	2	2	footer.footer-main	footer	1
-155	2	2	footer.footer-dev	footer_dev	1
-156	3	4	navbar-header.navbar	navbar	1
-157	3	5	contacts.address	address	1
-158	3	5	contacts.phone-number	number	1
-159	3	3	footer.footer-main	footer	1
-160	3	3	footer.footer-dev	footer_dev	1
+206	1	2	navbar-header.navbar	navbar	1
+207	1	3	contacts.address	address	1
+208	1	3	contacts.phone-number	number	1
+209	1	1	footer.footer-main	footer	1
+210	1	1	footer.footer-dev	footer_dev	1
+191	2	3	navbar-header.navbar	navbar	1
+192	2	4	contacts.address	address	1
+193	2	4	contacts.phone-number	number	1
+194	2	2	footer.footer-main	footer	1
+195	2	2	footer.footer-dev	footer_dev	1
+201	3	4	navbar-header.navbar	navbar	1
+202	3	5	contacts.address	address	1
+203	3	5	contacts.phone-number	number	1
+204	3	3	footer.footer-main	footer	1
+205	3	3	footer.footer-dev	footer_dev	1
 \.
 
 
@@ -2924,9 +2931,9 @@ COPY public.locals_localizations_links (local_id, inv_local_id) FROM stdin;
 --
 
 COPY public.mains (id, created_at, updated_at, created_by_id, updated_by_id, locale, head, "desc", head_button) FROM stdin;
-1	2022-06-20 12:06:20.758	2022-08-12 13:53:29.493	\N	2	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
-2	2022-06-24 16:20:55.711	2022-08-12 13:53:29.494	\N	2	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact us
-3	2022-06-24 16:22:30.188	2022-08-12 13:53:29.374	\N	2	tk	Höwür — berklik, durnuklylyk we ynam.	“Höwür” Hususy kärhanasynyň binalary we desgalary taslamalaşdyrmakda, gurmakda, şol sanda ýangyn duýduryş ulgamlaryny gurnamakda, tehniki hyzmatynda, lift merkezleşdirmesini ussatlyk bilen sazlamakda giň tejribesi bar.	Habarlaşmak
+1	2022-06-20 12:06:20.758	2022-08-17 16:22:39.352	\N	2	ru	Höwür — прочность, стойкость и уверенность.	Индивидуальное предприятие “Höwür” имеет широкий опыт в проектировке, постройке зданий и объектов, в том числе в монтаже, техническом обсулиживании систем пожарной сигнализации, грамотной настройке лифтовой диспетчеризации.   	Связаться
+2	2022-06-24 16:20:55.711	2022-08-17 16:22:39.449	\N	2	en	Höwür stands for strength, resilience and confidence.	Individual enterprise "Höwür" has extensive experience in the design, construction of buildings and facilities, including installation, technical maintenance of fire alarm systems, competent adjustment of elevator dispatching.	Contact us
+3	2022-06-24 16:22:30.188	2022-08-17 16:22:39.454	\N	2	tk	Höwür — berklik, durnuklylyk we ynam.	“Höwür” Hususy kärhanasynyň binalary we desgalary taslamalaşdyrmakda, gurmakda, şol sanda ýangyn duýduryş ulgamlaryny gurnamakda, tehniki hyzmatynda, lift merkezleşdirmesini ussatlyk bilen sazlamakda giň tejribesi bar.	Habarlaşmak
 \.
 
 
@@ -2938,21 +2945,21 @@ COPY public.mains_components (id, entity_id, component_id, component_type, field
 65	1	1	navbar-header.navbar	navbar	1
 66	1	1	contacts.phone-number	phone	1
 67	1	1	contacts.address	address	1
-179	1	1	services.services	services	1
-180	1	1	products.product	product	1
-181	1	1	about.about	about	1
-182	1	1	certificate.certificate	certificate	1
-183	1	1	form.form-main	form	1
-274	2	2	services.services	services	1
-275	2	2	products.product	product	1
-276	2	2	about.about	about	1
-277	2	2	certificate.certificate	certificate	1
-278	2	2	form.form-main	form	1
-279	3	3	services.services	services	1
-280	3	3	products.product	product	1
-281	3	3	about.about	about	1
-282	3	3	certificate.certificate	certificate	1
-283	3	3	form.form-main	form	1
+289	2	2	services.services	services	1
+290	2	2	products.product	product	1
+291	2	2	about.about	about	1
+292	2	2	certificate.certificate	certificate	1
+293	2	2	form.form-main	form	1
+294	3	3	services.services	services	1
+295	3	3	products.product	product	1
+296	3	3	about.about	about	1
+297	3	3	certificate.certificate	certificate	1
+298	3	3	form.form-main	form	1
+309	1	1	services.services	services	1
+310	1	1	products.product	product	1
+311	1	1	about.about	about	1
+312	1	1	certificate.certificate	certificate	1
+313	1	1	form.form-main	form	1
 \.
 
 
@@ -3046,14 +3053,14 @@ COPY public.pagas_services (id, created_at, updated_at, created_by_id, updated_b
 9	2022-07-07 10:25:33.755	2022-08-12 13:46:18.696	\N	2	tk	Ýangyn howpsuzlygy	3	Binalaryň we desgalaryň ýangyn howpsuzlygy ýangyndan we beýleki adatdan daşary ýagdaýlardan goraglylygy üpjün etmeli, adamlar we emläkler üçin howply netijeleri azaltmaly. Howpsuzlyga bolan talaplar desganyň görnüşi, onuň kategoriýalary we howplulyk synpy boýunça, şeýle hem iş görnüşleri we beýleki görkezijiler boýunça kesgitlenýär.\n\nÝangyn howpsuzlyk ulgamy indikilerden ybarat: Awtomatlaşdyrylan ýa-da eldeki signalizasiýa ulgamy, Habar beriş we adamlary halas etmegi dolandyryş ulgamy, Ýangyn söndüriş ulgamy. \n	Biziň ýerine ýetiren işlerimiz bilen aşakda tanşyp bilersiňiz.	fire-safety
 17	2022-07-07 10:48:58.485	2022-08-12 13:44:36.407	\N	2	en	CCTV	6	Video surveillance - a system that provides video recording of happening within the range of IP cameras.\n\nModern digital equipment of “Tiady” company can be installed in private houses, cottages, supermarkets, restaurants, as well as in any administrative offices, which will ensure the necessary level of security in a certain area. Our company is ready to install a video surveillance system at any facility.	You can see our works below.	surveillance
 18	2022-07-07 10:49:17.391	2022-08-12 13:44:36.589	\N	2	tk	Wideo gözegçilik	6	Wideogözegçilik  - IP kameralaryň hereketiniň çäginde bolup geçýänleriň wideo ýazgysyny üpjün edýän ulgamdyr.\n\n“Tiandy” kompaniýasynyň häzirkizaman sanly enjamlaryny hususy jaýlarda, kotejlerde, supermarketlerde, restoranlarda, şeýle hem islendik administratiw desgalarda gurnamak bolýar, bu bolsa belli bir çäkde zerur bolan howpsuzlyk derejesini üpjün etmäge ýardam eder. Kompaniýamyz islendik desgada wideogözegçilik ulgamynyň gurnamasyny amala aşyrmaga taýýar. 	Biziň ýerine ýetiren işlerimiz bilen aşakda tanşyp bilersiňiz.	surveillance
-11	2022-07-07 10:27:58.634	2022-08-12 13:45:40.392	\N	2	en	Elevator dispatching	4	The centralization of the operational control of the operation of elevators and the voice communication of elevator passengers with the dispatcher is carried out using elevator dispatching.\n\nThe solutions of our partners from “OB” company for a comprehensive and timely response to failures, as well as technical support, allow us to guarantee convenience, safety and reliability. We install a control and response system, a surveillance system, as well as a set of measures to ensure communication between elevator passengers and dispatchers.	You can see our works below.	elevators
-12	2022-07-07 10:28:40.662	2022-08-12 13:45:40.455	\N	2	tk	Lift merkezleşdirmesi	4	Liftleriň işiniň operatir gözegçiliginiň we lift ýolagçylarynyň dispetçer bilen sesli aragatnaşygynyň merkezleşdirilmegi lift merkezleşdirmesi arkaly amala aşyrylýar.\n\nBiziň “OB” hyzmatdaşymyzyň näsazlyklara toplumlaýyn we öz wagtynda seslenmek boýunça çözgütleri, şeýle hem tehniki goldawy bize rahatlygy, howpsuzlygy we ygtybarlylygy kepillendirmäge mümkinçilik berýär. Biz dolandyryş we seslenme ulgamlaryny, gözegçilik ediş ulgamlaryny, şeýle hem liftiň ýolagçylarynyň we dispetçeriň aragatnaşykda bolmagyny üpjün etmek boýunça çäreleriň toplumyny gurnaýarys. 	Biziň ýerine ýetiren işlerimiz bilen aşakda tanşyp bilersiňiz.	elevators
 7	2022-07-07 10:24:56.251	2022-08-12 13:46:18.691	\N	2	ru	Пожарная безопасность	3	Пожарная безопасность зданий и сооружений должна обеспечить защиту от возгораний и других чрезвычайных ситуаций, минимизировать опасные последствия для людей и имущества. Требования к безопасности определяются индивидуально по виду объекта, его категориям и классам опасности, по видам деятельности, другим показателям.\n\nВ систему пожарной безопасности входит: Система автоматической или ручной сигнализации, Система оповещения и управление эвакуацией людей, Система пожаротушения.	С нашими работами Вы можете ознакомиться ниже.	fire-safety
 14	2022-07-07 10:42:36.286	2022-08-12 13:47:23.207	\N	2	en	Design of Local Area Networks	5	A local area network is a group of computing devices that forms a structure with coverage in a specific, usually small area. Such a network can unite computers and peripherals located in the same room, building, or in several civil or industrial buildings. We carry out installation and commissioning of the network using the equipment of our partners ONV. Devices can be connected using cables, fiber optics or Wi-Fi.	You can see our work below.	networking
 13	2022-07-07 10:39:16.484	2022-08-12 13:47:23.282	\N	2	ru	Проектирование ЛВ сетей	5	Локально-вычислительная сеть — это группа вычислительных устройств, образующая структуру с покрытием на конкретной, как правило, небольшой территории. Такая сеть может объединять компьютеры и периферию, находящиеся в одном помещении, здании, или в нескольких гражданских или промышленных сооружениях.	С нашими работами Вы можете ознакомиться ниже.	networking
 15	2022-07-07 10:42:44.98	2022-08-12 13:47:23.284	\N	2	tk	Ýerli-hasaplaýjy tory taslamalaşdyrmak	5	Ýerli-hasaplaýjy tory – bu adatça anyk uly bolmadyk çäkde, örtükli gurluşy emele getirýän, hasaplaýjy enjamlaryň toparydyr. Şeýle tor bir jaýda, binada, ýa-da birnäçe raýat ýa-da senagat maksatly desgalarda ýerleşýän kompýuterleri we periferiýany birleşdirip bilýar.\n\nBiz ONV hyzmatdaşlarymyzyň enjamlarynyň kömegi bilen, gurnama we ulanyşa goýberiş-düzediş işlerini amala aşyrýarys. Enjamlaryň aragatnaşygy kabelleriň, optiki-süýüm tehnologiýalary ýa-da Wi-Fi arkaly üpjün edilip biliner.	Biziň ýerine ýetiren işlerimiz bilen aşakda tanşyp bilersiňiz.	networking
+11	2022-07-07 10:27:58.634	2022-08-16 17:17:39.657	\N	2	en	Elevator dispatching	4	The centralization of the operational control of the operation of elevators and the voice communication of elevator passengers with the dispatcher is carried out using elevator dispatching.\n\nThe solutions of our partners from “OB” company for a comprehensive and timely response to failures, as well as technical support, allow us to guarantee convenience, safety and reliability. We install a control and response system, a surveillance system, as well as a set of measures to ensure communication between elevator passengers and dispatchers.	You can see our works below.	elevators
+12	2022-07-07 10:28:40.662	2022-08-16 17:17:39.661	\N	2	tk	Lift merkezleşdirmesi	4	Liftleriň işiniň operatir gözegçiliginiň we lift ýolagçylarynyň dispetçer bilen sesli aragatnaşygynyň merkezleşdirilmegi lift merkezleşdirmesi arkaly amala aşyrylýar.\n\nBiziň “OB” hyzmatdaşymyzyň näsazlyklara toplumlaýyn we öz wagtynda seslenmek boýunça çözgütleri, şeýle hem tehniki goldawy bize rahatlygy, howpsuzlygy we ygtybarlylygy kepillendirmäge mümkinçilik berýär. Biz dolandyryş we seslenme ulgamlaryny, gözegçilik ediş ulgamlaryny, şeýle hem liftiň ýolagçylarynyň we dispetçeriň aragatnaşykda bolmagyny üpjün etmek boýunça çäreleriň toplumyny gurnaýarys. 	Biziň ýerine ýetiren işlerimiz bilen aşakda tanşyp bilersiňiz.	elevators
 16	2022-07-07 10:48:41.422	2022-08-12 13:44:36.586	\N	2	ru	Видеонаблюдение	6	Видеонаблюдение - система, обеспечивающая видеозапись происходящего в пределах действия IP камер. \n\nСовременное цифровое оборудование компании «Tiady» можно установить в частных домах, котеджах, супермаркетах, ресторанах, а также в любых административных, что позволит обеспечить необходимый уровень безопасности на определенной территории.	С нашими работами Вы можете ознакомиться ниже.	surveillance
-10	2022-07-07 10:27:22.731	2022-08-12 13:45:40.452	\N	2	ru	Лифтовая диспечеризация	4	Цетрализация оперативного контроля работы лифтов и голосовой связи пассажиров лифта с диспетчером осуществляется при помощи лифтовой диспетчеризации.\n\nРешения наших парнеров “ОБЬ” по комплексному и своевременному реагированию на сбои, а также техническая поддержка позволяют нам гарантировать нам удобсто, безопасность и надежность.   Мы устанавливаем систему управления и реагирования, систему наблюдения, а также комплекс мер по обеспечению связи пасажиров лифта и диспетчеров.	С нашими работами Вы можете ознакомиться ниже.	elevators
+10	2022-07-07 10:27:22.731	2022-08-16 17:17:39.547	\N	2	ru	Лифтовая диспечеризация	4	Цетрализация оперативного контроля работы лифтов и голосовой связи пассажиров лифта с диспетчером осуществляется при помощи лифтовой диспетчеризации.\n\nРешения наших парнеров “ОБЬ” по комплексному и своевременному реагированию на сбои, а также техническая поддержка позволяют нам гарантировать нам удобсто, безопасность и надежность. Мы устанавливаем систему управления и реагирования, систему наблюдения, а также комплекс мер по обеспечению связи пасажиров лифта и диспетчеров.	С нашими работами Вы можете ознакомиться ниже.	elevators
 \.
 
 
@@ -3310,24 +3317,24 @@ COPY public.product_lists_localizations_links (product_list_id, inv_product_list
 --
 
 COPY public.service_lists (id, heading, description, created_at, updated_at, created_by_id, updated_by_id, locale, sort_id) FROM stdin;
-9	Integrated construction	Company has all the resources to perform a range of construction works of premises and buildings, pipelines, installation of heating, air conditioning, ventilation systems, as well as other construction work.	2022-06-24 15:21:21.882	2022-08-12 13:38:01.933	\N	2	en	1
-10	Toplumlaýyn gurluşyk işleri	Kompaniýanyň jaýlaryň we binalaryň  gurluşygy, turbageçirijiler, ýyladyş, howany sowadyş, howalandyryş ulgamlaryny gurnamak boýunça işleriň toplumyny, şeýle hem beýleki gurluşyk işlerini ýerine ýetirmek üçin ähli serişdeleri bar.	2022-06-24 15:21:48.271	2022-08-12 13:38:02.004	\N	2	tk	1
-11	Elevator dispatching	We are able to provide an effective response to a failure, breakdown of elevator equipment, with the operational control support for the safety of passengers and their timely communication with the dispatcher.	2022-06-24 15:22:37.622	2022-08-12 13:38:23.754	\N	2	en	4
-5	Лифтовая диспетчеризация	Мы в состоянии обеспечить эффективное реагирование на сбой, поломку лифтового оборудования, при помощи оперативного контроля безопасности пасажиров и их своевременной связи с диспетчером.	2022-06-23 15:00:04.677	2022-08-12 13:38:23.807	\N	2	ru	4
-12	Lift merkezleşdirmesi	Biz ýolagçylaryň howpsuzlygynyň operatiw gözegçiligi we olaryň öz wagtynda dispetçer bilen habarlaşmagy arkaly, lift enjamynyň näsazlyklaryna, döwülmegine netijeli jogap bermegi üpjün edip bilýäris.	2022-06-24 15:23:08.259	2022-08-12 13:38:23.809	\N	2	tk	4
-15	Design	We are ready to develop concepts from scratch and carry out construction, industrial and preliminary design of Your building and accompany Your project throughout the construction.	2022-06-24 15:25:26.955	2022-08-12 13:39:23.456	\N	2	en	2
-2	Проектирование	Мы готовы разработать концепции с нуля и выполнить строительное, промышленное и эскизное проектирование Вашего здания и сопровождать Ваш проект на протяжении всего строительства.	2022-06-20 12:50:08.33	2022-08-12 13:39:23.499	\N	2	ru	2
-16	Taslamalaşdyrmak	Biz binaňyzyň täzeden başlap konsepsiýany işläp taýýarlamaga we gurluşyk, senagat we eskiz taslamasyny ýerine ýetirmäge, şeýle hem taslamaňyzy ähli gurluşyk döwründe alyp barmaga taýýar.	2022-06-24 15:25:45.934	2022-08-12 13:39:23.5	\N	2	tk	2
-17	Design of LP networks	Design, installation, commissioning are necessary for the successful automation of enterprises’ processes, we combine computer equipment and components into a common network that provides reliable optimization.	2022-06-24 15:27:21.022	2022-08-12 13:39:47.025	\N	2	en	6
-18	Ýerli-hasapaýjy torlary taslamalaşdyrmak	Taslamalaşdyrma, gurnama, ulanyşa goýberiş-düzediş işleri kärhananyň prosessleriniň üstünlikli awtomatlaşdyrylmagy üçin zerurdyr, biz ygtybarly optimizasiýany üpjün edýän, kompýuter enjamyny we degişlilikleri bir tora jemleýäris.	2022-06-24 15:28:03.478	2022-08-12 13:39:47.064	\N	2	tk	6
-4	Пожарная безопасность	Компания успешно проектирует и внедряет необходимые инженерно-технические решения, которые обеспечивают безопасную среду в зданиях и предприятиях.	2022-06-20 12:51:16.715	2022-08-12 13:40:31.409	\N	2	ru	3
-13	Fire safety	Company successfully designs and implements the necessary engineering and technical solutions that provide a safe environment in buildings and enterprises.	2022-06-24 15:23:51.624	2022-08-12 13:40:31.465	\N	2	en	3
-14	Ýangyn howpsuzlygy	Kompaniýa binalarda we kärhanalarda howpsuz gurşawy üpjün edýän, zerur bolan inžener-tehniki çözgütleri üstünlikli taslamalaşdyrýar we ornaşdyrýar.	2022-06-24 15:24:53.991	2022-08-12 13:40:31.476	\N	2	tk	3
+18	Ýerli-hasapaýjy torlary taslamalaşdyrmak	Taslamalaşdyrma, gurnama, ulanyşa goýberiş-düzediş işleri kärhananyň prosessleriniň üstünlikli awtomatlaşdyrylmagy üçin zerurdyr, biz ygtybarly optimizasiýany üpjün edýän, kompýuter enjamyny we degişlilikleri bir tora jemleýäris.	2022-06-24 15:28:03.478	2022-08-17 15:59:31.871	\N	2	tk	6
+4	Пожарная безопасность	Компания успешно проектирует и внедряет необходимые инженерно-технические решения, которые обеспечивают безопасную среду в зданиях и предприятиях.	2022-06-20 12:51:16.715	2022-08-17 15:59:42.655	\N	2	ru	3
+14	Ýangyn howpsuzlygy	Kompaniýa binalarda we kärhanalarda howpsuz gurşawy üpjün edýän, zerur bolan inžener-tehniki çözgütleri üstünlikli taslamalaşdyrýar we ornaşdyrýar.	2022-06-24 15:24:53.991	2022-08-17 15:59:42.687	\N	2	tk	3
+10	Toplumlaýyn gurluşyk işleri	Kompaniýanyň jaýlaryň we binalaryň  gurluşygy, turbageçirijiler, ýyladyş, howany sowadyş, howalandyryş ulgamlaryny gurnamak boýunça işleriň toplumyny, şeýle hem beýleki gurluşyk işlerini ýerine ýetirmek üçin ähli serişdeleri bar.	2022-06-24 15:21:48.271	2022-08-17 15:58:33.248	\N	2	tk	1
+9	Integrated construction	Company has all the resources to perform a range of construction works of premises and buildings, pipelines, installation of heating, air conditioning, ventilation systems, as well as other construction work.	2022-06-24 15:21:21.882	2022-08-17 15:58:33.249	\N	2	en	1
+13	Fire safety	Company successfully designs and implements the necessary engineering and technical solutions that provide a safe environment in buildings and enterprises.	2022-06-24 15:23:51.624	2022-08-17 15:59:42.688	\N	2	en	3
+5	Лифтовая диспетчеризация	Мы в состоянии обеспечить эффективное реагирование на сбой, поломку лифтового оборудования, при помощи оперативного контроля безопасности пасажиров и их своевременной связи с диспетчером.	2022-06-23 15:00:04.677	2022-08-17 15:58:59.537	\N	2	ru	4
+11	Elevator dispatching	We are able to provide an effective response to a failure, breakdown of elevator equipment, with the operational control support for the safety of passengers and their timely communication with the dispatcher.	2022-06-24 15:22:37.622	2022-08-17 15:58:59.578	\N	2	en	4
+12	Lift merkezleşdirmesi	Biz ýolagçylaryň howpsuzlygynyň operatiw gözegçiligi we olaryň öz wagtynda dispetçer bilen habarlaşmagy arkaly, lift enjamynyň näsazlyklaryna, döwülmegine netijeli jogap bermegi üpjün edip bilýäris.	2022-06-24 15:23:08.259	2022-08-17 15:58:59.581	\N	2	tk	4
+2	Проектирование	Мы готовы разработать концепции с нуля и выполнить строительное, промышленное и эскизное проектирование Вашего здания и сопровождать Ваш проект на протяжении всего строительства.	2022-06-20 12:50:08.33	2022-08-17 15:59:14.774	\N	2	ru	2
+16	Taslamalaşdyrmak	Biz binaňyzyň täzeden başlap konsepsiýany işläp taýýarlamaga we gurluşyk, senagat we eskiz taslamasyny ýerine ýetirmäge, şeýle hem taslamaňyzy ähli gurluşyk döwründe alyp barmaga taýýar.	2022-06-24 15:25:45.934	2022-08-17 15:59:14.813	\N	2	tk	2
+15	Design	We are ready to develop concepts from scratch and carry out construction, industrial and preliminary design of Your building and accompany Your project throughout the construction.	2022-06-24 15:25:26.955	2022-08-17 15:59:14.814	\N	2	en	2
+17	Design of LP networks	Design, installation, commissioning are necessary for the successful automation of enterprises’ processes, we combine computer equipment and components into a common network that provides reliable optimization.	2022-06-24 15:27:21.022	2022-08-17 15:59:31.87	\N	2	en	6
 7	CCTV	We successfully implement video surveillance systems, with guarantee for quality of visual control and automatic data analysis.	2022-06-24 15:19:54.377	2022-08-12 13:37:45.008	\N	2	en	5
 3	Видеонаблюдение	Мы успешно внедряем системы видеонаблюдения, гарантируя качество визуального контроля и автоматического анализа данных.	2022-06-20 12:50:49.435	2022-08-12 13:37:45.054	\N	\N	ru	5
 8	Wideogözegçilik	Biz daşky gözegçiligiň hilini we maglumatlaryň awtomatiki derňewini kepillendirýän wideo gözegçilik ulgamyny üstünlikli ornaşdyrýarys.	2022-06-24 15:20:58.58	2022-08-12 13:37:45.055	\N	2	tk	5
-1	Комплексное строительство	Компания имеет все ресурсы для выполнения комплекса работ по строительству, помещений и зданий, трубопроводов, установке систем отопления, кондиционирования, вентиляции, а также прочие строительные работы.	2022-06-20 12:49:13.72	2022-08-12 13:38:02.002	\N	\N	ru	1
-6	Проектировка слаботочных сетей	Проектирование, монтаж, пуско-наладка необходима для успешной автоматизации процессов предприятий, мы объединяем компьютерное оборудование и комплектующие в общую сеть, обеспечивающие надежную оптимизацию.	2022-06-23 15:00:50.943	2022-08-12 13:39:47.062	\N	2	ru	6
+1	Комплексное строительство	Компания имеет все ресурсы для выполнения комплекса работ по строительству, помещений и зданий, трубопроводов, установке систем отопления, кондиционирования, вентиляции, а также прочие строительные работы.	2022-06-20 12:49:13.72	2022-08-17 15:58:33.21	\N	2	ru	1
+6	Проектировка слаботочных сетей	Проектирование, монтаж, пуско-наладка необходима для успешной автоматизации процессов предприятий, мы объединяем компьютерное оборудование и комплектующие в общую сеть, обеспечивающие надежную оптимизацию.	2022-06-23 15:00:50.943	2022-08-17 15:59:31.815	\N	2	ru	6
 \.
 
 
@@ -3380,6 +3387,7 @@ COPY public.service_lists_localizations_links (service_list_id, inv_service_list
 --
 
 COPY public.strapi_api_tokens (id, name, description, type, access_key, created_at, updated_at, created_by_id, updated_by_id) FROM stdin;
+1	insomnia		full-access	42383d21e19788a19f331f8127d830c11b77912887e6005c70ee95580c1218d2364a7c3cd81e64aad83b4d1e318ec0003d2fb04f1fce2c9334165e85c7d2118f	2022-08-16 00:22:01.105	2022-08-16 00:22:01.105	\N	\N
 \.
 
 
@@ -3635,7 +3643,7 @@ SELECT pg_catalog.setval('public.components_footer_footer_mains_id_seq', 3, true
 -- Name: components_form_form_mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 132, true);
+SELECT pg_catalog.setval('public.components_form_form_mains_components_id_seq', 150, true);
 
 
 --
@@ -3670,7 +3678,7 @@ SELECT pg_catalog.setval('public.components_services_services_id_seq', 3, true);
 -- Name: files_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.files_id_seq', 73, true);
+SELECT pg_catalog.setval('public.files_id_seq', 80, true);
 
 
 --
@@ -3684,7 +3692,7 @@ SELECT pg_catalog.setval('public.i18n_locale_id_seq', 3, true);
 -- Name: layouts_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.layouts_components_id_seq', 160, true);
+SELECT pg_catalog.setval('public.layouts_components_id_seq', 210, true);
 
 
 --
@@ -3705,7 +3713,7 @@ SELECT pg_catalog.setval('public.locals_id_seq', 9, true);
 -- Name: mains_components_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.mains_components_id_seq', 283, true);
+SELECT pg_catalog.setval('public.mains_components_id_seq', 313, true);
 
 
 --
@@ -3747,7 +3755,7 @@ SELECT pg_catalog.setval('public.service_lists_id_seq', 18, true);
 -- Name: strapi_api_tokens_id_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.strapi_api_tokens_id_seq', 1, false);
+SELECT pg_catalog.setval('public.strapi_api_tokens_id_seq', 1, true);
 
 
 --
