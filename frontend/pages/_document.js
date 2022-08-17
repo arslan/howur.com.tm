@@ -16,8 +16,8 @@ class MyDocument extends Document {
 						href='https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&display=swap'
 						rel='stylesheet'
 					/>
-					<meta name="Hovur's Website" content='Construction' />
-					<link rel='icon' href='/favicon.ico' />
+					<meta name="Howur's Website" content='Your reliable partner in Turkmenistan.' />
+					<link rel='icon' href='/favicon.svg' />
 				</Head>
 				<body>
 					<Main />

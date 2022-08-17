@@ -46,7 +46,7 @@ const ContactSection = ({
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3148.6718832879487!2d58.34255391571648!3d37.891355413215805!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f70025ecc6a7673%3A0xf0ae0c7b777af2a4!2zQXJjaGFiaWwgSHd5IDU1LCBBc2hnYWJhdCwg0KLRg9GA0LrQvNC10L3QuNGB0YLQsNC9!5e0!3m2!1sru!2s!4v1656075780914!5m2!1sru!2s"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.2115746508605!2d58.34831324617642!3d37.89117491551739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f70025fe71f68c7%3A0xd4741d83aa694edf!2zQXLDp2FiaWwgxZ9hw71vbHkgNTIsIEHFn2dhYmF0LCBUdXJrbWVuaXN0YW4!5e0!3m2!1sen!2s!4v1660735896470!5m2!1sen!2s"
           width="100%"
           height="400px"
           allowFullScreen=""

@@ -8,13 +8,13 @@ const ReactPlayer = dynamic(() => import("react-player"), { ssr: false });
 
 const Hero = ({ data: { headVideo, head, desc, headButton } }) => {
 	return (
-		<div className='max-w-7xl mx-auto pt-12 pb-24 2xl:px-0 sm:px-12 flex sm:flex-col sm:items-center xl:items-start sm xl:flex-row sm:space-x-0 xl:space-x-12 sm:space-y-6 xl:space-y-0'>
+		<div className='flex pt-12 pb-24 mx-auto max-w-7xl 2xl:px-0 sm:px-12 sm:flex-col sm:items-center xl:items-start sm xl:flex-row sm:space-x-0 xl:space-x-12 sm:space-y-6 xl:space-y-0'>
 			<div className='sm:w-full xl:w-2/5'>
 				<h1 className='w-full text-[32px] font-bold  pb-8'>
 					<HighlightWords className='opacity-10' text={head} />
 				</h1>
 				<p>{desc}</p>
-				<div className='sm:w-full xl:w-1/2 py-2 text-center text-white mt-8 px-2 bg-red rounded'>
+				<div className='px-2 py-2 mt-8 text-center text-white rounded sm:w-full xl:w-1/2 bg-red'>
 					<Link href='#contacts' passhref>
 						<a className=''>{headButton}</a>
 					</Link>

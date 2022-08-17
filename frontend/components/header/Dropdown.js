@@ -24,9 +24,9 @@ export default function Dropdown({ name }) {
 	return (
 		<Menu as='div' className='relative inline-block'>
 			<div>
-				<Menu.Button className='w-full px-4  cursor-pointer relative flex hover:text-red text-xl'>
+				<Menu.Button className='relative flex px-4 cursor-pointer hover:text-red sm:text-sm xl:text-md'>
 					{name}
-					<div className='w-4 self-center ml-2 mt-[3px]'>
+					<div className='self-center ml-1 mt-[3px]'>
 						<GoChevronDown />
 					</div>
 				</Menu.Button>
@@ -40,12 +40,12 @@ export default function Dropdown({ name }) {
 				leaveFrom='transform opacity-100 scale-100'
 				leaveTo='transform opacity-0 scale-95'
 			>
-				<Menu.Items className='absolute mt-6 w-64  rounded-sm bg-white shadow-lg focus:outline-none'>
-					<div className=' py-1 '>
+				<Menu.Items className='absolute w-64 mt-6 bg-white rounded-sm shadow-lg focus:outline-none'>
+					<div className='py-1 '>
 						{underNav.map(({ attributes: { name, slug } }) => {
 							return (
 								<Menu.Item
-									className='absolute shadow-lg  focus:outline-none z-20 '
+									className='absolute z-20 shadow-lg focus:outline-none '
 									key={uuid_v4()}
 								>
 									<Link href={`/services/${slug}`} locale={locale} passHref>

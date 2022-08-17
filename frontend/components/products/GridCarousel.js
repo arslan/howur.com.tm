@@ -31,7 +31,7 @@ const GridCarousel = ({ product_lists: { brands } }) => {
 				pagination={{
 					clickable: true,
 				}}
-				mousewheel={true}
+				mousewheel={false}
 				keyboard={true}
 				autoplay={true}
 				modules={[Navigation, Pagination, Mousewheel, Keyboard, Autoplay]}
@@ -47,7 +47,7 @@ const GridCarousel = ({ product_lists: { brands } }) => {
 						return (
 							<SwiperSlide key={description}>
 								<div className='sm:px-12 2xl:px-0 2xl:w-full sm:w-screen' >
-									<h4 className='mb-2 ml-0.5 text-xl leading-7 sm:w-full xl:w-1/2 pb-12 h-48'>
+									<h4 className='mb-2 ml-0.5 lg:text-xl leading-7 sm:w-full xl:w-1/2 pb-12 sm:h-96 sm:text-md lg:h-48'>
 										{description}
 									</h4>
 								</div>

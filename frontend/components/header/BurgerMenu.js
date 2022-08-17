@@ -66,63 +66,9 @@ function BurgerMenu(props) {
 			},
 		},
 	} = useContext(layoutContext);
-
-	const navigation = [];
-	// navigations.map((e) => {
-	//   console.log(e.attributes.name);
-	//   switch (e.attributes.name) {
-	//     case "Главная":
-	//       navigation[0] = e;
-	//       break;
-	//     case "Home":
-	//       navigation[0] = e;
-	//       break;
-	//     case "Oý":
-	//       navigation[0] = e;
-	//       break;
-	//     case "Услуги":
-	//       navigation[1] = e;
-	//       break;
-	//     case "Services":
-	//       navigation[1] = e;
-	//       break;
-	//     case "Hyzmatlar":
-	//       navigation[1] = e;
-	//       break;
-	//     case "О нас":
-	//       navigation[2] = e;
-	//       break;
-	//     case "About Us":
-	//       navigation[2] = e;
-	//       break;
-	//     case "Biz hakda":
-	//       navigation[2] = e;
-	//       break;
-	//     case "Лицензии и сертификаты":
-	//       navigation[3] = e;
-	//       break;
-	//     case "Licenses and certificates":
-	//       navigation[3] = e;
-	//       break;
-	//     case "Ygtyýarnamalar we şahadatnamalar":
-	//       navigation[3] = e;
-	//       break;
-	//     case "Контакты":
-	//       navigation[4] = e;
-	//       break;
-	//     case "Contacts":
-	//       navigation[4] = e;
-	//       break;
-	//     case "Aragatnaşyklar":
-	//       navigation[4] = e;
-	//       break;
-	//     default:
-	//       break;
-	//   }
-	// });
 	return (
 		<Menu styles={styles}>
-			<h4 className='font-bold text-2xl  text-greyDark mb-12'>Menu</h4>
+			<h4 className='mb-12 text-2xl font-bold text-greyDark'>Menu</h4>
 			{navigations.map(({ attributes: { name, href } }, i) => {
 				if (href === null) {
 					return (
@@ -134,7 +80,7 @@ function BurgerMenu(props) {
 					);
 				}
 				return (
-					<li className='text-black text-xl pb-4' key={uuid_v4()}>
+					<li className='pb-4 text-xl text-black' key={uuid_v4()}>
 						<Link href={href} passHref>
 							<a
 								className={`cursor-pointer hover:text-red ${

@@ -30,7 +30,6 @@ export async function getStaticProps(ctx) {
 		};
 	}
 	const responseData = data[0].attributes;
-	console.log(responseData)
 	return {
 		props: { responseData },
 	};

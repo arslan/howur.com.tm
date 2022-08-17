@@ -34,7 +34,7 @@ function Lang() {
 
 	return (
 		<Menu as='div' className='relative inline-block text-[#7A7A7A] ml-2'>
-			<Menu.Button className='relative flex w-full text-xl hover:text-red'>
+			<Menu.Button className='relative flex w-full sm:text-sm xl:text-md hover:text-red'>
 				{lang[currentLang]}
 				<div className='self-center w-4'>
 					<GoChevronDown />

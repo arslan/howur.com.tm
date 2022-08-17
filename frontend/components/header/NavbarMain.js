@@ -23,10 +23,10 @@ function NavbarMain(props) {
 						return <Dropdown name={name} key={uuid_v4()} />;
 					}
 					return (
-						<li className='text-black text-xl' key={uuid_v4()}>
+						<li className='text-black sm:text-sm xl:text-md' key={uuid_v4()}>
 							<Link href={href} passHref>
 								<a
-									className={`cursor-pointer px-4 py-2 hover:text-red ${
+									className={`cursor-pointer py-2 hover:text-red ${
 										currentSection === "/" + href
 											? " text-red border-t-2 border-red"
 											: " px-4"
