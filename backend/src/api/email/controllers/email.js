@@ -11,6 +11,7 @@ module.exports = {
 
     try {
       const emailOptions = {
+	from: 'howur.com.tm <howur.com.tm@hillitilsimat.com>',
         to: process.env.EMAIL_SMTP_USER,
         subject: `Message From ${name}`,
         text: message + " | Sent from: " + email,
@@ -19,10 +20,10 @@ module.exports = {
       };
 
       await strapi.services["api::email.email"].send1(emailOptions); //sending a message through the created server.. works
-      /**
-       * sending emails through the nodemailer provider.. does not work
-       * await strapi.plugins["email"].services.email.send(emailOptions);
-       */
+      
+       // sending emails through the nodemailer provider.. does not work
+       // await strapi.plugins["email"].services.email.send(emailOptions);
+       
 
       strapi.log.debug(`Email sent to ${email}`);
       ctx.send({ message: "Email sent" });

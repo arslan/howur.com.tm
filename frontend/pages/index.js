@@ -153,5 +153,6 @@ export const getStaticProps = async ({ locale }) => {
   data.services = { ...data.services, service_lists };
   return {
     props: { data },
+	  revalidate: 10,
   };
 };

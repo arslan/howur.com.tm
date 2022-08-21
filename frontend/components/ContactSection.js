@@ -38,7 +38,7 @@ const ContactSection = ({
             </div>
             <div className="flex items-center">
               <FiPhone />
-              <a href="tel:+99365039539" className="pt-1 pl-2 text-black">
+              <a href="" className="pt-1 pl-2 text-black">
                 {form_number}
               </a>
             </div>
