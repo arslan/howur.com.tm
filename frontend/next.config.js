@@ -6,6 +6,6 @@ module.exports = {
 		HCAPTCHA: process.env.HCAPTCHA,
 	},
 	images: {
-		domains: ["howur.com.tm"],
+		domains: [process.env.IMAGE_DOMAIN],
 	},
 };

@@ -1,0 +1,27 @@
+#!/bin/bash
+
+CURRENT_TIME=$(date "+%Y.%m.%d-%H.%M.%S")
+
+echo "What do you want to do? [ dbdump | dbrestore ]"
+
+case $1 in
+    dbdump)
+        echo -n "Your docker instance name: "
+        read DOCKER_NAME
+        echo -n "Your database name: "
+        read DATABASE_NAME
+        docker exec -i ${DOCKER_NAME}-postgres-1 /bin/bash -c "PGPASSWORD=123r pg_dump --username postgres ${DATABASE_NAME}" > ./dump-${CURRENT_TIME}.sql
+        ;;
+    dbrestore)
+        echo -n "Your docker instance name: "
+        read DOCKER_NAME
+        echo -n "Your database name: "
+        read DATABASE_NAME
+        echo -n "Enter path to your .sql file: "
+        read DB_DUMP_PATH
+        docker exec -i ${DOCKER_NAME}-postgres-1 /bin/bash -c "PGPASSWORD=123r psql --username postgres ${DATABASE_NAME}" < ./${DB_DUMP_PATH}
+        ;;
+    *)
+      echo -n "unknown"
+      ;;
+esac
