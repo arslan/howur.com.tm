@@ -1,9 +1,9 @@
-import Link from "next/link";
-import { FiPhone } from "react-icons/fi";
-import { HiOutlineLocationMarker } from "react-icons/hi";
-import { MdOutlineEmail } from "react-icons/md";
-import Socialicons from "./common/SocialIcons";
-import Form from "./Form";
+import Link from 'next/link';
+import { FiPhone } from 'react-icons/fi';
+import { HiOutlineLocationMarker } from 'react-icons/hi';
+import { MdOutlineEmail } from 'react-icons/md';
+import Socialicons from './common/SocialIcons';
+import Form from './Form';
 
 const ContactSection = ({
   data: {
@@ -42,7 +42,9 @@ const ContactSection = ({
                 {form_number}
               </a>
             </div>
-            <Socialicons />
+            <div className="flex items-center">
+              <Socialicons /> <p className="ml-2">Skype</p>
+            </div>
           </div>
         </div>
         <iframe

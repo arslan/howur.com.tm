@@ -35,7 +35,7 @@ const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
   };
   useEffect(() => {}, [token]);
   return (
-    <form className="space-y-8" onSubmit={handleSubmit(onSubmit, onError)}>
+    <form className="space-y-6" onSubmit={handleSubmit(onSubmit, onError)}>
       <input
         type="text"
         placeholder={formName}
@@ -59,15 +59,13 @@ const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
       <textarea
         rows={3}
         placeholder={formMess}
-        className={`h-32 pl-2 border-b-2 outline-none sm:w-full lg:w-4/5  ${
+        className={`pl-2 border-b-2 outline-none sm:w-full lg:w-4/5  ${
           errors?.message ? 'border-red' : 'border-greyDark'
         }`}
         {...register('message', { required: true, maxLength: 1000 })}
       />
       <ReCAPTCHA
         onChange={setToken}
-        size="compact"
-        badge="inline"
         onErrored={() => setToken(null)}
         onExpired={() => setToken(null)}
         ref={captchaRef}
