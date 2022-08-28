@@ -1,15 +1,14 @@
 "use strict";
-const { verify } = require("hcaptcha");
 /**
  * `verifyCaptcha` policy.
  */
+const axios = require("axios").default;
 
-module.exports = async (ctx, next) => {
-  const secret = strapi.config.get("server.hcaptchaSecret");
+module.exports = async (ctx) => {
+  const secret = strapi.config.get("server.recaptchaSecret");
   const token = ctx.request.body.token;
   const { name, email, message } = ctx.request.body;
 
-  console.log(name, email, message, token);
   if (!name || !message || !email) {
     return 400;
   }
@@ -20,17 +19,23 @@ module.exports = async (ctx, next) => {
 
   try {
     console.log(secret, token);
-    let { success } = await verify(secret, token);
-    console.log(success);
-
-    if (success) {
-      // Equivalent to sending a HTTP 200 status as a server response
-      console.log("Message sent!");
-      return true;
-    } else {
-      return 400;
-    }
+    await axios({
+      method: 'post',
+      url: 'https://www.google.com/recaptcha/api/siteverify',
+      params: {
+        secret: secret,
+        response: token,
+      },
+    }).then((res) => {
+      if (res.data.success) {
+        return true;
+      } else {
+        console.log(res.data);
+        return 400;
+      }
+    });
   } catch (error) {
+    console.log(error);
     return 500;
   }
 };

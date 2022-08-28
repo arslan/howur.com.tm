@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
   const [token, setToken] = useState(null);
@@ -15,23 +16,22 @@ const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
   const onSubmit = (data) => {
     if (!token) {
       return alert('Captcha token required');
-    }   
+    }
     const requestOptions = {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({...data, token: token}),
+      body: JSON.stringify({ ...data, token: token }),
     };
-    
+
     fetch(
       `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/email`,
       requestOptions
-    ).then((res) => {
-    });
+    ).then((res) => {});
 
     reset();
-    captchaRef.current.resetCaptcha();
+    captchaRef.current.reset();
   };
   useEffect(() => {}, [token]);
   return (
@@ -64,12 +64,14 @@ const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
         }`}
         {...register('message', { required: true, maxLength: 1000 })}
       />
-      <HCaptcha
-        sitekey={process.env.HCAPTCHA}
-        onVerify={setToken}
-        onError={() => setToken(null)}
-        onExpire={() => setToken(null)}
+      <ReCAPTCHA
+        onChange={setToken}
+        size="compact"
+        badge="inline"
+        onErrored={() => setToken(null)}
+        onExpired={() => setToken(null)}
         ref={captchaRef}
+        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
       />
       <button
         type="submit"
