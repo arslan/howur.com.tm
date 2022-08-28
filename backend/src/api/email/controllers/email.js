@@ -7,11 +7,11 @@
 module.exports = {
   send: async (ctx, next) => {
     const { email, name, message } = ctx.request.body;
-    strapi.log.debug(`Trying to send an email to ${email}`);
+    strapi.log.debug(`Trying to send an email from ${email} to ${process.env.EMAIL_SMTP_USER}`);
 
     try {
       const emailOptions = {
-	from: 'howur.com.tm <howur.com.tm@hillitilsimat.com>',
+        from: "howur.com.tm <howur.com.tm@hillitilsimat.com>",
         to: process.env.EMAIL_SMTP_USER,
         subject: `Message From ${name}`,
         text: message + " | Sent from: " + email,
@@ -19,13 +19,12 @@ module.exports = {
           ${email}</p>`,
       };
 
-      await strapi.services["api::email.email"].send1(emailOptions); //sending a message through the created server.. works
-      
-       // sending emails through the nodemailer provider.. does not work
-       // await strapi.plugins["email"].services.email.send(emailOptions);
-       
+      //await strapi.services["api::email.email"].send1(emailOptions); //sending a message through the created server.. works
 
-      strapi.log.debug(`Email sent to ${email}`);
+      // sending emails through the nodemailer provider.. does not work
+      await strapi.plugins["email"].services.email.send(emailOptions);
+
+      strapi.log.debug(`Email sent to ${process.env.EMAIL_SMTP_USER}`);
       ctx.send({ message: "Email sent" });
     } catch (err) {
       strapi.log.error(`Error sending email to ${email}`, err);

@@ -1,63 +1,84 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 const Form = ({ data: { formName, formMess, formMail, formButton } }) => {
-	const [data, setData] = useState();
-	const [button, setButton] = useState(false);
+  const [token, setToken] = useState(null);
+  const captchaRef = useRef(null);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm({ mode: 'onBlur' });
+  const onError = (errors, e) => console.log(errors, e);
+  const onSubmit = (data) => {
+    if (!token) {
+      return alert('Captcha token required');
+    }   
+    const requestOptions = {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({...data, token: token}),
+    };
+    
+    fetch(
+      `${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/email`,
+      requestOptions
+    ).then((res) => {
+    });
 
-	const onSubmitData = async () => {
-		setButton(true);
-		const requestOptions = {
-			method: "POST",
-			headers: {
-				"Content-Type": "application/json",
-			},
-			body: JSON.stringify(data),
-		};
-		const response = await fetch(
-			`${process.env.NEXT_PUBLIC_STRAPI_API_URL}/api/email`,
-			requestOptions
-		);
-		const dataResponse = await response.json();
-		if (dataResponse) {
-			setButton(false);
-		}
-	};
-	return (
-		<form className='space-y-8'>
-			<input
-				type='text'
-				minLength='4'
-				placeholder={formName}
-				className='border-b-2 sm:w-full lg:w-4/5 h-12 border-greyDark pl-2 outline-none'
-				required
-				onChange={(e) => setData({ ...data, name: e.target.value })}
-			/>
-			<input
-				type='email'
-				minLength='4'
-				placeholder={formMail}
-				className='border-b-2 sm:w-full lg:w-4/5 h-12 border-greyDark pl-2 outline-none'
-				required
-				onChange={(e) => setData({ ...data, email: e.target.value })}
-			/>
-			<textarea
-				rows={1}
-				maxLength={1000}
-				placeholder={formMess}
-				className='border-b-2 sm:w-full lg:w-4/5 h-12 border-greyDark pl-2 outline-none'
-				required
-				onChange={(e) => setData({ ...data, message: e.target.value })}
-			/>
-			<button
-				disabled={button}
-				onClick={onSubmitData}
-				type='submit'
-				className='bg-red sm:w-full lg:w-4/5 h-12 rounded-md text-white'
-			>
-				{formButton}
-			</button>
-		</form>
-	);
+    reset();
+    captchaRef.current.resetCaptcha();
+  };
+  useEffect(() => {}, [token]);
+  return (
+    <form className="space-y-8" onSubmit={handleSubmit(onSubmit, onError)}>
+      <input
+        type="text"
+        placeholder={formName}
+        className={`h-12 pl-2 border-b-2 outline-none sm:w-full lg:w-4/5  ${
+          errors?.name ? 'border-red' : 'border-greyDark'
+        }`}
+        {...register('name', { required: true, minLength: 4 })}
+      />{' '}
+      <input
+        type="email"
+        placeholder={formMail}
+        className={`h-12 pl-2 border-b-2 outline-none sm:w-full lg:w-4/5  ${
+          errors?.email ? 'border-red' : 'border-greyDark'
+        }`}
+        {...register('email', {
+          required: true,
+          minLength: 4,
+          pattern: /^\S+@\S+$/i,
+        })}
+      />
+      <textarea
+        rows={3}
+        placeholder={formMess}
+        className={`h-32 pl-2 border-b-2 outline-none sm:w-full lg:w-4/5  ${
+          errors?.message ? 'border-red' : 'border-greyDark'
+        }`}
+        {...register('message', { required: true, maxLength: 1000 })}
+      />
+      <HCaptcha
+        sitekey={process.env.HCAPTCHA}
+        onVerify={setToken}
+        onError={() => setToken(null)}
+        onExpire={() => setToken(null)}
+        ref={captchaRef}
+      />
+      <button
+        type="submit"
+        className="h-12 text-white rounded-md bg-red sm:w-full lg:w-4/5"
+      >
+        {formButton}
+      </button>
+    </form>
+  );
 };
 
 export default Form;

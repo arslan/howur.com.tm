@@ -6,6 +6,7 @@ module.exports = {
       handler: "email.send",
       config: {
         auth: false,
+        policies: ["global::verifyCaptcha"],
       },
     },
   ],
