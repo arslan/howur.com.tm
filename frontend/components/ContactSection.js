@@ -48,7 +48,7 @@ const ContactSection = ({
           </div>
         </div>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d877.2115746508605!2d58.34831324617642!3d37.89117491551739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f70025fe71f68c7%3A0xd4741d83aa694edf!2zQXLDp2FiaWwgxZ9hw71vbHkgNTIsIEHFn2dhYmF0LCBUdXJrbWVuaXN0YW4!5e0!3m2!1sen!2s!4v1660735896470!5m2!1sen!2s"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1574.3354158831655!2d58.348304999999996!3d37.891380000000005!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f7003c1ff4b68b3%3A0xa4d34f4def3ba754!2zQXLDp2FiaWwgxZ9hw71vbHkgNTUsIEHFn2dhYmF0LCBUdXJrbWVuaXN0YW4!5e0!3m2!1sen!2sus!4v1661837233175!5m2!1sen!2sus"
           width="100%"
           height="400px"
           allowFullScreen=""
