@@ -4,17 +4,17 @@ module.exports = ({ env }) => ({
     config: {
       provider: "nodemailer",
       providerOptions: {
-        host: "smtp.yandex.ru",
+        host: "smtp.sanly.tm",
         port: 465, // no need to set host or port etc.
-        secure:true,
+        secure: true,
         auth: {
-          user: "howur.com.tm@hillitilsimat.com",
-          pass: `fczvcuwgvbwwmoha`,
+          user: "howur@sanly.tm",
+          pass: `Miras@480812`,
         },
       },
       settings: {
-        defaultFrom: "howur.com.tm <howur.com.tm@hillitilsimat.com>",
-        defaultReplyTo: "howur.com.tm <howur.com.tm@hillitilsimat.com>",
+        defaultFrom: "Howur <howur@sanly.tm>",
+        defaultReplyTo: "Howur <howur@sanly.tm>",
       },
     },
   },

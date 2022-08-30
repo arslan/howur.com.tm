@@ -11,7 +11,7 @@ module.exports = {
 
     try {
       const emailOptions = {
-        from: "howur.com.tm <howur.com.tm@hillitilsimat.com>",
+        from: "Howur <howur@sanly.tm>",
         to: process.env.EMAIL_SMTP_USER,
         subject: `Message From ${name}`,
         text: message + " | Sent from: " + email,
