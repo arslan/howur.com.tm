@@ -19,7 +19,7 @@ class MyDocument extends Document {
 					<meta name="Howur's Website" content='Your reliable partner in Turkmenistan.' />
 					<meta name="google-site-verification" content="1zRIljHWLSquTw2zHhzTeg5hgSjrnuSQZ4dg1zEtFTc" />
 					<meta name="yandex-verification" content="f7cb421ddf1bf5ef" />
-					<link rel='icon' href='/favicon.svg' />
+					<link rel='icon' href='/favicon.ico' />
 				</Head>
 				<body>
 					<Main />
