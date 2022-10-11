@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /strapi
+
+# Host
+Host: howur.com.tm
+
+# Sitemaps
+Sitemap: https://howur.com.tm/sitemap.xml
