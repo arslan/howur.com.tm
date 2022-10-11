@@ -21,15 +21,21 @@ class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta
-            name="Howur's Website"
-            content="Your reliable partner in Turkmenistan."
+            name="description"
+            content="Your reliable construction & engineering partner in Turkmenistan."
           />
+          <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
           <meta
             name="google-site-verification"
             content="1zRIljHWLSquTw2zHhzTeg5hgSjrnuSQZ4dg1zEtFTc"
           />
           <meta name="yandex-verification" content="f7cb421ddf1bf5ef" />
-          <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
+          <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+          <meta
+            name="viewport"
+            content="width = device-width, initial-scale = 1.0"
+          />
+          <meta name="robots" content="index,follow" />
         </Head>
         <body>
           <Main />
