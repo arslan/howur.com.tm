@@ -5,8 +5,5 @@ module.exports = ({ env }) => ({
   app: {
     keys: env.array("APP_KEYS"),
   },
-  recaptchaSecret: env(
-    "RECAPTCHA_SECRET_KEY",
-    "***REMOVED***"
-  ),
+  recaptchaSecret: env("RECAPTCHA_SECRET_KEY", ""),
 });
